@@ -1,0 +1,15 @@
+
+#include "i3d_base.xcconfig"
+
+ALWAYS_SEARCH_USER_PATHS        = YES
+USER_HEADER_SEARCH_PATHS        = $(I3D_INCLUDES) $(I3D_INCLUDES_LIBS) $(PROJECT_DIR) $(I3D_SOURCE)/game/xfighter $(PROJECT_DIR)/xfighterShared
+HEADER_SEARCH_PATHS             = $(I3D_INCLUDES) $(I3D_INCLUDES_LIBS) $(PROJECT_DIR) $(I3D_SOURCE)/game/xfighter $(PROJECT_DIR)/xfighterShared
+
+CONFIGURATION_BUILD_DIR         = $(I3D_BUILD_DIR_OUT)
+CONFIGURATION_TEMP_DIR          = $(I3D_BUILD_DIR_INT)
+
+GCC_PREPROCESSOR_DEFINITIONS    = $(inherited)
+GCC_PREFIX_HEADER               = xfighter.pch
+GCC_PRECOMPILE_PREFIX_HEADER    = YES
+
+USE_HEADERMAP                   = NO

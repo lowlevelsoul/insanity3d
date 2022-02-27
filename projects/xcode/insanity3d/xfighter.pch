@@ -1,0 +1,38 @@
+//======================================================================================================================
+// CONFIDENTIAL AND PROPRIETARY INFORMATION / NOT FOR DISCLOSURE WITHOUT WRITTEN PERMISSION
+// Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
+//======================================================================================================================
+
+#ifndef __XFIGHTER_PCH_H__
+#define __XFIGHTER_PCH_H__
+
+#include <stdint.h>
+#include <stdlib.h>
+#include <math.h>
+#include <assert.h>
+
+#if defined( __cplusplus )
+
+#   include <mutex>
+#   include <atomic>
+#   include <map>
+#   include <vector>
+#   include <queue>
+#   include <unordered_map>
+#   include <bitset>
+#   include <array>
+
+#   include "i3d/core/Types.h"
+#   include "i3d/core/StlAllocator.h"
+#   include "i3d/core/Stl.h"
+#   include "i3d/core/Sys.h"
+#   include "i3d/core/FileSystem.h"
+#   include "i3d/math/Math3d.h"
+#   include "i3d/core/Hash.h"
+#   include "i3d/core/Id.h"
+#   include "i3d/core/Log.h"
+#   include "i3d/core/CVar.h"
+
+#endif
+
+#endif

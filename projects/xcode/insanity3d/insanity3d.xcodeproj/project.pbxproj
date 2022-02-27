@@ -1,0 +1,2158 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D34A48D627C9158E0083DD65 /* Material.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A48D427C9158E0083DD65 /* Material.h */; };
+		D34A48D727C9158E0083DD65 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A48D527C9158E0083DD65 /* Material.cpp */; };
+		D34A48E627C915EC0083DD65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A48E527C915EC0083DD65 /* AppDelegate.m */; };
+		D34A48E927C915EC0083DD65 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A48E827C915EC0083DD65 /* GameViewController.m */; };
+		D34A48EC27C915EC0083DD65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34A48EA27C915EC0083DD65 /* Main.storyboard */; };
+		D34A48EF27C915EC0083DD65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34A48ED27C915EC0083DD65 /* LaunchScreen.storyboard */; };
+		D34A48F127C915EC0083DD65 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D34A48F027C915EC0083DD65 /* main.mm */; };
+		D34A48FA27C915EC0083DD65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A48F927C915EC0083DD65 /* AppDelegate.m */; };
+		D34A48FD27C915EC0083DD65 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A48FC27C915EC0083DD65 /* GameViewController.m */; };
+		D34A490027C915EC0083DD65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34A48FE27C915EC0083DD65 /* Main.storyboard */; };
+		D34A490327C915EC0083DD65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34A490127C915EC0083DD65 /* LaunchScreen.storyboard */; };
+		D34A490527C915EC0083DD65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A490427C915EC0083DD65 /* main.m */; };
+		D34A490E27C915EC0083DD65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A490D27C915EC0083DD65 /* AppDelegate.m */; };
+		D34A491127C915EC0083DD65 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A491027C915EC0083DD65 /* GameViewController.m */; };
+		D34A491427C915EC0083DD65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34A491227C915EC0083DD65 /* Main.storyboard */; };
+		D34A491627C915EC0083DD65 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D34A491527C915EC0083DD65 /* main.mm */; };
+		D34A491827C915EC0083DD65 /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = D34A48DA27C915E50083DD65 /* Renderer.mm */; };
+		D34A491927C915EC0083DD65 /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = D34A48DA27C915E50083DD65 /* Renderer.mm */; };
+		D34A491A27C915EC0083DD65 /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = D34A48DA27C915E50083DD65 /* Renderer.mm */; };
+		D34A491B27C915EC0083DD65 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A48DC27C915E50083DD65 /* Shaders.metal */; };
+		D34A491C27C915EC0083DD65 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A48DC27C915E50083DD65 /* Shaders.metal */; };
+		D34A491D27C915EC0083DD65 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A48DC27C915E50083DD65 /* Shaders.metal */; };
+		D34A491E27C915EC0083DD65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34A48DD27C915EC0083DD65 /* Assets.xcassets */; };
+		D34A491F27C915EC0083DD65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34A48DD27C915EC0083DD65 /* Assets.xcassets */; };
+		D34A492027C915EC0083DD65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34A48DD27C915EC0083DD65 /* Assets.xcassets */; };
+		D34A492A27C916180083DD65 /* Sys_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3B627C6A56C0004E0E2 /* Sys_ios.mm */; };
+		D34A492B27C916180083DD65 /* FileSystem_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3B527C6A56C0004E0E2 /* FileSystem_ios.mm */; };
+		D34A492C27C9161C0083DD65 /* FileSystem_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AC27C6A56C0004E0E2 /* FileSystem_common.cpp */; };
+		D34A492D27C9161C0083DD65 /* CVarManager_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3BC27C6A56D0004E0E2 /* CVarManager_local.cpp */; };
+		D34A492E27C9161C0083DD65 /* Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AA27C6A56C0004E0E2 /* Hash.cpp */; };
+		D34A492F27C9161C0083DD65 /* Sys_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3B827C6A56C0004E0E2 /* Sys_common.cpp */; };
+		D34A493027C9161C0083DD65 /* CVar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A827C6A56C0004E0E2 /* CVar.cpp */; };
+		D34A493127C9161C0083DD65 /* Log_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3BB27C6A56D0004E0E2 /* Log_common.cpp */; };
+		D34A493227C9161C0083DD65 /* Log_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3B027C6A56C0004E0E2 /* Log_local.cpp */; };
+		D34A493327C9161D0083DD65 /* FileSystem_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AC27C6A56C0004E0E2 /* FileSystem_common.cpp */; };
+		D34A493427C9161D0083DD65 /* CVarManager_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3BC27C6A56D0004E0E2 /* CVarManager_local.cpp */; };
+		D34A493527C9161D0083DD65 /* Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AA27C6A56C0004E0E2 /* Hash.cpp */; };
+		D34A493627C9161D0083DD65 /* Sys_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3B827C6A56C0004E0E2 /* Sys_common.cpp */; };
+		D34A493727C9161D0083DD65 /* CVar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A827C6A56C0004E0E2 /* CVar.cpp */; };
+		D34A493827C9161D0083DD65 /* Log_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3BB27C6A56D0004E0E2 /* Log_common.cpp */; };
+		D34A493927C9161D0083DD65 /* Log_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3B027C6A56C0004E0E2 /* Log_local.cpp */; };
+		D34A493A27C9161D0083DD65 /* FileSystem_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AC27C6A56C0004E0E2 /* FileSystem_common.cpp */; };
+		D34A493B27C9161D0083DD65 /* CVarManager_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3BC27C6A56D0004E0E2 /* CVarManager_local.cpp */; };
+		D34A493C27C9161D0083DD65 /* Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AA27C6A56C0004E0E2 /* Hash.cpp */; };
+		D34A493D27C9161D0083DD65 /* Sys_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3B827C6A56C0004E0E2 /* Sys_common.cpp */; };
+		D34A493E27C9161D0083DD65 /* CVar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A827C6A56C0004E0E2 /* CVar.cpp */; };
+		D34A493F27C9161D0083DD65 /* Log_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3BB27C6A56D0004E0E2 /* Log_common.cpp */; };
+		D34A494027C9161D0083DD65 /* Log_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3B027C6A56C0004E0E2 /* Log_local.cpp */; };
+		D34A494127C9162B0083DD65 /* Math3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F227C6B17F0004E0E2 /* Math3d.cpp */; };
+		D34A494227C9162B0083DD65 /* Matrix3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F027C6B17F0004E0E2 /* Matrix3.cpp */; };
+		D34A494327C9162B0083DD65 /* Matrix4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3EF27C6B17F0004E0E2 /* Matrix4.cpp */; };
+		D34A494427C9162B0083DD65 /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F127C6B17F0004E0E2 /* Quaternion.cpp */; };
+		D34A494527C9162B0083DD65 /* Math3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F227C6B17F0004E0E2 /* Math3d.cpp */; };
+		D34A494627C9162B0083DD65 /* Matrix3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F027C6B17F0004E0E2 /* Matrix3.cpp */; };
+		D34A494727C9162B0083DD65 /* Matrix4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3EF27C6B17F0004E0E2 /* Matrix4.cpp */; };
+		D34A494827C9162B0083DD65 /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F127C6B17F0004E0E2 /* Quaternion.cpp */; };
+		D34A494927C9162B0083DD65 /* Math3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F227C6B17F0004E0E2 /* Math3d.cpp */; };
+		D34A494A27C9162B0083DD65 /* Matrix3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F027C6B17F0004E0E2 /* Matrix3.cpp */; };
+		D34A494B27C9162B0083DD65 /* Matrix4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3EF27C6B17F0004E0E2 /* Matrix4.cpp */; };
+		D34A494C27C9162B0083DD65 /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F127C6B17F0004E0E2 /* Quaternion.cpp */; };
+		D34A494D27C9162C0083DD65 /* Math3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F227C6B17F0004E0E2 /* Math3d.cpp */; };
+		D34A494E27C9162C0083DD65 /* Matrix3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F027C6B17F0004E0E2 /* Matrix3.cpp */; };
+		D34A494F27C9162C0083DD65 /* Matrix4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3EF27C6B17F0004E0E2 /* Matrix4.cpp */; };
+		D34A495027C9162C0083DD65 /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F127C6B17F0004E0E2 /* Quaternion.cpp */; };
+		D34A495127C916390083DD65 /* GfxGpuPipeline_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3FD27C6B19E0004E0E2 /* GfxGpuPipeline_metal.mm */; };
+		D34A495227C916390083DD65 /* GfxGpuFunction_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41427C6B19F0004E0E2 /* GfxGpuFunction_metal.mm */; };
+		D34A495327C916390083DD65 /* Gfx_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40927C6B19E0004E0E2 /* Gfx_metal.mm */; };
+		D34A495427C916390083DD65 /* GfxFence_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41C27C6B19F0004E0E2 /* GfxFence_metal.mm */; };
+		D34A495527C916390083DD65 /* GfxTexture_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41927C6B19F0004E0E2 /* GfxTexture_metal.mm */; };
+		D34A495627C916390083DD65 /* GfxPass_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40127C6B19E0004E0E2 /* GfxPass_metal.mm */; };
+		D34A495727C916390083DD65 /* GfxGpuTextureArray_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41227C6B19F0004E0E2 /* GfxGpuTextureArray_metal.mm */; };
+		D34A495827C916390083DD65 /* GfxVertexDesc_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B40027C6B19E0004E0E2 /* GfxVertexDesc_local.cpp */; };
+		D34A495927C916390083DD65 /* GfxBuffer_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41127C6B19F0004E0E2 /* GfxBuffer_metal.mm */; };
+		D34A495A27C916390083DD65 /* GfxDepthState_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41A27C6B19F0004E0E2 /* GfxDepthState_metal.mm */; };
+		D34A495B27C916390083DD65 /* GfxRasterizeState_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40A27C6B19E0004E0E2 /* GfxRasterizeState_metal.mm */; };
+		D34A495C27C916390083DD65 /* GfxContext_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40F27C6B19F0004E0E2 /* GfxContext_metal.mm */; };
+		D34A495D27C916390083DD65 /* Gfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F827C6B19E0004E0E2 /* Gfx.cpp */; };
+		D34A495E27C916390083DD65 /* GfxGpuPipeline_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3FD27C6B19E0004E0E2 /* GfxGpuPipeline_metal.mm */; };
+		D34A495F27C916390083DD65 /* GfxGpuFunction_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41427C6B19F0004E0E2 /* GfxGpuFunction_metal.mm */; };
+		D34A496027C916390083DD65 /* Gfx_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40927C6B19E0004E0E2 /* Gfx_metal.mm */; };
+		D34A496127C916390083DD65 /* GfxFence_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41C27C6B19F0004E0E2 /* GfxFence_metal.mm */; };
+		D34A496227C916390083DD65 /* GfxTexture_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41927C6B19F0004E0E2 /* GfxTexture_metal.mm */; };
+		D34A496327C916390083DD65 /* GfxPass_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40127C6B19E0004E0E2 /* GfxPass_metal.mm */; };
+		D34A496427C916390083DD65 /* GfxGpuTextureArray_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41227C6B19F0004E0E2 /* GfxGpuTextureArray_metal.mm */; };
+		D34A496527C916390083DD65 /* GfxVertexDesc_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B40027C6B19E0004E0E2 /* GfxVertexDesc_local.cpp */; };
+		D34A496627C916390083DD65 /* GfxBuffer_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41127C6B19F0004E0E2 /* GfxBuffer_metal.mm */; };
+		D34A496727C916390083DD65 /* GfxDepthState_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41A27C6B19F0004E0E2 /* GfxDepthState_metal.mm */; };
+		D34A496827C916390083DD65 /* GfxRasterizeState_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40A27C6B19E0004E0E2 /* GfxRasterizeState_metal.mm */; };
+		D34A496927C916390083DD65 /* GfxContext_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40F27C6B19F0004E0E2 /* GfxContext_metal.mm */; };
+		D34A496A27C916390083DD65 /* Gfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F827C6B19E0004E0E2 /* Gfx.cpp */; };
+		D34A496B27C9163A0083DD65 /* GfxGpuPipeline_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3FD27C6B19E0004E0E2 /* GfxGpuPipeline_metal.mm */; };
+		D34A496C27C9163A0083DD65 /* GfxGpuFunction_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41427C6B19F0004E0E2 /* GfxGpuFunction_metal.mm */; };
+		D34A496D27C9163A0083DD65 /* Gfx_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40927C6B19E0004E0E2 /* Gfx_metal.mm */; };
+		D34A496E27C9163A0083DD65 /* GfxFence_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41C27C6B19F0004E0E2 /* GfxFence_metal.mm */; };
+		D34A496F27C9163A0083DD65 /* GfxTexture_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41927C6B19F0004E0E2 /* GfxTexture_metal.mm */; };
+		D34A497027C9163A0083DD65 /* GfxPass_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40127C6B19E0004E0E2 /* GfxPass_metal.mm */; };
+		D34A497127C9163A0083DD65 /* GfxGpuTextureArray_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41227C6B19F0004E0E2 /* GfxGpuTextureArray_metal.mm */; };
+		D34A497227C9163A0083DD65 /* GfxVertexDesc_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B40027C6B19E0004E0E2 /* GfxVertexDesc_local.cpp */; };
+		D34A497327C9163A0083DD65 /* GfxBuffer_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41127C6B19F0004E0E2 /* GfxBuffer_metal.mm */; };
+		D34A497427C9163A0083DD65 /* GfxDepthState_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41A27C6B19F0004E0E2 /* GfxDepthState_metal.mm */; };
+		D34A497527C9163A0083DD65 /* GfxRasterizeState_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40A27C6B19E0004E0E2 /* GfxRasterizeState_metal.mm */; };
+		D34A497627C9163A0083DD65 /* GfxContext_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40F27C6B19F0004E0E2 /* GfxContext_metal.mm */; };
+		D34A497727C9163A0083DD65 /* Gfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F827C6B19E0004E0E2 /* Gfx.cpp */; };
+		D34A497827C9163A0083DD65 /* GfxGpuPipeline_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3FD27C6B19E0004E0E2 /* GfxGpuPipeline_metal.mm */; };
+		D34A497927C9163A0083DD65 /* GfxGpuFunction_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41427C6B19F0004E0E2 /* GfxGpuFunction_metal.mm */; };
+		D34A497A27C9163A0083DD65 /* Gfx_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40927C6B19E0004E0E2 /* Gfx_metal.mm */; };
+		D34A497B27C9163A0083DD65 /* GfxFence_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41C27C6B19F0004E0E2 /* GfxFence_metal.mm */; };
+		D34A497C27C9163A0083DD65 /* GfxTexture_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41927C6B19F0004E0E2 /* GfxTexture_metal.mm */; };
+		D34A497D27C9163A0083DD65 /* GfxPass_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40127C6B19E0004E0E2 /* GfxPass_metal.mm */; };
+		D34A497E27C9163A0083DD65 /* GfxGpuTextureArray_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41227C6B19F0004E0E2 /* GfxGpuTextureArray_metal.mm */; };
+		D34A497F27C9163A0083DD65 /* GfxVertexDesc_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B40027C6B19E0004E0E2 /* GfxVertexDesc_local.cpp */; };
+		D34A498027C9163A0083DD65 /* GfxBuffer_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41127C6B19F0004E0E2 /* GfxBuffer_metal.mm */; };
+		D34A498127C9163A0083DD65 /* GfxDepthState_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B41A27C6B19F0004E0E2 /* GfxDepthState_metal.mm */; };
+		D34A498227C9163A0083DD65 /* GfxRasterizeState_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40A27C6B19E0004E0E2 /* GfxRasterizeState_metal.mm */; };
+		D34A498327C9163A0083DD65 /* GfxContext_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B40F27C6B19F0004E0E2 /* GfxContext_metal.mm */; };
+		D34A498427C9163A0083DD65 /* Gfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3F827C6B19E0004E0E2 /* Gfx.cpp */; };
+		D34A498627C916450083DD65 /* ResourceCache_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B44B27C6B3590004E0E2 /* ResourceCache_local.cpp */; };
+		D34A498827C916450083DD65 /* ResourceCache_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B44B27C6B3590004E0E2 /* ResourceCache_local.cpp */; };
+		D34A498A27C916460083DD65 /* ResourceCache_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B44B27C6B3590004E0E2 /* ResourceCache_local.cpp */; };
+		D34A499827C916560083DD65 /* Model_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4F527C7F9250004E0E2 /* Model_local.cpp */; };
+		D34A499927C916560083DD65 /* StaticTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B50027C7FCA00004E0E2 /* StaticTransform.cpp */; };
+		D34A499A27C916560083DD65 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A48D527C9158E0083DD65 /* Material.cpp */; };
+		D34A499B27C916560083DD65 /* DrawLit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4FE27C7FCA00004E0E2 /* DrawLit.cpp */; };
+		D34A499C27C916560083DD65 /* DebugLineDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B50327C7FCA00004E0E2 /* DebugLineDraw.cpp */; };
+		D34A499D27C916560083DD65 /* RenderBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4F127C7D4AA0004E0E2 /* RenderBatch.cpp */; };
+		D34A499E27C916600083DD65 /* RttiSystem_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C127C7CD0B0004E0E2 /* RttiSystem_local.cpp */; };
+		D34A499F27C916600083DD65 /* RttiParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4CA27C7CD0B0004E0E2 /* RttiParser.cpp */; };
+		D34A49A027C916600083DD65 /* RttiObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C727C7CD0B0004E0E2 /* RttiObject.cpp */; };
+		D34A49A127C916600083DD65 /* RttiResource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C927C7CD0B0004E0E2 /* RttiResource.cpp */; };
+		D34A49A227C916600083DD65 /* RttiLexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4BB27C7CD0A0004E0E2 /* RttiLexer.cpp */; };
+		D34A49A327C916600083DD65 /* RttiType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C327C7CD0B0004E0E2 /* RttiType.cpp */; };
+		D34A49A427C916600083DD65 /* RttiLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4CD27C7CD0B0004E0E2 /* RttiLoader.cpp */; };
+		D34A49A527C916600083DD65 /* RttiStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C627C7CD0B0004E0E2 /* RttiStream.cpp */; };
+		D34A49A627C916600083DD65 /* RttiSystem_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C127C7CD0B0004E0E2 /* RttiSystem_local.cpp */; };
+		D34A49A727C916600083DD65 /* RttiParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4CA27C7CD0B0004E0E2 /* RttiParser.cpp */; };
+		D34A49A827C916600083DD65 /* RttiObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C727C7CD0B0004E0E2 /* RttiObject.cpp */; };
+		D34A49A927C916600083DD65 /* RttiResource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C927C7CD0B0004E0E2 /* RttiResource.cpp */; };
+		D34A49AA27C916600083DD65 /* RttiLexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4BB27C7CD0A0004E0E2 /* RttiLexer.cpp */; };
+		D34A49AB27C916600083DD65 /* RttiType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C327C7CD0B0004E0E2 /* RttiType.cpp */; };
+		D34A49AC27C916600083DD65 /* RttiLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4CD27C7CD0B0004E0E2 /* RttiLoader.cpp */; };
+		D34A49AD27C916600083DD65 /* RttiStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C627C7CD0B0004E0E2 /* RttiStream.cpp */; };
+		D34A49AE27C916610083DD65 /* RttiSystem_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C127C7CD0B0004E0E2 /* RttiSystem_local.cpp */; };
+		D34A49AF27C916610083DD65 /* RttiParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4CA27C7CD0B0004E0E2 /* RttiParser.cpp */; };
+		D34A49B027C916610083DD65 /* RttiObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C727C7CD0B0004E0E2 /* RttiObject.cpp */; };
+		D34A49B127C916610083DD65 /* RttiResource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C927C7CD0B0004E0E2 /* RttiResource.cpp */; };
+		D34A49B227C916610083DD65 /* RttiLexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4BB27C7CD0A0004E0E2 /* RttiLexer.cpp */; };
+		D34A49B327C916610083DD65 /* RttiType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C327C7CD0B0004E0E2 /* RttiType.cpp */; };
+		D34A49B427C916610083DD65 /* RttiLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4CD27C7CD0B0004E0E2 /* RttiLoader.cpp */; };
+		D34A49B527C916610083DD65 /* RttiStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C627C7CD0B0004E0E2 /* RttiStream.cpp */; };
+		D34A49B627C916660083DD65 /* LoaderBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4E627C7CF600004E0E2 /* LoaderBase.cpp */; };
+		D34A49B727C916660083DD65 /* LoaderBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4E627C7CF600004E0E2 /* LoaderBase.cpp */; };
+		D34A49B827C916670083DD65 /* LoaderBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4E627C7CF600004E0E2 /* LoaderBase.cpp */; };
+		D34A49B927C9166C0083DD65 /* HeapFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4FB27C7FA770004E0E2 /* HeapFrame.cpp */; };
+		D34A49BA27C9166D0083DD65 /* HeapFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4FB27C7FA770004E0E2 /* HeapFrame.cpp */; };
+		D34A49BB27C9166D0083DD65 /* HeapFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4FB27C7FA770004E0E2 /* HeapFrame.cpp */; };
+		D34A49BF27C94F9E0083DD65 /* i3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49BE27C94F9E0083DD65 /* i3d.cpp */; };
+		D34A49C027C94FA00083DD65 /* i3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49BE27C94F9E0083DD65 /* i3d.cpp */; };
+		D34A49C127C94FA10083DD65 /* i3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49BE27C94F9E0083DD65 /* i3d.cpp */; };
+		D34A49C227C94FA10083DD65 /* i3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49BE27C94F9E0083DD65 /* i3d.cpp */; };
+		D34A49CC27C9FD860083DD65 /* Texture_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49C427C9FD860083DD65 /* Texture_base.cpp */; };
+		D34A49CD27C9FD860083DD65 /* TexStream.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A49C527C9FD860083DD65 /* TexStream.h */; };
+		D34A49CE27C9FD860083DD65 /* Render_local.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A49C627C9FD860083DD65 /* Render_local.h */; };
+		D34A49CF27C9FD860083DD65 /* Texture_base.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A49C727C9FD860083DD65 /* Texture_base.h */; };
+		D34A49D027C9FD860083DD65 /* ModelStream.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A49C827C9FD860083DD65 /* ModelStream.h */; };
+		D34A49D127C9FD860083DD65 /* Render_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49C927C9FD860083DD65 /* Render_local.cpp */; };
+		D34A49D227C9FD860083DD65 /* RenderBuffers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49CA27C9FD860083DD65 /* RenderBuffers.cpp */; };
+		D34A49D327C9FD860083DD65 /* RenderBuffers.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A49CB27C9FD860083DD65 /* RenderBuffers.h */; };
+		D34A49DA27C9FD960083DD65 /* DrawLit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4FE27C7FCA00004E0E2 /* DrawLit.cpp */; };
+		D34A49DB27C9FD960083DD65 /* RenderBuffers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49CA27C9FD860083DD65 /* RenderBuffers.cpp */; };
+		D34A49DC27C9FD960083DD65 /* Render_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49C927C9FD860083DD65 /* Render_local.cpp */; };
+		D34A49DD27C9FD960083DD65 /* RenderBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4F127C7D4AA0004E0E2 /* RenderBatch.cpp */; };
+		D34A49DE27C9FD960083DD65 /* StaticTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B50027C7FCA00004E0E2 /* StaticTransform.cpp */; };
+		D34A49DF27C9FD960083DD65 /* Texture_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49C427C9FD860083DD65 /* Texture_base.cpp */; };
+		D34A49E027C9FD960083DD65 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A48D527C9158E0083DD65 /* Material.cpp */; };
+		D34A49E127C9FD960083DD65 /* Model_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4F527C7F9250004E0E2 /* Model_local.cpp */; };
+		D34A49E227C9FD960083DD65 /* DebugLineDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B50327C7FCA00004E0E2 /* DebugLineDraw.cpp */; };
+		D34A49E327C9FD970083DD65 /* DrawLit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4FE27C7FCA00004E0E2 /* DrawLit.cpp */; };
+		D34A49E427C9FD970083DD65 /* RenderBuffers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49CA27C9FD860083DD65 /* RenderBuffers.cpp */; };
+		D34A49E527C9FD970083DD65 /* Render_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49C927C9FD860083DD65 /* Render_local.cpp */; };
+		D34A49E627C9FD970083DD65 /* RenderBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4F127C7D4AA0004E0E2 /* RenderBatch.cpp */; };
+		D34A49E727C9FD970083DD65 /* StaticTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B50027C7FCA00004E0E2 /* StaticTransform.cpp */; };
+		D34A49E827C9FD970083DD65 /* Texture_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49C427C9FD860083DD65 /* Texture_base.cpp */; };
+		D34A49E927C9FD970083DD65 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A48D527C9158E0083DD65 /* Material.cpp */; };
+		D34A49EA27C9FD970083DD65 /* Model_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4F527C7F9250004E0E2 /* Model_local.cpp */; };
+		D34A49EB27C9FD970083DD65 /* DebugLineDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B50327C7FCA00004E0E2 /* DebugLineDraw.cpp */; };
+		D34A49EC27C9FD980083DD65 /* RenderBuffers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49CA27C9FD860083DD65 /* RenderBuffers.cpp */; };
+		D34A49ED27C9FD980083DD65 /* Render_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49C927C9FD860083DD65 /* Render_local.cpp */; };
+		D34A49EE27C9FD980083DD65 /* Texture_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A49C427C9FD860083DD65 /* Texture_base.cpp */; };
+		D34A4A0027C9FDD40083DD65 /* pbr.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F227C9FDD30083DD65 /* pbr.metal */; };
+		D34A4A0127C9FDD40083DD65 /* Debug3d.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F327C9FDD30083DD65 /* Debug3d.metal */; };
+		D34A4A0227C9FDD40083DD65 /* TransformSkinTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A49F427C9FDD30083DD65 /* TransformSkinTypes.h */; };
+		D34A4A0327C9FDD40083DD65 /* pbr.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A49F527C9FDD30083DD65 /* pbr.h */; };
+		D34A4A0427C9FDD40083DD65 /* TransformSkin.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F627C9FDD30083DD65 /* TransformSkin.metal */; };
+		D34A4A0527C9FDD40083DD65 /* draw3d_toon.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F727C9FDD30083DD65 /* draw3d_toon.metal */; };
+		D34A4A0627C9FDD40083DD65 /* draw3d_pbr_types.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A49F827C9FDD30083DD65 /* draw3d_pbr_types.h */; };
+		D34A4A0727C9FDD40083DD65 /* ArgumentBufferDummy.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F927C9FDD30083DD65 /* ArgumentBufferDummy.metal */; };
+		D34A4A0827C9FDD40083DD65 /* TransformStatic.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FA27C9FDD30083DD65 /* TransformStatic.metal */; };
+		D34A4A0927C9FDD40083DD65 /* Debug3dTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A49FB27C9FDD30083DD65 /* Debug3dTypes.h */; };
+		D34A4A0A27C9FDD40083DD65 /* draw3d_pbr_bindless.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FC27C9FDD40083DD65 /* draw3d_pbr_bindless.metal */; };
+		D34A4A0B27C9FDD40083DD65 /* draw3d_pbr.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FD27C9FDD40083DD65 /* draw3d_pbr.metal */; };
+		D34A4A0C27C9FDD40083DD65 /* TextureArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A49FE27C9FDD40083DD65 /* TextureArguments.h */; };
+		D34A4A0D27C9FDD40083DD65 /* TransformStaticTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A49FF27C9FDD40083DD65 /* TransformStaticTypes.h */; };
+		D34A4A0F27CA45F00083DD65 /* FileSystem_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AE27C6A56C0004E0E2 /* FileSystem_macos.mm */; };
+		D34A4A1027CA45FE0083DD65 /* Sys_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A627C6A56C0004E0E2 /* Sys_macos.mm */; };
+		D34A4A1627CA690E0083DD65 /* XFighter.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A4A1427CA690E0083DD65 /* XFighter.h */; };
+		D34A4A1727CA69140083DD65 /* XFighter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A1327CA690E0083DD65 /* XFighter.cpp */; };
+		D34A4A1827CA69150083DD65 /* XFighter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A1327CA690E0083DD65 /* XFighter.cpp */; };
+		D34A4A1927CA69160083DD65 /* XFighter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A1327CA690E0083DD65 /* XFighter.cpp */; };
+		D34A4A1B27CA6AFF0083DD65 /* farmhash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A1A27CA6AFF0083DD65 /* farmhash.cpp */; };
+		D34A4A1C27CA6AFF0083DD65 /* farmhash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A1A27CA6AFF0083DD65 /* farmhash.cpp */; };
+		D34A4A1D27CA6AFF0083DD65 /* farmhash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A1A27CA6AFF0083DD65 /* farmhash.cpp */; };
+		D34A4A1E27CA6AFF0083DD65 /* farmhash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A1A27CA6AFF0083DD65 /* farmhash.cpp */; };
+		D34A4A1F27CA9ECA0083DD65 /* draw3d_pbr_bindless.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FC27C9FDD40083DD65 /* draw3d_pbr_bindless.metal */; };
+		D34A4A2027CA9ECA0083DD65 /* pbr.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F227C9FDD30083DD65 /* pbr.metal */; };
+		D34A4A2127CA9ECA0083DD65 /* Debug3d.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F327C9FDD30083DD65 /* Debug3d.metal */; };
+		D34A4A2227CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FD27C9FDD40083DD65 /* draw3d_pbr.metal */; };
+		D34A4A2327CA9ECA0083DD65 /* TransformSkin.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F627C9FDD30083DD65 /* TransformSkin.metal */; };
+		D34A4A2427CA9ECA0083DD65 /* TransformStatic.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FA27C9FDD30083DD65 /* TransformStatic.metal */; };
+		D34A4A2527CA9ECA0083DD65 /* draw3d_toon.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F727C9FDD30083DD65 /* draw3d_toon.metal */; };
+		D34A4A2627CA9ECA0083DD65 /* draw3d_pbr_bindless.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FC27C9FDD40083DD65 /* draw3d_pbr_bindless.metal */; };
+		D34A4A2727CA9ECA0083DD65 /* pbr.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F227C9FDD30083DD65 /* pbr.metal */; };
+		D34A4A2827CA9ECA0083DD65 /* Debug3d.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F327C9FDD30083DD65 /* Debug3d.metal */; };
+		D34A4A2927CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FD27C9FDD40083DD65 /* draw3d_pbr.metal */; };
+		D34A4A2A27CA9ECA0083DD65 /* TransformSkin.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F627C9FDD30083DD65 /* TransformSkin.metal */; };
+		D34A4A2B27CA9ECA0083DD65 /* TransformStatic.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FA27C9FDD30083DD65 /* TransformStatic.metal */; };
+		D34A4A2C27CA9ECA0083DD65 /* draw3d_toon.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F727C9FDD30083DD65 /* draw3d_toon.metal */; };
+		D34A4A2D27CA9ECA0083DD65 /* draw3d_pbr_bindless.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FC27C9FDD40083DD65 /* draw3d_pbr_bindless.metal */; };
+		D34A4A2E27CA9ECA0083DD65 /* pbr.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F227C9FDD30083DD65 /* pbr.metal */; };
+		D34A4A2F27CA9ECA0083DD65 /* Debug3d.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F327C9FDD30083DD65 /* Debug3d.metal */; };
+		D34A4A3027CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FD27C9FDD40083DD65 /* draw3d_pbr.metal */; };
+		D34A4A3127CA9ECA0083DD65 /* TransformSkin.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F627C9FDD30083DD65 /* TransformSkin.metal */; };
+		D34A4A3227CA9ECA0083DD65 /* TransformStatic.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FA27C9FDD30083DD65 /* TransformStatic.metal */; };
+		D34A4A3327CA9ECA0083DD65 /* draw3d_toon.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F727C9FDD30083DD65 /* draw3d_toon.metal */; };
+		D366B3BD27C6A56D0004E0E2 /* Sys_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A627C6A56C0004E0E2 /* Sys_macos.mm */; };
+		D366B3BF27C6A56D0004E0E2 /* CVar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A827C6A56C0004E0E2 /* CVar.cpp */; };
+		D366B3C127C6A56D0004E0E2 /* Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AA27C6A56C0004E0E2 /* Hash.cpp */; };
+		D366B3C327C6A56D0004E0E2 /* FileSystem_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AC27C6A56C0004E0E2 /* FileSystem_common.cpp */; };
+		D366B3C427C6A56D0004E0E2 /* CVarManager_local.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B3AD27C6A56C0004E0E2 /* CVarManager_local.h */; };
+		D366B3C527C6A56D0004E0E2 /* FileSystem_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AE27C6A56C0004E0E2 /* FileSystem_macos.mm */; };
+		D366B3C727C6A56D0004E0E2 /* Log_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3B027C6A56C0004E0E2 /* Log_local.cpp */; };
+		D366B3C827C6A56D0004E0E2 /* Sys_common.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B3B127C6A56C0004E0E2 /* Sys_common.h */; };
+		D366B3CA27C6A56D0004E0E2 /* FileSystem_common.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B3B327C6A56C0004E0E2 /* FileSystem_common.h */; };
+		D366B3CE27C6A56D0004E0E2 /* Sys_macos.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B3B727C6A56C0004E0E2 /* Sys_macos.h */; };
+		D366B3CF27C6A56D0004E0E2 /* Sys_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3B827C6A56C0004E0E2 /* Sys_common.cpp */; };
+		D366B3D027C6A56D0004E0E2 /* Sys_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B3B927C6A56D0004E0E2 /* Sys_ios.h */; };
+		D366B3D227C6A56D0004E0E2 /* Log_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3BB27C6A56D0004E0E2 /* Log_common.cpp */; };
+		D366B3D327C6A56D0004E0E2 /* CVarManager_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3BC27C6A56D0004E0E2 /* CVarManager_local.cpp */; };
+		D366B41F27C6B19F0004E0E2 /* GfxTexture_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B3F927C6B19E0004E0E2 /* GfxTexture_metal.h */; };
+		D366B42027C6B19F0004E0E2 /* GfxGpuTextureArray.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B3FA27C6B19E0004E0E2 /* GfxGpuTextureArray.h */; };
+		D366B42127C6B19F0004E0E2 /* GfxBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B3FB27C6B19E0004E0E2 /* GfxBuffer.h */; };
+		D366B42227C6B19F0004E0E2 /* GfxFence_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B3FC27C6B19E0004E0E2 /* GfxFence_metal.h */; };
+		D366B42427C6B19F0004E0E2 /* GfxDepthState_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B3FE27C6B19E0004E0E2 /* GfxDepthState_metal.h */; };
+		D366B42527C6B19F0004E0E2 /* GfxPass.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B3FF27C6B19E0004E0E2 /* GfxPass.h */; };
+		D366B42827C6B19F0004E0E2 /* GfxRasterizeState_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B40227C6B19E0004E0E2 /* GfxRasterizeState_metal.h */; };
+		D366B42927C6B19F0004E0E2 /* GfxTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B40327C6B19E0004E0E2 /* GfxTexture.h */; };
+		D366B42A27C6B19F0004E0E2 /* GfxFence.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B40427C6B19E0004E0E2 /* GfxFence.h */; };
+		D366B42B27C6B19F0004E0E2 /* GfxDepthState.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B40527C6B19E0004E0E2 /* GfxDepthState.h */; };
+		D366B42C27C6B19F0004E0E2 /* GfxTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B40627C6B19E0004E0E2 /* GfxTypes.h */; };
+		D366B42D27C6B19F0004E0E2 /* GfxContext.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B40727C6B19E0004E0E2 /* GfxContext.h */; };
+		D366B42E27C6B19F0004E0E2 /* GfxContext_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B40827C6B19E0004E0E2 /* GfxContext_metal.h */; };
+		D366B43127C6B19F0004E0E2 /* Gfx.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B40B27C6B19E0004E0E2 /* Gfx.h */; };
+		D366B43227C6B19F0004E0E2 /* GfxPass_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B40C27C6B19E0004E0E2 /* GfxPass_metal.h */; };
+		D366B43327C6B19F0004E0E2 /* Gfx_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B40D27C6B19E0004E0E2 /* Gfx_metal.h */; };
+		D366B43427C6B19F0004E0E2 /* GfxGpuTextureArray_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B40E27C6B19E0004E0E2 /* GfxGpuTextureArray_metal.h */; };
+		D366B43627C6B19F0004E0E2 /* GfxRasterizeState.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B41027C6B19F0004E0E2 /* GfxRasterizeState.h */; };
+		D366B43927C6B19F0004E0E2 /* GfxGpuFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B41327C6B19F0004E0E2 /* GfxGpuFunction.h */; };
+		D366B43B27C6B19F0004E0E2 /* GfxGpuPipeline_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B41527C6B19F0004E0E2 /* GfxGpuPipeline_metal.h */; };
+		D366B43C27C6B19F0004E0E2 /* GfxVertexDesc.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B41627C6B19F0004E0E2 /* GfxVertexDesc.h */; };
+		D366B43D27C6B19F0004E0E2 /* GfxGpuPipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B41727C6B19F0004E0E2 /* GfxGpuPipeline.h */; };
+		D366B43E27C6B19F0004E0E2 /* GfxGpuFunction_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B41827C6B19F0004E0E2 /* GfxGpuFunction_metal.h */; };
+		D366B44127C6B19F0004E0E2 /* GfxBuffer_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B41B27C6B19F0004E0E2 /* GfxBuffer_metal.h */; };
+		D366B44327C6B19F0004E0E2 /* GfxVertexDesc_local.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B41D27C6B19F0004E0E2 /* GfxVertexDesc_local.h */; };
+		D366B44C27C6B3590004E0E2 /* ResourceCache_local.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B44827C6B3590004E0E2 /* ResourceCache_local.h */; };
+		D366B44E27C6B3590004E0E2 /* ResourceCompiler.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B44A27C6B3590004E0E2 /* ResourceCompiler.h */; };
+		D366B44F27C6B3590004E0E2 /* ResourceCache_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B44B27C6B3590004E0E2 /* ResourceCache_local.cpp */; };
+		D366B49F27C7CBA40004E0E2 /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B47A27C7CBA30004E0E2 /* Model.h */; };
+		D366B4CE27C7CD0B0004E0E2 /* RttiLexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4BB27C7CD0A0004E0E2 /* RttiLexer.cpp */; };
+		D366B4CF27C7CD0B0004E0E2 /* RttiParser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D366B4BC27C7CD0A0004E0E2 /* RttiParser.hpp */; };
+		D366B4D027C7CD0B0004E0E2 /* RttiSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4BD27C7CD0B0004E0E2 /* RttiSystem.h */; };
+		D366B4D127C7CD0B0004E0E2 /* RttiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4BE27C7CD0B0004E0E2 /* RttiObject.h */; };
+		D366B4D227C7CD0B0004E0E2 /* RttiPropType.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4BF27C7CD0B0004E0E2 /* RttiPropType.h */; };
+		D366B4D327C7CD0B0004E0E2 /* RttiPropTypeTraits.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4C027C7CD0B0004E0E2 /* RttiPropTypeTraits.h */; };
+		D366B4D427C7CD0B0004E0E2 /* RttiSystem_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C127C7CD0B0004E0E2 /* RttiSystem_local.cpp */; };
+		D366B4D527C7CD0B0004E0E2 /* RttiSystem_local.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4C227C7CD0B0004E0E2 /* RttiSystem_local.h */; };
+		D366B4D627C7CD0B0004E0E2 /* RttiType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C327C7CD0B0004E0E2 /* RttiType.cpp */; };
+		D366B4D727C7CD0B0004E0E2 /* Rtti.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4C427C7CD0B0004E0E2 /* Rtti.h */; };
+		D366B4D827C7CD0B0004E0E2 /* RttiType.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4C527C7CD0B0004E0E2 /* RttiType.h */; };
+		D366B4D927C7CD0B0004E0E2 /* RttiStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C627C7CD0B0004E0E2 /* RttiStream.cpp */; };
+		D366B4DA27C7CD0B0004E0E2 /* RttiObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C727C7CD0B0004E0E2 /* RttiObject.cpp */; };
+		D366B4DB27C7CD0B0004E0E2 /* RttiLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4C827C7CD0B0004E0E2 /* RttiLoader.h */; };
+		D366B4DC27C7CD0B0004E0E2 /* RttiResource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4C927C7CD0B0004E0E2 /* RttiResource.cpp */; };
+		D366B4DD27C7CD0B0004E0E2 /* RttiParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4CA27C7CD0B0004E0E2 /* RttiParser.cpp */; };
+		D366B4DE27C7CD0B0004E0E2 /* RttiStream.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4CB27C7CD0B0004E0E2 /* RttiStream.h */; };
+		D366B4DF27C7CD0B0004E0E2 /* RttiResource.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4CC27C7CD0B0004E0E2 /* RttiResource.h */; };
+		D366B4E027C7CD0B0004E0E2 /* RttiLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4CD27C7CD0B0004E0E2 /* RttiLoader.cpp */; };
+		D366B4EA27C7CF600004E0E2 /* LoaderBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4E427C7CF600004E0E2 /* LoaderBase.h */; };
+		D366B4EC27C7CF600004E0E2 /* LoaderBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4E627C7CF600004E0E2 /* LoaderBase.cpp */; };
+		D366B4F227C7D4AA0004E0E2 /* RenderBatchCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4EF27C7D4AA0004E0E2 /* RenderBatchCmd.h */; };
+		D366B4F327C7D4AA0004E0E2 /* RenderBatch.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4F027C7D4AA0004E0E2 /* RenderBatch.h */; };
+		D366B4F427C7D4AA0004E0E2 /* RenderBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4F127C7D4AA0004E0E2 /* RenderBatch.cpp */; };
+		D366B4F727C7F9250004E0E2 /* Model_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4F527C7F9250004E0E2 /* Model_local.cpp */; };
+		D366B4F827C7F9250004E0E2 /* Model_local.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4F627C7F9250004E0E2 /* Model_local.h */; };
+		D366B4FC27C7FA770004E0E2 /* HeapFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4FA27C7FA770004E0E2 /* HeapFrame.h */; };
+		D366B4FD27C7FA770004E0E2 /* HeapFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4FB27C7FA770004E0E2 /* HeapFrame.cpp */; };
+		D366B50427C7FCA00004E0E2 /* DrawLit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4FE27C7FCA00004E0E2 /* DrawLit.cpp */; };
+		D366B50527C7FCA00004E0E2 /* Texture.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B4FF27C7FCA00004E0E2 /* Texture.h */; };
+		D366B50627C7FCA00004E0E2 /* StaticTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B50027C7FCA00004E0E2 /* StaticTransform.cpp */; };
+		D366B50727C7FCA00004E0E2 /* DrawLit.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B50127C7FCA00004E0E2 /* DrawLit.h */; };
+		D366B50827C7FCA00004E0E2 /* StaticTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B50227C7FCA00004E0E2 /* StaticTransform.h */; };
+		D366B50927C7FCA00004E0E2 /* DebugLineDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B50327C7FCA00004E0E2 /* DebugLineDraw.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D34A48D427C9158E0083DD65 /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
+		D34A48D527C9158E0083DD65 /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Material.cpp; sourceTree = "<group>"; };
+		D34A48D927C915E50083DD65 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		D34A48DA27C915E50083DD65 /* Renderer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
+		D34A48DB27C915E50083DD65 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
+		D34A48DC27C915E50083DD65 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		D34A48DD27C915EC0083DD65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D34A48E227C915EC0083DD65 /* xfighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xfighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34A48E427C915EC0083DD65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D34A48E527C915EC0083DD65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D34A48E727C915EC0083DD65 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		D34A48E827C915EC0083DD65 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		D34A48EB27C915EC0083DD65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D34A48EE27C915EC0083DD65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D34A48F027C915EC0083DD65 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		D34A48F627C915EC0083DD65 /* xfighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xfighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34A48F827C915EC0083DD65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D34A48F927C915EC0083DD65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D34A48FB27C915EC0083DD65 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		D34A48FC27C915EC0083DD65 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		D34A48FF27C915EC0083DD65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D34A490227C915EC0083DD65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D34A490427C915EC0083DD65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D34A490A27C915EC0083DD65 /* xfighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xfighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34A490C27C915EC0083DD65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D34A490D27C915EC0083DD65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D34A490F27C915EC0083DD65 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		D34A491027C915EC0083DD65 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		D34A491327C915EC0083DD65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D34A491527C915EC0083DD65 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		D34A491727C915EC0083DD65 /* xfighter_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = xfighter_macOS.entitlements; sourceTree = "<group>"; };
+		D34A49BC27C94EAD0083DD65 /* xfighter_ios.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = xfighter_ios.xcconfig; sourceTree = "<group>"; };
+		D34A49BD27C94EFE0083DD65 /* xfighter.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xfighter.pch; sourceTree = "<group>"; };
+		D34A49BE27C94F9E0083DD65 /* i3d.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = i3d.cpp; sourceTree = "<group>"; };
+		D34A49C327C94FBE0083DD65 /* i3d.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = i3d.h; sourceTree = "<group>"; };
+		D34A49C427C9FD860083DD65 /* Texture_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture_base.cpp; sourceTree = "<group>"; };
+		D34A49C527C9FD860083DD65 /* TexStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TexStream.h; sourceTree = "<group>"; };
+		D34A49C627C9FD860083DD65 /* Render_local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Render_local.h; sourceTree = "<group>"; };
+		D34A49C727C9FD860083DD65 /* Texture_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture_base.h; sourceTree = "<group>"; };
+		D34A49C827C9FD860083DD65 /* ModelStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelStream.h; sourceTree = "<group>"; };
+		D34A49C927C9FD860083DD65 /* Render_local.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Render_local.cpp; sourceTree = "<group>"; };
+		D34A49CA27C9FD860083DD65 /* RenderBuffers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderBuffers.cpp; sourceTree = "<group>"; };
+		D34A49CB27C9FD860083DD65 /* RenderBuffers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderBuffers.h; sourceTree = "<group>"; };
+		D34A49F227C9FDD30083DD65 /* pbr.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = pbr.metal; sourceTree = "<group>"; };
+		D34A49F327C9FDD30083DD65 /* Debug3d.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Debug3d.metal; sourceTree = "<group>"; };
+		D34A49F427C9FDD30083DD65 /* TransformSkinTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformSkinTypes.h; sourceTree = "<group>"; };
+		D34A49F527C9FDD30083DD65 /* pbr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pbr.h; sourceTree = "<group>"; };
+		D34A49F627C9FDD30083DD65 /* TransformSkin.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = TransformSkin.metal; sourceTree = "<group>"; };
+		D34A49F727C9FDD30083DD65 /* draw3d_toon.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = draw3d_toon.metal; sourceTree = "<group>"; };
+		D34A49F827C9FDD30083DD65 /* draw3d_pbr_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = draw3d_pbr_types.h; sourceTree = "<group>"; };
+		D34A49F927C9FDD30083DD65 /* ArgumentBufferDummy.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = ArgumentBufferDummy.metal; sourceTree = "<group>"; };
+		D34A49FA27C9FDD30083DD65 /* TransformStatic.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = TransformStatic.metal; sourceTree = "<group>"; };
+		D34A49FB27C9FDD30083DD65 /* Debug3dTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug3dTypes.h; sourceTree = "<group>"; };
+		D34A49FC27C9FDD40083DD65 /* draw3d_pbr_bindless.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = draw3d_pbr_bindless.metal; sourceTree = "<group>"; };
+		D34A49FD27C9FDD40083DD65 /* draw3d_pbr.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = draw3d_pbr.metal; sourceTree = "<group>"; };
+		D34A49FE27C9FDD40083DD65 /* TextureArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureArguments.h; sourceTree = "<group>"; };
+		D34A49FF27C9FDD40083DD65 /* TransformStaticTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformStaticTypes.h; sourceTree = "<group>"; };
+		D34A4A0E27CA40510083DD65 /* xfighter_macos.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = xfighter_macos.xcconfig; sourceTree = "<group>"; };
+		D34A4A1327CA690E0083DD65 /* XFighter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = XFighter.cpp; sourceTree = "<group>"; };
+		D34A4A1427CA690E0083DD65 /* XFighter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFighter.h; sourceTree = "<group>"; };
+		D34A4A1A27CA6AFF0083DD65 /* farmhash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = farmhash.cpp; sourceTree = "<group>"; };
+		D366B37427C406860004E0E2 /* libi3d-macos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libi3d-macos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D366B39D27C408CB0004E0E2 /* i3d_base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_base.xcconfig; sourceTree = "<group>"; };
+		D366B39E27C409150004E0E2 /* i3d_lib.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_lib.xcconfig; sourceTree = "<group>"; };
+		D366B3A627C6A56C0004E0E2 /* Sys_macos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Sys_macos.mm; sourceTree = "<group>"; };
+		D366B3A827C6A56C0004E0E2 /* CVar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CVar.cpp; sourceTree = "<group>"; };
+		D366B3AA27C6A56C0004E0E2 /* Hash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hash.cpp; sourceTree = "<group>"; };
+		D366B3AC27C6A56C0004E0E2 /* FileSystem_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileSystem_common.cpp; sourceTree = "<group>"; };
+		D366B3AD27C6A56C0004E0E2 /* CVarManager_local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVarManager_local.h; sourceTree = "<group>"; };
+		D366B3AE27C6A56C0004E0E2 /* FileSystem_macos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FileSystem_macos.mm; sourceTree = "<group>"; };
+		D366B3B027C6A56C0004E0E2 /* Log_local.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log_local.cpp; sourceTree = "<group>"; };
+		D366B3B127C6A56C0004E0E2 /* Sys_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sys_common.h; sourceTree = "<group>"; };
+		D366B3B327C6A56C0004E0E2 /* FileSystem_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSystem_common.h; sourceTree = "<group>"; };
+		D366B3B527C6A56C0004E0E2 /* FileSystem_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FileSystem_ios.mm; sourceTree = "<group>"; };
+		D366B3B627C6A56C0004E0E2 /* Sys_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Sys_ios.mm; sourceTree = "<group>"; };
+		D366B3B727C6A56C0004E0E2 /* Sys_macos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sys_macos.h; sourceTree = "<group>"; };
+		D366B3B827C6A56C0004E0E2 /* Sys_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sys_common.cpp; sourceTree = "<group>"; };
+		D366B3B927C6A56D0004E0E2 /* Sys_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sys_ios.h; sourceTree = "<group>"; };
+		D366B3BB27C6A56D0004E0E2 /* Log_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log_common.cpp; sourceTree = "<group>"; };
+		D366B3BC27C6A56D0004E0E2 /* CVarManager_local.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CVarManager_local.cpp; sourceTree = "<group>"; };
+		D366B3EF27C6B17F0004E0E2 /* Matrix4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix4.cpp; sourceTree = "<group>"; };
+		D366B3F027C6B17F0004E0E2 /* Matrix3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix3.cpp; sourceTree = "<group>"; };
+		D366B3F127C6B17F0004E0E2 /* Quaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quaternion.cpp; sourceTree = "<group>"; };
+		D366B3F227C6B17F0004E0E2 /* Math3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Math3d.cpp; sourceTree = "<group>"; };
+		D366B3F827C6B19E0004E0E2 /* Gfx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gfx.cpp; sourceTree = "<group>"; };
+		D366B3F927C6B19E0004E0E2 /* GfxTexture_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxTexture_metal.h; sourceTree = "<group>"; };
+		D366B3FA27C6B19E0004E0E2 /* GfxGpuTextureArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxGpuTextureArray.h; sourceTree = "<group>"; };
+		D366B3FB27C6B19E0004E0E2 /* GfxBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxBuffer.h; sourceTree = "<group>"; };
+		D366B3FC27C6B19E0004E0E2 /* GfxFence_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxFence_metal.h; sourceTree = "<group>"; };
+		D366B3FD27C6B19E0004E0E2 /* GfxGpuPipeline_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GfxGpuPipeline_metal.mm; sourceTree = "<group>"; };
+		D366B3FE27C6B19E0004E0E2 /* GfxDepthState_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxDepthState_metal.h; sourceTree = "<group>"; };
+		D366B3FF27C6B19E0004E0E2 /* GfxPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxPass.h; sourceTree = "<group>"; };
+		D366B40027C6B19E0004E0E2 /* GfxVertexDesc_local.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GfxVertexDesc_local.cpp; sourceTree = "<group>"; };
+		D366B40127C6B19E0004E0E2 /* GfxPass_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GfxPass_metal.mm; sourceTree = "<group>"; };
+		D366B40227C6B19E0004E0E2 /* GfxRasterizeState_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxRasterizeState_metal.h; sourceTree = "<group>"; };
+		D366B40327C6B19E0004E0E2 /* GfxTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxTexture.h; sourceTree = "<group>"; };
+		D366B40427C6B19E0004E0E2 /* GfxFence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxFence.h; sourceTree = "<group>"; };
+		D366B40527C6B19E0004E0E2 /* GfxDepthState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxDepthState.h; sourceTree = "<group>"; };
+		D366B40627C6B19E0004E0E2 /* GfxTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxTypes.h; sourceTree = "<group>"; };
+		D366B40727C6B19E0004E0E2 /* GfxContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxContext.h; sourceTree = "<group>"; };
+		D366B40827C6B19E0004E0E2 /* GfxContext_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxContext_metal.h; sourceTree = "<group>"; };
+		D366B40927C6B19E0004E0E2 /* Gfx_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Gfx_metal.mm; sourceTree = "<group>"; };
+		D366B40A27C6B19E0004E0E2 /* GfxRasterizeState_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GfxRasterizeState_metal.mm; sourceTree = "<group>"; };
+		D366B40B27C6B19E0004E0E2 /* Gfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gfx.h; sourceTree = "<group>"; };
+		D366B40C27C6B19E0004E0E2 /* GfxPass_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxPass_metal.h; sourceTree = "<group>"; };
+		D366B40D27C6B19E0004E0E2 /* Gfx_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gfx_metal.h; sourceTree = "<group>"; };
+		D366B40E27C6B19E0004E0E2 /* GfxGpuTextureArray_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxGpuTextureArray_metal.h; sourceTree = "<group>"; };
+		D366B40F27C6B19F0004E0E2 /* GfxContext_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GfxContext_metal.mm; sourceTree = "<group>"; };
+		D366B41027C6B19F0004E0E2 /* GfxRasterizeState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxRasterizeState.h; sourceTree = "<group>"; };
+		D366B41127C6B19F0004E0E2 /* GfxBuffer_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GfxBuffer_metal.mm; sourceTree = "<group>"; };
+		D366B41227C6B19F0004E0E2 /* GfxGpuTextureArray_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GfxGpuTextureArray_metal.mm; sourceTree = "<group>"; };
+		D366B41327C6B19F0004E0E2 /* GfxGpuFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxGpuFunction.h; sourceTree = "<group>"; };
+		D366B41427C6B19F0004E0E2 /* GfxGpuFunction_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GfxGpuFunction_metal.mm; sourceTree = "<group>"; };
+		D366B41527C6B19F0004E0E2 /* GfxGpuPipeline_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxGpuPipeline_metal.h; sourceTree = "<group>"; };
+		D366B41627C6B19F0004E0E2 /* GfxVertexDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxVertexDesc.h; sourceTree = "<group>"; };
+		D366B41727C6B19F0004E0E2 /* GfxGpuPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxGpuPipeline.h; sourceTree = "<group>"; };
+		D366B41827C6B19F0004E0E2 /* GfxGpuFunction_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxGpuFunction_metal.h; sourceTree = "<group>"; };
+		D366B41927C6B19F0004E0E2 /* GfxTexture_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GfxTexture_metal.mm; sourceTree = "<group>"; };
+		D366B41A27C6B19F0004E0E2 /* GfxDepthState_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GfxDepthState_metal.mm; sourceTree = "<group>"; };
+		D366B41B27C6B19F0004E0E2 /* GfxBuffer_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxBuffer_metal.h; sourceTree = "<group>"; };
+		D366B41C27C6B19F0004E0E2 /* GfxFence_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GfxFence_metal.mm; sourceTree = "<group>"; };
+		D366B41D27C6B19F0004E0E2 /* GfxVertexDesc_local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxVertexDesc_local.h; sourceTree = "<group>"; };
+		D366B44827C6B3590004E0E2 /* ResourceCache_local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceCache_local.h; sourceTree = "<group>"; };
+		D366B44927C6B3590004E0E2 /* ResourceCompiler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceCompiler.cpp; sourceTree = "<group>"; };
+		D366B44A27C6B3590004E0E2 /* ResourceCompiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceCompiler.h; sourceTree = "<group>"; };
+		D366B44B27C6B3590004E0E2 /* ResourceCache_local.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceCache_local.cpp; sourceTree = "<group>"; };
+		D366B45127C6B6AA0004E0E2 /* Math3d.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Math3d.h; sourceTree = "<group>"; };
+		D366B45227C6B6AA0004E0E2 /* Vector2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector2.h; sourceTree = "<group>"; };
+		D366B45327C6B6AA0004E0E2 /* Math3dTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Math3dTypes.h; sourceTree = "<group>"; };
+		D366B45427C6B6AA0004E0E2 /* Scalar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scalar.h; sourceTree = "<group>"; };
+		D366B45527C6B6AA0004E0E2 /* Math3d.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = Math3d.inl; sourceTree = "<group>"; };
+		D366B45727C6B6AA0004E0E2 /* InputSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputSystem.h; sourceTree = "<group>"; };
+		D366B45827C6B6AA0004E0E2 /* InputEventArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputEventArray.h; sourceTree = "<group>"; };
+		D366B45927C6B6AA0004E0E2 /* InputTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputTypes.h; sourceTree = "<group>"; };
+		D366B45B27C6B6AA0004E0E2 /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
+		D366B45D27C6B6AA0004E0E2 /* FileSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileSystem.h; sourceTree = "<group>"; };
+		D366B45E27C6B6AA0004E0E2 /* Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		D366B45F27C6B6AA0004E0E2 /* Id.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Id.h; sourceTree = "<group>"; };
+		D366B46027C6B6AA0004E0E2 /* CVar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVar.h; sourceTree = "<group>"; };
+		D366B46127C6B6AA0004E0E2 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		D366B46227C6B6AA0004E0E2 /* Sys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sys.h; sourceTree = "<group>"; };
+		D366B46327C6B6AA0004E0E2 /* Hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
+		D366B46527C6B6AB0004E0E2 /* Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Render.h; sourceTree = "<group>"; };
+		D366B46727C6B7E20004E0E2 /* I3d.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = I3d.pch; sourceTree = "<group>"; };
+		D366B46C27C6B8510004E0E2 /* Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		D366B46D27C6B9DC0004E0E2 /* StlAllocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StlAllocator.h; sourceTree = "<group>"; };
+		D366B46E27C6BA450004E0E2 /* Stl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stl.h; sourceTree = "<group>"; };
+		D366B47A27C7CBA30004E0E2 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		D366B4BB27C7CD0A0004E0E2 /* RttiLexer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RttiLexer.cpp; sourceTree = "<group>"; };
+		D366B4BC27C7CD0A0004E0E2 /* RttiParser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RttiParser.hpp; sourceTree = "<group>"; };
+		D366B4BD27C7CD0B0004E0E2 /* RttiSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RttiSystem.h; sourceTree = "<group>"; };
+		D366B4BE27C7CD0B0004E0E2 /* RttiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RttiObject.h; sourceTree = "<group>"; };
+		D366B4BF27C7CD0B0004E0E2 /* RttiPropType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RttiPropType.h; sourceTree = "<group>"; };
+		D366B4C027C7CD0B0004E0E2 /* RttiPropTypeTraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RttiPropTypeTraits.h; sourceTree = "<group>"; };
+		D366B4C127C7CD0B0004E0E2 /* RttiSystem_local.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RttiSystem_local.cpp; sourceTree = "<group>"; };
+		D366B4C227C7CD0B0004E0E2 /* RttiSystem_local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RttiSystem_local.h; sourceTree = "<group>"; };
+		D366B4C327C7CD0B0004E0E2 /* RttiType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RttiType.cpp; sourceTree = "<group>"; };
+		D366B4C427C7CD0B0004E0E2 /* Rtti.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rtti.h; sourceTree = "<group>"; };
+		D366B4C527C7CD0B0004E0E2 /* RttiType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RttiType.h; sourceTree = "<group>"; };
+		D366B4C627C7CD0B0004E0E2 /* RttiStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RttiStream.cpp; sourceTree = "<group>"; };
+		D366B4C727C7CD0B0004E0E2 /* RttiObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RttiObject.cpp; sourceTree = "<group>"; };
+		D366B4C827C7CD0B0004E0E2 /* RttiLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RttiLoader.h; sourceTree = "<group>"; };
+		D366B4C927C7CD0B0004E0E2 /* RttiResource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RttiResource.cpp; sourceTree = "<group>"; };
+		D366B4CA27C7CD0B0004E0E2 /* RttiParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RttiParser.cpp; sourceTree = "<group>"; };
+		D366B4CB27C7CD0B0004E0E2 /* RttiStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RttiStream.h; sourceTree = "<group>"; };
+		D366B4CC27C7CD0B0004E0E2 /* RttiResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RttiResource.h; sourceTree = "<group>"; };
+		D366B4CD27C7CD0B0004E0E2 /* RttiLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RttiLoader.cpp; sourceTree = "<group>"; };
+		D366B4E327C7CF600004E0E2 /* Image_jpeg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image_jpeg.cpp; sourceTree = "<group>"; };
+		D366B4E427C7CF600004E0E2 /* LoaderBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoaderBase.h; sourceTree = "<group>"; };
+		D366B4E527C7CF600004E0E2 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		D366B4E627C7CF600004E0E2 /* LoaderBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoaderBase.cpp; sourceTree = "<group>"; };
+		D366B4E727C7CF600004E0E2 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
+		D366B4E827C7CF600004E0E2 /* Image_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image_png.cpp; sourceTree = "<group>"; };
+		D366B4EF27C7D4AA0004E0E2 /* RenderBatchCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderBatchCmd.h; sourceTree = "<group>"; };
+		D366B4F027C7D4AA0004E0E2 /* RenderBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderBatch.h; sourceTree = "<group>"; };
+		D366B4F127C7D4AA0004E0E2 /* RenderBatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderBatch.cpp; sourceTree = "<group>"; };
+		D366B4F527C7F9250004E0E2 /* Model_local.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model_local.cpp; sourceTree = "<group>"; };
+		D366B4F627C7F9250004E0E2 /* Model_local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_local.h; sourceTree = "<group>"; };
+		D366B4FA27C7FA770004E0E2 /* HeapFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeapFrame.h; sourceTree = "<group>"; };
+		D366B4FB27C7FA770004E0E2 /* HeapFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HeapFrame.cpp; sourceTree = "<group>"; };
+		D366B4FE27C7FCA00004E0E2 /* DrawLit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawLit.cpp; sourceTree = "<group>"; };
+		D366B4FF27C7FCA00004E0E2 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		D366B50027C7FCA00004E0E2 /* StaticTransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StaticTransform.cpp; sourceTree = "<group>"; };
+		D366B50127C7FCA00004E0E2 /* DrawLit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLit.h; sourceTree = "<group>"; };
+		D366B50227C7FCA00004E0E2 /* StaticTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTransform.h; sourceTree = "<group>"; };
+		D366B50327C7FCA00004E0E2 /* DebugLineDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebugLineDraw.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D34A48DF27C915EC0083DD65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34A48F327C915EC0083DD65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34A490727C915EC0083DD65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D366B37227C406860004E0E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D34A48D827C915E50083DD65 /* xfighterShared */ = {
+			isa = PBXGroup;
+			children = (
+				D34A48D927C915E50083DD65 /* Renderer.h */,
+				D34A48DA27C915E50083DD65 /* Renderer.mm */,
+				D34A48DB27C915E50083DD65 /* ShaderTypes.h */,
+				D34A48DC27C915E50083DD65 /* Shaders.metal */,
+				D34A48DD27C915EC0083DD65 /* Assets.xcassets */,
+			);
+			path = xfighterShared;
+			sourceTree = "<group>";
+		};
+		D34A48E327C915EC0083DD65 /* xfighter iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D34A48E427C915EC0083DD65 /* AppDelegate.h */,
+				D34A48E527C915EC0083DD65 /* AppDelegate.m */,
+				D34A48E727C915EC0083DD65 /* GameViewController.h */,
+				D34A48E827C915EC0083DD65 /* GameViewController.m */,
+				D34A48EA27C915EC0083DD65 /* Main.storyboard */,
+				D34A48ED27C915EC0083DD65 /* LaunchScreen.storyboard */,
+				D34A48F027C915EC0083DD65 /* main.mm */,
+			);
+			path = "xfighter iOS";
+			sourceTree = "<group>";
+		};
+		D34A48F727C915EC0083DD65 /* xfighter tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				D34A48F827C915EC0083DD65 /* AppDelegate.h */,
+				D34A48F927C915EC0083DD65 /* AppDelegate.m */,
+				D34A48FB27C915EC0083DD65 /* GameViewController.h */,
+				D34A48FC27C915EC0083DD65 /* GameViewController.m */,
+				D34A48FE27C915EC0083DD65 /* Main.storyboard */,
+				D34A490127C915EC0083DD65 /* LaunchScreen.storyboard */,
+				D34A490427C915EC0083DD65 /* main.m */,
+			);
+			path = "xfighter tvOS";
+			sourceTree = "<group>";
+		};
+		D34A490B27C915EC0083DD65 /* xfighter macOS */ = {
+			isa = PBXGroup;
+			children = (
+				D34A490C27C915EC0083DD65 /* AppDelegate.h */,
+				D34A490D27C915EC0083DD65 /* AppDelegate.m */,
+				D34A490F27C915EC0083DD65 /* GameViewController.h */,
+				D34A491027C915EC0083DD65 /* GameViewController.m */,
+				D34A491227C915EC0083DD65 /* Main.storyboard */,
+				D34A491527C915EC0083DD65 /* main.mm */,
+				D34A491727C915EC0083DD65 /* xfighter_macOS.entitlements */,
+			);
+			path = "xfighter macOS";
+			sourceTree = "<group>";
+		};
+		D34A49F027C9FDAE0083DD65 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				D34A49F127C9FDBD0083DD65 /* metal */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		D34A49F127C9FDBD0083DD65 /* metal */ = {
+			isa = PBXGroup;
+			children = (
+				D34A49FB27C9FDD30083DD65 /* Debug3dTypes.h */,
+				D34A49F827C9FDD30083DD65 /* draw3d_pbr_types.h */,
+				D34A49F527C9FDD30083DD65 /* pbr.h */,
+				D34A49FE27C9FDD40083DD65 /* TextureArguments.h */,
+				D34A49F427C9FDD30083DD65 /* TransformSkinTypes.h */,
+				D34A49FF27C9FDD40083DD65 /* TransformStaticTypes.h */,
+				D34A49F927C9FDD30083DD65 /* ArgumentBufferDummy.metal */,
+				D34A49F327C9FDD30083DD65 /* Debug3d.metal */,
+				D34A49FC27C9FDD40083DD65 /* draw3d_pbr_bindless.metal */,
+				D34A49FD27C9FDD40083DD65 /* draw3d_pbr.metal */,
+				D34A49F727C9FDD30083DD65 /* draw3d_toon.metal */,
+				D34A49F227C9FDD30083DD65 /* pbr.metal */,
+				D34A49F627C9FDD30083DD65 /* TransformSkin.metal */,
+				D34A49FA27C9FDD30083DD65 /* TransformStatic.metal */,
+			);
+			path = metal;
+			sourceTree = "<group>";
+		};
+		D34A4A1127CA68F70083DD65 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				D34A4A1227CA68FC0083DD65 /* xfighter */,
+			);
+			path = game;
+			sourceTree = "<group>";
+		};
+		D34A4A1227CA68FC0083DD65 /* xfighter */ = {
+			isa = PBXGroup;
+			children = (
+				D34A4A1327CA690E0083DD65 /* XFighter.cpp */,
+				D34A4A1427CA690E0083DD65 /* XFighter.h */,
+			);
+			path = xfighter;
+			sourceTree = "<group>";
+		};
+		D366B36927C406370004E0E2 = {
+			isa = PBXGroup;
+			children = (
+				D366B39C27C408B70004E0E2 /* project */,
+				D366B38027C4068B0004E0E2 /* source */,
+				D366B37527C406860004E0E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D366B37527C406860004E0E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D366B37427C406860004E0E2 /* libi3d-macos.a */,
+				D34A48E227C915EC0083DD65 /* xfighter.app */,
+				D34A48F627C915EC0083DD65 /* xfighter.app */,
+				D34A490A27C915EC0083DD65 /* xfighter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D366B38027C4068B0004E0E2 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				D366B38227C406AC0004E0E2 /* i3d */,
+			);
+			name = source;
+			path = ../../../source;
+			sourceTree = "<group>";
+		};
+		D366B38127C4069C0004E0E2 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D366B3A427C6A5240004E0E2 /* i3d */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D366B38227C406AC0004E0E2 /* i3d */ = {
+			isa = PBXGroup;
+			children = (
+				D366B38D27C406EB0004E0E2 /* source */,
+				D366B38127C4069C0004E0E2 /* include */,
+			);
+			path = i3d;
+			sourceTree = "<group>";
+		};
+		D366B38D27C406EB0004E0E2 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				D34A4A1127CA68F70083DD65 /* game */,
+				D366B3D427C6A5B40004E0E2 /* i3d */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		D366B39C27C408B70004E0E2 /* project */ = {
+			isa = PBXGroup;
+			children = (
+				D34A48D827C915E50083DD65 /* xfighterShared */,
+				D34A48E327C915EC0083DD65 /* xfighter iOS */,
+				D34A48F727C915EC0083DD65 /* xfighter tvOS */,
+				D34A490B27C915EC0083DD65 /* xfighter macOS */,
+				D366B39D27C408CB0004E0E2 /* i3d_base.xcconfig */,
+				D366B39E27C409150004E0E2 /* i3d_lib.xcconfig */,
+				D366B46727C6B7E20004E0E2 /* I3d.pch */,
+				D34A49BC27C94EAD0083DD65 /* xfighter_ios.xcconfig */,
+				D34A49BD27C94EFE0083DD65 /* xfighter.pch */,
+				D34A4A0E27CA40510083DD65 /* xfighter_macos.xcconfig */,
+			);
+			name = project;
+			sourceTree = "<group>";
+		};
+		D366B3A427C6A5240004E0E2 /* i3d */ = {
+			isa = PBXGroup;
+			children = (
+				D34A49C327C94FBE0083DD65 /* i3d.h */,
+				D366B4E127C7CD140004E0E2 /* rtti */,
+				D366B45C27C6B6AA0004E0E2 /* core */,
+				D366B45627C6B6AA0004E0E2 /* input */,
+				D366B45027C6B6AA0004E0E2 /* math */,
+				D366B46427C6B6AB0004E0E2 /* render */,
+				D366B45A27C6B6AA0004E0E2 /* res */,
+			);
+			path = i3d;
+			sourceTree = "<group>";
+		};
+		D366B3D427C6A5B40004E0E2 /* i3d */ = {
+			isa = PBXGroup;
+			children = (
+				D366B4F927C7FA480004E0E2 /* mem */,
+				D366B4E227C7CF2A0004E0E2 /* util */,
+				D366B4BA27C7CCCD0004E0E2 /* rtti */,
+				D366B46F27C7CB910004E0E2 /* render */,
+				D366B44727C6B3470004E0E2 /* res */,
+				D366B3F727C6B18D0004E0E2 /* gfx */,
+				D366B3D627C6B08E0004E0E2 /* math */,
+				D366B3D527C6B0800004E0E2 /* core */,
+				D34A49BE27C94F9E0083DD65 /* i3d.cpp */,
+			);
+			path = i3d;
+			sourceTree = "<group>";
+		};
+		D366B3D527C6B0800004E0E2 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				D34A4A1A27CA6AFF0083DD65 /* farmhash.cpp */,
+				D366B3A827C6A56C0004E0E2 /* CVar.cpp */,
+				D366B3BC27C6A56D0004E0E2 /* CVarManager_local.cpp */,
+				D366B3AC27C6A56C0004E0E2 /* FileSystem_common.cpp */,
+				D366B3AA27C6A56C0004E0E2 /* Hash.cpp */,
+				D366B3BB27C6A56D0004E0E2 /* Log_common.cpp */,
+				D366B3B027C6A56C0004E0E2 /* Log_local.cpp */,
+				D366B3B827C6A56C0004E0E2 /* Sys_common.cpp */,
+				D366B3AD27C6A56C0004E0E2 /* CVarManager_local.h */,
+				D366B3B327C6A56C0004E0E2 /* FileSystem_common.h */,
+				D366B3B127C6A56C0004E0E2 /* Sys_common.h */,
+				D366B3B927C6A56D0004E0E2 /* Sys_ios.h */,
+				D366B3B727C6A56C0004E0E2 /* Sys_macos.h */,
+				D366B3B527C6A56C0004E0E2 /* FileSystem_ios.mm */,
+				D366B3AE27C6A56C0004E0E2 /* FileSystem_macos.mm */,
+				D366B3B627C6A56C0004E0E2 /* Sys_ios.mm */,
+				D366B3A627C6A56C0004E0E2 /* Sys_macos.mm */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		D366B3D627C6B08E0004E0E2 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				D366B3F227C6B17F0004E0E2 /* Math3d.cpp */,
+				D366B3F027C6B17F0004E0E2 /* Matrix3.cpp */,
+				D366B3EF27C6B17F0004E0E2 /* Matrix4.cpp */,
+				D366B3F127C6B17F0004E0E2 /* Quaternion.cpp */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+		D366B3F727C6B18D0004E0E2 /* gfx */ = {
+			isa = PBXGroup;
+			children = (
+				D366B3F827C6B19E0004E0E2 /* Gfx.cpp */,
+				D366B40027C6B19E0004E0E2 /* GfxVertexDesc_local.cpp */,
+				D366B40D27C6B19E0004E0E2 /* Gfx_metal.h */,
+				D366B40B27C6B19E0004E0E2 /* Gfx.h */,
+				D366B41B27C6B19F0004E0E2 /* GfxBuffer_metal.h */,
+				D366B3FB27C6B19E0004E0E2 /* GfxBuffer.h */,
+				D366B40827C6B19E0004E0E2 /* GfxContext_metal.h */,
+				D366B40727C6B19E0004E0E2 /* GfxContext.h */,
+				D366B3FE27C6B19E0004E0E2 /* GfxDepthState_metal.h */,
+				D366B40527C6B19E0004E0E2 /* GfxDepthState.h */,
+				D366B3FC27C6B19E0004E0E2 /* GfxFence_metal.h */,
+				D366B40427C6B19E0004E0E2 /* GfxFence.h */,
+				D366B41827C6B19F0004E0E2 /* GfxGpuFunction_metal.h */,
+				D366B41327C6B19F0004E0E2 /* GfxGpuFunction.h */,
+				D366B41527C6B19F0004E0E2 /* GfxGpuPipeline_metal.h */,
+				D366B41727C6B19F0004E0E2 /* GfxGpuPipeline.h */,
+				D366B40E27C6B19E0004E0E2 /* GfxGpuTextureArray_metal.h */,
+				D366B3FA27C6B19E0004E0E2 /* GfxGpuTextureArray.h */,
+				D366B40C27C6B19E0004E0E2 /* GfxPass_metal.h */,
+				D366B3FF27C6B19E0004E0E2 /* GfxPass.h */,
+				D366B40227C6B19E0004E0E2 /* GfxRasterizeState_metal.h */,
+				D366B41027C6B19F0004E0E2 /* GfxRasterizeState.h */,
+				D366B3F927C6B19E0004E0E2 /* GfxTexture_metal.h */,
+				D366B40327C6B19E0004E0E2 /* GfxTexture.h */,
+				D366B40627C6B19E0004E0E2 /* GfxTypes.h */,
+				D366B41D27C6B19F0004E0E2 /* GfxVertexDesc_local.h */,
+				D366B41627C6B19F0004E0E2 /* GfxVertexDesc.h */,
+				D366B40927C6B19E0004E0E2 /* Gfx_metal.mm */,
+				D366B41127C6B19F0004E0E2 /* GfxBuffer_metal.mm */,
+				D366B40F27C6B19F0004E0E2 /* GfxContext_metal.mm */,
+				D366B41A27C6B19F0004E0E2 /* GfxDepthState_metal.mm */,
+				D366B41C27C6B19F0004E0E2 /* GfxFence_metal.mm */,
+				D366B41427C6B19F0004E0E2 /* GfxGpuFunction_metal.mm */,
+				D366B3FD27C6B19E0004E0E2 /* GfxGpuPipeline_metal.mm */,
+				D366B41227C6B19F0004E0E2 /* GfxGpuTextureArray_metal.mm */,
+				D366B40127C6B19E0004E0E2 /* GfxPass_metal.mm */,
+				D366B40A27C6B19E0004E0E2 /* GfxRasterizeState_metal.mm */,
+				D366B41927C6B19F0004E0E2 /* GfxTexture_metal.mm */,
+			);
+			path = gfx;
+			sourceTree = "<group>";
+		};
+		D366B44727C6B3470004E0E2 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				D366B44827C6B3590004E0E2 /* ResourceCache_local.h */,
+				D366B44B27C6B3590004E0E2 /* ResourceCache_local.cpp */,
+				D366B44927C6B3590004E0E2 /* ResourceCompiler.cpp */,
+				D366B44A27C6B3590004E0E2 /* ResourceCompiler.h */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		D366B45027C6B6AA0004E0E2 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				D366B45127C6B6AA0004E0E2 /* Math3d.h */,
+				D366B45227C6B6AA0004E0E2 /* Vector2.h */,
+				D366B45327C6B6AA0004E0E2 /* Math3dTypes.h */,
+				D366B45427C6B6AA0004E0E2 /* Scalar.h */,
+				D366B45527C6B6AA0004E0E2 /* Math3d.inl */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+		D366B45627C6B6AA0004E0E2 /* input */ = {
+			isa = PBXGroup;
+			children = (
+				D366B45727C6B6AA0004E0E2 /* InputSystem.h */,
+				D366B45827C6B6AA0004E0E2 /* InputEventArray.h */,
+				D366B45927C6B6AA0004E0E2 /* InputTypes.h */,
+			);
+			path = input;
+			sourceTree = "<group>";
+		};
+		D366B45A27C6B6AA0004E0E2 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				D366B45B27C6B6AA0004E0E2 /* Resource.h */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		D366B45C27C6B6AA0004E0E2 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				D366B46D27C6B9DC0004E0E2 /* StlAllocator.h */,
+				D366B46E27C6BA450004E0E2 /* Stl.h */,
+				D366B46C27C6B8510004E0E2 /* Array.h */,
+				D366B45D27C6B6AA0004E0E2 /* FileSystem.h */,
+				D366B45E27C6B6AA0004E0E2 /* Types.h */,
+				D366B45F27C6B6AA0004E0E2 /* Id.h */,
+				D366B46027C6B6AA0004E0E2 /* CVar.h */,
+				D366B46127C6B6AA0004E0E2 /* Log.h */,
+				D366B46227C6B6AA0004E0E2 /* Sys.h */,
+				D366B46327C6B6AA0004E0E2 /* Hash.h */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		D366B46427C6B6AB0004E0E2 /* render */ = {
+			isa = PBXGroup;
+			children = (
+				D34A48D427C9158E0083DD65 /* Material.h */,
+				D366B4FF27C7FCA00004E0E2 /* Texture.h */,
+				D366B47A27C7CBA30004E0E2 /* Model.h */,
+				D366B46527C6B6AB0004E0E2 /* Render.h */,
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
+		D366B46F27C7CB910004E0E2 /* render */ = {
+			isa = PBXGroup;
+			children = (
+				D34A49F027C9FDAE0083DD65 /* shaders */,
+				D366B50327C7FCA00004E0E2 /* DebugLineDraw.cpp */,
+				D366B4FE27C7FCA00004E0E2 /* DrawLit.cpp */,
+				D34A48D527C9158E0083DD65 /* Material.cpp */,
+				D366B4F527C7F9250004E0E2 /* Model_local.cpp */,
+				D34A49C927C9FD860083DD65 /* Render_local.cpp */,
+				D366B4F127C7D4AA0004E0E2 /* RenderBatch.cpp */,
+				D34A49CA27C9FD860083DD65 /* RenderBuffers.cpp */,
+				D366B50027C7FCA00004E0E2 /* StaticTransform.cpp */,
+				D34A49C427C9FD860083DD65 /* Texture_base.cpp */,
+				D366B50127C7FCA00004E0E2 /* DrawLit.h */,
+				D366B4F627C7F9250004E0E2 /* Model_local.h */,
+				D34A49C827C9FD860083DD65 /* ModelStream.h */,
+				D34A49C627C9FD860083DD65 /* Render_local.h */,
+				D366B4F027C7D4AA0004E0E2 /* RenderBatch.h */,
+				D366B4EF27C7D4AA0004E0E2 /* RenderBatchCmd.h */,
+				D34A49CB27C9FD860083DD65 /* RenderBuffers.h */,
+				D366B50227C7FCA00004E0E2 /* StaticTransform.h */,
+				D34A49C527C9FD860083DD65 /* TexStream.h */,
+				D34A49C727C9FD860083DD65 /* Texture_base.h */,
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
+		D366B4BA27C7CCCD0004E0E2 /* rtti */ = {
+			isa = PBXGroup;
+			children = (
+				D366B4C427C7CD0B0004E0E2 /* Rtti.h */,
+				D366B4BB27C7CD0A0004E0E2 /* RttiLexer.cpp */,
+				D366B4CD27C7CD0B0004E0E2 /* RttiLoader.cpp */,
+				D366B4C827C7CD0B0004E0E2 /* RttiLoader.h */,
+				D366B4C727C7CD0B0004E0E2 /* RttiObject.cpp */,
+				D366B4CA27C7CD0B0004E0E2 /* RttiParser.cpp */,
+				D366B4BC27C7CD0A0004E0E2 /* RttiParser.hpp */,
+				D366B4BF27C7CD0B0004E0E2 /* RttiPropType.h */,
+				D366B4C027C7CD0B0004E0E2 /* RttiPropTypeTraits.h */,
+				D366B4C927C7CD0B0004E0E2 /* RttiResource.cpp */,
+				D366B4CC27C7CD0B0004E0E2 /* RttiResource.h */,
+				D366B4C627C7CD0B0004E0E2 /* RttiStream.cpp */,
+				D366B4C127C7CD0B0004E0E2 /* RttiSystem_local.cpp */,
+				D366B4C227C7CD0B0004E0E2 /* RttiSystem_local.h */,
+				D366B4C327C7CD0B0004E0E2 /* RttiType.cpp */,
+			);
+			path = rtti;
+			sourceTree = "<group>";
+		};
+		D366B4E127C7CD140004E0E2 /* rtti */ = {
+			isa = PBXGroup;
+			children = (
+				D366B4BD27C7CD0B0004E0E2 /* RttiSystem.h */,
+				D366B4BE27C7CD0B0004E0E2 /* RttiObject.h */,
+				D366B4CB27C7CD0B0004E0E2 /* RttiStream.h */,
+				D366B4C527C7CD0B0004E0E2 /* RttiType.h */,
+			);
+			path = rtti;
+			sourceTree = "<group>";
+		};
+		D366B4E227C7CF2A0004E0E2 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				D366B4E327C7CF600004E0E2 /* Image_jpeg.cpp */,
+				D366B4E827C7CF600004E0E2 /* Image_png.cpp */,
+				D366B4E727C7CF600004E0E2 /* Image.cpp */,
+				D366B4E527C7CF600004E0E2 /* Image.h */,
+				D366B4E627C7CF600004E0E2 /* LoaderBase.cpp */,
+				D366B4E427C7CF600004E0E2 /* LoaderBase.h */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		D366B4F927C7FA480004E0E2 /* mem */ = {
+			isa = PBXGroup;
+			children = (
+				D366B4FB27C7FA770004E0E2 /* HeapFrame.cpp */,
+				D366B4FA27C7FA770004E0E2 /* HeapFrame.h */,
+			);
+			path = mem;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D366B37027C406860004E0E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D366B42D27C6B19F0004E0E2 /* GfxContext.h in Headers */,
+				D366B4D027C7CD0B0004E0E2 /* RttiSystem.h in Headers */,
+				D366B42927C6B19F0004E0E2 /* GfxTexture.h in Headers */,
+				D366B42B27C6B19F0004E0E2 /* GfxDepthState.h in Headers */,
+				D366B4D327C7CD0B0004E0E2 /* RttiPropTypeTraits.h in Headers */,
+				D366B42527C6B19F0004E0E2 /* GfxPass.h in Headers */,
+				D366B4D227C7CD0B0004E0E2 /* RttiPropType.h in Headers */,
+				D34A4A1627CA690E0083DD65 /* XFighter.h in Headers */,
+				D34A49D027C9FD860083DD65 /* ModelStream.h in Headers */,
+				D366B3CE27C6A56D0004E0E2 /* Sys_macos.h in Headers */,
+				D366B4D727C7CD0B0004E0E2 /* Rtti.h in Headers */,
+				D366B44E27C6B3590004E0E2 /* ResourceCompiler.h in Headers */,
+				D366B43D27C6B19F0004E0E2 /* GfxGpuPipeline.h in Headers */,
+				D366B42027C6B19F0004E0E2 /* GfxGpuTextureArray.h in Headers */,
+				D366B4D527C7CD0B0004E0E2 /* RttiSystem_local.h in Headers */,
+				D366B4D127C7CD0B0004E0E2 /* RttiObject.h in Headers */,
+				D366B3D027C6A56D0004E0E2 /* Sys_ios.h in Headers */,
+				D366B4EA27C7CF600004E0E2 /* LoaderBase.h in Headers */,
+				D366B42127C6B19F0004E0E2 /* GfxBuffer.h in Headers */,
+				D366B50727C7FCA00004E0E2 /* DrawLit.h in Headers */,
+				D366B42827C6B19F0004E0E2 /* GfxRasterizeState_metal.h in Headers */,
+				D34A4A0227C9FDD40083DD65 /* TransformSkinTypes.h in Headers */,
+				D366B42A27C6B19F0004E0E2 /* GfxFence.h in Headers */,
+				D366B44C27C6B3590004E0E2 /* ResourceCache_local.h in Headers */,
+				D366B43E27C6B19F0004E0E2 /* GfxGpuFunction_metal.h in Headers */,
+				D366B3C427C6A56D0004E0E2 /* CVarManager_local.h in Headers */,
+				D366B43627C6B19F0004E0E2 /* GfxRasterizeState.h in Headers */,
+				D366B42E27C6B19F0004E0E2 /* GfxContext_metal.h in Headers */,
+				D366B4F227C7D4AA0004E0E2 /* RenderBatchCmd.h in Headers */,
+				D366B42C27C6B19F0004E0E2 /* GfxTypes.h in Headers */,
+				D366B43227C6B19F0004E0E2 /* GfxPass_metal.h in Headers */,
+				D34A49CD27C9FD860083DD65 /* TexStream.h in Headers */,
+				D34A49D327C9FD860083DD65 /* RenderBuffers.h in Headers */,
+				D34A49CE27C9FD860083DD65 /* Render_local.h in Headers */,
+				D366B43927C6B19F0004E0E2 /* GfxGpuFunction.h in Headers */,
+				D366B43427C6B19F0004E0E2 /* GfxGpuTextureArray_metal.h in Headers */,
+				D366B43C27C6B19F0004E0E2 /* GfxVertexDesc.h in Headers */,
+				D366B50827C7FCA00004E0E2 /* StaticTransform.h in Headers */,
+				D34A4A0D27C9FDD40083DD65 /* TransformStaticTypes.h in Headers */,
+				D366B44327C6B19F0004E0E2 /* GfxVertexDesc_local.h in Headers */,
+				D366B41F27C6B19F0004E0E2 /* GfxTexture_metal.h in Headers */,
+				D34A4A0327C9FDD40083DD65 /* pbr.h in Headers */,
+				D366B4F327C7D4AA0004E0E2 /* RenderBatch.h in Headers */,
+				D366B4DE27C7CD0B0004E0E2 /* RttiStream.h in Headers */,
+				D366B4DB27C7CD0B0004E0E2 /* RttiLoader.h in Headers */,
+				D366B43327C6B19F0004E0E2 /* Gfx_metal.h in Headers */,
+				D366B44127C6B19F0004E0E2 /* GfxBuffer_metal.h in Headers */,
+				D34A4A0927C9FDD40083DD65 /* Debug3dTypes.h in Headers */,
+				D366B43B27C6B19F0004E0E2 /* GfxGpuPipeline_metal.h in Headers */,
+				D366B50527C7FCA00004E0E2 /* Texture.h in Headers */,
+				D366B49F27C7CBA40004E0E2 /* Model.h in Headers */,
+				D366B43127C6B19F0004E0E2 /* Gfx.h in Headers */,
+				D366B4DF27C7CD0B0004E0E2 /* RttiResource.h in Headers */,
+				D366B42427C6B19F0004E0E2 /* GfxDepthState_metal.h in Headers */,
+				D366B4CF27C7CD0B0004E0E2 /* RttiParser.hpp in Headers */,
+				D34A4A0C27C9FDD40083DD65 /* TextureArguments.h in Headers */,
+				D366B3C827C6A56D0004E0E2 /* Sys_common.h in Headers */,
+				D34A48D627C9158E0083DD65 /* Material.h in Headers */,
+				D366B4D827C7CD0B0004E0E2 /* RttiType.h in Headers */,
+				D366B4FC27C7FA770004E0E2 /* HeapFrame.h in Headers */,
+				D366B3CA27C6A56D0004E0E2 /* FileSystem_common.h in Headers */,
+				D366B4F827C7F9250004E0E2 /* Model_local.h in Headers */,
+				D366B42227C6B19F0004E0E2 /* GfxFence_metal.h in Headers */,
+				D34A4A0627C9FDD40083DD65 /* draw3d_pbr_types.h in Headers */,
+				D34A49CF27C9FD860083DD65 /* Texture_base.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D34A48E127C915EC0083DD65 /* xfighter iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D34A492127C915EC0083DD65 /* Build configuration list for PBXNativeTarget "xfighter iOS" */;
+			buildPhases = (
+				D34A48DE27C915EC0083DD65 /* Sources */,
+				D34A48DF27C915EC0083DD65 /* Frameworks */,
+				D34A48E027C915EC0083DD65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "xfighter iOS";
+			productName = "xfighter iOS";
+			productReference = D34A48E227C915EC0083DD65 /* xfighter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D34A48F527C915EC0083DD65 /* xfighter tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D34A492427C915EC0083DD65 /* Build configuration list for PBXNativeTarget "xfighter tvOS" */;
+			buildPhases = (
+				D34A48F227C915EC0083DD65 /* Sources */,
+				D34A48F327C915EC0083DD65 /* Frameworks */,
+				D34A48F427C915EC0083DD65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "xfighter tvOS";
+			productName = "xfighter tvOS";
+			productReference = D34A48F627C915EC0083DD65 /* xfighter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D34A490927C915EC0083DD65 /* xfighter macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D34A492727C915EC0083DD65 /* Build configuration list for PBXNativeTarget "xfighter macOS" */;
+			buildPhases = (
+				D34A490627C915EC0083DD65 /* Sources */,
+				D34A490727C915EC0083DD65 /* Frameworks */,
+				D34A490827C915EC0083DD65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "xfighter macOS";
+			productName = "xfighter macOS";
+			productReference = D34A490A27C915EC0083DD65 /* xfighter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D366B37327C406860004E0E2 /* i3d-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D366B37D27C406860004E0E2 /* Build configuration list for PBXNativeTarget "i3d-macos" */;
+			buildPhases = (
+				D366B37027C406860004E0E2 /* Headers */,
+				D366B37127C406860004E0E2 /* Sources */,
+				D366B37227C406860004E0E2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "i3d-macos";
+			productName = "i3d-macos";
+			productReference = D366B37427C406860004E0E2 /* libi3d-macos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D366B36A27C406370004E0E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					D34A48E127C915EC0083DD65 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D34A48F527C915EC0083DD65 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D34A490927C915EC0083DD65 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D366B37327C406860004E0E2 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = D366B36D27C406370004E0E2 /* Build configuration list for PBXProject "insanity3d" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D366B36927C406370004E0E2;
+			productRefGroup = D366B37527C406860004E0E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D366B37327C406860004E0E2 /* i3d-macos */,
+				D34A48E127C915EC0083DD65 /* xfighter iOS */,
+				D34A48F527C915EC0083DD65 /* xfighter tvOS */,
+				D34A490927C915EC0083DD65 /* xfighter macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D34A48E027C915EC0083DD65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34A48EC27C915EC0083DD65 /* Main.storyboard in Resources */,
+				D34A491E27C915EC0083DD65 /* Assets.xcassets in Resources */,
+				D34A48EF27C915EC0083DD65 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34A48F427C915EC0083DD65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34A490027C915EC0083DD65 /* Main.storyboard in Resources */,
+				D34A491F27C915EC0083DD65 /* Assets.xcassets in Resources */,
+				D34A490327C915EC0083DD65 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34A490827C915EC0083DD65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34A492027C915EC0083DD65 /* Assets.xcassets in Resources */,
+				D34A491427C915EC0083DD65 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D34A48DE27C915EC0083DD65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34A498627C916450083DD65 /* ResourceCache_local.cpp in Sources */,
+				D34A493227C9161C0083DD65 /* Log_local.cpp in Sources */,
+				D34A495C27C916390083DD65 /* GfxContext_metal.mm in Sources */,
+				D34A4A2227CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */,
+				D34A492D27C9161C0083DD65 /* CVarManager_local.cpp in Sources */,
+				D34A493127C9161C0083DD65 /* Log_common.cpp in Sources */,
+				D34A49E127C9FD960083DD65 /* Model_local.cpp in Sources */,
+				D34A49A227C916600083DD65 /* RttiLexer.cpp in Sources */,
+				D34A491827C915EC0083DD65 /* Renderer.mm in Sources */,
+				D34A49DF27C9FD960083DD65 /* Texture_base.cpp in Sources */,
+				D34A4A2427CA9ECA0083DD65 /* TransformStatic.metal in Sources */,
+				D34A495327C916390083DD65 /* Gfx_metal.mm in Sources */,
+				D34A494227C9162B0083DD65 /* Matrix3.cpp in Sources */,
+				D34A495827C916390083DD65 /* GfxVertexDesc_local.cpp in Sources */,
+				D34A49A427C916600083DD65 /* RttiLoader.cpp in Sources */,
+				D34A49A027C916600083DD65 /* RttiObject.cpp in Sources */,
+				D34A492A27C916180083DD65 /* Sys_ios.mm in Sources */,
+				D34A49B827C916670083DD65 /* LoaderBase.cpp in Sources */,
+				D34A495427C916390083DD65 /* GfxFence_metal.mm in Sources */,
+				D34A49DA27C9FD960083DD65 /* DrawLit.cpp in Sources */,
+				D34A4A1727CA69140083DD65 /* XFighter.cpp in Sources */,
+				D34A48E927C915EC0083DD65 /* GameViewController.m in Sources */,
+				D34A49E227C9FD960083DD65 /* DebugLineDraw.cpp in Sources */,
+				D34A499E27C916600083DD65 /* RttiSystem_local.cpp in Sources */,
+				D34A492C27C9161C0083DD65 /* FileSystem_common.cpp in Sources */,
+				D34A4A1C27CA6AFF0083DD65 /* farmhash.cpp in Sources */,
+				D34A492F27C9161C0083DD65 /* Sys_common.cpp in Sources */,
+				D34A49B927C9166C0083DD65 /* HeapFrame.cpp in Sources */,
+				D34A49A527C916600083DD65 /* RttiStream.cpp in Sources */,
+				D34A48F127C915EC0083DD65 /* main.mm in Sources */,
+				D34A495927C916390083DD65 /* GfxBuffer_metal.mm in Sources */,
+				D34A492B27C916180083DD65 /* FileSystem_ios.mm in Sources */,
+				D34A4A2027CA9ECA0083DD65 /* pbr.metal in Sources */,
+				D34A495A27C916390083DD65 /* GfxDepthState_metal.mm in Sources */,
+				D34A494427C9162B0083DD65 /* Quaternion.cpp in Sources */,
+				D34A495B27C916390083DD65 /* GfxRasterizeState_metal.mm in Sources */,
+				D34A49DB27C9FD960083DD65 /* RenderBuffers.cpp in Sources */,
+				D34A495227C916390083DD65 /* GfxGpuFunction_metal.mm in Sources */,
+				D34A4A1F27CA9ECA0083DD65 /* draw3d_pbr_bindless.metal in Sources */,
+				D34A48E627C915EC0083DD65 /* AppDelegate.m in Sources */,
+				D34A4A2127CA9ECA0083DD65 /* Debug3d.metal in Sources */,
+				D34A493027C9161C0083DD65 /* CVar.cpp in Sources */,
+				D34A494327C9162B0083DD65 /* Matrix4.cpp in Sources */,
+				D34A495127C916390083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
+				D34A499F27C916600083DD65 /* RttiParser.cpp in Sources */,
+				D34A495D27C916390083DD65 /* Gfx.cpp in Sources */,
+				D34A491B27C915EC0083DD65 /* Shaders.metal in Sources */,
+				D34A492E27C9161C0083DD65 /* Hash.cpp in Sources */,
+				D34A495727C916390083DD65 /* GfxGpuTextureArray_metal.mm in Sources */,
+				D34A495527C916390083DD65 /* GfxTexture_metal.mm in Sources */,
+				D34A49DE27C9FD960083DD65 /* StaticTransform.cpp in Sources */,
+				D34A49A127C916600083DD65 /* RttiResource.cpp in Sources */,
+				D34A49DC27C9FD960083DD65 /* Render_local.cpp in Sources */,
+				D34A49C027C94FA00083DD65 /* i3d.cpp in Sources */,
+				D34A495627C916390083DD65 /* GfxPass_metal.mm in Sources */,
+				D34A49DD27C9FD960083DD65 /* RenderBatch.cpp in Sources */,
+				D34A494127C9162B0083DD65 /* Math3d.cpp in Sources */,
+				D34A4A2527CA9ECA0083DD65 /* draw3d_toon.metal in Sources */,
+				D34A49E027C9FD960083DD65 /* Material.cpp in Sources */,
+				D34A4A2327CA9ECA0083DD65 /* TransformSkin.metal in Sources */,
+				D34A49A327C916600083DD65 /* RttiType.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34A48F227C915EC0083DD65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34A493427C9161D0083DD65 /* CVarManager_local.cpp in Sources */,
+				D34A49AA27C916600083DD65 /* RttiLexer.cpp in Sources */,
+				D34A49EA27C9FD970083DD65 /* Model_local.cpp in Sources */,
+				D34A491927C915EC0083DD65 /* Renderer.mm in Sources */,
+				D34A497527C9163A0083DD65 /* GfxRasterizeState_metal.mm in Sources */,
+				D34A498827C916450083DD65 /* ResourceCache_local.cpp in Sources */,
+				D34A4A2A27CA9ECA0083DD65 /* TransformSkin.metal in Sources */,
+				D34A493327C9161D0083DD65 /* FileSystem_common.cpp in Sources */,
+				D34A494527C9162B0083DD65 /* Math3d.cpp in Sources */,
+				D34A49E527C9FD970083DD65 /* Render_local.cpp in Sources */,
+				D34A4A2927CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */,
+				D34A497227C9163A0083DD65 /* GfxVertexDesc_local.cpp in Sources */,
+				D34A496C27C9163A0083DD65 /* GfxGpuFunction_metal.mm in Sources */,
+				D34A496E27C9163A0083DD65 /* GfxFence_metal.mm in Sources */,
+				D34A49E827C9FD970083DD65 /* Texture_base.cpp in Sources */,
+				D34A48FD27C915EC0083DD65 /* GameViewController.m in Sources */,
+				D34A49A927C916600083DD65 /* RttiResource.cpp in Sources */,
+				D34A49A627C916600083DD65 /* RttiSystem_local.cpp in Sources */,
+				D34A4A2B27CA9ECA0083DD65 /* TransformStatic.metal in Sources */,
+				D34A494827C9162B0083DD65 /* Quaternion.cpp in Sources */,
+				D34A49EB27C9FD970083DD65 /* DebugLineDraw.cpp in Sources */,
+				D34A490527C915EC0083DD65 /* main.m in Sources */,
+				D34A4A1D27CA6AFF0083DD65 /* farmhash.cpp in Sources */,
+				D34A49AC27C916600083DD65 /* RttiLoader.cpp in Sources */,
+				D34A49BA27C9166D0083DD65 /* HeapFrame.cpp in Sources */,
+				D34A49C127C94FA10083DD65 /* i3d.cpp in Sources */,
+				D34A493827C9161D0083DD65 /* Log_common.cpp in Sources */,
+				D34A4A2827CA9ECA0083DD65 /* Debug3d.metal in Sources */,
+				D34A497727C9163A0083DD65 /* Gfx.cpp in Sources */,
+				D34A49AB27C916600083DD65 /* RttiType.cpp in Sources */,
+				D34A493527C9161D0083DD65 /* Hash.cpp in Sources */,
+				D34A496B27C9163A0083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
+				D34A48FA27C915EC0083DD65 /* AppDelegate.m in Sources */,
+				D34A49E427C9FD970083DD65 /* RenderBuffers.cpp in Sources */,
+				D34A49B727C916660083DD65 /* LoaderBase.cpp in Sources */,
+				D34A494727C9162B0083DD65 /* Matrix4.cpp in Sources */,
+				D34A496D27C9163A0083DD65 /* Gfx_metal.mm in Sources */,
+				D34A493627C9161D0083DD65 /* Sys_common.cpp in Sources */,
+				D34A49AD27C916600083DD65 /* RttiStream.cpp in Sources */,
+				D34A494627C9162B0083DD65 /* Matrix3.cpp in Sources */,
+				D34A497627C9163A0083DD65 /* GfxContext_metal.mm in Sources */,
+				D34A4A2627CA9ECA0083DD65 /* draw3d_pbr_bindless.metal in Sources */,
+				D34A4A1827CA69150083DD65 /* XFighter.cpp in Sources */,
+				D34A491C27C915EC0083DD65 /* Shaders.metal in Sources */,
+				D34A497027C9163A0083DD65 /* GfxPass_metal.mm in Sources */,
+				D34A4A2C27CA9ECA0083DD65 /* draw3d_toon.metal in Sources */,
+				D34A497127C9163A0083DD65 /* GfxGpuTextureArray_metal.mm in Sources */,
+				D34A497327C9163A0083DD65 /* GfxBuffer_metal.mm in Sources */,
+				D34A49A727C916600083DD65 /* RttiParser.cpp in Sources */,
+				D34A493927C9161D0083DD65 /* Log_local.cpp in Sources */,
+				D34A496F27C9163A0083DD65 /* GfxTexture_metal.mm in Sources */,
+				D34A493727C9161D0083DD65 /* CVar.cpp in Sources */,
+				D34A49A827C916600083DD65 /* RttiObject.cpp in Sources */,
+				D34A49E727C9FD970083DD65 /* StaticTransform.cpp in Sources */,
+				D34A49E927C9FD970083DD65 /* Material.cpp in Sources */,
+				D34A4A2727CA9ECA0083DD65 /* pbr.metal in Sources */,
+				D34A49E627C9FD970083DD65 /* RenderBatch.cpp in Sources */,
+				D34A497427C9163A0083DD65 /* GfxDepthState_metal.mm in Sources */,
+				D34A49E327C9FD970083DD65 /* DrawLit.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34A490627C915EC0083DD65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34A493B27C9161D0083DD65 /* CVarManager_local.cpp in Sources */,
+				D34A49B227C916610083DD65 /* RttiLexer.cpp in Sources */,
+				D34A49EE27C9FD980083DD65 /* Texture_base.cpp in Sources */,
+				D34A4A3027CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */,
+				D34A491A27C915EC0083DD65 /* Renderer.mm in Sources */,
+				D34A498227C9163A0083DD65 /* GfxRasterizeState_metal.mm in Sources */,
+				D34A4A1027CA45FE0083DD65 /* Sys_macos.mm in Sources */,
+				D34A498A27C916460083DD65 /* ResourceCache_local.cpp in Sources */,
+				D34A493A27C9161D0083DD65 /* FileSystem_common.cpp in Sources */,
+				D34A494927C9162B0083DD65 /* Math3d.cpp in Sources */,
+				D34A4A3227CA9ECA0083DD65 /* TransformStatic.metal in Sources */,
+				D34A499D27C916560083DD65 /* RenderBatch.cpp in Sources */,
+				D34A497F27C9163A0083DD65 /* GfxVertexDesc_local.cpp in Sources */,
+				D34A497927C9163A0083DD65 /* GfxGpuFunction_metal.mm in Sources */,
+				D34A499927C916560083DD65 /* StaticTransform.cpp in Sources */,
+				D34A497B27C9163A0083DD65 /* GfxFence_metal.mm in Sources */,
+				D34A491127C915EC0083DD65 /* GameViewController.m in Sources */,
+				D34A49B127C916610083DD65 /* RttiResource.cpp in Sources */,
+				D34A49AE27C916610083DD65 /* RttiSystem_local.cpp in Sources */,
+				D34A494C27C9162B0083DD65 /* Quaternion.cpp in Sources */,
+				D34A4A1927CA69160083DD65 /* XFighter.cpp in Sources */,
+				D34A491627C915EC0083DD65 /* main.mm in Sources */,
+				D34A49B427C916610083DD65 /* RttiLoader.cpp in Sources */,
+				D34A499B27C916560083DD65 /* DrawLit.cpp in Sources */,
+				D34A49BB27C9166D0083DD65 /* HeapFrame.cpp in Sources */,
+				D34A4A1E27CA6AFF0083DD65 /* farmhash.cpp in Sources */,
+				D34A49C227C94FA10083DD65 /* i3d.cpp in Sources */,
+				D34A493F27C9161D0083DD65 /* Log_common.cpp in Sources */,
+				D34A498427C9163A0083DD65 /* Gfx.cpp in Sources */,
+				D34A49B327C916610083DD65 /* RttiType.cpp in Sources */,
+				D34A493C27C9161D0083DD65 /* Hash.cpp in Sources */,
+				D34A497827C9163A0083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
+				D34A4A2E27CA9ECA0083DD65 /* pbr.metal in Sources */,
+				D34A4A0F27CA45F00083DD65 /* FileSystem_macos.mm in Sources */,
+				D34A490E27C915EC0083DD65 /* AppDelegate.m in Sources */,
+				D34A49B627C916660083DD65 /* LoaderBase.cpp in Sources */,
+				D34A494B27C9162B0083DD65 /* Matrix4.cpp in Sources */,
+				D34A499827C916560083DD65 /* Model_local.cpp in Sources */,
+				D34A4A2D27CA9ECA0083DD65 /* draw3d_pbr_bindless.metal in Sources */,
+				D34A497A27C9163A0083DD65 /* Gfx_metal.mm in Sources */,
+				D34A4A2F27CA9ECA0083DD65 /* Debug3d.metal in Sources */,
+				D34A49EC27C9FD980083DD65 /* RenderBuffers.cpp in Sources */,
+				D34A499C27C916560083DD65 /* DebugLineDraw.cpp in Sources */,
+				D34A493D27C9161D0083DD65 /* Sys_common.cpp in Sources */,
+				D34A49B527C916610083DD65 /* RttiStream.cpp in Sources */,
+				D34A494A27C9162B0083DD65 /* Matrix3.cpp in Sources */,
+				D34A498327C9163A0083DD65 /* GfxContext_metal.mm in Sources */,
+				D34A491D27C915EC0083DD65 /* Shaders.metal in Sources */,
+				D34A497D27C9163A0083DD65 /* GfxPass_metal.mm in Sources */,
+				D34A499A27C916560083DD65 /* Material.cpp in Sources */,
+				D34A497E27C9163A0083DD65 /* GfxGpuTextureArray_metal.mm in Sources */,
+				D34A498027C9163A0083DD65 /* GfxBuffer_metal.mm in Sources */,
+				D34A49AF27C916610083DD65 /* RttiParser.cpp in Sources */,
+				D34A494027C9161D0083DD65 /* Log_local.cpp in Sources */,
+				D34A49ED27C9FD980083DD65 /* Render_local.cpp in Sources */,
+				D34A497C27C9163A0083DD65 /* GfxTexture_metal.mm in Sources */,
+				D34A493E27C9161D0083DD65 /* CVar.cpp in Sources */,
+				D34A4A3327CA9ECA0083DD65 /* draw3d_toon.metal in Sources */,
+				D34A49B027C916610083DD65 /* RttiObject.cpp in Sources */,
+				D34A4A3127CA9ECA0083DD65 /* TransformSkin.metal in Sources */,
+				D34A498127C9163A0083DD65 /* GfxDepthState_metal.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D366B37127C406860004E0E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34A496A27C916390083DD65 /* Gfx.cpp in Sources */,
+				D34A49D227C9FD860083DD65 /* RenderBuffers.cpp in Sources */,
+				D34A48D727C9158E0083DD65 /* Material.cpp in Sources */,
+				D34A4A0A27C9FDD40083DD65 /* draw3d_pbr_bindless.metal in Sources */,
+				D366B4F727C7F9250004E0E2 /* Model_local.cpp in Sources */,
+				D366B4FD27C7FA770004E0E2 /* HeapFrame.cpp in Sources */,
+				D34A494D27C9162C0083DD65 /* Math3d.cpp in Sources */,
+				D366B4CE27C7CD0B0004E0E2 /* RttiLexer.cpp in Sources */,
+				D366B3C127C6A56D0004E0E2 /* Hash.cpp in Sources */,
+				D366B3D227C6A56D0004E0E2 /* Log_common.cpp in Sources */,
+				D366B3BD27C6A56D0004E0E2 /* Sys_macos.mm in Sources */,
+				D34A495F27C916390083DD65 /* GfxGpuFunction_metal.mm in Sources */,
+				D366B3BF27C6A56D0004E0E2 /* CVar.cpp in Sources */,
+				D34A496027C916390083DD65 /* Gfx_metal.mm in Sources */,
+				D34A496727C916390083DD65 /* GfxDepthState_metal.mm in Sources */,
+				D34A4A1B27CA6AFF0083DD65 /* farmhash.cpp in Sources */,
+				D34A4A0027C9FDD40083DD65 /* pbr.metal in Sources */,
+				D34A494E27C9162C0083DD65 /* Matrix3.cpp in Sources */,
+				D366B4F427C7D4AA0004E0E2 /* RenderBatch.cpp in Sources */,
+				D34A4A0427C9FDD40083DD65 /* TransformSkin.metal in Sources */,
+				D34A4A0527C9FDD40083DD65 /* draw3d_toon.metal in Sources */,
+				D34A495E27C916390083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
+				D366B4D927C7CD0B0004E0E2 /* RttiStream.cpp in Sources */,
+				D34A496127C916390083DD65 /* GfxFence_metal.mm in Sources */,
+				D34A496427C916390083DD65 /* GfxGpuTextureArray_metal.mm in Sources */,
+				D366B4DD27C7CD0B0004E0E2 /* RttiParser.cpp in Sources */,
+				D34A496927C916390083DD65 /* GfxContext_metal.mm in Sources */,
+				D366B4D427C7CD0B0004E0E2 /* RttiSystem_local.cpp in Sources */,
+				D366B3C327C6A56D0004E0E2 /* FileSystem_common.cpp in Sources */,
+				D34A4A0127C9FDD40083DD65 /* Debug3d.metal in Sources */,
+				D34A496827C916390083DD65 /* GfxRasterizeState_metal.mm in Sources */,
+				D366B50627C7FCA00004E0E2 /* StaticTransform.cpp in Sources */,
+				D366B4D627C7CD0B0004E0E2 /* RttiType.cpp in Sources */,
+				D34A496527C916390083DD65 /* GfxVertexDesc_local.cpp in Sources */,
+				D366B3D327C6A56D0004E0E2 /* CVarManager_local.cpp in Sources */,
+				D34A496327C916390083DD65 /* GfxPass_metal.mm in Sources */,
+				D366B44F27C6B3590004E0E2 /* ResourceCache_local.cpp in Sources */,
+				D34A4A0B27C9FDD40083DD65 /* draw3d_pbr.metal in Sources */,
+				D34A4A0727C9FDD40083DD65 /* ArgumentBufferDummy.metal in Sources */,
+				D366B3C727C6A56D0004E0E2 /* Log_local.cpp in Sources */,
+				D34A494F27C9162C0083DD65 /* Matrix4.cpp in Sources */,
+				D366B4EC27C7CF600004E0E2 /* LoaderBase.cpp in Sources */,
+				D34A496227C916390083DD65 /* GfxTexture_metal.mm in Sources */,
+				D366B50427C7FCA00004E0E2 /* DrawLit.cpp in Sources */,
+				D34A495027C9162C0083DD65 /* Quaternion.cpp in Sources */,
+				D34A49BF27C94F9E0083DD65 /* i3d.cpp in Sources */,
+				D366B50927C7FCA00004E0E2 /* DebugLineDraw.cpp in Sources */,
+				D366B4DA27C7CD0B0004E0E2 /* RttiObject.cpp in Sources */,
+				D366B3CF27C6A56D0004E0E2 /* Sys_common.cpp in Sources */,
+				D366B3C527C6A56D0004E0E2 /* FileSystem_macos.mm in Sources */,
+				D34A49D127C9FD860083DD65 /* Render_local.cpp in Sources */,
+				D366B4DC27C7CD0B0004E0E2 /* RttiResource.cpp in Sources */,
+				D34A49CC27C9FD860083DD65 /* Texture_base.cpp in Sources */,
+				D34A496627C916390083DD65 /* GfxBuffer_metal.mm in Sources */,
+				D34A4A0827C9FDD40083DD65 /* TransformStatic.metal in Sources */,
+				D366B4E027C7CD0B0004E0E2 /* RttiLoader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D34A48EA27C915EC0083DD65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D34A48EB27C915EC0083DD65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D34A48ED27C915EC0083DD65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D34A48EE27C915EC0083DD65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D34A48FE27C915EC0083DD65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D34A48FF27C915EC0083DD65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D34A490127C915EC0083DD65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D34A490227C915EC0083DD65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D34A491227C915EC0083DD65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D34A491327C915EC0083DD65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D34A492227C915EC0083DD65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D34A49BC27C94EAD0083DD65 /* xfighter_ios.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B46GUXM6BX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nothing.com.xfighter;
+				PRODUCT_NAME = xfighter;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D34A492327C915EC0083DD65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D34A49BC27C94EAD0083DD65 /* xfighter_ios.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B46GUXM6BX;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nothing.com.xfighter;
+				PRODUCT_NAME = xfighter;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D34A492527C915EC0083DD65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D366B39E27C409150004E0E2 /* i3d_lib.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B46GUXM6BX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nothing.com.xfighter;
+				PRODUCT_NAME = xfighter;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.2;
+			};
+			name = Debug;
+		};
+		D34A492627C915EC0083DD65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B46GUXM6BX;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nothing.com.xfighter;
+				PRODUCT_NAME = xfighter;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D34A492827C915EC0083DD65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D34A4A0E27CA40510083DD65 /* xfighter_macos.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "xfighter macOS/xfighter_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B46GUXM6BX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nothing.com.xfighter;
+				PRODUCT_NAME = xfighter;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		D34A492927C915EC0083DD65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D34A4A0E27CA40510083DD65 /* xfighter_macos.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "xfighter macOS/xfighter_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B46GUXM6BX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nothing.com.xfighter;
+				PRODUCT_NAME = xfighter;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		D366B36E27C406370004E0E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		D366B36F27C406370004E0E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		D366B37E27C406860004E0E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D366B39E27C409150004E0E2 /* i3d_lib.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B46GUXM6BX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D366B37F27C406860004E0E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D366B39E27C409150004E0E2 /* i3d_lib.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B46GUXM6BX;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D34A492127C915EC0083DD65 /* Build configuration list for PBXNativeTarget "xfighter iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D34A492227C915EC0083DD65 /* Debug */,
+				D34A492327C915EC0083DD65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D34A492427C915EC0083DD65 /* Build configuration list for PBXNativeTarget "xfighter tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D34A492527C915EC0083DD65 /* Debug */,
+				D34A492627C915EC0083DD65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D34A492727C915EC0083DD65 /* Build configuration list for PBXNativeTarget "xfighter macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D34A492827C915EC0083DD65 /* Debug */,
+				D34A492927C915EC0083DD65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D366B36D27C406370004E0E2 /* Build configuration list for PBXProject "insanity3d" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D366B36E27C406370004E0E2 /* Debug */,
+				D366B36F27C406370004E0E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D366B37D27C406860004E0E2 /* Build configuration list for PBXNativeTarget "i3d-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D366B37E27C406860004E0E2 /* Debug */,
+				D366B37F27C406860004E0E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D366B36A27C406370004E0E2 /* Project object */;
+}

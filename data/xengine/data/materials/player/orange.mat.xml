@@ -1,0 +1,5 @@
+<material name="player/orange">
+    <tex_albedo path="player/orange.tex" />
+    <tex_amr path="player/amr.tex" />
+    <tex_glow path="player/glow.tex" />
+</material>

@@ -1,0 +1,6 @@
+
+object "Material" {
+    tex_albedo = "~/textures/rx2/yellow.tex"
+    tex_amr = "~/textures/rx2/amr.tex"
+    tex_glow = "~/textures/rx2/glow.tex"
+}

@@ -1,0 +1,24 @@
+
+
+I3D_ROOT                     = $(PROJECT_DIR)/../../..
+I3D_SOURCE                   = $(I3D_ROOT)/source/i3d
+
+I3D_BUILD_DIR                = $(I3D_ROOT)/build/$(PLATFORM_NAME)/$(CONFIGURATION)
+I3D_BUILD_DIR_OUT            = $(I3D_BUILD_DIR)/out/
+I3D_BUILD_DIR_INT            = $(I3D_BUILD_DIR)/int/$(PROJECT_NAME)/$(TARGET_NAME)
+
+I3D_LIBS                    = $(I3D_SOURCE)/libs
+I3D_LIB_LPNG                = $(I3D_LIBS)/lpng1636
+I3D_LIB_SQUISH              = $(I3D_LIBS)/squish
+I3D_LIB_AVIR                = $(I3D_LIBS)/avir
+I3D_LIB_ETC2COMP            = $(I3D_LIBS)/etc2comp
+I3D_LIB_MXML                = $(I3D_LIBS)/MXML
+I3D_LIB_JPEG                = $(I3D_LIBS)/libjpeg-turbo
+I3D_LIB_ETC2COMP            = $(I3D_LIBS)/etc2comp
+I3D_INCLUDE_ETC2COMP        = $(I3D_LIB_ETC2COMP)/EtcLib/Etc $(I3D_LIB_ETC2COMP)/EtcLib/EtcCodec
+
+I3D_INCLUDES_TOOL           = $(I3D_SOURCE)/tools
+
+I3D_INCLUDES                 = $(I3D_SOURCE)/include $(I3D_SOURCE)/source
+I3D_INCLUDES_LIBS            = $(I3D_LIB_ETC2COMP)/EtcLib/Etc $(I3D_LIB_ETC2COMP)/EtcLib/EtcCodec $(I3D_LIB_SQUISH) $(I3D_LIB_AVIR) $(I3D_LIB_LPNG) $(I3D_LIB_MXML)/Source $(I3D_LIB_JPEG) $(I3D_LIB_JPEG)/platform/macosx
+
