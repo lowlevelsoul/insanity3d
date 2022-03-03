@@ -240,6 +240,14 @@
 		D34A4A3127CA9ECA0083DD65 /* TransformSkin.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F627C9FDD30083DD65 /* TransformSkin.metal */; };
 		D34A4A3227CA9ECA0083DD65 /* TransformStatic.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49FA27C9FDD30083DD65 /* TransformStatic.metal */; };
 		D34A4A3327CA9ECA0083DD65 /* draw3d_toon.metal in Sources */ = {isa = PBXBuildFile; fileRef = D34A49F727C9FDD30083DD65 /* draw3d_toon.metal */; };
+		D34A4A3927CCD1A90083DD65 /* ComponentArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A3827CCD1A80083DD65 /* ComponentArray.cpp */; };
+		D34A4A3A27CCD1A90083DD65 /* ComponentArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A3827CCD1A80083DD65 /* ComponentArray.cpp */; };
+		D34A4A3B27CCD1A90083DD65 /* ComponentArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A3827CCD1A80083DD65 /* ComponentArray.cpp */; };
+		D34A4A3C27CCD1A90083DD65 /* ComponentArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A3827CCD1A80083DD65 /* ComponentArray.cpp */; };
+		D34A4A4227CFE8EF0083DD65 /* Ecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A4127CFE8EF0083DD65 /* Ecs.cpp */; };
+		D34A4A4327CFE8EF0083DD65 /* Ecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A4127CFE8EF0083DD65 /* Ecs.cpp */; };
+		D34A4A4427CFE8EF0083DD65 /* Ecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A4127CFE8EF0083DD65 /* Ecs.cpp */; };
+		D34A4A4527CFE8EF0083DD65 /* Ecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A4127CFE8EF0083DD65 /* Ecs.cpp */; };
 		D366B3BD27C6A56D0004E0E2 /* Sys_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A627C6A56C0004E0E2 /* Sys_macos.mm */; };
 		D366B3BF27C6A56D0004E0E2 /* CVar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A827C6A56C0004E0E2 /* CVar.cpp */; };
 		D366B3C127C6A56D0004E0E2 /* Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AA27C6A56C0004E0E2 /* Hash.cpp */; };
@@ -381,6 +389,14 @@
 		D34A4A1327CA690E0083DD65 /* XFighter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = XFighter.cpp; sourceTree = "<group>"; };
 		D34A4A1427CA690E0083DD65 /* XFighter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFighter.h; sourceTree = "<group>"; };
 		D34A4A1A27CA6AFF0083DD65 /* farmhash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = farmhash.cpp; sourceTree = "<group>"; };
+		D34A4A3627CCCF8E0083DD65 /* EcsTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcsTypes.h; sourceTree = "<group>"; };
+		D34A4A3727CCD00F0083DD65 /* ComponentArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentArray.h; sourceTree = "<group>"; };
+		D34A4A3827CCD1A80083DD65 /* ComponentArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ComponentArray.cpp; sourceTree = "<group>"; };
+		D34A4A3D27CE5C9D0083DD65 /* ComponentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentManager.h; sourceTree = "<group>"; };
+		D34A4A3E27CE74790083DD65 /* System.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = System.h; sourceTree = "<group>"; };
+		D34A4A3F27CE75F40083DD65 /* EntityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
+		D34A4A4027CE78700083DD65 /* Ecs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ecs.h; sourceTree = "<group>"; };
+		D34A4A4127CFE8EF0083DD65 /* Ecs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ecs.cpp; sourceTree = "<group>"; };
 		D366B37427C406860004E0E2 /* libi3d-macos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libi3d-macos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D366B39D27C408CB0004E0E2 /* i3d_base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_base.xcconfig; sourceTree = "<group>"; };
 		D366B39E27C409150004E0E2 /* i3d_lib.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_lib.xcconfig; sourceTree = "<group>"; };
@@ -640,6 +656,28 @@
 			path = xfighter;
 			sourceTree = "<group>";
 		};
+		D34A4A3427CCCF6D0083DD65 /* ecs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ecs;
+			sourceTree = "<group>";
+		};
+		D34A4A3527CCCF7D0083DD65 /* ecs */ = {
+			isa = PBXGroup;
+			children = (
+				D34A4A3627CCCF8E0083DD65 /* EcsTypes.h */,
+				D34A4A3727CCD00F0083DD65 /* ComponentArray.h */,
+				D34A4A3827CCD1A80083DD65 /* ComponentArray.cpp */,
+				D34A4A3D27CE5C9D0083DD65 /* ComponentManager.h */,
+				D34A4A3E27CE74790083DD65 /* System.h */,
+				D34A4A3F27CE75F40083DD65 /* EntityManager.h */,
+				D34A4A4027CE78700083DD65 /* Ecs.h */,
+				D34A4A4127CFE8EF0083DD65 /* Ecs.cpp */,
+			);
+			path = ecs;
+			sourceTree = "<group>";
+		};
 		D366B36927C406370004E0E2 = {
 			isa = PBXGroup;
 			children = (
@@ -715,6 +753,7 @@
 		D366B3A427C6A5240004E0E2 /* i3d */ = {
 			isa = PBXGroup;
 			children = (
+				D34A4A3527CCCF7D0083DD65 /* ecs */,
 				D34A49C327C94FBE0083DD65 /* i3d.h */,
 				D366B4E127C7CD140004E0E2 /* rtti */,
 				D366B45C27C6B6AA0004E0E2 /* core */,
@@ -729,6 +768,7 @@
 		D366B3D427C6A5B40004E0E2 /* i3d */ = {
 			isa = PBXGroup;
 			children = (
+				D34A4A3427CCCF6D0083DD65 /* ecs */,
 				D366B4F927C7FA480004E0E2 /* mem */,
 				D366B4E227C7CF2A0004E0E2 /* util */,
 				D366B4BA27C7CCCD0004E0E2 /* rtti */,
@@ -1243,7 +1283,9 @@
 				D34A4A2127CA9ECA0083DD65 /* Debug3d.metal in Sources */,
 				D34A493027C9161C0083DD65 /* CVar.cpp in Sources */,
 				D34A494327C9162B0083DD65 /* Matrix4.cpp in Sources */,
+				D34A4A3A27CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
 				D34A495127C916390083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
+				D34A4A4327CFE8EF0083DD65 /* Ecs.cpp in Sources */,
 				D34A499F27C916600083DD65 /* RttiParser.cpp in Sources */,
 				D34A495D27C916390083DD65 /* Gfx.cpp in Sources */,
 				D34A491B27C915EC0083DD65 /* Shaders.metal in Sources */,
@@ -1283,6 +1325,7 @@
 				D34A496C27C9163A0083DD65 /* GfxGpuFunction_metal.mm in Sources */,
 				D34A496E27C9163A0083DD65 /* GfxFence_metal.mm in Sources */,
 				D34A49E827C9FD970083DD65 /* Texture_base.cpp in Sources */,
+				D34A4A4427CFE8EF0083DD65 /* Ecs.cpp in Sources */,
 				D34A48FD27C915EC0083DD65 /* GameViewController.m in Sources */,
 				D34A49A927C916600083DD65 /* RttiResource.cpp in Sources */,
 				D34A49A627C916600083DD65 /* RttiSystem_local.cpp in Sources */,
@@ -1309,6 +1352,7 @@
 				D34A49AD27C916600083DD65 /* RttiStream.cpp in Sources */,
 				D34A494627C9162B0083DD65 /* Matrix3.cpp in Sources */,
 				D34A497627C9163A0083DD65 /* GfxContext_metal.mm in Sources */,
+				D34A4A3B27CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
 				D34A4A2627CA9ECA0083DD65 /* draw3d_pbr_bindless.metal in Sources */,
 				D34A4A1827CA69150083DD65 /* XFighter.cpp in Sources */,
 				D34A491C27C915EC0083DD65 /* Shaders.metal in Sources */,
@@ -1377,7 +1421,9 @@
 				D34A4A2F27CA9ECA0083DD65 /* Debug3d.metal in Sources */,
 				D34A49EC27C9FD980083DD65 /* RenderBuffers.cpp in Sources */,
 				D34A499C27C916560083DD65 /* DebugLineDraw.cpp in Sources */,
+				D34A4A3C27CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
 				D34A493D27C9161D0083DD65 /* Sys_common.cpp in Sources */,
+				D34A4A4527CFE8EF0083DD65 /* Ecs.cpp in Sources */,
 				D34A49B527C916610083DD65 /* RttiStream.cpp in Sources */,
 				D34A494A27C9162B0083DD65 /* Matrix3.cpp in Sources */,
 				D34A498327C9163A0083DD65 /* GfxContext_metal.mm in Sources */,
@@ -1404,6 +1450,7 @@
 			files = (
 				D34A496A27C916390083DD65 /* Gfx.cpp in Sources */,
 				D34A49D227C9FD860083DD65 /* RenderBuffers.cpp in Sources */,
+				D34A4A3927CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
 				D34A48D727C9158E0083DD65 /* Material.cpp in Sources */,
 				D34A4A0A27C9FDD40083DD65 /* draw3d_pbr_bindless.metal in Sources */,
 				D366B4F727C7F9250004E0E2 /* Model_local.cpp in Sources */,
@@ -1414,6 +1461,7 @@
 				D366B3D227C6A56D0004E0E2 /* Log_common.cpp in Sources */,
 				D366B3BD27C6A56D0004E0E2 /* Sys_macos.mm in Sources */,
 				D34A495F27C916390083DD65 /* GfxGpuFunction_metal.mm in Sources */,
+				D34A4A4227CFE8EF0083DD65 /* Ecs.cpp in Sources */,
 				D366B3BF27C6A56D0004E0E2 /* CVar.cpp in Sources */,
 				D34A496027C916390083DD65 /* Gfx_metal.mm in Sources */,
 				D34A496727C916390083DD65 /* GfxDepthState_metal.mm in Sources */,
