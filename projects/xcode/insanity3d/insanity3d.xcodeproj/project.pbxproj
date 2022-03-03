@@ -659,6 +659,8 @@
 		D34A4A3427CCCF6D0083DD65 /* ecs */ = {
 			isa = PBXGroup;
 			children = (
+				D34A4A3827CCD1A80083DD65 /* ComponentArray.cpp */,
+				D34A4A4127CFE8EF0083DD65 /* Ecs.cpp */,
 			);
 			path = ecs;
 			sourceTree = "<group>";
@@ -668,12 +670,10 @@
 			children = (
 				D34A4A3627CCCF8E0083DD65 /* EcsTypes.h */,
 				D34A4A3727CCD00F0083DD65 /* ComponentArray.h */,
-				D34A4A3827CCD1A80083DD65 /* ComponentArray.cpp */,
 				D34A4A3D27CE5C9D0083DD65 /* ComponentManager.h */,
 				D34A4A3E27CE74790083DD65 /* System.h */,
 				D34A4A3F27CE75F40083DD65 /* EntityManager.h */,
 				D34A4A4027CE78700083DD65 /* Ecs.h */,
-				D34A4A4127CFE8EF0083DD65 /* Ecs.cpp */,
 			);
 			path = ecs;
 			sourceTree = "<group>";
