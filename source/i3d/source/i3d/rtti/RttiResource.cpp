@@ -11,7 +11,7 @@ namespace i3d {
     i3d::CVar rtti_logLoadedObjects("rtti_logLoadedObjects", false, "Spits out a list of the object types loaded from an rtti binary after loading / construction");
     i3d::CVar rtti_logLoad("rtti_logLoad", false, "Logs out info about rtti objects being loaded");
     
-    DEFINE_RESOURCE( RttiResource, "rtti;" )
+    DEFINE_RESOURCE( RttiResource, "brtti;" )
     
     //======================================================================================================================
     RttiResource::RttiResource() {

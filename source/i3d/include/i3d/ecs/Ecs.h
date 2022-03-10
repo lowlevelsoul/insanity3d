@@ -48,6 +48,53 @@ namespace i3d {
             if ( sigSystemChanged == true ) {
                 m_systems.EntitySignatureChanged( ent, sig );
             }
+            
+            ComponentArrayBase * arrayBase = m_components.GetComponentArray<__type__>();
+            void * compPtr = arrayBase->AddEntity( ent );
+            return (__type__ *) compPtr;
+            
+        }
+        
+        template<typename __type__>
+        __type__ & GetComponent( Entity ent ) {
+            ComponentArrayBase * arrayBase = m_components.GetComponentArray<__type__>();
+            void * ptr = arrayBase->GetComponent( ent );
+            return *( ( __type__ *) ptr );
+        }
+        
+        
+        template<typename __type__>
+        void PublishSystem( System * system ) {
+            EntitySignature sig;
+            sig[ m_components.GetComponentType<__type__>() ] = 1;
+            PublishSystem( system, sig );
+        }
+        
+        template<typename t0, typename t1>
+        void PublishSystem( System * system ) {
+            EntitySignature sig;
+            sig[ m_components.GetComponentType<t0>() ] = 1;
+            sig[ m_components.GetComponentType<t1>() ] = 1;
+            PublishSystem( system, sig );
+        }
+        
+        template<typename t0, typename t1, typename t2>
+        void PublishSystem( System * system ) {
+            EntitySignature sig;
+            sig[ m_components.GetComponentType<t0>() ] = 1;
+            sig[ m_components.GetComponentType<t1>() ] = 1;
+            sig[ m_components.GetComponentType<t2>() ] = 1;
+            PublishSystem( system, sig );
+        }
+        
+        template<typename t0, typename t1, typename t2, typename t3>
+        void PublishSystem( System * system ) {
+            EntitySignature sig;
+            sig[ m_components.GetComponentType<t0>() ] = 1;
+            sig[ m_components.GetComponentType<t1>() ] = 1;
+            sig[ m_components.GetComponentType<t2>() ] = 1;
+            sig[ m_components.GetComponentType<t3>() ] = 2;
+            PublishSystem( system, sig );
         }
         
     protected:

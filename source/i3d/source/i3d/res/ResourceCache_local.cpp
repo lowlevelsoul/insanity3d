@@ -43,11 +43,9 @@ namespace i3d {
         do {
             hasResource = ::resLocal->PopPending();
             
-            if ( hasResource == true ) {
-            
+            if ( hasResource == true ) {            
                 Resource * res = resLocal->m_loading;
-                
-                
+
     #ifdef RESOURCE_COMPILE_STALE
         
                 // Only attempt to check if the resource requires compilation if there
@@ -232,10 +230,15 @@ namespace i3d {
     
     //======================================================================================================================
     bool ResourceCacheLocal::HasPending() {
-        std::scoped_lock<std::mutex> lock( m_mutex );
+        bool locked = m_mutex.try_lock();
+        if ( locked == false ) {
+            return true;
+        }
         
         bool isPendingEmpty = m_pending.empty();
         Resource * currLoading = m_loading;
+        
+        m_mutex.unlock();
         
         return (isPendingEmpty == false || currLoading != nullptr );
     }

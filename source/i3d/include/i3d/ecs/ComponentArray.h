@@ -36,7 +36,8 @@ namespace i3d {
             }
             
             XE_ASSERT( m_entityToIndexMap.find(ent) != m_entityToIndexMap.end() );
-            return m_components[ m_entityToIndexMap.find(ent)->second ];
+            int32_t index = m_entityToIndexMap.find(ent)->second;
+            return m_components[ index ];
         }
         
         template<typename __type__>
@@ -53,7 +54,7 @@ namespace i3d {
         size_t                  m_capacity;
         size_t                  m_count;
         size_t                  m_refCount;
-        uint8_t **              m_components;
+        void **                 m_components;
         size_t                  m_componentStride;
         ComponentPrototype **   m_prototypes;
         

@@ -33,6 +33,15 @@
 #   include "i3d/core/Log.h"
 #   include "i3d/core/CVar.h"
 
+#   include "i3d/rtti/Rtti.h"
+#   include "i3d/rtti/RttiType.h"
+#   include "i3d/rtti/RttiObject.h"
+#   include "i3d/rtti/RttiResource.h"
+
+#   include "i3d/ecs/Ecs.h"
+#   include "i3d/ecs/EntityPrototype.h"
+#   include "i3d/ecs/ComponentPrototype.h"
+
 #endif
 
 #endif

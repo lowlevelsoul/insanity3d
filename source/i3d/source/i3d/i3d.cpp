@@ -7,6 +7,8 @@
 #include "i3d/render/Render.h"
 #include "i3d/core/Log.h"
 #include "i3d/render/Material.h"
+#include "i3d/rtti/RttiScriptResource.h"
+#include "i3d/ecs/PrototypeResource.h"
 
 namespace i3d {
     
@@ -30,6 +32,9 @@ namespace i3d {
     
     void RttiCreate();
     void RttiDestroy();
+    
+    void EcsCreate();
+    void EcsDestroy();
     
     class EngineState {
     public:
@@ -73,8 +78,12 @@ namespace i3d {
         CVarCreate();
         RttiCreate();
         ResCreate();
+        EcsCreate();
         
         res->PublishFactory< i3d::MaterialResource >();
+        res->PublishFactory< i3d::RttiResource >();
+        res->PublishFactory< i3d::RttiScriptResource >();
+        res->PublishFactory< i3d::PrototypeResource >();
     }
     
     //======================================================================================================================
@@ -89,12 +98,14 @@ namespace i3d {
         engine->m_game->Finalise();
         GameDestroy();
         
+        EcsDestroy();
         ResDestroy();
         RttiDestroy();
         CVarDestroy();
         SysDestroy();
         FsDestroy();
         LogDestroy();
+        
         
         engine->~EngineState();
     }
