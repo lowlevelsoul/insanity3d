@@ -16,8 +16,10 @@ void XFighter::InitialiseEcs() {
     ecs->PublishComponent<Transform>( &m_transforms );
     ecs->PublishComponent<ShipModel>( &m_shipModels );
     ecs->PublishComponent<Player>( &m_players );
+    ecs->PublishComponent<Camera>( &m_camera );
     
     ecs->PublishSystem<Transform>( &m_transformManager );
     ecs->PublishSystem<ShipModel, Transform>( &m_shipManager );
     ecs->PublishSystem<Player, ShipModel, Transform>( &m_playerManager );
+    ecs->PublishSystem<Camera>( &m_sceneManager );
 }

@@ -68,7 +68,7 @@ namespace i3d {
 #elif defined( __APPLE__ )
 #   if TARGET_OS_OSX
         static constexpr PLATFORM_ID THIS_PLATFORM = PLATFORM_ID_MACOS;
-#   elif TARGET_OS_TVOS
+#   elif TARGET_OS_TV
         static constexpr PLATFORM_ID THIS_PLATFORM = PLATFORM_ID_TVOS;
 #   elif TARGET_OS_IOS
         static constexpr PLATFORM_ID THIS_PLATFORM = PLATFORM_ID_IOS;

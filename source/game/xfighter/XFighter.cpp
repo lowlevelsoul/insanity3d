@@ -46,6 +46,8 @@ XFighter::~XFighter() {
 void XFighter::Initialise() {
     InitialiseEcs();
     
+    CreateSystemEnt();
+    
     m_materialRes = res->Load<i3d::MaterialResource>( "~/materials/rx2/red.mat" );
     m_model = res->Load< i3d::Model >( "~/models/rx2/ship.mdl" );
     m_player = res->Load<i3d::PrototypeResource>( "~/prototypes/player.proto" );
@@ -58,13 +60,32 @@ void XFighter::Initialise() {
     i3d::Entity playerEnt = m_player->CreateEntity();
 }
 
+
+//======================================================================================================================
+void XFighter::CreateSystemEnt() {
+    i3d::PrototypeResource * systemProto = nullptr;
+    
+    bool loaded = res->Find("~/prototypes/system.proto");
+    if ( loaded == false ) {
+        systemProto = res->Load<i3d::PrototypeResource>("~/prototypes/system.proto");
+
+        res->StartLoading();
+        
+        while ( res->HasPending() == true ) {
+        
+        }
+    }
+    
+    m_systemEnt = systemProto->CreateEntity();
+}
+
 //======================================================================================================================
 void XFighter::Finalise() {
     
 }
 
 //======================================================================================================================
-void XFighter::Think( float timeStep ) {
+void XFighter::Think( float timeStep, uint32_t viewWidth, uint32_t viewHeight ) {
     //m_rot += 180.0f * deltaTime;
     //while ( m_rot >= 360 ) m_rot -= 360.0f;
     
@@ -74,7 +95,7 @@ void XFighter::Think( float timeStep ) {
 }
 
 //======================================================================================================================
-void XFighter::Draw( float timeStep ) {
+void XFighter::Draw( float timeStep, uint32_t viewWidth, uint32_t viewHeight ) {
     i3d::Matrix4 projMat, viewMat;
     
     projMat.SetProjectionPerspLH( i3d::scalar::DegToRad( 60 ), 4.0f / 3.0f, 5, 500 );
@@ -89,10 +110,16 @@ void XFighter::Draw( float timeStep ) {
     
     render->BeginScene();
     {
-        render->BeginScene3d( projMat, viewMat, viewport );
+        //render->BeginScene3d( projMat, viewMat, viewport );
         //render->SubmitModel( m_model, modelMat, m_materialRes->GetMaterial() );
-        m_shipManager.Draw( timeStep );
-        render->EndScene3d();
+        
+        m_sceneManager.BeginScene( timeStep, viewWidth, viewHeight );
+        {
+            m_shipManager.Draw( timeStep );
+        }
+        m_sceneManager.EndScene();
+        
+        //render->EndScene3d();
         
     }
     render->EndScene();

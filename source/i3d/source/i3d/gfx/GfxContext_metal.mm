@@ -22,6 +22,7 @@ namespace i3d { namespace gfx {
     //======================================================================================================================
     void ContextMetal::Create( Params & params ) {
         
+#if TARGET_OS_OSX
         NSView * view = (__bridge NSView *) params.m_nativeView;
         bool baseIsMTKView = [view isKindOfClass:[MTKView class] ];
         if ( baseIsMTKView ) {
@@ -41,6 +42,10 @@ namespace i3d { namespace gfx {
             [m_view setDelegate: m_viewDelegate];
             [m_baseView.contentView addSubview: m_view ];
         }
+#elif TARGET_OS_IOS || TARGET_OS_TV
+        m_view = (__bridge MTKView *) params.m_nativeView;
+        m_baseView = nil;
+#endif
         
         m_cmdQueue = [GetDevice() newCommandQueue];
         

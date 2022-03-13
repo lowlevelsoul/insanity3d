@@ -59,9 +59,9 @@ namespace i3d {
     static uint8_t EngineStateMem[ sizeof( EngineState ) ];
     EngineState * engine = nullptr;
     
-    static void EngineThink( float deltaTime );
+    static void EngineThink( float deltaTime, uint32_t viewWidth, uint32_t viewHeight );
     
-    static void EngineDraw( float deltaTime );
+    static void EngineDraw( float deltaTime, uint32_t viewWidth, uint32_t viewHeight );
     
 
     //======================================================================================================================
@@ -111,7 +111,7 @@ namespace i3d {
     }
     
     //======================================================================================================================
-    void EngineThink() {
+    void EngineThink( uint32_t viewWidth, uint32_t viewHeight ) {
         float deltaTime = 1.0f / 60.0f;
         if ( engine->m_firstFrame == true ) {
             engine->m_firstFrame = false;
@@ -124,20 +124,20 @@ namespace i3d {
             engine->m_lastTick = currTick;
         }
         
-        EngineThink( deltaTime );
+        EngineThink( deltaTime, viewWidth, viewHeight );
         
-        EngineDraw( deltaTime );
+        EngineDraw( deltaTime, viewWidth, viewHeight );
     }
     
     //======================================================================================================================
-    void EngineThink( float deltaTime ) {
-        engine->m_game->Think( deltaTime );
+    void EngineThink( float deltaTime, uint32_t viewWidth, uint32_t viewHeight ) {
+        engine->m_game->Think( deltaTime, viewWidth, viewHeight );
     }
     
     //======================================================================================================================
-    void EngineDraw( float deltaTime ) {
+    void EngineDraw( float deltaTime, uint32_t viewWidth, uint32_t viewHeight ) {
         
-        engine->m_game->Draw( deltaTime );
+        engine->m_game->Draw( deltaTime, viewWidth, viewHeight );
         render->Submit();
     }
 }

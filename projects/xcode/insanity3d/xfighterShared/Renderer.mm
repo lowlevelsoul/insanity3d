@@ -16,7 +16,7 @@
 
 namespace i3d {
     void EnginePostRenderInitialise();
-    void EngineThink();
+    void EngineThink( uint32_t viewWidth, uint32_t viewHeight );
     
     void RenderCreate( RenderParams * params );
     void RenderDestroy();
@@ -69,7 +69,8 @@ namespace i3d {
 //=======================================================================================================================
 - (void)drawInMTKView:(nonnull MTKView *)view
 {
-    i3d::EngineThink();
+    CGSize size = view.drawableSize;
+    i3d::EngineThink( size.width, size.height );
 }
 
 //=======================================================================================================================

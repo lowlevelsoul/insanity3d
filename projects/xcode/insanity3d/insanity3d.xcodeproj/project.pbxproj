@@ -291,6 +291,20 @@
 		D34A4A8727DA4C0E0083DD65 /* PlayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A8527DA4C0E0083DD65 /* PlayerManager.cpp */; };
 		D34A4A8827DA4C0E0083DD65 /* PlayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A8527DA4C0E0083DD65 /* PlayerManager.cpp */; };
 		D34A4A8927DA4C0E0083DD65 /* PlayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A8527DA4C0E0083DD65 /* PlayerManager.cpp */; };
+		D34A4A8D27DC6E500083DD65 /* Frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A8C27DC6E500083DD65 /* Frustum.cpp */; };
+		D34A4A8E27DC6E500083DD65 /* Frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A8C27DC6E500083DD65 /* Frustum.cpp */; };
+		D34A4A8F27DC6E500083DD65 /* Frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A8C27DC6E500083DD65 /* Frustum.cpp */; };
+		D34A4A9027DC6E500083DD65 /* Frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A8C27DC6E500083DD65 /* Frustum.cpp */; };
+		D34A4A9527DCE7F40083DD65 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A9327DCE7F40083DD65 /* Camera.cpp */; };
+		D34A4A9627DCE7F40083DD65 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A9327DCE7F40083DD65 /* Camera.cpp */; };
+		D34A4A9727DCE7F40083DD65 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A9327DCE7F40083DD65 /* Camera.cpp */; };
+		D34A4A9827DCE7F40083DD65 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A9327DCE7F40083DD65 /* Camera.cpp */; };
+		D34A4A9927DCE7F40083DD65 /* Camera.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A4A9427DCE7F40083DD65 /* Camera.h */; };
+		D34A4A9C27DD0C440083DD65 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A9A27DD0C440083DD65 /* SceneManager.cpp */; };
+		D34A4A9D27DD0C440083DD65 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A9A27DD0C440083DD65 /* SceneManager.cpp */; };
+		D34A4A9E27DD0C440083DD65 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A9A27DD0C440083DD65 /* SceneManager.cpp */; };
+		D34A4A9F27DD0C450083DD65 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4A9A27DD0C440083DD65 /* SceneManager.cpp */; };
+		D34A4AA027DD0C450083DD65 /* SceneManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D34A4A9B27DD0C440083DD65 /* SceneManager.h */; };
 		D366B3BD27C6A56D0004E0E2 /* Sys_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A627C6A56C0004E0E2 /* Sys_macos.mm */; };
 		D366B3BF27C6A56D0004E0E2 /* CVar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A827C6A56C0004E0E2 /* CVar.cpp */; };
 		D366B3C127C6A56D0004E0E2 /* Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AA27C6A56C0004E0E2 /* Hash.cpp */; };
@@ -461,6 +475,14 @@
 		D34A4A8127DA49E80083DD65 /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		D34A4A8527DA4C0E0083DD65 /* PlayerManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerManager.cpp; sourceTree = "<group>"; };
 		D34A4A8627DA4C0E0083DD65 /* PlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
+		D34A4A8A27DBD09E0083DD65 /* Plane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
+		D34A4A8B27DBD1B80083DD65 /* Frustum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Frustum.h; sourceTree = "<group>"; };
+		D34A4A8C27DC6E500083DD65 /* Frustum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Frustum.cpp; sourceTree = "<group>"; };
+		D34A4A9127DC97DE0083DD65 /* Sphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
+		D34A4A9327DCE7F40083DD65 /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		D34A4A9427DCE7F40083DD65 /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		D34A4A9A27DD0C440083DD65 /* SceneManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
+		D34A4A9B27DD0C440083DD65 /* SceneManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
 		D366B37427C406860004E0E2 /* libi3d-macos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libi3d-macos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D366B39D27C408CB0004E0E2 /* i3d_base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_base.xcconfig; sourceTree = "<group>"; };
 		D366B39E27C409150004E0E2 /* i3d_lib.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_lib.xcconfig; sourceTree = "<group>"; };
@@ -760,6 +782,8 @@
 				D34A4A5F27D3E8290083DD65 /* ShipModel.h */,
 				D34A4A8027DA49E80083DD65 /* Player.cpp */,
 				D34A4A8127DA49E80083DD65 /* Player.h */,
+				D34A4A9327DCE7F40083DD65 /* Camera.cpp */,
+				D34A4A9427DCE7F40083DD65 /* Camera.h */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -773,8 +797,17 @@
 				D34A4A7727D8F3690083DD65 /* TransformManager.h */,
 				D34A4A7B27D9303E0083DD65 /* ShipManager.cpp */,
 				D34A4A7C27D9303E0083DD65 /* ShipManager.h */,
+				D34A4A9A27DD0C440083DD65 /* SceneManager.cpp */,
+				D34A4A9B27DD0C440083DD65 /* SceneManager.h */,
 			);
 			path = systems;
+			sourceTree = "<group>";
+		};
+		D34A4AA127DE1C6A0083DD65 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tools;
 			sourceTree = "<group>";
 		};
 		D366B36927C406370004E0E2 = {
@@ -827,6 +860,7 @@
 		D366B38D27C406EB0004E0E2 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				D34A4AA127DE1C6A0083DD65 /* tools */,
 				D366B3D427C6A5B40004E0E2 /* i3d */,
 			);
 			path = source;
@@ -912,6 +946,7 @@
 				D366B3F027C6B17F0004E0E2 /* Matrix3.cpp */,
 				D366B3EF27C6B17F0004E0E2 /* Matrix4.cpp */,
 				D366B3F127C6B17F0004E0E2 /* Quaternion.cpp */,
+				D34A4A8C27DC6E500083DD65 /* Frustum.cpp */,
 			);
 			path = math;
 			sourceTree = "<group>";
@@ -919,44 +954,44 @@
 		D366B3F727C6B18D0004E0E2 /* gfx */ = {
 			isa = PBXGroup;
 			children = (
-				D366B3F827C6B19E0004E0E2 /* Gfx.cpp */,
-				D366B40027C6B19E0004E0E2 /* GfxVertexDesc_local.cpp */,
 				D366B40D27C6B19E0004E0E2 /* Gfx_metal.h */,
+				D366B40927C6B19E0004E0E2 /* Gfx_metal.mm */,
+				D366B3F827C6B19E0004E0E2 /* Gfx.cpp */,
 				D366B40B27C6B19E0004E0E2 /* Gfx.h */,
 				D366B41B27C6B19F0004E0E2 /* GfxBuffer_metal.h */,
+				D366B41127C6B19F0004E0E2 /* GfxBuffer_metal.mm */,
 				D366B3FB27C6B19E0004E0E2 /* GfxBuffer.h */,
 				D366B40827C6B19E0004E0E2 /* GfxContext_metal.h */,
+				D366B40F27C6B19F0004E0E2 /* GfxContext_metal.mm */,
 				D366B40727C6B19E0004E0E2 /* GfxContext.h */,
 				D366B3FE27C6B19E0004E0E2 /* GfxDepthState_metal.h */,
+				D366B41A27C6B19F0004E0E2 /* GfxDepthState_metal.mm */,
 				D366B40527C6B19E0004E0E2 /* GfxDepthState.h */,
 				D366B3FC27C6B19E0004E0E2 /* GfxFence_metal.h */,
+				D366B41C27C6B19F0004E0E2 /* GfxFence_metal.mm */,
 				D366B40427C6B19E0004E0E2 /* GfxFence.h */,
 				D366B41827C6B19F0004E0E2 /* GfxGpuFunction_metal.h */,
+				D366B41427C6B19F0004E0E2 /* GfxGpuFunction_metal.mm */,
 				D366B41327C6B19F0004E0E2 /* GfxGpuFunction.h */,
 				D366B41527C6B19F0004E0E2 /* GfxGpuPipeline_metal.h */,
+				D366B3FD27C6B19E0004E0E2 /* GfxGpuPipeline_metal.mm */,
 				D366B41727C6B19F0004E0E2 /* GfxGpuPipeline.h */,
 				D366B40E27C6B19E0004E0E2 /* GfxGpuTextureArray_metal.h */,
+				D366B41227C6B19F0004E0E2 /* GfxGpuTextureArray_metal.mm */,
 				D366B3FA27C6B19E0004E0E2 /* GfxGpuTextureArray.h */,
 				D366B40C27C6B19E0004E0E2 /* GfxPass_metal.h */,
+				D366B40127C6B19E0004E0E2 /* GfxPass_metal.mm */,
 				D366B3FF27C6B19E0004E0E2 /* GfxPass.h */,
 				D366B40227C6B19E0004E0E2 /* GfxRasterizeState_metal.h */,
+				D366B40A27C6B19E0004E0E2 /* GfxRasterizeState_metal.mm */,
 				D366B41027C6B19F0004E0E2 /* GfxRasterizeState.h */,
 				D366B3F927C6B19E0004E0E2 /* GfxTexture_metal.h */,
+				D366B41927C6B19F0004E0E2 /* GfxTexture_metal.mm */,
 				D366B40327C6B19E0004E0E2 /* GfxTexture.h */,
 				D366B40627C6B19E0004E0E2 /* GfxTypes.h */,
+				D366B40027C6B19E0004E0E2 /* GfxVertexDesc_local.cpp */,
 				D366B41D27C6B19F0004E0E2 /* GfxVertexDesc_local.h */,
 				D366B41627C6B19F0004E0E2 /* GfxVertexDesc.h */,
-				D366B40927C6B19E0004E0E2 /* Gfx_metal.mm */,
-				D366B41127C6B19F0004E0E2 /* GfxBuffer_metal.mm */,
-				D366B40F27C6B19F0004E0E2 /* GfxContext_metal.mm */,
-				D366B41A27C6B19F0004E0E2 /* GfxDepthState_metal.mm */,
-				D366B41C27C6B19F0004E0E2 /* GfxFence_metal.mm */,
-				D366B41427C6B19F0004E0E2 /* GfxGpuFunction_metal.mm */,
-				D366B3FD27C6B19E0004E0E2 /* GfxGpuPipeline_metal.mm */,
-				D366B41227C6B19F0004E0E2 /* GfxGpuTextureArray_metal.mm */,
-				D366B40127C6B19E0004E0E2 /* GfxPass_metal.mm */,
-				D366B40A27C6B19E0004E0E2 /* GfxRasterizeState_metal.mm */,
-				D366B41927C6B19F0004E0E2 /* GfxTexture_metal.mm */,
 			);
 			path = gfx;
 			sourceTree = "<group>";
@@ -980,6 +1015,9 @@
 				D366B45327C6B6AA0004E0E2 /* Math3dTypes.h */,
 				D366B45427C6B6AA0004E0E2 /* Scalar.h */,
 				D366B45527C6B6AA0004E0E2 /* Math3d.inl */,
+				D34A4A8A27DBD09E0083DD65 /* Plane.h */,
+				D34A4A8B27DBD1B80083DD65 /* Frustum.h */,
+				D34A4A9127DC97DE0083DD65 /* Sphere.h */,
 			);
 			path = math;
 			sourceTree = "<group>";
@@ -1148,6 +1186,7 @@
 				D366B43E27C6B19F0004E0E2 /* GfxGpuFunction_metal.h in Headers */,
 				D366B3C427C6A56D0004E0E2 /* CVarManager_local.h in Headers */,
 				D366B43627C6B19F0004E0E2 /* GfxRasterizeState.h in Headers */,
+				D34A4A9927DCE7F40083DD65 /* Camera.h in Headers */,
 				D34A4A5D27D1F1FE0083DD65 /* Transform.h in Headers */,
 				D366B42E27C6B19F0004E0E2 /* GfxContext_metal.h in Headers */,
 				D366B4F227C7D4AA0004E0E2 /* RenderBatchCmd.h in Headers */,
@@ -1188,6 +1227,7 @@
 				D366B3CA27C6A56D0004E0E2 /* FileSystem_common.h in Headers */,
 				D366B4F827C7F9250004E0E2 /* Model_local.h in Headers */,
 				D366B42227C6B19F0004E0E2 /* GfxFence_metal.h in Headers */,
+				D34A4AA027DD0C450083DD65 /* SceneManager.h in Headers */,
 				D34A4A0627C9FDD40083DD65 /* draw3d_pbr_types.h in Headers */,
 				D34A49CF27C9FD860083DD65 /* Texture_base.h in Headers */,
 			);
@@ -1363,6 +1403,7 @@
 				D34A49A427C916600083DD65 /* RttiLoader.cpp in Sources */,
 				D34A4A6827D7B1080083DD65 /* PrototypeResource.cpp in Sources */,
 				D34A49A027C916600083DD65 /* RttiObject.cpp in Sources */,
+				D34A4A9D27DD0C440083DD65 /* SceneManager.cpp in Sources */,
 				D34A492A27C916180083DD65 /* Sys_ios.mm in Sources */,
 				D34A49B827C916670083DD65 /* LoaderBase.cpp in Sources */,
 				D34A4A8727DA4C0E0083DD65 /* PlayerManager.cpp in Sources */,
@@ -1377,6 +1418,7 @@
 				D34A499E27C916600083DD65 /* RttiSystem_local.cpp in Sources */,
 				D34A492C27C9161C0083DD65 /* FileSystem_common.cpp in Sources */,
 				D34A4A1C27CA6AFF0083DD65 /* farmhash.cpp in Sources */,
+				D34A4A9627DCE7F40083DD65 /* Camera.cpp in Sources */,
 				D34A492F27C9161C0083DD65 /* Sys_common.cpp in Sources */,
 				D34A49B927C9166C0083DD65 /* HeapFrame.cpp in Sources */,
 				D34A49A527C916600083DD65 /* RttiStream.cpp in Sources */,
@@ -1410,6 +1452,7 @@
 				D34A4A8227DA49E80083DD65 /* Player.cpp in Sources */,
 				D34A49DC27C9FD960083DD65 /* Render_local.cpp in Sources */,
 				D34A4A6127D3E8290083DD65 /* ShipModel.cpp in Sources */,
+				D34A4A8E27DC6E500083DD65 /* Frustum.cpp in Sources */,
 				D34A49C027C94FA00083DD65 /* i3d.cpp in Sources */,
 				D34A495627C916390083DD65 /* GfxPass_metal.mm in Sources */,
 				D34A49DD27C9FD960083DD65 /* RenderBatch.cpp in Sources */,
@@ -1444,6 +1487,7 @@
 				D34A496C27C9163A0083DD65 /* GfxGpuFunction_metal.mm in Sources */,
 				D34A496E27C9163A0083DD65 /* GfxFence_metal.mm in Sources */,
 				D34A49E827C9FD970083DD65 /* Texture_base.cpp in Sources */,
+				D34A4A9E27DD0C440083DD65 /* SceneManager.cpp in Sources */,
 				D34A4A4427CFE8EF0083DD65 /* Ecs.cpp in Sources */,
 				D34A48FD27C915EC0083DD65 /* GameViewController.m in Sources */,
 				D34A49A927C916600083DD65 /* RttiResource.cpp in Sources */,
@@ -1485,8 +1529,10 @@
 				D34A49A727C916600083DD65 /* RttiParser.cpp in Sources */,
 				D34A493927C9161D0083DD65 /* Log_local.cpp in Sources */,
 				D34A496F27C9163A0083DD65 /* GfxTexture_metal.mm in Sources */,
+				D34A4A8F27DC6E500083DD65 /* Frustum.cpp in Sources */,
 				D34A493727C9161D0083DD65 /* CVar.cpp in Sources */,
 				D34A49A827C916600083DD65 /* RttiObject.cpp in Sources */,
+				D34A4A9727DCE7F40083DD65 /* Camera.cpp in Sources */,
 				D34A4A7E27D9303E0083DD65 /* ShipManager.cpp in Sources */,
 				D34A49E727C9FD970083DD65 /* StaticTransform.cpp in Sources */,
 				D34A4A7927D8F3690083DD65 /* TransformManager.cpp in Sources */,
@@ -1523,6 +1569,7 @@
 				D34A499927C916560083DD65 /* StaticTransform.cpp in Sources */,
 				D34A4A6A27D7B1080083DD65 /* PrototypeResource.cpp in Sources */,
 				D34A497B27C9163A0083DD65 /* GfxFence_metal.mm in Sources */,
+				D34A4A9F27DD0C450083DD65 /* SceneManager.cpp in Sources */,
 				D34A491127C915EC0083DD65 /* GameViewController.m in Sources */,
 				D34A49B127C916610083DD65 /* RttiResource.cpp in Sources */,
 				D34A4A8927DA4C0E0083DD65 /* PlayerManager.cpp in Sources */,
@@ -1537,6 +1584,7 @@
 				D34A499B27C916560083DD65 /* DrawLit.cpp in Sources */,
 				D34A49BB27C9166D0083DD65 /* HeapFrame.cpp in Sources */,
 				D34A4A1E27CA6AFF0083DD65 /* farmhash.cpp in Sources */,
+				D34A4A9827DCE7F40083DD65 /* Camera.cpp in Sources */,
 				D34A49C227C94FA10083DD65 /* i3d.cpp in Sources */,
 				D34A493F27C9161D0083DD65 /* Log_common.cpp in Sources */,
 				D34A498427C9163A0083DD65 /* Gfx.cpp in Sources */,
@@ -1570,6 +1618,7 @@
 				D34A4A8427DA49E80083DD65 /* Player.cpp in Sources */,
 				D34A49AF27C916610083DD65 /* RttiParser.cpp in Sources */,
 				D34A4A6327D3E8290083DD65 /* ShipModel.cpp in Sources */,
+				D34A4A9027DC6E500083DD65 /* Frustum.cpp in Sources */,
 				D34A494027C9161D0083DD65 /* Log_local.cpp in Sources */,
 				D34A49ED27C9FD980083DD65 /* Render_local.cpp in Sources */,
 				D34A497C27C9163A0083DD65 /* GfxTexture_metal.mm in Sources */,
@@ -1590,6 +1639,7 @@
 				D34A49D227C9FD860083DD65 /* RenderBuffers.cpp in Sources */,
 				D34A4A3927CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
 				D34A48D727C9158E0083DD65 /* Material.cpp in Sources */,
+				D34A4A9527DCE7F40083DD65 /* Camera.cpp in Sources */,
 				D34A4A0A27C9FDD40083DD65 /* draw3d_pbr_bindless.metal in Sources */,
 				D34A4A6D27D8A6550083DD65 /* RttiScriptResource.cpp in Sources */,
 				D366B4F727C7F9250004E0E2 /* Model_local.cpp in Sources */,
@@ -1626,6 +1676,7 @@
 				D34A4A4F27D11D2C0083DD65 /* ComponentPrototype.cpp in Sources */,
 				D34A496527C916390083DD65 /* GfxVertexDesc_local.cpp in Sources */,
 				D366B3D327C6A56D0004E0E2 /* CVarManager_local.cpp in Sources */,
+				D34A4A8D27DC6E500083DD65 /* Frustum.cpp in Sources */,
 				D34A496327C916390083DD65 /* GfxPass_metal.mm in Sources */,
 				D366B44F27C6B3590004E0E2 /* ResourceCache_local.cpp in Sources */,
 				D34A4A0B27C9FDD40083DD65 /* draw3d_pbr.metal in Sources */,
@@ -1636,6 +1687,7 @@
 				D366B4EC27C7CF600004E0E2 /* LoaderBase.cpp in Sources */,
 				D34A496227C916390083DD65 /* GfxTexture_metal.mm in Sources */,
 				D34A4A6727D7B1080083DD65 /* PrototypeResource.cpp in Sources */,
+				D34A4A9C27DD0C440083DD65 /* SceneManager.cpp in Sources */,
 				D366B50427C7FCA00004E0E2 /* DrawLit.cpp in Sources */,
 				D34A495027C9162C0083DD65 /* Quaternion.cpp in Sources */,
 				D34A49BF27C94F9E0083DD65 /* i3d.cpp in Sources */,
