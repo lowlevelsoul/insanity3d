@@ -208,7 +208,7 @@ namespace i3d {
                 
                 // No prefix, so just copy
             default : {
-                std::string emptyStr = "";
+                stl::string::type::type emptyStr = "";
                 pathOut = pathIn;
             }
         }

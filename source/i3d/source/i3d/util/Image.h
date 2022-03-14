@@ -3,8 +3,8 @@
 // Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#ifndef __XENGINE_TOOLIMAGE_H__
-#define __XENGINE_TOOLIMAGE_H__
+#ifndef __TOOLIMAGE_H__
+#define __TOOLIMAGE_H__
 
 #include "xe/core/Types.h"
 #include "xe/container/Array.h"

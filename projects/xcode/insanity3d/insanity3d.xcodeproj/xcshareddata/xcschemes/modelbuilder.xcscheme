@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D34A490927C915EC0083DD65"
-               BuildableName = "xfighter.app"
-               BlueprintName = "xfighter macOS"
+               BlueprintIdentifier = "D34A4B2F27DE6DBD0083DD65"
+               BuildableName = "modelbuilder"
+               BlueprintName = "modelbuilder"
                ReferencedContainer = "container:insanity3d.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -35,8 +35,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/rusty/Dev/projects/insanity3d/data/xfighter"
+      useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -45,12 +44,30 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D34A490927C915EC0083DD65"
-            BuildableName = "xfighter.app"
-            BlueprintName = "xfighter macOS"
+            BlueprintIdentifier = "D34A4B2F27DE6DBD0083DD65"
+            BuildableName = "modelbuilder"
+            BlueprintName = "modelbuilder"
             ReferencedContainer = "container:insanity3d.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "+outfile /Users/rusty/Dev/projects/insanity3d/data/xfighter/data/models/rx2/ship.bmdl"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "+flipfaces"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "+scale 0.1"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "+infile /Users/rusty/Dev/projects/insanity3d/data/xfighter/assets/models/rx2/RX2_grey.FBX"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -62,9 +79,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D34A490927C915EC0083DD65"
-            BuildableName = "xfighter.app"
-            BlueprintName = "xfighter macOS"
+            BlueprintIdentifier = "D34A4B2F27DE6DBD0083DD65"
+            BuildableName = "modelbuilder"
+            BlueprintName = "modelbuilder"
             ReferencedContainer = "container:insanity3d.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

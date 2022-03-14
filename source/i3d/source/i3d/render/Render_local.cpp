@@ -128,7 +128,7 @@ namespace i3d {
         
         res->PublishFactory<i3d::ModelLocal>();
         res->PublishFactory<i3d::TextureBase>();
-        //res->PublishFactory<xe::SkeletonLocal>();
+        //res->PublishFactory<i3d::SkeletonLocal>();
 
         CreateDefaultTextures();
         

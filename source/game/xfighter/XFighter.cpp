@@ -48,8 +48,6 @@ void XFighter::Initialise() {
     
     CreateSystemEnt();
     
-    m_materialRes = res->Load<i3d::MaterialResource>( "~/materials/rx2/red.mat" );
-    m_model = res->Load< i3d::Model >( "~/models/rx2/ship.mdl" );
     m_player = res->Load<i3d::PrototypeResource>( "~/prototypes/player.proto" );
     
     res->StartLoading();

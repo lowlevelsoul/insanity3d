@@ -218,7 +218,9 @@ namespace i3d {
                     for ( uint32_t i = 0; i < arraySize; ++i ) {
                         stl::String::type path;
                         ReadPropDataString( path );
+#ifndef IS_TOOL_APP
                         (*propArray)[i] = res->Load( path.c_str() );
+#endif
                     }
                 }
                 break;
@@ -282,7 +284,9 @@ namespace i3d {
             case RTTI_PROP_TYPE_RESOURCE: {
                     stl::String::type path;
                     ReadPropDataString( path );
+#ifndef IS_TOOL_APP
                     *( ( Resource ** ) propData ) = res->Load( path.c_str() );
+#endif
                 }
                 break;
                 

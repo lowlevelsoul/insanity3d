@@ -14,7 +14,7 @@ namespace i3d {
         stl::String::size_type lastSepPos = path.rfind( fs->GetPlatformSeparator() );
         stl::String::size_type lastOtherSepPos = path.rfind( fs->GetOtherSeparator() );
             
-        stl::String::size_type actualLastPos = std::string::npos;
+        stl::String::size_type actualLastPos = stl::String::type::npos;
         
         if ( lastSepPos == stl::String::npos && lastOtherSepPos == stl::String::npos ) {
             // No path separator, so just set the position to be invalid

@@ -1,0 +1,5 @@
+#include "i3d_base.xcconfig"
+
+ASSIMP_ROOT                     = $(I3D_ROOT)/../../libs/assimp-5.0.1
+ASSIMP_INCLUDE                  = $(ASSIMP_ROOT)/include $(ASSIMP_ROOT)/build/macos/include
+ASSIMP_LINK                     = -L$(ASSIMP_ROOT)/build/macos/code/Release -L$(ASSIMP_ROOT)/build/macos/contrib/irrXML/Release -lassimp -lIrrXML
