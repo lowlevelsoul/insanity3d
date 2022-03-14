@@ -4,7 +4,7 @@
 //======================================================================================================================
 
 #include "toolimage/ToolImage.h"
-#include "common/FileSystem.h"
+#include "i3d/core/FileSystem.h"
     
 static const size_t FORMAT_PIXEL_SIZE[] = {
     0,          // FORMAT_NONE=0,
@@ -132,7 +132,7 @@ void ToolImage::Finalise() {
 
 //===============================================================================================================================
 bool ToolImage::Load( const char* path, bool forceRgba ) {
-    std::string ext;
+    i3d::stl::String::type ext;
     bool gotExt = fs->GetExtension( ext, path );
     if (gotExt == false) {
         return false;
@@ -155,7 +155,7 @@ bool ToolImage::Load( const char* path, bool forceRgba ) {
 
 //===============================================================================================================================
 bool ToolImage::Save( const char* path ) {
-    r3d::ScopedFile file( path, "wb" );
+    i3d::ScopedFile file( path, "wb" );
     if ( file.IsValid() == false ) {
         return false;
     }

@@ -40,21 +40,21 @@ TexBuilder::~TexBuilder() {
 //===============================================================================================================================
 bool TexBuilder::WriteOutputImage( std::string& errorMsg ) {
     
-    r3d::ScopedFile texFile( m_outPath.c_str(), "wb");
+    i3d::ScopedFile texFile( m_outPath.c_str(), "wb");
     if (texFile.IsValid() == false ) {
         errorMsg = sys->Vformat("Error opening %s", m_outPath.c_str());
         return false;
     }
     
-    LOG("Writing to %s\n", m_outPath.c_str());
+    XE_LOG("Writing to %s\n", m_outPath.c_str());
     
     bool writeOk = false;
     if (m_convertToBlock == true) {
-        LOG("    Writing block compressed images\n");
+        XE_LOG("    Writing block compressed images\n");
         writeOk = WriteImages(texFile, m_dstImagesCompressed);
     }
     else {
-        LOG("    Writing uncompressed images\n");
+        XE_LOG("    Writing uncompressed images\n");
         writeOk = WriteImages(texFile, m_dstImages);
     }
     
@@ -120,7 +120,7 @@ ToolImage* TexBuilder::BlockCompress(ToolImage* src, ToolImage::FORMAT blockForm
             }
         }
         else {
-            ERROR( false, "Bad etc input image format\n" );
+            XE_ERROR( false, "Bad etc input image format\n" );
         }
         
         uint8_t * encodedBits;
@@ -135,7 +135,7 @@ ToolImage* TexBuilder::BlockCompress(ToolImage* src, ToolImage::FORMAT blockForm
         dst = new ToolImage;
         dst->Initialise(src->m_width, src->m_height, blockFormat);
         
-        ERROR( encodedBitsNumBytes != dst->m_size, "Encoding size / expected image size mismatch \n" );
+        XE_ERROR( encodedBitsNumBytes != dst->m_size, "Encoding size / expected image size mismatch \n" );
         memcpy( &dst->m_bytes[0], encodedBits, encodedBitsNumBytes );
     }
     
@@ -174,7 +174,7 @@ uint32_t TexBuilder::GetSquishFlags(ToolImage::FORMAT blockFormat) {
 
 //===============================================================================================================================
 bool TexBuilder::LoadSourceImage( std::string& errorMsg ) {
-    LOG("Loading input image %s\n", m_srcPath.c_str());
+    XE_LOG("Loading input image %s\n", m_srcPath.c_str());
     
     m_srcImage = new ToolImage;
     bool loadOk = m_srcImage->Load(m_srcPath.c_str(), true);
@@ -201,11 +201,11 @@ bool TexBuilder::Process(  std::string& errorMsg ) {
     // If we want a different sized base image, then we need to resize it. If not
     // we just use the source image.
     if (m_resize == true) {
-        LOG("Resizing base image to %u x %u \n", m_newWidth, m_newHeight);
+        XE_LOG("Resizing base image to %u x %u \n", m_newWidth, m_newHeight);
         baseImage = Resize(m_srcImage, m_newWidth, m_newHeight);
     }
     else {
-        LOG("Using original base image \n");
+        XE_LOG("Using original base image \n");
         baseImage = m_srcImage;
     }
     
@@ -213,7 +213,7 @@ bool TexBuilder::Process(  std::string& errorMsg ) {
     
     if (m_genMips == true) {
         
-        LOG("Generating mips\n");
+        XE_LOG("Generating mips\n");
     
         // Generate rgba mip images
         uint32_t smallestMipSize = 64;
@@ -229,7 +229,7 @@ bool TexBuilder::Process(  std::string& errorMsg ) {
                 break;
             }
             
-            LOG("    Level %i (%u x %u)\n", i+1, mipWidth, mipHeight);
+            XE_LOG("    Level %i (%u x %u)\n", i+1, mipWidth, mipHeight);
             
             ToolImage* mip = Resize(baseImage, mipWidth, mipHeight);
             m_dstImages.push_back(mip);
@@ -237,17 +237,17 @@ bool TexBuilder::Process(  std::string& errorMsg ) {
     }
     
     if (m_convertToBlock == true) {
-        LOG("Converting to block format\n");
+        XE_LOG("Converting to block format\n");
         
         int32_t index = 0;
         for(auto s : m_dstImages) {
-            LOG("    Compressing image %i (%u x %u)...", index, s->GetWidth(), s->GetHeight());
+            XE_LOG("    Compressing image %i (%u x %u)...", index, s->GetWidth(), s->GetHeight());
             ++index;
             
             ToolImage* blockImg = BlockCompress(s, m_outputFormat);
             m_dstImagesCompressed.push_back(blockImg);
             
-            LOG("Done.\n");
+            XE_LOG("Done.\n");
         }
     }
     
@@ -291,12 +291,12 @@ ToolImage* TexBuilder::Resize(ToolImage* src, uint32_t newWidth, uint32_t newHei
 }
 
 //===============================================================================================================================
-bool TexBuilder::WriteImages( r3d::File * str, std::vector<ToolImage::Ptr>& images) {
-    r3d::TexStream header;
+bool TexBuilder::WriteImages( i3d::File * str, std::vector<ToolImage::Ptr>& images) {
+    i3d::TexStream header;
     memset(&header, 0, sizeof(header));
     
     // Fill out the info that we currently know about the header, and write it to the file
-    header.m_version    = r3d::TexStream::VERSION;
+    header.m_version    = i3d::TexStream::VERSION;
     header.m_width      = images[0]->GetWidth();
     header.m_height     = images[0]->GetHeight();
     header.m_mipCount   = (uint32_t) images.size() - 1;
@@ -324,49 +324,49 @@ bool TexBuilder::WriteImages( r3d::File * str, std::vector<ToolImage::Ptr>& imag
 }
 
 //===============================================================================================================================
-bool TexBuilder::WriteHeader( r3d::File * str, r3d::TexStream& header ) {
+bool TexBuilder::WriteHeader( i3d::File * str, i3d::TexStream& header ) {
     str->Write( &header.m_version );
     str->Write( &header.m_flags );
     str->Write( &header.m_format );
     str->Write( &header.m_width );
     str->Write( &header.m_height );
     str->Write( &header.m_mipCount );
-    str->Write( header.m_offsImages, r3d::TexStream::MAX_MIP_COUNT );
+    str->Write( header.m_offsImages, i3d::TexStream::MAX_MIP_COUNT );
     
     return true;
 }
 
 //===============================================================================================================================
-r3d::TexStream::FORMAT TexBuilder::GetStreamFormat(ToolImage::FORMAT imgFmt) {
+i3d::TexStream::FORMAT TexBuilder::GetStreamFormat(ToolImage::FORMAT imgFmt) {
     switch(imgFmt) {
         case ToolImage::FORMAT_RGB_U8:
-            return r3d::TexStream::FORMAT_RGB_U8;
+            return i3d::TexStream::FORMAT_RGB_U8;
             
         case ToolImage::FORMAT_RGBA_U8:
-            return r3d::TexStream::FORMAT_RGBA_U8;
+            return i3d::TexStream::FORMAT_RGBA_U8;
         
         case ToolImage::FORMAT_RGB_BC1:
-            return r3d::TexStream::FORMAT_RGB_BC1;
+            return i3d::TexStream::FORMAT_RGB_BC1;
             
         case ToolImage::FORMAT_RGBA_BC1:
-            return r3d::TexStream::FORMAT_RGBA_BC1;
+            return i3d::TexStream::FORMAT_RGBA_BC1;
             
         case ToolImage::FORMAT_RGBA_BC2:
-            return r3d::TexStream::FORMAT_RGBA_BC2;
+            return i3d::TexStream::FORMAT_RGBA_BC2;
             
         case ToolImage::FORMAT_RGBA_BC3:
-            return r3d::TexStream::FORMAT_RGBA_BC3;
+            return i3d::TexStream::FORMAT_RGBA_BC3;
             
         case ToolImage::FORMAT_RGB_ETC2:
-            return r3d::TexStream::FORMAT_RGB_ETC2;
+            return i3d::TexStream::FORMAT_RGB_ETC2;
             
         case ToolImage::FORMAT_RGBA_ETC2:
-            return r3d::TexStream::FORMAT_RGBA_ETC2;
+            return i3d::TexStream::FORMAT_RGBA_ETC2;
             
         default:
             break;
     }
     
-    return r3d::TexStream::FORMAT_NONE;
+    return i3d::TexStream::FORMAT_NONE;
 }
 

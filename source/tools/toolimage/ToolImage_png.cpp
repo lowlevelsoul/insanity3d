@@ -12,13 +12,13 @@
     
 //===============================================================================================================================
 static void PngReadFunc( png_structp png_ptr, png_bytep outBytes, png_size_t byteCountToRead ) {
-    r3d::File * file = (r3d::File*)png_ptr->io_ptr;
+    i3d::File * file = (i3d::File*)png_ptr->io_ptr;
     file->Read( outBytes, 1, byteCountToRead );
 }
 
 //===============================================================================================================================
 static void PngWriteFunc( png_structp png_ptr, png_bytep outBytes, png_size_t byteCountToRead ) {
-    r3d::File * file = (r3d::File*)png_ptr->io_ptr;
+    i3d::File * file = (i3d::File*)png_ptr->io_ptr;
     file->Write( outBytes, 1, byteCountToRead );
 }
 
@@ -30,7 +30,7 @@ static void PngWriteFlushFunc(png_structp flushPtr) {
 //===============================================================================================================================
 bool ToolImage::LoadPng(const char* path, bool forceAlpha) {
     
-    r3d::ScopedFile file( path, "rb" );
+    i3d::ScopedFile file( path, "rb" );
     if ( file.IsValid() == false ) {
         return false;
     }
@@ -56,7 +56,7 @@ bool ToolImage::LoadPng(const char* path, bool forceAlpha) {
         return false;
     }
 
-    png_set_read_fn( png_ptr, (r3d::File*) file, PngReadFunc );
+    png_set_read_fn( png_ptr, (i3d::File*) file, PngReadFunc );
 
     // tell libpng we already read the signature
     png_set_sig_bytes( png_ptr, PNG_SIG_LENGTH );
@@ -106,7 +106,7 @@ bool ToolImage::LoadPng(const char* path, bool forceAlpha) {
 
 
 //===============================================================================================================================
-bool ToolImage::SavePng( r3d::File * file) {
+bool ToolImage::SavePng( i3d::File * file) {
     
     bool formatValid = (m_format != FORMAT_RGB_U8) || (m_format != FORMAT_RGBA_U8);
     if (formatValid == false) {

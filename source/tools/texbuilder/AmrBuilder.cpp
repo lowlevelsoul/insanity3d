@@ -55,7 +55,7 @@ bool AmrBuilder::LoadSourceImages( std::string& errorMsg ) {
         
         if (path.empty() == false) {
             
-            LOG("Loading %s texture %s\n", SRC_NAMES[i], path.c_str());
+            XE_LOG("Loading %s texture %s\n", SRC_NAMES[i], path.c_str());
             
             m_srcTextures[i] = new ToolImage;
             
@@ -96,7 +96,7 @@ bool AmrBuilder::SetupMissingImages( std::string& errorMsg ) {
     for(uint32_t i=0; i < SRC_TEX_COUNT; ++i) {
         if (m_srcTextures[i] == nullptr) {
             
-            LOG("Creating default texture for %s\n", SRC_NAMES[i]);
+            XE_LOG("Creating default texture for %s\n", SRC_NAMES[i]);
             
             ToolImage* img = new ToolImage;
             img->Initialise(width, height, ToolImage::FORMAT_RGBA_U8);
@@ -117,7 +117,7 @@ bool AmrBuilder::SetupMissingImages( std::string& errorMsg ) {
 //===============================================================================================================================
 bool AmrBuilder::MakeOutputTexture( std::string& errorMsg ) {
     
-    LOG("Constructing final AMR texture\n");
+    XE_LOG("Constructing final AMR texture\n");
 
     m_outTexture = new ToolImage;
     m_outTexture->Initialise(m_srcTextures[0]->GetWidth(), m_srcTextures[0]->GetHeight(), ToolImage::FORMAT_RGBA_U8);

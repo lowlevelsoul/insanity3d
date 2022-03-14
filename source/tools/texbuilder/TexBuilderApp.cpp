@@ -111,19 +111,19 @@ TexBuilderApp::TexBuilderApp() {
 
 //===============================================================================================================================
 void TexBuilderApp::DisplayHelp(int32_t helpItem) {
-    LOG("texbuilder %u.%u.%u\n", VERSION_MAJOR, VERSION_MINOR, VERSION_FIX);
-    LOG("======================================\n");
+    XE_LOG("texbuilder %u.%u.%u\n", VERSION_MAJOR, VERSION_MINOR, VERSION_FIX);
+    XE_LOG("======================================\n");
     
     if (helpItem < 0 || helpItem >= ARG_COUNT) {
         for(uint32_t i=0; HELP_TEXT[i] != nullptr; ++i) {
-            LOG("%s\n", HELP_TEXT[i]);
+            XE_LOG("%s\n", HELP_TEXT[i]);
             if (i == ARG_BLOCK) {
                 DisplayBlockFormats();
             }
         }
     }
     else {
-        LOG("%s\n", HELP_TEXT[helpItem]);
+        XE_LOG("%s\n", HELP_TEXT[helpItem]);
         if (helpItem == ARG_BLOCK) {
             DisplayBlockFormats();
         }
@@ -135,7 +135,7 @@ void TexBuilderApp::DisplayBlockFormats() {
     for(const TexBuilder::BlockCompressFormat * fmt = TexBuilder::BLOCK_FORMATS;
         fmt->formatString != nullptr;
         ++fmt) {
-        LOG("                                   %s\n", fmt->formatString);
+        XE_LOG("                                   %s\n", fmt->formatString);
     }
 }
     
@@ -153,17 +153,17 @@ bool TexBuilderApp::Run() {
     }
     
     if (m_displayVersion == true) {
-        LOG("%u.%u.%u\n", VERSION_MAJOR, VERSION_MINOR, VERSION_FIX);
+        XE_LOG("%u.%u.%u\n", VERSION_MAJOR, VERSION_MINOR, VERSION_FIX);
         return true;
     }
     
     if (m_buildAmr == true) {
-        LOG("Building AMR texture for PBR material\n");\
+        XE_LOG("Building AMR texture for PBR material\n");\
         
         std::string errorMsg;
         bool buildOk = m_amrBuilder.Process(errorMsg);
         if (buildOk == false) {
-            LOG("Error building AMR texture\nReason: %s\n", errorMsg.c_str());
+            XE_LOG("Error building AMR texture\nReason: %s\n", errorMsg.c_str());
             return false;
         }
         
@@ -177,14 +177,14 @@ bool TexBuilderApp::Run() {
     
     bool processOk = m_texgen.Process(errorMsg);
     if (processOk == false) {
-        LOG("%s\n", errorMsg.c_str());
+        XE_LOG("%s\n", errorMsg.c_str());
         return false;
     }
     
     // Write out the final image
     bool writeOk = this->WriteOutputImage( errorMsg );
     if (writeOk == false) {
-        LOG("%s\n", errorMsg.c_str());
+        XE_LOG("%s\n", errorMsg.c_str());
         return false;
     }
     
@@ -213,7 +213,7 @@ bool TexBuilderApp::HandleArg( ToolArg& arg, uint32_t argEnum ) {
             
         case ARG_OUTFILE:
             if (arg.m_params.size() != 1) {
-                LOG("outfile error %u\n", arg.m_params.size());
+                XE_LOG("outfile error %u\n", arg.m_params.size());
                 DisplayHelp(ARG_OUTFILE);
                 return false;
             }
@@ -253,7 +253,7 @@ bool TexBuilderApp::HandleArg( ToolArg& arg, uint32_t argEnum ) {
             
             uint32_t mipCount = atoi( arg.m_params[0] );
             if (mipCount > 32) {
-                LOG("To many mip levels!\n");
+                XE_LOG("To many mip levels!\n");
                 return false;
             }
             

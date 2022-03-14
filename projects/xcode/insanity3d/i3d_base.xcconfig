@@ -7,7 +7,7 @@ I3D_BUILD_DIR                = $(I3D_ROOT)/build/$(PLATFORM_NAME)/$(CONFIGURATIO
 I3D_BUILD_DIR_OUT            = $(I3D_BUILD_DIR)/out/
 I3D_BUILD_DIR_INT            = $(I3D_BUILD_DIR)/int/$(PROJECT_NAME)/$(TARGET_NAME)
 
-I3D_LIBS                    = $(I3D_SOURCE)/libs
+I3D_LIBS                    = $(I3D_ROOT)/source/libs
 I3D_LIB_LPNG                = $(I3D_LIBS)/lpng1636
 I3D_LIB_SQUISH              = $(I3D_LIBS)/squish
 I3D_LIB_AVIR                = $(I3D_LIBS)/avir

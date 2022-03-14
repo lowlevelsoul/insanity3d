@@ -111,7 +111,7 @@ protected:
     
     bool LoadJpeg(const char* path, bool forceAlpha);
     
-    bool SavePng( r3d::File * file );
+    bool SavePng( i3d::File * file );
     
     void ExpandRoRgba(uint32_t h, const uint8_t* srcRgb);
 

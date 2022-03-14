@@ -7,8 +7,8 @@
 #define __TEXBUILDER_H__
 
 #include "toolimage/ToolImage.h"
-#include "engine/render/TexStream.h"
 #include "texbuilder/AmrBuilder.h"
+#include "i3d/render/TexStream.h"
 
 class TexBuilder {
 public:
@@ -60,11 +60,11 @@ public:
     
 protected:
     
-    r3d::TexStream::FORMAT GetStreamFormat( ToolImage::FORMAT imgFmt );
+    i3d::TexStream::FORMAT GetStreamFormat( ToolImage::FORMAT imgFmt );
     
-    bool WriteImages( r3d::File * str, std::vector<ToolImage::Ptr> & images);
+    bool WriteImages( i3d::File * str, std::vector<ToolImage::Ptr> & images);
     
-    bool WriteHeader( r3d::File * str, r3d::TexStream& header);
+    bool WriteHeader( i3d::File * str, i3d::TexStream& header);
 };
 
 #endif

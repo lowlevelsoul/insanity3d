@@ -1,0 +1,20 @@
+
+#include "i3d_base.xcconfig"
+
+LIBS_IMAGES = $(I3D_LIB_AVIR) $(I3D_INCLUDE_ETC2COMP) $(I3D_LIB_SQUISH)
+
+ALWAYS_SEARCH_USER_PATHS        = YES
+USER_HEADER_SEARCH_PATHS        = $(I3D_INCLUDES) $(I3D_INCLUDES_LIBS) $(PROJECT_DIR) $(I3D_INCLUDES_TOOL) $(LIBS_IMAGES)
+HEADER_SEARCH_PATHS             = $(I3D_INCLUDES) $(I3D_INCLUDES_LIBS) $(PROJECT_DIR) $(I3D_INCLUDES_TOOL) $(LIBS_IMAGES)
+
+CONFIGURATION_BUILD_DIR         = $(I3D_BUILD_DIR_OUT)
+CONFIGURATION_TEMP_DIR          = $(I3D_BUILD_DIR_INT)
+
+GCC_PREPROCESSOR_DEFINITIONS    = $(inherited)
+GCC_PREFIX_HEADER               = texbuilder.pch
+GCC_PRECOMPILE_PREFIX_HEADER    = YES
+
+USE_HEADERMAP                   = NO
+
+FRAMEWORKS                      = -lz -framework cocoa -framework foundation -lz
+OTHER_LDFLAGS                   =  $(FRAMEWORKS) -L$(I3D_BUILD_DIR_OUT) $(ASSIMP_LINK) -ltoolapp -ltoolimage -lpng -letc2comp -lsquish
