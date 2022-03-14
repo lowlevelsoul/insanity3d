@@ -1,5 +1,0 @@
-<material name="player/desert">
-    <tex_albedo path="player/desert.tex" />
-    <tex_amr path="player/amr.tex" />
-    <tex_glow path="player/glow.tex" />
-</material>
