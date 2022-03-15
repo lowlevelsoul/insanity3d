@@ -36,7 +36,7 @@ public:
     bool                        m_stripMixamo;
     
     
-    std::vector<std::string>    m_meshFilters;          ///< List of mesh filters
+    i3d::stl::Vector<i3d::stl::String::type>::type    m_meshFilters;          ///< List of mesh filters
     std::vector<uint64_t>       m_meshFilterHashes;     ///< List of hashed mesh filter names
     
     

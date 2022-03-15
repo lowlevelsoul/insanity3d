@@ -25,7 +25,7 @@ public:
     std::string                 m_joint;            ///< The name of the joint this clusteris associated with
     std::vector<uint32_t>       m_verts;            ///< List of vertex indices that this cluster affects
     std::vector<float>          m_weights;          ///< List of weights
-    i3d::Matrix4                     m_offset;           ///< Offset matrix used to transform the vertices for the skin
+    i3d::Matrix4                m_offset;           ///< Offset matrix used to transform the vertices for the skin
 };
 
 class ToolSkin : public RefObject {

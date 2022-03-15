@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D34A4B2F27DE6DBD0083DD65"
-               BuildableName = "modelbuilder"
-               BlueprintName = "modelbuilder"
+               BlueprintIdentifier = "D34A4AC727DE46E40083DD65"
+               BuildableName = "libtoolmodel.a"
+               BlueprintName = "toolmodel"
                ReferencedContainer = "container:insanity3d.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,38 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D34A4B2F27DE6DBD0083DD65"
-            BuildableName = "modelbuilder"
-            BlueprintName = "modelbuilder"
-            ReferencedContainer = "container:insanity3d.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "+outfile /Users/rusty/Dev/projects/insanity3d/data/xfighter/data/macos/data/models/rx2/ship.bmdl"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "+meshfilter Fighter-RX2"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "+flipfaces"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "+scale 0.1"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "+infile /Users/rusty/Dev/projects/insanity3d/data/xfighter/assets/models/rx2/RX2_grey.FBX"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -79,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D34A4B2F27DE6DBD0083DD65"
-            BuildableName = "modelbuilder"
-            BlueprintName = "modelbuilder"
+            BlueprintIdentifier = "D34A4AC727DE46E40083DD65"
+            BuildableName = "libtoolmodel.a"
+            BlueprintName = "toolmodel"
             ReferencedContainer = "container:insanity3d.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

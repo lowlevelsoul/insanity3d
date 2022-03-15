@@ -36,6 +36,8 @@ public:
         bool                        m_genNormals;
         bool                        m_stripMixamo;
         SkeletonBuilder::Options    m_skeletonOpt;
+        
+        i3d::stl::Vector<i3d::stl::String::type>::type m_meshFilter;
     };
     
     ModelBuilder( Options & options );
@@ -68,6 +70,8 @@ public:
     void WriteHeader( ToolMemStream & str, i3d::ModelStream & header );
 
     void MakeMeshSkinShell( ToolMesh * mesh, SkeletonBuilder & sb );
+    
+    bool MeshPassesFilter( const char * name );
     
 public:
     class SrcMesh : public RefObject {

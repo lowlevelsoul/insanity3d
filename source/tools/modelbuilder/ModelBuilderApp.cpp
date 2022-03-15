@@ -203,6 +203,7 @@ bool ModelBuilderApp::Run() {
     m_modelBuilderOpt.m_genNormals = m_genNormals;
     m_modelBuilderOpt.m_stripMixamo = m_stripMixamo;
     m_modelBuilderOpt.m_skeletonOpt = m_skeletonBuilderOpt;
+    m_modelBuilderOpt.m_meshFilter = m_meshFilters;
     
     if ( m_info == true ) {
         ShowModelInfo( model );
@@ -321,7 +322,7 @@ bool ModelBuilderApp::HandleArg(  ToolArg& arg, uint32_t argEnum ) {
             }
 
             for(auto f : arg.m_params) {
-                // AddMeshFilter( f );
+                m_meshFilters.push_back( f );
             }
             break;
         }

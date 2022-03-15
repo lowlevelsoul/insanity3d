@@ -13,6 +13,7 @@ RTTI_CLASS_BEGIN( ModelBuilder )
     RTTI_PROP( BOOL, "gen_normals", m_genNormals )
     RTTI_PROP( BOOL, "strip_mixamo", m_stripMixamo )
     RTTI_PROP( STRING, "rootnode", m_rootNode )
+    RTTI_PROP_ARRAY(STRING, "mesh_filter", m_meshFilter)
 RTTI_CLASS_END( ModelBuilder )
 
 //======================================================================================================================
@@ -70,6 +71,13 @@ bool ModelBuilder::Run() {
     
     if (m_stripMixamo == true) {
         args.push_back("+stripmixamo");
+    }
+    
+    if ( m_meshFilter.empty() == false ) {
+        args.push_back("+meshfilter");
+        for ( auto & m : m_meshFilter ) {
+            args.push_back( m );
+        }
     }
 
     sys->Exec( exePath.c_str(), args );

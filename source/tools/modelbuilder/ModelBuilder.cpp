@@ -181,7 +181,6 @@ void ModelBuilder::WriteHeader( ToolMemStream & str, i3d::ModelStream & header )
     str.Write( &header.m_pad, 1 );
 	str.Write( header.m_bounds[ 0 ], 3 );
     str.Write( header.m_bounds[ 1 ], 3 );
-
 }
 
 //======================================================================================================================
@@ -251,6 +250,38 @@ void ModelBuilder::ModifyMeshes( ToolModel * model ) {
      
         sm->m_mesh->ApplyTransform( modTransform );
     }
+    
+#if 0
+    bool mergeMeshes = true;
+    if ( mergeMeshes == true && m_srcMeshes.size() > 1 ) {
+        SrcMesh * mm = new SrcMesh;
+        mm->m_mesh = new ToolMesh( nullptr );
+        
+        uint32_t vertexBase = 0;
+        
+        for ( auto sm : m_srcMeshes ) {
+            for ( auto v : sm->m_mesh->m_verts ) {
+                mm->m_mesh->m_verts.push_back( v );
+            }
+            
+            for ( auto n : sm->m_mesh->m_normals ) {
+                mm->m_mesh->m_normals.push_back( n );
+            }
+            
+            for ( auto tc : sm->m_mesh->m_texcoords ) {
+                mm->m_mesh->m_texcoords.push_back( tc );
+            }
+            
+            if ( sm->m_mesh->m_skin != nullptr ) {
+                mm->m_mesh->m_skin = new ToolSkin( nullptr );
+                for ( auto w : mm->m_mesh->m_skin->m_clusters ) {
+                    
+                }
+            }
+            
+        }
+    }
+#endif
 
     // Calculate entire model bounds
     m_boundsMin = m_srcMeshes[ 0 ]->m_mesh->m_boundsMin;
@@ -333,37 +364,57 @@ void ModelBuilder::MakeMeshSkinShell( ToolMesh * mesh, SkeletonBuilder & sb ) {
 }
 
 //======================================================================================================================
+bool ModelBuilder::MeshPassesFilter( const char * name ) {
+    if (m_options.m_meshFilter.empty() == true ) {
+        return true;
+    }
+    
+    for ( auto & f : m_options.m_meshFilter ) {
+        if ( strcasecmp( name, f.c_str() ) == 0 ) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+//======================================================================================================================
 void ModelBuilder::GatherMeshes( ToolJoint * joint ) {
     
-    if (joint->HasMeshes() == true ) {
-        if (joint->m_meshes.size() > 1) {
+    bool pass = MeshPassesFilter( joint->m_name.c_str() );
+    
+    if ( pass == true ) {
+        
+        if ( joint->HasMeshes() == true ) {
             
-            for (uint32_t m = 0; m < joint->m_meshes.size(); ++m) {
+            if (joint->m_meshes.size() > 1) {
+                for (uint32_t m = 0; m < joint->m_meshes.size(); ++m) {
+                    SrcMesh * srcMesh = new SrcMesh;
+                    
+                    srcMesh->m_joint = joint;
+                    
+                    srcMesh->m_mesh = new ToolMesh( nullptr );
+                    srcMesh->m_mesh->Copy( joint->m_meshes[m] );
+                    srcMesh->m_mesh->m_model = joint->m_meshes[m]->m_model;
+                    
+                    i3d::stl::String::type meshName = sys->Vformat("%s_%04u", joint->m_name.c_str(), m);
+                    srcMesh->m_mesh->m_name = meshName;
+                    
+                    m_srcMeshes.push_back( srcMesh );
+                }
+            }
+            else {
                 SrcMesh * srcMesh = new SrcMesh;
                 
                 srcMesh->m_joint = joint;
                 
                 srcMesh->m_mesh = new ToolMesh( nullptr );
-                srcMesh->m_mesh->Copy( joint->m_meshes[m] );
-                srcMesh->m_mesh->m_model = joint->m_meshes[m]->m_model;
-                
-                i3d::stl::String::type meshName = sys->Vformat("%s_%04u", joint->m_name.c_str(), m);
-                srcMesh->m_mesh->m_name = meshName;
+                srcMesh->m_mesh->Copy( joint->m_meshes[0] );
+                srcMesh->m_mesh->m_name = joint->m_name;
+                srcMesh->m_mesh->m_model = joint->m_meshes[0]->m_model;
                 
                 m_srcMeshes.push_back( srcMesh );
-            }            
-        }
-        else {
-            SrcMesh * srcMesh = new SrcMesh;
-            
-            srcMesh->m_joint = joint;
-            
-            srcMesh->m_mesh = new ToolMesh( nullptr );
-            srcMesh->m_mesh->Copy( joint->m_meshes[0] );
-            srcMesh->m_mesh->m_name = joint->m_name;
-            srcMesh->m_mesh->m_model = joint->m_meshes[0]->m_model;
-            
-            m_srcMeshes.push_back( srcMesh );
+            }
         }
     }
     
