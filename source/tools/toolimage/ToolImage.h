@@ -109,7 +109,9 @@ protected:
     
     bool LoadPng(const char* path, bool forceAlpha);
     
+#if 0
     bool LoadJpeg(const char* path, bool forceAlpha);
+#endif
     
     bool SavePng( i3d::File * file );
     

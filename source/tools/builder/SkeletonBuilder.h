@@ -17,15 +17,15 @@ public:
     
     virtual bool Run() override;
     
-    virtual void GatherInputs( std::vector<std::string> & inputs );
+    virtual void GatherInputs( std::vector<i3d::stl::String::type> & inputs );
     
-    virtual void GatherOutputs( std::vector<std::string> & outputs );
+    virtual void GatherOutputs( std::vector<i3d::stl::String::type> & outputs );
     
     virtual const char * GetExeName() const override { return "modelbuilder"; }
     
 public:
-    std::string     m_input;
-    std::string     m_rootNode;
+    i3d::stl::String::type     m_input;
+    i3d::stl::String::type     m_rootNode;
     float           m_scale;
     bool            m_stripMixamo;
 };

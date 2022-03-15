@@ -9,9 +9,9 @@
 RTTI_CLASS_BEGIN( TextureBuilder )
     RTTI_PROP( STRING, "input", m_input )
     RTTI_PROP( STRING, "block", m_block )
-    RTTI_PROP( UINT, "width", m_width )
-    RTTI_PROP( UINT, "height", m_height )
-    RTTI_PROP( UINT, "mipcount", m_mipCount )
+    RTTI_PROP( INT, "width", m_width )
+    RTTI_PROP( INT, "height", m_height )
+    RTTI_PROP( INT, "mipcount", m_mipCount )
 RTTI_CLASS_END( TextureBuilder )
 
 
@@ -28,28 +28,28 @@ TextureBuilder::~TextureBuilder() {
 }
 
 //======================================================================================================================
-void TextureBuilder::GatherInputs( std::vector<std::string> & inputs ) {
+void TextureBuilder::GatherInputs( std::vector<i3d::stl::String::type> & inputs ) {
     inputs.push_back( GetFullTexturePath() );
 }
 
 //======================================================================================================================
-void TextureBuilder::GatherOutputs( std::vector<std::string> & outputs ) {
-    outputs.push_back( MakeOutputFilePath( ".tex" ) );
+void TextureBuilder::GatherOutputs( std::vector<i3d::stl::String::type> & outputs ) {
+    outputs.push_back( MakeOutputFilePath( ".btex" ) );
 }
 
 //======================================================================================================================
-const std::string TextureBuilder::GetFullTexturePath() {
-    std::string inputFilePath = MakeInputFilePath( m_input.c_str() );
+const i3d::stl::String::type TextureBuilder::GetFullTexturePath() {
+    i3d::stl::String::type inputFilePath = MakeInputFilePath( m_input.c_str() );
     return inputFilePath;
 }
 
 //======================================================================================================================
 bool TextureBuilder::Run() {
     
-    std::string inputFilePath = GetFullTexturePath();
-    std::string outFilePath = MakeOutputFilePath( ".tex" );
+    i3d::stl::String::type inputFilePath = GetFullTexturePath();
+    i3d::stl::String::type outFilePath = MakeOutputFilePath( ".btex" );
     
-    std::vector<std::string> args;
+    i3d::stl::Vector<i3d::stl::String::type>::type args;
     args.push_back("+infile");
     args.push_back(inputFilePath);
     args.push_back("+outfile");

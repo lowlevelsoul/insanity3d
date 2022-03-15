@@ -143,9 +143,11 @@ bool ToolImage::Load( const char* path, bool forceRgba ) {
     if ( strcmp(ext.c_str(), "png" ) == 0 ) {
         loadRes = LoadPng( path, forceRgba );
     }
+#if 0
     else if ( ( strcmp(ext.c_str(), "jpg" ) == 0 ) || ( strcmp(ext.c_str(), "jpeg" ) == 0 ) ) {
         loadRes = LoadJpeg( path, forceRgba );
     }
+#endif
     else {
         return false;
     }

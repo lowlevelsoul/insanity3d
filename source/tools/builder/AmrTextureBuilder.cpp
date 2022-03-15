@@ -11,9 +11,9 @@ RTTI_CLASS_BEGIN( AmrTextureBuilder )
     RTTI_PROP( STRING, "metallic", m_metallic )
     RTTI_PROP( STRING, "roughness", m_roughness )
     RTTI_PROP( STRING, "block", m_block )
-    RTTI_PROP( UINT, "width", m_width )
-    RTTI_PROP( UINT, "height", m_height )
-    RTTI_PROP( UINT, "mipcount", m_mipCount )
+    RTTI_PROP( INT, "width", m_width )
+    RTTI_PROP( INT, "height", m_height )
+    RTTI_PROP( INT, "mipcount", m_mipCount )
 RTTI_CLASS_END( AmrTextureBuilder )
 
 
@@ -30,7 +30,7 @@ AmrTextureBuilder::~AmrTextureBuilder() {
 }
 
 //======================================================================================================================
-void AmrTextureBuilder::GatherInputs( std::vector<std::string> & inputs ) {
+void AmrTextureBuilder::GatherInputs( std::vector<i3d::stl::String::type> & inputs ) {
     if ( m_ambientOcclusion.empty() == false ) {
         inputs.push_back( GetFullTexturePath( m_ambientOcclusion ) );
     }
@@ -45,20 +45,20 @@ void AmrTextureBuilder::GatherInputs( std::vector<std::string> & inputs ) {
 }
 
 //======================================================================================================================
-void AmrTextureBuilder::GatherOutputs( std::vector<std::string> & outputs ) {
-    outputs.push_back( MakeOutputFilePath( ".tex" ) );
+void AmrTextureBuilder::GatherOutputs( std::vector<i3d::stl::String::type> & outputs ) {
+    outputs.push_back( MakeOutputFilePath( ".btex" ) );
 }
 
 //======================================================================================================================
-const std::string AmrTextureBuilder::GetFullTexturePath( std::string & tex ) {
-    std::string inputFilePath = MakeInputFilePath( tex.c_str() );
+const i3d::stl::String::type AmrTextureBuilder::GetFullTexturePath( i3d::stl::String::type & tex ) {
+    i3d::stl::String::type inputFilePath = MakeInputFilePath( tex.c_str() );
     return inputFilePath;
 }
 
 //======================================================================================================================
 bool AmrTextureBuilder::Run() {
     
-    std::vector<std::string> args;
+    i3d::stl::Vector<i3d::stl::String::type>::type args;
     args.push_back( "+amr" );
     
     if (m_ambientOcclusion.empty() == false ) {
@@ -77,7 +77,7 @@ bool AmrTextureBuilder::Run() {
     }
 
     args.push_back( "+outfile" );
-    args.push_back( MakeOutputFilePath( ".tex" ) );
+    args.push_back( MakeOutputFilePath( ".btex" ) );
     
     if ( m_width != 0 && m_height != 0 ) {
         args.push_back( "+size" );

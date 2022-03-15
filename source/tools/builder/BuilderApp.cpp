@@ -25,9 +25,10 @@ BuilderApp::BuilderApp() {
     PublishArgEnum( "platform", ARG_PLATFORM );
     PublishArgEnum( "folders", ARG_FOLDERS );
     
-    m_dataFolderName = "data";
-    m_displayVersion = false;
-    m_filterFolders = false;
+    m_dataFolderName    = "data";
+    m_displayVersion    = false;
+    m_filterFolders     = false;
+    m_platform          = i3d::THIS_PLATFORM;
 }
 
 //======================================================================================================================
@@ -86,7 +87,7 @@ bool BuilderApp::Run() {
     
     fs->AppendPath( m_outputBasePath, m_dataFolderName.c_str() );
     
-    LOG("Builder output base path: %s\n", m_outputBasePath.c_str() );
+    XE_LOG("Builder output base path: %s\n", m_outputBasePath.c_str() );
     
     // Setup the folder filters if any were specified.
     if ( m_filterFolders == true ) {
@@ -101,10 +102,10 @@ bool BuilderApp::Run() {
 //======================================================================================================================
 void BuilderApp::PrintVersionNumber( bool asHeader ) {
     if ( asHeader == true ) {
-        LOG( "Builder Version " );
+        XE_LOG( "Builder Version " );
     }
     
-    LOG( "%u.%u.%u\n", VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH );
+    XE_LOG( "%u.%u.%u\n", VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH );
 }
 
 //======================================================================================================================

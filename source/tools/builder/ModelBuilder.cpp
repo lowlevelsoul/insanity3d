@@ -9,9 +9,9 @@
 RTTI_CLASS_BEGIN( ModelBuilder )
     RTTI_PROP( STRING, "input", m_input )
     RTTI_PROP( FLOAT, "scale", m_scale )
-    RTTI_PROP( BOOL, "flipfaces", m_flipFaces )
-    RTTI_PROP( BOOL, "gennormals", m_genNormals )
-    RTTI_PROP( BOOL, "stripmixamo", m_stripMixamo )
+    RTTI_PROP( BOOL, "flip_faces", m_flipFaces )
+    RTTI_PROP( BOOL, "gen_normals", m_genNormals )
+    RTTI_PROP( BOOL, "strip_mixamo", m_stripMixamo )
     RTTI_PROP( STRING, "rootnode", m_rootNode )
 RTTI_CLASS_END( ModelBuilder )
 
@@ -19,6 +19,8 @@ RTTI_CLASS_END( ModelBuilder )
 ModelBuilder::ModelBuilder() {
     m_scale = 1;
     m_flipFaces = false;
+    m_genNormals = false;
+    m_stripMixamo = false;
 }
 
 //======================================================================================================================
@@ -27,25 +29,27 @@ ModelBuilder::~ModelBuilder() {
 }
 
 //======================================================================================================================
-void ModelBuilder::GatherInputs( std::vector<std::string> & inputs ) {
+void ModelBuilder::GatherInputs( std::vector<i3d::stl::String::type> & inputs ) {
     inputs.push_back( MakeInputFilePath( m_input.c_str() ) );
     inputs.push_back( m_builder->GetToolPath("modelbuilder") );
 }
 
 //======================================================================================================================
-void ModelBuilder::GatherOutputs( std::vector<std::string> & outputs ) {
-    std::string outputFilePath = MakeOutputFilePath( ".mdl" );
+void ModelBuilder::GatherOutputs( std::vector<i3d::stl::String::type> & outputs ) {
+    i3d::stl::String::type outputFilePath = MakeOutputFilePath( ".bmdl" );
     outputs.push_back( outputFilePath );
 }
 
 //======================================================================================================================
 bool ModelBuilder::Run() {
-    std::string exePath = GetToolExePath();
+    i3d::stl::String::type exePath = GetToolExePath();
     
-    std::string inputFilePath = MakeInputFilePath( m_input.c_str() );
-    std::string outputFilePath = MakeOutputFilePath( ".mdl");
+    i3d::stl::String::type inputFilePath = MakeInputFilePath( m_input.c_str() );
+    i3d::stl::String::type outputFilePath = MakeOutputFilePath( ".bmdl");
     
-    std::vector<std::string> args;
+    const char * outPath = outputFilePath.c_str();
+    
+    i3d::stl::Vector<i3d::stl::String::type>::type args;
     args.push_back( "+infile" );
     args.push_back( inputFilePath.c_str() );
     args.push_back( "+outfile" );

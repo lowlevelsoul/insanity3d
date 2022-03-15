@@ -18,9 +18,9 @@ public:
     
     struct MetaScanContext {
         Builder*            m_builder;
-        std::string         m_basePath;
+        i3d::stl::String::type         m_basePath;
         std::vector<BuilderTool::ref_ptr_t> * m_builders;
-        std::string         m_profile;
+        i3d::stl::String::type         m_profile;
     };
     
     static const char * FOLDER_NAMES[ FOLDER_COUNT ];
@@ -35,19 +35,22 @@ public:
     
     void ScanMetaFilesForTool( FOLDER folder );
     
-    static void MetaFileCallback( std::string & path, void * context );
+    static void MetaFileCallback( i3d::stl::String::type & path, void * context );
     
-    std::string GetToolPath( const char * toolExeName );
+    i3d::stl::String::type GetToolPath( const char * toolExeName );
     
     void SetFilterFolder( const std::bitset<FOLDER_COUNT>& filter );
     
-protected:
-    std::string                                 m_inputPath;
-    std::string                                 m_outputPath;
+    i3d::PLATFORM_ID GetPlatform() const { return m_platform; }
     
-    std::string                                 m_profile;
-    std::string                                 m_builderExeFolder;
-    std::vector<BuilderTool::ref_ptr_t>         m_builders[FOLDER_COUNT];
+protected:
+    i3d::stl::String::type                      m_inputPath;
+    i3d::stl::String::type                      m_outputPath;
+    
+    i3d::PLATFORM_ID                            m_platform;
+    i3d::stl::String::type                      m_profile;
+    i3d::stl::String::type                      m_builderExeFolder;
+    std::vector<BuilderTool::ref_ptr_t>         m_builders[ FOLDER_COUNT ];
     std::bitset<FOLDER_COUNT>                   m_folders;
     bool                                        m_filterFolders;
 };

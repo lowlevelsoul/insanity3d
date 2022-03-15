@@ -24,25 +24,25 @@ SkeletonBuilder::~SkeletonBuilder() {
 }
 
 //======================================================================================================================
-void SkeletonBuilder::GatherInputs( std::vector<std::string> & inputs ) {
+void SkeletonBuilder::GatherInputs( std::vector<i3d::stl::String::type> & inputs ) {
     inputs.push_back( MakeInputFilePath( m_input.c_str() ) );
     inputs.push_back( m_builder->GetToolPath("modelbuilder") );
 }
 
 //======================================================================================================================
-void SkeletonBuilder::GatherOutputs( std::vector<std::string> & outputs ) {
-    std::string outputFilePath = MakeOutputFilePath( ".skl" );
+void SkeletonBuilder::GatherOutputs( std::vector<i3d::stl::String::type> & outputs ) {
+    i3d::stl::String::type outputFilePath = MakeOutputFilePath( ".skl" );
     outputs.push_back( outputFilePath );
 }
 
 //======================================================================================================================
 bool SkeletonBuilder::Run() {
-    std::string exePath = GetToolExePath();
+    i3d::stl::String::type exePath = GetToolExePath();
     
-    std::string inputFilePath = MakeInputFilePath( m_input.c_str() );
-    std::string outputFilePath = MakeOutputFilePath( ".skl");
+    i3d::stl::String::type inputFilePath = MakeInputFilePath( m_input.c_str() );
+    i3d::stl::String::type outputFilePath = MakeOutputFilePath( ".skl");
     
-    std::vector<std::string> args;
+    i3d::stl::Vector<i3d::stl::String::type>::type args;
     args.push_back( "+infile" );
     args.push_back( inputFilePath.c_str() );
     args.push_back( "+outfile" );

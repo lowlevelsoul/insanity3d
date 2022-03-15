@@ -26,24 +26,24 @@ bool BuilderTool::Run() {
 }
 
 //======================================================================================================================
-void BuilderTool::GatherInputs( std::vector<std::string> & inputs ) {
+void BuilderTool::GatherInputs( std::vector<i3d::stl::String::type> & inputs ) {
     
 }
 
 //======================================================================================================================
-void BuilderTool::GatherOutputs( std::vector<std::string> & outputs ) {
+void BuilderTool::GatherOutputs( std::vector<i3d::stl::String::type> & outputs ) {
     
 }
 
 //======================================================================================================================
-std::string BuilderTool::MakeInputFilePath( const char * inputFile ) {
+i3d::stl::String::type BuilderTool::MakeInputFilePath( const char * inputFile ) {
     // Join the input base path and the path to the metal file to give
     // us the folder location of the input file
-    std::string inputFilePath = m_inputPath;
+    i3d::stl::String::type inputFilePath = m_inputPath;
     fs->AppendPath(inputFilePath, m_metaPath.c_str());
     
     // Extract the file name to remove the metal file and add the input file name
-    std::string temp;
+    i3d::stl::String::type temp;
     fs->ExtractFilename(temp, inputFilePath);
     fs->AppendPath( inputFilePath, inputFile );
     
@@ -51,8 +51,12 @@ std::string BuilderTool::MakeInputFilePath( const char * inputFile ) {
 }
 
 //======================================================================================================================
-std::string BuilderTool::MakeOutputFilePath( const char * ext ) {
-    std::string outFilePath = m_outputPath;
+i3d::stl::String::type BuilderTool::MakeOutputFilePath( const char * ext ) {
+    i3d::stl::String::type outFilePath = m_outputPath;
+    
+    const char * metaPath = m_metaPath.c_str();
+    const char * outPath = outFilePath.c_str();
+    
     fs->AppendPath( outFilePath, m_metaPath.c_str() );
     fs->StripExtension( outFilePath );
     fs->AppendExtension( outFilePath, ext );
@@ -61,8 +65,8 @@ std::string BuilderTool::MakeOutputFilePath( const char * ext ) {
 }
 
 //======================================================================================================================
-std::string BuilderTool::GetToolExePath() {
-    std::string appPath, toolName;
+i3d::stl::String::type BuilderTool::GetToolExePath() {
+    i3d::stl::String::type appPath, toolName;
     fs->GetApplicationPath( appPath );
     fs->ExtractFilename( toolName, appPath);
     fs->AppendPath( appPath, GetExeName() );
@@ -78,10 +82,10 @@ const char * BuilderTool::GetExeName() const {
 //======================================================================================================================
 bool BuilderTool::CheckStale() {
     // Gathe inpit and outputs for this tool
-    std::vector<std::string> inputs;
+    std::vector<i3d::stl::String::type> inputs;
     GatherInputs( inputs );
     
-    std::vector<std::string> outputs;
+    std::vector<i3d::stl::String::type> outputs;
     GatherOutputs( outputs );
     
     // If either the inputs or outpurs are empty, we'll just assume that the
@@ -109,7 +113,7 @@ bool BuilderTool::CheckStale() {
         
         for ( auto & i : inputs ) {
             exists = fs->DoesFileExist( i.c_str() );
-            ERROR(exists == false, "Input file %s does not exist!\n", i.c_str() );
+            XE_ERROR(exists == false, "Input file %s does not exist!\n", i.c_str() );
             
             uint64_t inputTimeStamp;
             fs->GetModifiedTimestamp( inputTimeStamp, i.c_str());
@@ -127,8 +131,8 @@ bool BuilderTool::CheckStale() {
 }
 
 //======================================================================================================================
-const std::string BuilderTool::GetMetaFullPath() const {
-    std::string path = m_inputPath;
+const i3d::stl::String::type BuilderTool::GetMetaFullPath() const {
+    i3d::stl::String::type path = m_inputPath;
     fs->AppendPath( path, m_metaPath.c_str() );
     return path;
 }

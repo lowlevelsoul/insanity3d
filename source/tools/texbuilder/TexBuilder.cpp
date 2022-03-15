@@ -11,11 +11,11 @@
 #include "EtcImage.h"
 
 const TexBuilder::BlockCompressFormat TexBuilder::BLOCK_FORMATS[] = {
-    {"bc1",                 ToolImage::FORMAT_RGB_BC1},
-    {"bc2",                 ToolImage::FORMAT_RGBA_BC2},
-    {"bc3",                 ToolImage::FORMAT_RGBA_BC3},
-    {"etc2",                ToolImage::FORMAT_RGB_ETC2},
-    {"etc2a",               ToolImage::FORMAT_RGBA_ETC2},
+    { "bc1",                 ToolImage::FORMAT_RGB_BC1 },
+    { "bc2",                 ToolImage::FORMAT_RGBA_BC2 },
+    { "bc3",                 ToolImage::FORMAT_RGBA_BC3 },
+    { "etc2",                ToolImage::FORMAT_RGB_ETC2 },
+    { "etc2a",               ToolImage::FORMAT_RGBA_ETC2 },
     { nullptr }
 };
 

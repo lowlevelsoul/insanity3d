@@ -17,20 +17,20 @@ public:
     
     virtual bool Run();
     
-    virtual void GatherInputs( std::vector<std::string> & inputs );
+    virtual void GatherInputs( std::vector<i3d::stl::String::type> & inputs );
     
-    virtual void GatherOutputs( std::vector<std::string> & outputs );
+    virtual void GatherOutputs( std::vector<i3d::stl::String::type> & outputs );
     
     virtual const char * GetExeName() const { return "texbuilder"; }
     
-    const std::string GetFullTexturePath();
+    const i3d::stl::String::type GetFullTexturePath();
     
 public:
     uint32_t        m_width;
     uint32_t        m_height;
     uint32_t        m_mipCount;
-    std::string     m_block;
-    std::string     m_input;
+    i3d::stl::String::type     m_block;
+    i3d::stl::String::type     m_input;
 };
 
 #endif

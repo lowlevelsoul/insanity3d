@@ -23,11 +23,11 @@ public:
     Builder::FOLDER GetFolderId( const char * str );
     
 protected:
-    std::string         m_inputPath;                ///< Where does builder get the files from?
-    std::string         m_outputPath;               ///< The base path for where builder will write files to
-    std::string         m_platform;                 ///< The platform outoput folder (appended to output path)
-    std::string         m_outputBasePath;           ///< Full output bath
-    std::string         m_dataFolderName;           ///< Name of the data folder
+    i3d::stl::String::type         m_inputPath;                ///< Where does builder get the files from?
+    i3d::stl::String::type         m_outputPath;               ///< The base path for where builder will write files to
+    i3d::stl::String::type         m_platform;                 ///< The platform outoput folder (appended to output path)
+    i3d::stl::String::type         m_outputBasePath;           ///< Full output bath
+    i3d::stl::String::type         m_dataFolderName;           ///< Name of the data folder
     bool                m_filterFolders;
     std::bitset<Builder::FOLDER_COUNT> m_folders;
     

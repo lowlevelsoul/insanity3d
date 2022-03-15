@@ -221,7 +221,7 @@ namespace i3d {
     //======================================================================================================================
     const RttiPropDef * RttiLoader::GetPropDef( const char * propName ) const {
         RttiType * type = rtti->Find( m_streamBuilder->m_currContext.m_currObject->m_objectType );
-        XE_ERROR( type == nullptr, "Type for property is invalid\n" );
+        XE_ERROR( type == nullptr, "Object type does not exist" );
 
         const RttiPropDef * pd = type->FindProp( propName );
         return pd;

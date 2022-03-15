@@ -17,19 +17,20 @@ public:
     
     virtual bool Run() override;
     
-    virtual void GatherInputs( std::vector<std::string> & inputs );
+    virtual void GatherInputs( std::vector<i3d::stl::String::type> & inputs );
     
-    virtual void GatherOutputs( std::vector<std::string> & outputs );
+    virtual void GatherOutputs( std::vector<i3d::stl::String::type> & outputs );
     
     virtual const char * GetExeName() const override { return "modelbuilder"; }
     
 public:
-    std::string     m_input;
-    float           m_scale;
-    bool            m_flipFaces;
-    bool            m_genNormals;
-    std::string     m_rootNode;
-    bool            m_stripMixamo;
+    i3d::stl::String::type      m_input;
+    float                       m_scale;
+    bool                        m_flipFaces;
+    bool                        m_genNormals;
+    i3d::stl::String::type      m_rootNode;
+    i3d::stl::Vector<i3d::stl::String::type>::type m_meshFilter;
+    bool                        m_stripMixamo;
 };
 
 #endif

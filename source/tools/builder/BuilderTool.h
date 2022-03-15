@@ -6,12 +6,10 @@
 #ifndef __BUILDERTOOL_H__
 #define __BUILDERTOOL_H__
 
-#include "toolapp/RttiType.h"
-
 class Builder;
 
-class BuilderTool : public RttiObject {
-    RTTI_CLASS_DECLARE( BuilderTool, RttiObject )
+class BuilderTool : public i3d::RttiObject {
+    RTTI_CLASS_DECLARE( BuilderTool, i3d::RttiObject )
 public:
     BuilderTool();
     
@@ -19,27 +17,27 @@ public:
     
     virtual bool Run();
     
-    std::string MakeInputFilePath( const char * inputFile );
+    i3d::stl::String::type MakeInputFilePath( const char * inputFile );
     
-    std::string MakeOutputFilePath( const char * ext );
+    i3d::stl::String::type MakeOutputFilePath( const char * ext );
     
-    std::string GetToolExePath();
+    i3d::stl::String::type GetToolExePath();
     
-    virtual void GatherInputs( std::vector<std::string> & inputs );
+    virtual void GatherInputs( std::vector<i3d::stl::String::type> & inputs );
     
-    virtual void GatherOutputs( std::vector<std::string> & outputs );
+    virtual void GatherOutputs( std::vector<i3d::stl::String::type> & outputs );
     
     bool CheckStale();
     
     virtual const char * GetExeName() const;
     
-    const std::string GetMetaFullPath() const;
+    const i3d::stl::String::type GetMetaFullPath() const;
     
 public:
-    std::string         m_inputPath;        ///<
-    std::string         m_outputPath;       ///<
-    Builder *           m_builder;          ///< Pointer to the builder class that owns this tool
-    std::string         m_metaPath;         ///< Path to the metal file that was used to create this tool instance
+    i3d::stl::String::type          m_inputPath;        ///<
+    i3d::stl::String::type          m_outputPath;       ///<
+    Builder *                       m_builder;          ///< Pointer to the builder class that owns this tool
+    i3d::stl::String::type          m_metaPath;         ///< Path to the metal file that was used to create this tool instance
 };
 
 #endif
