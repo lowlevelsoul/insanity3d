@@ -14,7 +14,7 @@
 
 namespace i3d {
     
-    DEFINE_RESOURCE(ModelLocal, "bmdl;")
+    DEFINE_RESOURCE(ModelLocal, "mdl;")
     
     //======================================================================================================================
     ModelLocal::ModelLocal() {

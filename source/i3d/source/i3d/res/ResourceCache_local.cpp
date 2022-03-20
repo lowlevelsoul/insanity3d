@@ -17,6 +17,8 @@ i3d::ResourceCache * res = nullptr;
 i3d::ResourceCacheLocal * resLocal = nullptr;
 
 namespace i3d {
+    
+    CVar res_buildPlatform( "res_buildPlatform", "macos", "Platform used for building resources" );
 
     //======================================================================================================================
     void ResCreate() {
@@ -327,8 +329,11 @@ namespace i3d {
         stl::String::type resCompileScriptPath = ResourceBuilder::GetAssetCompilePathFromResource( res->m_path.c_str() );
         XE_ERROR( fs->DoesFileExist( resCompileScriptPath.c_str() ) == false, "Could not find resource compile script at %s", resCompileScriptPath.c_str());
         
+        i3d::PLATFORM_ID buildPlatformId = i3d::GetPlatformIdFromString( res_buildPlatform.GetString() );
+        XE_ERROR( buildPlatformId == i3d::PLATFORM_ID_NONE, "Invalid resource build platform %s\n", res_buildPlatform.GetString() );
+        
         RttiLoader loader;
-        loader.Load( resCompileScriptPath.c_str(), m_compileTargetPlatform );
+        loader.Load( resCompileScriptPath.c_str(), buildPlatformId );
         
         XE_ERROR( loader.m_object == nullptr, "Uncaught error whilst loading compile script. No compile objects found\n");
         XE_ERROR( loader.m_object->IsOfType<ResourceBuilder>() == false, "Compile script does not contain a ResourceCompile object\n");

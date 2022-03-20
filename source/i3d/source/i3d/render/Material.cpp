@@ -45,12 +45,12 @@ namespace i3d {
     
     //======================================================================================================================
     void MaterialResource::Load( File * file, const char * path ) {
-        RttiLoader loader;
+        RttiStream str;
         
-        bool loadOk = loader.Load( file, path, i3d::THIS_PLATFORM );
-        XE_ERROR( loadOk == false, "Uncaught error loading rtti script '%s'\n", path);
+        str.ReadFromFile( file );        
+        str.Construct();
         
-        m_material = loader.m_object->SafeCast<Material>();
+        m_material = str.m_objects[0]->SafeCast<Material>();
         XE_ASSERT( m_material != nullptr );
     }
     

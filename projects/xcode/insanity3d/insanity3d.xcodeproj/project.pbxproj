@@ -469,6 +469,7 @@
 		D34A4D5827E5CE350083DD65 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4E727C7CF600004E0E2 /* Image.cpp */; };
 		D34A4D5C27E6FF350083DD65 /* TextureBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D5A27E6FF350083DD65 /* TextureBuilder.cpp */; };
 		D34A4D5D27E735C20083DD65 /* AmrBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D2727E373530083DD65 /* AmrBuilder.cpp */; };
+		D34A4D6027E7492B0083DD65 /* RttiBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D5E27E7492B0083DD65 /* RttiBuilder.cpp */; };
 		D366B3BD27C6A56D0004E0E2 /* Sys_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A627C6A56C0004E0E2 /* Sys_macos.mm */; };
 		D366B3BF27C6A56D0004E0E2 /* CVar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A827C6A56C0004E0E2 /* CVar.cpp */; };
 		D366B3C127C6A56D0004E0E2 /* Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AA27C6A56C0004E0E2 /* Hash.cpp */; };
@@ -941,6 +942,8 @@
 		D34A4D5527E376600083DD65 /* SkeletonBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SkeletonBuilder.cpp; sourceTree = "<group>"; };
 		D34A4D5A27E6FF350083DD65 /* TextureBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureBuilder.cpp; sourceTree = "<group>"; };
 		D34A4D5B27E6FF350083DD65 /* TextureBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureBuilder.h; sourceTree = "<group>"; };
+		D34A4D5E27E7492B0083DD65 /* RttiBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RttiBuilder.cpp; sourceTree = "<group>"; };
+		D34A4D5F27E7492B0083DD65 /* RttiBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RttiBuilder.h; sourceTree = "<group>"; };
 		D366B37427C406860004E0E2 /* libi3d-macos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libi3d-macos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D366B39D27C408CB0004E0E2 /* i3d_base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_base.xcconfig; sourceTree = "<group>"; };
 		D366B39E27C409150004E0E2 /* i3d_lib.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_lib.xcconfig; sourceTree = "<group>"; };
@@ -1601,6 +1604,8 @@
 		D34A4D2527E372AB0083DD65 /* build */ = {
 			isa = PBXGroup;
 			children = (
+				D34A4D5E27E7492B0083DD65 /* RttiBuilder.cpp */,
+				D34A4D5F27E7492B0083DD65 /* RttiBuilder.h */,
 				D34A4D5A27E6FF350083DD65 /* TextureBuilder.cpp */,
 				D34A4D5B27E6FF350083DD65 /* TextureBuilder.h */,
 				D34A4D5527E376600083DD65 /* SkeletonBuilder.cpp */,
@@ -2750,6 +2755,7 @@
 				D34A497A27C9163A0083DD65 /* Gfx_metal.mm in Sources */,
 				D34A4A2F27CA9ECA0083DD65 /* Debug3d.metal in Sources */,
 				D34A4D5027E374390083DD65 /* ToolJoint.cpp in Sources */,
+				D34A4D6027E7492B0083DD65 /* RttiBuilder.cpp in Sources */,
 				D34A4D5827E5CE350083DD65 /* Image.cpp in Sources */,
 				D34A49EC27C9FD980083DD65 /* RenderBuffers.cpp in Sources */,
 				D34A499C27C916560083DD65 /* DebugLineDraw.cpp in Sources */,

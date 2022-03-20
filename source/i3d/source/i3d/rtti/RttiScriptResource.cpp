@@ -22,9 +22,10 @@ namespace i3d {
     
     //======================================================================================================================
     void RttiScriptResource::Load( File * file, const char * path ) {
-        RttiLoader loader;
-        loader.Load( file, path );
+        RttiStream stream;
+        stream.ReadFromFile( file );
+        stream.Construct();
         
-        m_object = loader.m_object;
+        m_object = stream.m_objects[0];
     }
 }
