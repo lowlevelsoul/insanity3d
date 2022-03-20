@@ -450,6 +450,25 @@
 		D34A4C7D27DFC55C0083DD65 /* SkeletonBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4C7527DFC55C0083DD65 /* SkeletonBuilder.cpp */; };
 		D34A4C7E27DFC55C0083DD65 /* ModelBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4C7627DFC55C0083DD65 /* ModelBuilder.cpp */; };
 		D34A4C7F27DFC55C0083DD65 /* Builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4C7827DFC55C0083DD65 /* Builder.cpp */; };
+		D34A4C8827E209BD0083DD65 /* RttiBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4C8627E209BD0083DD65 /* RttiBuilder.cpp */; };
+		D34A4D2B27E373530083DD65 /* ModelBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D2927E373530083DD65 /* ModelBuilder.cpp */; };
+		D34A4D3227E373CB0083DD65 /* ToolMemStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D2D27E373CB0083DD65 /* ToolMemStream.cpp */; };
+		D34A4D3327E373CB0083DD65 /* RefObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D2E27E373CB0083DD65 /* RefObject.cpp */; };
+		D34A4D4927E374390083DD65 /* ToolSkin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D3427E374380083DD65 /* ToolSkin.cpp */; };
+		D34A4D4A27E374390083DD65 /* ToolModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D3727E374380083DD65 /* ToolModel.cpp */; };
+		D34A4D4B27E374390083DD65 /* ToolMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D3827E374380083DD65 /* ToolMesh.cpp */; };
+		D34A4D4C27E374390083DD65 /* ModelImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D3927E374380083DD65 /* ModelImporter.cpp */; };
+		D34A4D4D27E374390083DD65 /* ToolMaterial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D3A27E374380083DD65 /* ToolMaterial.cpp */; };
+		D34A4D4F27E374390083DD65 /* ModelImporterAssImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D3C27E374380083DD65 /* ModelImporterAssImp.cpp */; };
+		D34A4D5027E374390083DD65 /* ToolJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D3D27E374380083DD65 /* ToolJoint.cpp */; };
+		D34A4D5127E374390083DD65 /* ToolAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D3E27E374380083DD65 /* ToolAnimation.cpp */; };
+		D34A4D5227E374390083DD65 /* ToolSkeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D4627E374390083DD65 /* ToolSkeleton.cpp */; };
+		D34A4D5327E375A90083DD65 /* ResourceBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B44927C6B3590004E0E2 /* ResourceBuilder.cpp */; };
+		D34A4D5627E376600083DD65 /* SkeletonBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D5527E376600083DD65 /* SkeletonBuilder.cpp */; };
+		D34A4D5727E5CE320083DD65 /* Image_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4E827C7CF600004E0E2 /* Image_png.cpp */; };
+		D34A4D5827E5CE350083DD65 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4E727C7CF600004E0E2 /* Image.cpp */; };
+		D34A4D5C27E6FF350083DD65 /* TextureBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D5A27E6FF350083DD65 /* TextureBuilder.cpp */; };
+		D34A4D5D27E735C20083DD65 /* AmrBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D2727E373530083DD65 /* AmrBuilder.cpp */; };
 		D366B3BD27C6A56D0004E0E2 /* Sys_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A627C6A56C0004E0E2 /* Sys_macos.mm */; };
 		D366B3BF27C6A56D0004E0E2 /* CVar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A827C6A56C0004E0E2 /* CVar.cpp */; };
 		D366B3C127C6A56D0004E0E2 /* Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AA27C6A56C0004E0E2 /* Hash.cpp */; };
@@ -490,7 +509,7 @@
 		D366B44127C6B19F0004E0E2 /* GfxBuffer_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B41B27C6B19F0004E0E2 /* GfxBuffer_metal.h */; };
 		D366B44327C6B19F0004E0E2 /* GfxVertexDesc_local.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B41D27C6B19F0004E0E2 /* GfxVertexDesc_local.h */; };
 		D366B44C27C6B3590004E0E2 /* ResourceCache_local.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B44827C6B3590004E0E2 /* ResourceCache_local.h */; };
-		D366B44E27C6B3590004E0E2 /* ResourceCompiler.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B44A27C6B3590004E0E2 /* ResourceCompiler.h */; };
+		D366B44E27C6B3590004E0E2 /* ResourceBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B44A27C6B3590004E0E2 /* ResourceBuilder.h */; };
 		D366B44F27C6B3590004E0E2 /* ResourceCache_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B44B27C6B3590004E0E2 /* ResourceCache_local.cpp */; };
 		D366B49F27C7CBA40004E0E2 /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = D366B47A27C7CBA30004E0E2 /* Model.h */; };
 		D366B4CE27C7CD0B0004E0E2 /* RttiLexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B4BB27C7CD0A0004E0E2 /* RttiLexer.cpp */; };
@@ -888,6 +907,40 @@
 		D34A4C7627DFC55C0083DD65 /* ModelBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelBuilder.cpp; sourceTree = "<group>"; };
 		D34A4C7727DFC55C0083DD65 /* ModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelBuilder.h; sourceTree = "<group>"; };
 		D34A4C7827DFC55C0083DD65 /* Builder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Builder.cpp; sourceTree = "<group>"; };
+		D34A4C8627E209BD0083DD65 /* RttiBuilder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RttiBuilder.cpp; sourceTree = "<group>"; };
+		D34A4C8727E209BD0083DD65 /* RttiBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RttiBuilder.h; sourceTree = "<group>"; };
+		D34A4D2627E373530083DD65 /* ModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelBuilder.h; sourceTree = "<group>"; };
+		D34A4D2727E373530083DD65 /* AmrBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AmrBuilder.cpp; sourceTree = "<group>"; };
+		D34A4D2827E373530083DD65 /* AmrBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmrBuilder.h; sourceTree = "<group>"; };
+		D34A4D2927E373530083DD65 /* ModelBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelBuilder.cpp; sourceTree = "<group>"; };
+		D34A4D2D27E373CB0083DD65 /* ToolMemStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToolMemStream.cpp; sourceTree = "<group>"; };
+		D34A4D2E27E373CB0083DD65 /* RefObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RefObject.cpp; sourceTree = "<group>"; };
+		D34A4D2F27E373CB0083DD65 /* RefPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefPointer.h; sourceTree = "<group>"; };
+		D34A4D3027E373CB0083DD65 /* RefObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefObject.h; sourceTree = "<group>"; };
+		D34A4D3127E373CB0083DD65 /* ToolMemStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolMemStream.h; sourceTree = "<group>"; };
+		D34A4D3427E374380083DD65 /* ToolSkin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToolSkin.cpp; sourceTree = "<group>"; };
+		D34A4D3627E374380083DD65 /* ToolMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolMaterial.h; sourceTree = "<group>"; };
+		D34A4D3727E374380083DD65 /* ToolModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToolModel.cpp; sourceTree = "<group>"; };
+		D34A4D3827E374380083DD65 /* ToolMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToolMesh.cpp; sourceTree = "<group>"; };
+		D34A4D3927E374380083DD65 /* ModelImporter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelImporter.cpp; sourceTree = "<group>"; };
+		D34A4D3A27E374380083DD65 /* ToolMaterial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToolMaterial.cpp; sourceTree = "<group>"; };
+		D34A4D3C27E374380083DD65 /* ModelImporterAssImp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelImporterAssImp.cpp; sourceTree = "<group>"; };
+		D34A4D3D27E374380083DD65 /* ToolJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToolJoint.cpp; sourceTree = "<group>"; };
+		D34A4D3E27E374380083DD65 /* ToolAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToolAnimation.cpp; sourceTree = "<group>"; };
+		D34A4D3F27E374380083DD65 /* ToolUniqueList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolUniqueList.h; sourceTree = "<group>"; };
+		D34A4D4027E374380083DD65 /* ToolJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolJoint.h; sourceTree = "<group>"; };
+		D34A4D4127E374380083DD65 /* ToolSkeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolSkeleton.h; sourceTree = "<group>"; };
+		D34A4D4227E374380083DD65 /* ModelImporterAssImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelImporterAssImp.h; sourceTree = "<group>"; };
+		D34A4D4327E374390083DD65 /* ToolSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolSkin.h; sourceTree = "<group>"; };
+		D34A4D4427E374390083DD65 /* ModelImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelImporter.h; sourceTree = "<group>"; };
+		D34A4D4527E374390083DD65 /* ToolMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolMesh.h; sourceTree = "<group>"; };
+		D34A4D4627E374390083DD65 /* ToolSkeleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToolSkeleton.cpp; sourceTree = "<group>"; };
+		D34A4D4727E374390083DD65 /* ToolModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolModel.h; sourceTree = "<group>"; };
+		D34A4D4827E374390083DD65 /* ToolAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolAnimation.h; sourceTree = "<group>"; };
+		D34A4D5427E376600083DD65 /* SkeletonBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkeletonBuilder.h; sourceTree = "<group>"; };
+		D34A4D5527E376600083DD65 /* SkeletonBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SkeletonBuilder.cpp; sourceTree = "<group>"; };
+		D34A4D5A27E6FF350083DD65 /* TextureBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureBuilder.cpp; sourceTree = "<group>"; };
+		D34A4D5B27E6FF350083DD65 /* TextureBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureBuilder.h; sourceTree = "<group>"; };
 		D366B37427C406860004E0E2 /* libi3d-macos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libi3d-macos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D366B39D27C408CB0004E0E2 /* i3d_base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_base.xcconfig; sourceTree = "<group>"; };
 		D366B39E27C409150004E0E2 /* i3d_lib.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_lib.xcconfig; sourceTree = "<group>"; };
@@ -950,8 +1003,8 @@
 		D366B41C27C6B19F0004E0E2 /* GfxFence_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GfxFence_metal.mm; sourceTree = "<group>"; };
 		D366B41D27C6B19F0004E0E2 /* GfxVertexDesc_local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxVertexDesc_local.h; sourceTree = "<group>"; };
 		D366B44827C6B3590004E0E2 /* ResourceCache_local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceCache_local.h; sourceTree = "<group>"; };
-		D366B44927C6B3590004E0E2 /* ResourceCompiler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceCompiler.cpp; sourceTree = "<group>"; };
-		D366B44A27C6B3590004E0E2 /* ResourceCompiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceCompiler.h; sourceTree = "<group>"; };
+		D366B44927C6B3590004E0E2 /* ResourceBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceBuilder.cpp; sourceTree = "<group>"; };
+		D366B44A27C6B3590004E0E2 /* ResourceBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceBuilder.h; sourceTree = "<group>"; };
 		D366B44B27C6B3590004E0E2 /* ResourceCache_local.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceCache_local.cpp; sourceTree = "<group>"; };
 		D366B45127C6B6AA0004E0E2 /* Math3d.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Math3d.h; sourceTree = "<group>"; };
 		D366B45227C6B6AA0004E0E2 /* Vector2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector2.h; sourceTree = "<group>"; };
@@ -1539,8 +1592,51 @@
 				D34A4C6F27DFC55C0083DD65 /* SkeletonBuilder.h */,
 				D34A4C7427DFC55C0083DD65 /* TextureBuilder.cpp */,
 				D34A4C7127DFC55C0083DD65 /* TextureBuilder.h */,
+				D34A4C8627E209BD0083DD65 /* RttiBuilder.cpp */,
+				D34A4C8727E209BD0083DD65 /* RttiBuilder.h */,
 			);
 			path = builder;
+			sourceTree = "<group>";
+		};
+		D34A4D2527E372AB0083DD65 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				D34A4D5A27E6FF350083DD65 /* TextureBuilder.cpp */,
+				D34A4D5B27E6FF350083DD65 /* TextureBuilder.h */,
+				D34A4D5527E376600083DD65 /* SkeletonBuilder.cpp */,
+				D34A4D5427E376600083DD65 /* SkeletonBuilder.h */,
+				D34A4D2727E373530083DD65 /* AmrBuilder.cpp */,
+				D34A4D2827E373530083DD65 /* AmrBuilder.h */,
+				D34A4D2927E373530083DD65 /* ModelBuilder.cpp */,
+				D34A4D2627E373530083DD65 /* ModelBuilder.h */,
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		D34A4D2C27E373770083DD65 /* toolmodel */ = {
+			isa = PBXGroup;
+			children = (
+				D34A4D3927E374380083DD65 /* ModelImporter.cpp */,
+				D34A4D4427E374390083DD65 /* ModelImporter.h */,
+				D34A4D3C27E374380083DD65 /* ModelImporterAssImp.cpp */,
+				D34A4D4227E374380083DD65 /* ModelImporterAssImp.h */,
+				D34A4D3E27E374380083DD65 /* ToolAnimation.cpp */,
+				D34A4D4827E374390083DD65 /* ToolAnimation.h */,
+				D34A4D3D27E374380083DD65 /* ToolJoint.cpp */,
+				D34A4D4027E374380083DD65 /* ToolJoint.h */,
+				D34A4D3A27E374380083DD65 /* ToolMaterial.cpp */,
+				D34A4D3627E374380083DD65 /* ToolMaterial.h */,
+				D34A4D3827E374380083DD65 /* ToolMesh.cpp */,
+				D34A4D4527E374390083DD65 /* ToolMesh.h */,
+				D34A4D3727E374380083DD65 /* ToolModel.cpp */,
+				D34A4D4727E374390083DD65 /* ToolModel.h */,
+				D34A4D4627E374390083DD65 /* ToolSkeleton.cpp */,
+				D34A4D4127E374380083DD65 /* ToolSkeleton.h */,
+				D34A4D3427E374380083DD65 /* ToolSkin.cpp */,
+				D34A4D4327E374390083DD65 /* ToolSkin.h */,
+				D34A4D3F27E374380083DD65 /* ToolUniqueList.h */,
+			);
+			path = toolmodel;
 			sourceTree = "<group>";
 		};
 		D366B36927C406370004E0E2 = {
@@ -1640,6 +1736,7 @@
 		D366B3D427C6A5B40004E0E2 /* i3d */ = {
 			isa = PBXGroup;
 			children = (
+				D34A4D2527E372AB0083DD65 /* build */,
 				D34A4A3427CCCF6D0083DD65 /* ecs */,
 				D366B4F927C7FA480004E0E2 /* mem */,
 				D366B4E227C7CF2A0004E0E2 /* util */,
@@ -1740,8 +1837,8 @@
 			children = (
 				D366B44827C6B3590004E0E2 /* ResourceCache_local.h */,
 				D366B44B27C6B3590004E0E2 /* ResourceCache_local.cpp */,
-				D366B44927C6B3590004E0E2 /* ResourceCompiler.cpp */,
-				D366B44A27C6B3590004E0E2 /* ResourceCompiler.h */,
+				D366B44927C6B3590004E0E2 /* ResourceBuilder.cpp */,
+				D366B44A27C6B3590004E0E2 /* ResourceBuilder.h */,
 			);
 			path = res;
 			sourceTree = "<group>";
@@ -1875,9 +1972,15 @@
 				D366B4E327C7CF600004E0E2 /* Image_jpeg.cpp */,
 				D366B4E827C7CF600004E0E2 /* Image_png.cpp */,
 				D366B4E727C7CF600004E0E2 /* Image.cpp */,
-				D366B4E527C7CF600004E0E2 /* Image.h */,
 				D366B4E627C7CF600004E0E2 /* LoaderBase.cpp */,
+				D34A4D2E27E373CB0083DD65 /* RefObject.cpp */,
+				D34A4D2D27E373CB0083DD65 /* ToolMemStream.cpp */,
+				D366B4E527C7CF600004E0E2 /* Image.h */,
 				D366B4E427C7CF600004E0E2 /* LoaderBase.h */,
+				D34A4D3027E373CB0083DD65 /* RefObject.h */,
+				D34A4D2F27E373CB0083DD65 /* RefPointer.h */,
+				D34A4D3127E373CB0083DD65 /* ToolMemStream.h */,
+				D34A4D2C27E373770083DD65 /* toolmodel */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -2004,7 +2107,7 @@
 				D34A49D027C9FD860083DD65 /* ModelStream.h in Headers */,
 				D366B3CE27C6A56D0004E0E2 /* Sys_macos.h in Headers */,
 				D366B4D727C7CD0B0004E0E2 /* Rtti.h in Headers */,
-				D366B44E27C6B3590004E0E2 /* ResourceCompiler.h in Headers */,
+				D366B44E27C6B3590004E0E2 /* ResourceBuilder.h in Headers */,
 				D366B43D27C6B19F0004E0E2 /* GfxGpuPipeline.h in Headers */,
 				D366B42027C6B19F0004E0E2 /* GfxGpuTextureArray.h in Headers */,
 				D366B4D527C7CD0B0004E0E2 /* RttiSystem_local.h in Headers */,
@@ -2586,10 +2689,13 @@
 			files = (
 				D34A493B27C9161D0083DD65 /* CVarManager_local.cpp in Sources */,
 				D34A49B227C916610083DD65 /* RttiLexer.cpp in Sources */,
+				D34A4D3327E373CB0083DD65 /* RefObject.cpp in Sources */,
 				D34A49EE27C9FD980083DD65 /* Texture_base.cpp in Sources */,
 				D34A4A3027CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */,
+				D34A4D5727E5CE320083DD65 /* Image_png.cpp in Sources */,
 				D34A491A27C915EC0083DD65 /* Renderer.mm in Sources */,
 				D34A498227C9163A0083DD65 /* GfxRasterizeState_metal.mm in Sources */,
+				D34A4D4C27E374390083DD65 /* ModelImporter.cpp in Sources */,
 				D34A4A5C27D1F1FE0083DD65 /* Transform.cpp in Sources */,
 				D34A4A1027CA45FE0083DD65 /* Sys_macos.mm in Sources */,
 				D34A498A27C916460083DD65 /* ResourceCache_local.cpp in Sources */,
@@ -2604,27 +2710,36 @@
 				D34A497B27C9163A0083DD65 /* GfxFence_metal.mm in Sources */,
 				D34A4A9F27DD0C450083DD65 /* SceneManager.cpp in Sources */,
 				D34A491127C915EC0083DD65 /* GameViewController.m in Sources */,
+				D34A4D5627E376600083DD65 /* SkeletonBuilder.cpp in Sources */,
 				D34A49B127C916610083DD65 /* RttiResource.cpp in Sources */,
 				D34A4A8927DA4C0E0083DD65 /* PlayerManager.cpp in Sources */,
+				D34A4D4A27E374390083DD65 /* ToolModel.cpp in Sources */,
 				D34A49AE27C916610083DD65 /* RttiSystem_local.cpp in Sources */,
 				D34A494C27C9162B0083DD65 /* Quaternion.cpp in Sources */,
 				D34A4A1927CA69160083DD65 /* XFighter.cpp in Sources */,
 				D34A491627C915EC0083DD65 /* main.mm in Sources */,
+				D34A4D5327E375A90083DD65 /* ResourceBuilder.cpp in Sources */,
 				D34A49B427C916610083DD65 /* RttiLoader.cpp in Sources */,
+				D34A4D4D27E374390083DD65 /* ToolMaterial.cpp in Sources */,
 				D34A4A4E27D11D2C0083DD65 /* EntityPrototype.cpp in Sources */,
 				D34A4A7527D8F2290083DD65 /* XFighter_ecs.cpp in Sources */,
 				D34A4A7A27D8F3690083DD65 /* TransformManager.cpp in Sources */,
 				D34A499B27C916560083DD65 /* DrawLit.cpp in Sources */,
 				D34A49BB27C9166D0083DD65 /* HeapFrame.cpp in Sources */,
 				D34A4A1E27CA6AFF0083DD65 /* farmhash.cpp in Sources */,
+				D34A4D5127E374390083DD65 /* ToolAnimation.cpp in Sources */,
+				D34A4D4927E374390083DD65 /* ToolSkin.cpp in Sources */,
 				D34A4A9827DCE7F40083DD65 /* Camera.cpp in Sources */,
+				D34A4D4F27E374390083DD65 /* ModelImporterAssImp.cpp in Sources */,
 				D34A49C227C94FA10083DD65 /* i3d.cpp in Sources */,
 				D34A493F27C9161D0083DD65 /* Log_common.cpp in Sources */,
 				D34A498427C9163A0083DD65 /* Gfx.cpp in Sources */,
 				D34A49B327C916610083DD65 /* RttiType.cpp in Sources */,
+				D34A4D5227E374390083DD65 /* ToolSkeleton.cpp in Sources */,
 				D34A493C27C9161D0083DD65 /* Hash.cpp in Sources */,
 				D34A497827C9163A0083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
 				D34A4A2E27CA9ECA0083DD65 /* pbr.metal in Sources */,
+				D34A4D4B27E374390083DD65 /* ToolMesh.cpp in Sources */,
 				D34A4A0F27CA45F00083DD65 /* FileSystem_macos.mm in Sources */,
 				D34A490E27C915EC0083DD65 /* AppDelegate.m in Sources */,
 				D34A49B627C916660083DD65 /* LoaderBase.cpp in Sources */,
@@ -2634,13 +2749,17 @@
 				D34A4A2D27CA9ECA0083DD65 /* draw3d_pbr_bindless.metal in Sources */,
 				D34A497A27C9163A0083DD65 /* Gfx_metal.mm in Sources */,
 				D34A4A2F27CA9ECA0083DD65 /* Debug3d.metal in Sources */,
+				D34A4D5027E374390083DD65 /* ToolJoint.cpp in Sources */,
+				D34A4D5827E5CE350083DD65 /* Image.cpp in Sources */,
 				D34A49EC27C9FD980083DD65 /* RenderBuffers.cpp in Sources */,
 				D34A499C27C916560083DD65 /* DebugLineDraw.cpp in Sources */,
 				D34A4A3C27CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
+				D34A4D2B27E373530083DD65 /* ModelBuilder.cpp in Sources */,
 				D34A493D27C9161D0083DD65 /* Sys_common.cpp in Sources */,
 				D34A4A5227D11D2C0083DD65 /* ComponentPrototype.cpp in Sources */,
 				D34A4A4527CFE8EF0083DD65 /* Ecs.cpp in Sources */,
 				D34A49B527C916610083DD65 /* RttiStream.cpp in Sources */,
+				D34A4D3227E373CB0083DD65 /* ToolMemStream.cpp in Sources */,
 				D34A494A27C9162B0083DD65 /* Matrix3.cpp in Sources */,
 				D34A498327C9163A0083DD65 /* GfxContext_metal.mm in Sources */,
 				D34A491D27C915EC0083DD65 /* Shaders.metal in Sources */,
@@ -2649,7 +2768,9 @@
 				D34A497E27C9163A0083DD65 /* GfxGpuTextureArray_metal.mm in Sources */,
 				D34A498027C9163A0083DD65 /* GfxBuffer_metal.mm in Sources */,
 				D34A4A8427DA49E80083DD65 /* Player.cpp in Sources */,
+				D34A4D5D27E735C20083DD65 /* AmrBuilder.cpp in Sources */,
 				D34A49AF27C916610083DD65 /* RttiParser.cpp in Sources */,
+				D34A4D5C27E6FF350083DD65 /* TextureBuilder.cpp in Sources */,
 				D34A4A6327D3E8290083DD65 /* ShipModel.cpp in Sources */,
 				D34A4A9027DC6E500083DD65 /* Frustum.cpp in Sources */,
 				D34A494027C9161D0083DD65 /* Log_local.cpp in Sources */,
@@ -2811,6 +2932,7 @@
 			files = (
 				D34A4C7F27DFC55C0083DD65 /* Builder.cpp in Sources */,
 				D34A4C7927DFC55C0083DD65 /* BuilderTool.cpp in Sources */,
+				D34A4C8827E209BD0083DD65 /* RttiBuilder.cpp in Sources */,
 				D34A4C7E27DFC55C0083DD65 /* ModelBuilder.cpp in Sources */,
 				D34A4C7D27DFC55C0083DD65 /* SkeletonBuilder.cpp in Sources */,
 				D34A4C7A27DFC55C0083DD65 /* BuilderApp.cpp in Sources */,

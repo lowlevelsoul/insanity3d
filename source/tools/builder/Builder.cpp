@@ -8,7 +8,10 @@
 
 const char * Builder::FOLDER_NAMES[ Builder::FOLDER_COUNT ] = {
     "textures",
-    "models"
+    "models",
+    "materials",
+    "prototypes",
+    "missions",
 };
 
 //======================================================================================================================
@@ -65,8 +68,7 @@ void Builder::Run( const char * inputPath, const char * outputPath, const char *
             }
         }
         
-        if (processFolder == true) {
-        
+        if (processFolder == true) {        
             XE_LOG("Scanning %s for meta files...", FOLDER_NAMES[f]);
             ScanMetaFilesForTool( FOLDER( f ) );
             XE_LOG("Done.\n");

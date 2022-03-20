@@ -25,11 +25,11 @@ public:
     
     virtual ~ShipModelPrototype();
     
-    virtual void CreateComponent( i3d::Entity ent );
+    virtual void CreateComponent( i3d::Entity ent ) override;
     
-    virtual void Construct( i3d::Entity & ent );
+    virtual void Construct( i3d::Entity & ent )  override;
     
-    virtual void DestroyComponent( i3d::Entity ent );
+    virtual void DestroyComponent( i3d::Entity ent )  override;
     
 public:
     i3d::Model *                m_model;

@@ -3,12 +3,12 @@
 // Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#include "xe/util/Image.h"
+#include "i3d/util/Image.h"
 
 #include "png.h"
 #include "pngstruct.h"
 
-namespace xe {
+namespace i3d {
 
     #define PNG_SIG_LENGTH 8
         

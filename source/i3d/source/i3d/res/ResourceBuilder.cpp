@@ -3,49 +3,49 @@
 // Copyright (C) 2021 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#include "i3d/res/ResourceCompiler.h"
+#include "i3d/res/ResourceBuilder.h"
 
 namespace i3d {
 
     //======================================================================================================================
-    ResourceCompiler::ResourceCompiler() {
+    ResourceBuilder::ResourceBuilder() {
         
     }
     
     //======================================================================================================================
-    ResourceCompiler::~ResourceCompiler() {
+    ResourceBuilder::~ResourceBuilder() {
         
     }
     
     //======================================================================================================================
-    void ResourceCompiler::Compile( Resource * resource ) {
+    void ResourceBuilder::Compile( Resource * resource ) {
         
     }
 
     //======================================================================================================================
-    void ResourceCompiler::GetDependencies( Resource * resource,
-                                           i3d::Array<stl::String> & inputs ) {
+    void ResourceBuilder::GetDependencies( Resource * resource,
+                                           stl::Vector<stl::String::type>::type & inputs ) {
         
     }
 
     //======================================================================================================================
-    stl::String ResourceCompiler::GetAssetCompilePathFromResource( const char * path ) {
-        stl::String assetPath = path;
+    stl::String::type ResourceBuilder::GetAssetCompilePathFromResource( const char * path ) {
+        stl::String::type assetPath = path;
         
         if (assetPath[0] == FileSystem::MOUNT_DATA_PREFIX ) {
             assetPath[0] = FileSystem::MOUNT_ASSET_PREFIX;
         }
         
-        assetPath.Append( ".compile" );
+        assetPath.append( ".build" );
         
         return assetPath;
     }
     
     //======================================================================================================================
-    bool ResourceCompiler::CreateFolderAtPath( const char * path ) {
+    bool ResourceBuilder::CreateFolderAtPath( const char * path ) {
         
-        stl::String actualPath = path;
-        stl::String filename;
+        stl::String::type actualPath = path;
+        stl::String::type filename;
         fs->ExtractFilename(filename, actualPath);
         
         bool createOk = fs->CreateFolder( actualPath.c_str(), true );

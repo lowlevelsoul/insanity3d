@@ -3,9 +3,9 @@
 // Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#include "xe/util/Image.h"
+#include "i3d/util/Image.h"
 
-namespace xe {
+namespace i3d {
     
     static const size_t FORMAT_PIXEL_SIZE[] = {
         0,          // FORMAT_NONE=0,
@@ -85,7 +85,7 @@ namespace xe {
             m_blockCount = m_blockCountX * m_blockCountY;
             m_size = m_blockSize * m_blockCount;
             
-            m_bytes.Resize( m_size );
+            m_bytes.resize( m_size );
             
             m_width = (int32_t)(m_blockCountX * m_blockDimX);
             m_height = (int32_t)(m_blockCountY * m_blockDimY);
@@ -110,8 +110,8 @@ namespace xe {
         m_pitch = width * pixelSize;
         m_size = m_pitch * height;
         
-        m_bytes.Resize( m_size );
-        m_rows.Resize( m_height );
+        m_bytes.resize( m_size );
+        m_rows.resize( m_height );
         
         uintptr_t currOffs = 0;
         
@@ -133,7 +133,7 @@ namespace xe {
 
     //===============================================================================================================================
     bool Image::Load( const char* path, bool forceRgba ) {
-        i3d::String ext;
+        i3d::stl::String::type ext;
         bool gotExt = fs->GetExtension( ext, path );
         if (gotExt == false) {
             return false;
@@ -141,9 +141,9 @@ namespace xe {
 
         bool loadRes = false;
         
-        std::transform(ext.Begin(), ext.End(), ext.Begin(), std::tolower );
+        std::transform(ext.begin(), ext.end(), ext.begin(), std::tolower );
         
-        if ( strcmp(ext.GetCStr(), "png" ) == 0 ) {
+        if ( strcmp(ext.c_str(), "png" ) == 0 ) {
             loadRes = LoadPng( path, forceRgba );
             
         }

@@ -13,6 +13,9 @@ public:
     enum FOLDER {
         FOLDER_TEXTURES=0,
         FOLDER_MODELS,
+        FOLDER_MATERIALS,
+        FOLDER_PROTOTYPES,
+        FOLDER_MISSIONS,
         FOLDER_COUNT,
     };
     

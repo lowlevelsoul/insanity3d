@@ -78,6 +78,10 @@ bool BuilderApp::Run() {
     // Display version number
     PrintVersionNumber( true );
     
+    if (m_platform.empty() == true ) {
+        XE_ERROR( true, "No platform specified. Please use builder --help for details\n");
+    }
+    
     // Build the output folder path
     m_outputBasePath = m_outputPath;
     

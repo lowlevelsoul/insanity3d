@@ -149,7 +149,7 @@ namespace i3d {
         m_mountAssets = m_mountData;
         
         AppendPath( m_mountData, "/data");
-        AppendPath( m_mountAssets, "/assets");
+        AppendPath( m_mountAssets, "../../assets");
         
         XE_LOG("=========================================\n");
         XE_LOG("FileSystem init \n");

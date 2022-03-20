@@ -6,12 +6,11 @@
 #ifndef __TOOLIMAGE_H__
 #define __TOOLIMAGE_H__
 
-#include "xe/core/Types.h"
-#include "xe/container/Array.h"
-#include "xe/util/RefPointer.h"
-#include "xe/util/RefObject.h"
+#include "i3d/core/Types.h"
+#include "i3d/util/RefPointer.h"
+#include "i3d/util/RefObject.h"
 
-namespace xe {
+namespace i3d {
 
     class Image : public RefObject {
     public:
@@ -63,9 +62,9 @@ namespace xe {
         size_t                      m_blockSize;                ///< Size of a singe block in bytes
         size_t                      m_blockCount;               ///< Total block count
         size_t                      m_blockCountX;              ///< Number of blocks across
-        size_t                      m_blockCountY;              ///< Number of blocks down
-        i3d::Array<uint8_t>          m_bytes;                    ///< Image bytes
-        i3d::Array<uint8_t*>         m_rows;                     ///< Image row pointers
+        size_t                              m_blockCountY;              ///< Number of blocks down
+        stl::Vector<uint8_t>::type          m_bytes;                    ///< Image bytes
+        stl::Vector<uint8_t*>::type         m_rows;                     ///< Image row pointers
         
     public:
         Image();

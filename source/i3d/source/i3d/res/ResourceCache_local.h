@@ -10,7 +10,7 @@
 
 namespace i3d {
     
-    class ResourceCompiler;
+    class ResourceBuilder;
 
     class ResourceCacheLocal : public ResourceCache {
     public:
@@ -44,15 +44,15 @@ namespace i3d {
         
         bool PopPending();
         
-        bool ResourceNeedsCompile( Resource * res, ResourceCompiler *& compiler );
+        bool ResourceNeedsBuild( Resource * res, ResourceBuilder *& compiler );
             
         void MakePathCanonoical( stl::String::type & pathOut, const char * path );
             
         uint64_t CalcPathHash( const char * path );
         
-        ResourceCompiler * LoadCompileScript( Resource * res );
+        ResourceBuilder * LoadBuildScript( Resource * res );
         
-        bool HasCompileSript( Resource * res );
+        bool HasBuildSript( Resource * res );
             
     protected:
         static const size_t FACTORY_BUCKET_COUNT = 8;

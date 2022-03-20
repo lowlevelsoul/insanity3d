@@ -7,9 +7,11 @@
 #include "i3d/core/Hash.h"
 #include "i3d/core/Sys.h"
 #include "i3d/res/ResourceCache_local.h"
+#include "i3d/res/ResourceBuilder.h"
+#include "i3d/rtti/RttiLoader.h"
 #include <thread>
 
-// #define RESOURCE_COMPILE_STALE
+#define RESOURCE_COMPILE_STALE
 
 i3d::ResourceCache * res = nullptr;
 i3d::ResourceCacheLocal * resLocal = nullptr;
@@ -51,24 +53,24 @@ namespace i3d {
                 // Only attempt to check if the resource requires compilation if there
                 // is a valid compile script associated with it. Otherwise, we'll just assume
                 // that the resource exists and has just been magically placed in the data folder
-                bool hasCompiler = resLocal->HasCompileSript( res );
-                if ( hasCompiler == true ) {
+                bool hasBuilder = resLocal->HasBuildSript( res );
+                if ( hasBuilder == true ) {
                 
-                    ResourceCompiler * compiler = nullptr;
-                    bool isStale = resLocal->ResourceNeedsCompile( res, compiler );
+                    ResourceBuilder * builder = nullptr;
+                    bool isStale = resLocal->ResourceNeedsBuild( res, builder );
                     if ( isStale == true ) {
-                        XE_LOG( "Resource %s is stale. Compiling.\n ", res );
+                        XE_LOG( "Resource %s is stale. Compiling.\n ", res->GetPath() );
                         
-                        if ( compiler == nullptr ) {
+                        if ( builder == nullptr ) {
                             // If the target file does not exist, we most likely never loaded the compile
-                            // script to create the compiler. So make sure we load it now!
-                            compiler = resLocal->LoadCompileScript( res );
+                            // script to create the builder. So make sure we load it now!
+                            builder = resLocal->LoadBuildScript( res );
                         }
 
-                        compiler->Compile( res );
+                        builder->Compile( res );
                     }
                     
-                    SAFE_DELETE( compiler );
+                    SAFE_DELETE( builder );
                 }
     #endif
                 
@@ -192,24 +194,24 @@ namespace i3d {
         // Only attempt to check if the resource requires compilation if there
         // is a valid compile script associated with it. Otherwise, we'll just assume
         // that the resource exists and has just been magically placed in the data folder
-        bool hasCompiler = HasCompileSript( res );
-        if ( hasCompiler == true ) {
+        bool hasBuilder = HasBuildSript( res );
+        if ( hasBuilder == true ) {
         
-            ResourceCompiler * compiler = nullptr;
-            bool isStale = ResourceNeedsCompile( res, compiler );
+            ResourceBuilder * builder = nullptr;
+            bool isStale = ResourceNeedsBuild( res, builder );
             if ( isStale == true ) {
                 XE_LOG( "Resource %s is stale. Compiling.\n ", path );
                 
-                if ( compiler == nullptr ) {
+                if ( builder == nullptr ) {
                     // If the target file does not exist, we most likely never loaded the compile
-                    // script to create the compiler. So make sure we load it now!
-                    compiler = LoadCompileScript( res );
+                    // script to create the builder. So make sure we load it now!
+                    builder = LoadBuildScript( res );
                 }
 
-                compiler->Compile( res );
+                builder->Compile( res );
             }
             
-            SAFE_DELETE( compiler );
+            SAFE_DELETE( builder );
     }
     #endif
         
@@ -315,38 +317,28 @@ namespace i3d {
     }
     
     //======================================================================================================================
-    bool ResourceCacheLocal::HasCompileSript( Resource * res ) {
-        return false;
-#if 0
-        stl::String resCompileScriptPath = ResourceCompiler::GetAssetCompilePathFromResource( res->m_path.c_str() );
+    bool ResourceCacheLocal::HasBuildSript( Resource * res ) {
+        stl::String::type resCompileScriptPath = ResourceBuilder::GetAssetCompilePathFromResource( res->m_path.c_str() );
         return fs->DoesFileExist( resCompileScriptPath.c_str() );
-#endif
     }
     
     //======================================================================================================================
-    ResourceCompiler * ResourceCacheLocal::LoadCompileScript( Resource * res ) {
-        
-#if 0
-        stl::String resCompileScriptPath = ResourceCompiler::GetAssetCompilePathFromResource( res->m_path.c_str() );
+    ResourceBuilder * ResourceCacheLocal::LoadBuildScript( Resource * res ) {
+        stl::String::type resCompileScriptPath = ResourceBuilder::GetAssetCompilePathFromResource( res->m_path.c_str() );
         XE_ERROR( fs->DoesFileExist( resCompileScriptPath.c_str() ) == false, "Could not find resource compile script at %s", resCompileScriptPath.c_str());
         
         RttiLoader loader;
         loader.Load( resCompileScriptPath.c_str(), m_compileTargetPlatform );
         
-        XE_ERROR( loader.m_object == nullptr, "Ubcaught error whilst loading compile script. No compile objects found\n");
-        XE_ERROR( loader.m_object->IsOfType<ResourceCompiler>() == false, "Compile script does not contain a ResourceCompile object\n");
+        XE_ERROR( loader.m_object == nullptr, "Uncaught error whilst loading compile script. No compile objects found\n");
+        XE_ERROR( loader.m_object->IsOfType<ResourceBuilder>() == false, "Compile script does not contain a ResourceCompile object\n");
         
-        return loader.m_object->SafeCast<ResourceCompiler>();
-#endif
-        
-        return nullptr;
+        return loader.m_object->SafeCast<ResourceBuilder>();
     }
 
     //======================================================================================================================
-    bool ResourceCacheLocal::ResourceNeedsCompile( Resource * res, ResourceCompiler *& compiler ) {
-        
-#if 0
-        i3d::Array<stl::String> inputs;
+    bool ResourceCacheLocal::ResourceNeedsBuild( Resource * res, ResourceBuilder *& builder ) {
+        stl::Vector<stl::String::type>::type inputs;
         
         if ( fs->DoesFileExist( res->m_path.c_str() )  == false ) {
             // The file we're checking, doesn't actually exist. So just bail with true,
@@ -354,25 +346,25 @@ namespace i3d {
             return true;
         }
         
-        compiler = LoadCompileScript( res );
-        XE_ASSERT( compiler != nullptr );
+        builder = LoadBuildScript( res );
+        XE_ASSERT( builder != nullptr );
         
-        inputs.PushBack( ResourceCompiler::GetAssetCompilePathFromResource( res->m_path.c_str() ) );
+        inputs.push_back( ResourceBuilder::GetAssetCompilePathFromResource( res->m_path.c_str() ) );
         
-        compiler->GetDependencies( res, inputs);
+        builder->GetDependencies( res, inputs);
         
         // Get the respufe target file time stamp
         uint64_t resFileTimeStamp;
         fs->GetModifiedTimestamp( resFileTimeStamp, res->m_path.c_str());
         
         // Get the time stamps of the inputs
-        Array<uint64_t> inputTimeStamps;
+        stl::Vector<uint64_t>::type inputTimeStamps;
         
         for ( auto & i : inputs ) {
             if (fs->DoesFileExist( i.c_str() ) == true ) {
                 uint64_t timestamp;
                 fs->GetModifiedTimestamp(timestamp, i.c_str() );
-                inputTimeStamps.PushBack( timestamp );
+                inputTimeStamps.push_back( timestamp );
             }
         }
 
@@ -386,7 +378,6 @@ namespace i3d {
         }
         
         // If we get to hear, the resource is up-to-date.
-#endif
         return false;
     }
     
@@ -403,6 +394,4 @@ namespace i3d {
         m_pending.pop_back();
         return true;
     }
-    
-
 }

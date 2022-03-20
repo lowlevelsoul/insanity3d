@@ -12,18 +12,18 @@ namespace i3d {
     
     class Resource;
 
-    class ResourceCompiler : public RttiObject {
+    class ResourceBuilder : public RttiObject {
     public:
-        ResourceCompiler();
+        ResourceBuilder();
         
-        virtual ~ResourceCompiler();
+        virtual ~ResourceBuilder();
         
         virtual void GetDependencies( Resource * resource,
-                                      std::vector<stl::String> & inputs );
+                                      stl::Vector<stl::String::type>::type & inputs );
         
         virtual void Compile( Resource * resource );
         
-        static stl::String GetAssetCompilePathFromResource( const char * path );
+        static stl::String::type GetAssetCompilePathFromResource( const char * path );
         
         static bool CreateFolderAtPath( const char * path );
     };
