@@ -6,6 +6,7 @@
 #include "i3d/ecs/EntityPrototype.h"
 #include "i3d/ecs/Ecs.h"
 
+
 namespace i3d {
     
     RTTI_CLASS_BEGIN( EntityPrototype )

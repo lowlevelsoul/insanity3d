@@ -1601,7 +1601,7 @@
 			path = builder;
 			sourceTree = "<group>";
 		};
-		D34A4D2527E372AB0083DD65 /* build */ = {
+		D34A4D2527E372AB0083DD65 /* resbuild */ = {
 			isa = PBXGroup;
 			children = (
 				D34A4D5E27E7492B0083DD65 /* RttiBuilder.cpp */,
@@ -1615,7 +1615,7 @@
 				D34A4D2927E373530083DD65 /* ModelBuilder.cpp */,
 				D34A4D2627E373530083DD65 /* ModelBuilder.h */,
 			);
-			path = build;
+			path = resbuild;
 			sourceTree = "<group>";
 		};
 		D34A4D2C27E373770083DD65 /* toolmodel */ = {
@@ -1741,7 +1741,7 @@
 		D366B3D427C6A5B40004E0E2 /* i3d */ = {
 			isa = PBXGroup;
 			children = (
-				D34A4D2527E372AB0083DD65 /* build */,
+				D34A4D2527E372AB0083DD65 /* resbuild */,
 				D34A4A3427CCCF6D0083DD65 /* ecs */,
 				D366B4F927C7FA480004E0E2 /* mem */,
 				D366B4E227C7CF2A0004E0E2 /* util */,
