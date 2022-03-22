@@ -32,13 +32,8 @@ namespace i3d {
     }
 
     //=========================================================================================================================================
-    static stl::String::size_type _getExtensionSeperator( const stl::String::type & path) {
-        stl::String::size_type lastSepPos = _getLastSeperator(path);
-        if (lastSepPos == stl::String::npos) {
-            lastSepPos = 0;
-        }
-        
-        stl::String::size_type extSepPos = path.find('.', lastSepPos);
+    static stl::String::size_type _getExtensionSeperator( const stl::String::type & path) {        
+        stl::String::size_type extSepPos = path.rfind('.');
         return extSepPos;
     }
 
@@ -136,7 +131,7 @@ namespace i3d {
           return false;
         }
 
-        path = path.substr( 0, extSepPos - 1 );
+        path = path.substr( 0, extSepPos );
         return true;
     }
 

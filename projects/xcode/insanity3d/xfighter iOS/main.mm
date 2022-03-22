@@ -13,7 +13,7 @@ namespace i3d {
 }
 
 //======================================================================================================================
-int main(int argc, char * argv[]) {
+int main( int argc, char ** argv ) {
     
     NSString * appDelegateClassName;    
     @autoreleasepool {
@@ -21,7 +21,7 @@ int main(int argc, char * argv[]) {
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
     
-    i3d::EngineInitialise( argc, argv );
+    i3d::EngineInitialise( argc, (const char **) argv );
     
     int retCode = UIApplicationMain(argc, argv, nil, appDelegateClassName);
     

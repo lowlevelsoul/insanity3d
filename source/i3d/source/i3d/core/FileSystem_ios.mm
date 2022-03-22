@@ -18,6 +18,8 @@
 
 #import <foundation/Foundation.h>
 
+i3d::FileSystem * fs = nullptr;
+
 namespace i3d {
 
     /// Internal file class
@@ -96,6 +98,8 @@ namespace i3d {
         bool EnumeratePathConents( const char * path, PathEnumeratorFunc enumFunc, void * context, const char * ext );
         bool GetApplicationPath( stl::String::type & pathOut );
         bool GetModifiedTimestamp(uint64_t& timeStamp, const char* filePath);
+        virtual void SetDataMountFolder( const char * path );
+        virtual void SetAssetMountFolder( const char * path );
         
         File * FileOpen( const char * path, const char * mode );
         void FileClose( File * file );
@@ -148,6 +152,16 @@ namespace i3d {
         
     //=========================================================================================================================================
     FileSystemIos::~FileSystemIos() {
+    }
+    
+    //=========================================================================================================================================
+    void FileSystemIos::SetDataMountFolder( const char * path ) {
+        
+    }
+    
+    //=========================================================================================================================================
+    void FileSystemIos::SetAssetMountFolder( const char * path ) {
+        
     }
     
     //=========================================================================================================================================
@@ -208,7 +222,7 @@ namespace i3d {
                 
                 // No prefix, so just copy
             default : {
-                stl::string::type::type emptyStr = "";
+                stl::String::type emptyStr = "";
                 pathOut = pathIn;
             }
         }

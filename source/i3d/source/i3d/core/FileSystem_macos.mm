@@ -98,6 +98,9 @@ namespace i3d {
         bool EnumeratePathConents( const char * path, PathEnumeratorFunc enumFunc, void * context, const char * ext );
         bool GetApplicationPath( stl::String::type & pathOut );
         bool GetModifiedTimestamp( uint64_t& timeStamp, const char* filePath );
+        void SetDataMountFolder( const char * path );
+        void SetAssetMountFolder( const char * path );
+        
         
         File * FileOpen( const char * path, const char * mode );
         void FileClose( File * file );
@@ -161,7 +164,23 @@ namespace i3d {
     //=========================================================================================================================================
     FileSystemMacos::~FileSystemMacos() {
     }
+
+    //=========================================================================================================================================
+    void FileSystemMacos::SetDataMountFolder( const char * path ) {
+        GetCurrentDirectory( m_mountData );
+        AppendPath( m_mountData, path );
+        
+        XE_LOG("Data folder path changed to : %s\n", m_mountData.c_str() );
+    }
     
+    //=========================================================================================================================================
+    void FileSystemMacos::SetAssetMountFolder( const char * path ) {
+        GetCurrentDirectory( m_mountAssets );
+        AppendPath( m_mountAssets, path );
+        
+        XE_LOG("Data folder path changed to : %s\n", m_mountAssets.c_str() );
+    }
+
     //=========================================================================================================================================
     File* FileSystemMacos::FileOpen( const char*  path, const char * mode ) {
         assert(path != NULL);

@@ -78,6 +78,9 @@ namespace i3d {
         virtual bool GetApplicationPath ( stl::String::type& pathOut ) = 0;
         virtual bool GetModifiedTimestamp ( uint64_t& timeStamp, const char* filePath ) = 0;
         
+        virtual void SetDataMountFolder( const char * path ) = 0;
+        virtual void SetAssetMountFolder( const char * path ) = 0 ;
+        
         virtual File * FileOpen ( const char * path, const char * mode ) = 0;
         virtual void FileClose ( File * file ) = 0;
     };

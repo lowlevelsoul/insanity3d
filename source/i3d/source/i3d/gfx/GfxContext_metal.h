@@ -39,7 +39,7 @@ namespace i3d { namespace gfx {
         MTKView *  _Nullable            m_view;
 #elif TARGET_OS_IOS || TARGET_OS_TV
         UIView *                        m_baseView;
-        MTKViw *                        m_view;
+        MTKView *                       m_view;
 #else
 #   error Unknown Metal platform
 #endif

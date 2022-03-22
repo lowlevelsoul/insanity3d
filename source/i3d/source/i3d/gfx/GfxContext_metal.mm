@@ -62,6 +62,7 @@ namespace i3d { namespace gfx {
     }
 }}
 
+#if TARGET_OS_OSX
 
 @implementation ContextViewDelegate
     {
@@ -102,3 +103,5 @@ namespace i3d { namespace gfx {
     }
 
 @end
+
+#endif
