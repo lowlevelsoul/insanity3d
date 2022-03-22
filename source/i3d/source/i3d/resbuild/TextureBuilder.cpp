@@ -49,7 +49,7 @@ namespace i3d {
     }
     
     //======================================================================================================================
-    void TextureBuilder::Compile( Resource * resource ) {
+    void TextureBuilder::Compile( const char * path ) {
         // Load the base image and add to the array of images
         Image * baseImg = LoadImage();
         m_images.push_back( baseImg );
@@ -95,11 +95,11 @@ namespace i3d {
         // Write texture stream from images
         XE_LOG( "Writing texture images\n" );
         
-        bool folderOk = CreateFolderAtPath( resource->GetPath() );
-        XE_ERROR( folderOk == false, " Could not create folder at %s\n", resource->GetPath() );
+        bool folderOk = CreateFolderAtPath( path );
+        XE_ERROR( folderOk == false, " Could not create folder at %s\n", path );
         
-        i3d::ScopedFile file( resource->GetPath(), "wb" );
-        XE_ERROR( file.IsValid() == false, "Error opening resource file %s for writing\n", resource->GetPath());
+        i3d::ScopedFile file( path, "wb" );
+        XE_ERROR( file.IsValid() == false, "Error opening resource file %s for writing\n", path );
         
         WriteImages( file, m_images );
     }
@@ -132,7 +132,12 @@ namespace i3d {
             return m_baseImage;
         }
         else {
-            m_baseImage = img;
+            if (loadedImage == true ) {
+                m_baseImage = img;
+            }
+            else {
+                img = m_baseImage;
+            }
         }
         
         // If we have a maximum size, check to see if the image violates that contraint. If it

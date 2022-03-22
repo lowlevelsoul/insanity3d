@@ -32,7 +32,7 @@ namespace i3d {
     }
 
     //======================================================================================================================
-    void RttiBuilder::Compile( Resource * resource ) {
+    void RttiBuilder::Compile( const char * path ) {
         
         // Load and compile the rtti script into a binary stream
         RttiLoader rttiLoader;
@@ -44,10 +44,10 @@ namespace i3d {
         rttiLoader.LoadAndCompileToStream( rttiStream, m_input.c_str(), buildPlatformId );
         
         // Save the stream to a file
-        CreateFolderAtPath( resource->GetPath() );
+        CreateFolderAtPath( path );
         {
-            ScopedFile file( resource->GetPath(), "wb" );
-            XE_ERROR( file.IsValid() == false, "Error opening %s for writing\n", resource->GetPath() );
+            ScopedFile file( path, "wb" );
+            XE_ERROR( file.IsValid() == false, "Error opening %s for writing\n", path);
             rttiStream.WriteToFile( file );
         }
     }

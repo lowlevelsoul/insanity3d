@@ -18,7 +18,7 @@ namespace i3d {
     }
     
     //======================================================================================================================
-    void ResourceBuilder::Compile( Resource * resource ) {
+    void ResourceBuilder::Compile( const char * path ) {
         
     }
 

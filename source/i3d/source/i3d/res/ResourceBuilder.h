@@ -21,7 +21,7 @@ namespace i3d {
         virtual void GetDependencies( Resource * resource,
                                       stl::Vector<stl::String::type>::type & inputs );
         
-        virtual void Compile( Resource * resource );
+        virtual void Compile( const char * path );
         
         static stl::String::type GetAssetCompilePathFromResource( const char * path );
         

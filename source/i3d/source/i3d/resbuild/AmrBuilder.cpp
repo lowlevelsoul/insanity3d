@@ -52,7 +52,7 @@ namespace i3d {
     }
     
     //===============================================================================================================================
-    void  AmrBuilder::Compile( Resource * resource ) {
+    void  AmrBuilder::Compile( const char * path ) {
         stl::String::type errorMsg;
         bool ok = Process( errorMsg );
         XE_ERROR( ok == false, "Error processing source textures. Reason: %s\n", errorMsg.c_str() );
@@ -63,7 +63,7 @@ namespace i3d {
         texComp.m_block         = m_block;
         texComp.m_mipCount      = m_mipCount;
         
-        texComp.Compile( resource );        
+        texComp.Compile( path );        
     }
 
     //===============================================================================================================================

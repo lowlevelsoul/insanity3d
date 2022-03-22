@@ -11,7 +11,7 @@
 #include "i3d/rtti/RttiLoader.h"
 #include <thread>
 
-#define RESOURCE_COMPILE_STALE
+// #define RESOURCE_COMPILE_STALE
 
 i3d::ResourceCache * res = nullptr;
 i3d::ResourceCacheLocal * resLocal = nullptr;
@@ -69,7 +69,7 @@ namespace i3d {
                             builder = resLocal->LoadBuildScript( res );
                         }
 
-                        builder->Compile( res );
+                        builder->Compile( res->GetPath() );
                     }
                     
                     SAFE_DELETE( builder );
@@ -210,7 +210,7 @@ namespace i3d {
                     builder = LoadBuildScript( res );
                 }
 
-                builder->Compile( res );
+                builder->Compile( res->GetPath() );
             }
             
             SAFE_DELETE( builder );

@@ -47,7 +47,7 @@ namespace i3d {
         virtual void GetDependencies( Resource * resource,
                                       stl::Vector<stl::String::type>::type & inputs ) override;
         
-        virtual void Compile( Resource * resource ) override;
+        virtual void Compile( const char * path ) override;
 
         void WriteToStream( ToolMemStream & str, ToolModel * model );
         

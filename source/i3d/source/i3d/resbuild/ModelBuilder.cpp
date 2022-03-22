@@ -130,7 +130,7 @@ namespace i3d {
     }
     
     //======================================================================================================================
-    void ModelBuilder::Compile( Resource * resource ) {
+    void ModelBuilder::Compile( const char * path ) {
         
         // Load the model
         XE_LOG(" Loading source model %s\n", m_input.c_str() );
@@ -146,11 +146,11 @@ namespace i3d {
         WriteToStream( str, model );
         XE_LOG("   Size : %uKB\n", str.Length() / 1024 );
         
-        bool folderOk = CreateFolderAtPath( resource->GetPath() );
-        XE_ERROR( folderOk == false, " Could not create folder at %s\n", resource->GetPath() );
+        bool folderOk = CreateFolderAtPath( path );
+        XE_ERROR( folderOk == false, " Could not create folder at %s\n", path );
         
-        ScopedFile file( resource->GetPath(), "wb" );
-        XE_ERROR( file == nullptr, "Unable to open %s for writing\n", resource->GetPath() );
+        ScopedFile file( path, "wb" );
+        XE_ERROR( file == nullptr, "Unable to open %s for writing\n", path );
         
         file->Write( str.GetStream(), str.Length() );
     }
