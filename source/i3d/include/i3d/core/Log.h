@@ -59,9 +59,22 @@ namespace i3d {
     
 extern i3d::Log * logsys;
 
+#if defined(_DEBUG) || defined(DEBUG)
+#   define I3D_ENABLE_LOG_MACROS
+#else
+#   if defined(I3D_RELEASE_LOG)
+#       define I3D_ENABLE_LOG_MACROS
+#   endif
+#endif
 
-#define XE_LOG(...) logsys->Printf(i3d::LOG_CAT_MISC, __VA_ARGS__ )
-#define XE_ERROR(C, ...) (void)((!(C)) || ( logsys->Printf( i3d::LOG_CAT_ERROR, __VA_ARGS__ ), sys->Exit( 0 ), 0 ) )
-#define XE_WARN(C, ...) (void)((!(C)) || ( logsys->Printf( i3d::LOG_CAT_WARN, __VA_ARGS__ ), 0 ) )
+#if defined(I3D_ENABLE_LOG_MACROS)
+#   define XE_LOG(...) logsys->Printf(i3d::LOG_CAT_MISC, __VA_ARGS__ )
+#   define XE_ERROR(C, ...) (void)((!(C)) || ( logsys->Printf( i3d::LOG_CAT_ERROR, __VA_ARGS__ ), sys->Exit( 0 ), 0 ) )
+#   define XE_WARN(C, ...) (void)((!(C)) || ( logsys->Printf( i3d::LOG_CAT_WARN, __VA_ARGS__ ), 0 ) )
+#else
+#   define XE_LOG(...)
+#   define XE_ERROR(C, ...)
+#   define XE_WARN(C, ...)
+#endif
 
 #endif

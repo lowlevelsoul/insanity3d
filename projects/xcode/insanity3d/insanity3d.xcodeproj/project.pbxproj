@@ -402,6 +402,14 @@
 		D367BB1327EA525C00BBAAB4 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D367BB1227EA525C00BBAAB4 /* data */; };
 		D367BB1427EA53FB00BBAAB4 /* ResourceBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B44927C6B3590004E0E2 /* ResourceBuilder.cpp */; };
 		D367BB1527EA53FB00BBAAB4 /* ResourceBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B44927C6B3590004E0E2 /* ResourceBuilder.cpp */; };
+		D3BE383927EB7211006B345A /* palette_neon_intrinsics.c in Sources */ = {isa = PBXBuildFile; fileRef = D3BE383527EB7211006B345A /* palette_neon_intrinsics.c */; };
+		D3BE383A27EB7211006B345A /* palette_neon_intrinsics.c in Sources */ = {isa = PBXBuildFile; fileRef = D3BE383527EB7211006B345A /* palette_neon_intrinsics.c */; };
+		D3BE383B27EB7211006B345A /* filter_neon_intrinsics.c in Sources */ = {isa = PBXBuildFile; fileRef = D3BE383627EB7211006B345A /* filter_neon_intrinsics.c */; };
+		D3BE383C27EB7211006B345A /* filter_neon_intrinsics.c in Sources */ = {isa = PBXBuildFile; fileRef = D3BE383627EB7211006B345A /* filter_neon_intrinsics.c */; };
+		D3BE383D27EB7211006B345A /* arm_init.c in Sources */ = {isa = PBXBuildFile; fileRef = D3BE383727EB7211006B345A /* arm_init.c */; };
+		D3BE383E27EB7211006B345A /* arm_init.c in Sources */ = {isa = PBXBuildFile; fileRef = D3BE383727EB7211006B345A /* arm_init.c */; };
+		D3BE383F27EB7211006B345A /* filter_neon.S in Sources */ = {isa = PBXBuildFile; fileRef = D3BE383827EB7211006B345A /* filter_neon.S */; };
+		D3BE384027EB7211006B345A /* filter_neon.S in Sources */ = {isa = PBXBuildFile; fileRef = D3BE383827EB7211006B345A /* filter_neon.S */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -796,6 +804,10 @@
 		D367BAC627E8D5DC00BBAAB4 /* xfighter_builder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xfighter_builder; sourceTree = BUILT_PRODUCTS_DIR; };
 		D367BB0027E8D6C800BBAAB4 /* xfighter_builder.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = xfighter_builder.xcconfig; sourceTree = "<group>"; };
 		D367BB1227EA525C00BBAAB4 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../../../data/xfighter/data/ios/data; sourceTree = "<group>"; };
+		D3BE383527EB7211006B345A /* palette_neon_intrinsics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = palette_neon_intrinsics.c; sourceTree = "<group>"; };
+		D3BE383627EB7211006B345A /* filter_neon_intrinsics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filter_neon_intrinsics.c; sourceTree = "<group>"; };
+		D3BE383727EB7211006B345A /* arm_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arm_init.c; sourceTree = "<group>"; };
+		D3BE383827EB7211006B345A /* filter_neon.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = filter_neon.S; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1059,6 +1071,7 @@
 		D34A4B7727DFBC2B0083DD65 /* lpng1636 */ = {
 			isa = PBXGroup;
 			children = (
+				D3BE383427EB71FB006B345A /* arm */,
 				D34A4B7927DFBC480083DD65 /* png.c */,
 				D34A4B8B27DFBC490083DD65 /* pngerror.c */,
 				D34A4B8127DFBC480083DD65 /* pngget.c */,
@@ -1567,6 +1580,17 @@
 			path = mem;
 			sourceTree = "<group>";
 		};
+		D3BE383427EB71FB006B345A /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				D3BE383727EB7211006B345A /* arm_init.c */,
+				D3BE383627EB7211006B345A /* filter_neon_intrinsics.c */,
+				D3BE383827EB7211006B345A /* filter_neon.S */,
+				D3BE383527EB7211006B345A /* palette_neon_intrinsics.c */,
+			);
+			path = arm;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2022,6 +2046,7 @@
 				D34A493B27C9161D0083DD65 /* CVarManager_local.cpp in Sources */,
 				D34A49B227C916610083DD65 /* RttiLexer.cpp in Sources */,
 				D34A4D3327E373CB0083DD65 /* RefObject.cpp in Sources */,
+				D3BE383F27EB7211006B345A /* filter_neon.S in Sources */,
 				D34A49EE27C9FD980083DD65 /* Texture_base.cpp in Sources */,
 				D34A4A3027CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */,
 				D34A4D5727E5CE320083DD65 /* Image_png.cpp in Sources */,
@@ -2046,6 +2071,7 @@
 				D34A49B127C916610083DD65 /* RttiResource.cpp in Sources */,
 				D34A4A8927DA4C0E0083DD65 /* PlayerManager.cpp in Sources */,
 				D34A4D4A27E374390083DD65 /* ToolModel.cpp in Sources */,
+				D3BE383B27EB7211006B345A /* filter_neon_intrinsics.c in Sources */,
 				D34A49AE27C916610083DD65 /* RttiSystem_local.cpp in Sources */,
 				D34A494C27C9162B0083DD65 /* Quaternion.cpp in Sources */,
 				D34A4A1927CA69160083DD65 /* XFighter.cpp in Sources */,
@@ -2054,6 +2080,7 @@
 				D34A49B427C916610083DD65 /* RttiLoader.cpp in Sources */,
 				D34A4D4D27E374390083DD65 /* ToolMaterial.cpp in Sources */,
 				D34A4A4E27D11D2C0083DD65 /* EntityPrototype.cpp in Sources */,
+				D3BE383D27EB7211006B345A /* arm_init.c in Sources */,
 				D34A4A7527D8F2290083DD65 /* XFighter_ecs.cpp in Sources */,
 				D34A4A7A27D8F3690083DD65 /* TransformManager.cpp in Sources */,
 				D34A499B27C916560083DD65 /* DrawLit.cpp in Sources */,
@@ -2086,6 +2113,7 @@
 				D34A4D5827E5CE350083DD65 /* Image.cpp in Sources */,
 				D34A49EC27C9FD980083DD65 /* RenderBuffers.cpp in Sources */,
 				D34A499C27C916560083DD65 /* DebugLineDraw.cpp in Sources */,
+				D3BE383927EB7211006B345A /* palette_neon_intrinsics.c in Sources */,
 				D34A4A3C27CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
 				D34A4D2B27E373530083DD65 /* ModelBuilder.cpp in Sources */,
 				D34A493D27C9161D0083DD65 /* Sys_common.cpp in Sources */,
@@ -2217,11 +2245,15 @@
 				D367BAD227E8D63F00BBAAB4 /* Log_local.cpp in Sources */,
 				D367BAE327E8D65D00BBAAB4 /* RttiObject.cpp in Sources */,
 				D367BAFB27E8D69600BBAAB4 /* EntityPrototype.cpp in Sources */,
+				D3BE383C27EB7211006B345A /* filter_neon_intrinsics.c in Sources */,
+				D3BE383A27EB7211006B345A /* palette_neon_intrinsics.c in Sources */,
 				D367BAF227E8D67500BBAAB4 /* RttiBuilder.cpp in Sources */,
+				D3BE383E27EB7211006B345A /* arm_init.c in Sources */,
 				D367BB1127E8EAAA00BBAAB4 /* Material.cpp in Sources */,
 				D367BADE27E8D65D00BBAAB4 /* RttiLexer.cpp in Sources */,
 				D367BADF27E8D65D00BBAAB4 /* RttiParser.cpp in Sources */,
 				D367BAD827E8D64D00BBAAB4 /* Matrix4.cpp in Sources */,
+				D3BE384027EB7211006B345A /* filter_neon.S in Sources */,
 				D367BAD727E8D64600BBAAB4 /* FileSystem_macos.mm in Sources */,
 				D367BAE127E8D65D00BBAAB4 /* RttiSystem_local.cpp in Sources */,
 				D367BACE27E8D63F00BBAAB4 /* CVar.cpp in Sources */,
