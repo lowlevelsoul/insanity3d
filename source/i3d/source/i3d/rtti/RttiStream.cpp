@@ -61,6 +61,11 @@ namespace i3d {
     
     //=======================================================================================================================
     void RttiStream::Construct() {
+        
+        // We might call this method multiple times as we can treat an rtti stream as a prototype
+        // that can be called mutiple times. So lear out object array.
+        m_objects.resize(0);
+        
         // Create the objects
         for ( auto & oi : m_objectInfo ) {
             RttiObject * object = rtti->Create( oi.m_typeId );

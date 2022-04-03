@@ -8,12 +8,17 @@
 #include "i3d/render/Material.h"
 #include "i3d/ecs/PrototypeResource.h"
 
-#include "components/Transform.h"
-#include "components/ShipModel.h"
+#include "entity/EntityDef.h"
+#include "entity/EntityManager.h"
+#include "misc/GameGlobals.h"
+#include "ship/Ship.h"
 
 
 static uint8_t XFighterMem[ sizeof( XFighter ) ];
 XFighter * game = nullptr;
+
+void EntityManagerCreate();
+void EntityManagerDestroy();
 
 //======================================================================================================================
 i3d::Game * i3d::GameCreate() {
@@ -34,7 +39,6 @@ void i3d::GameDestroy() {
 
 //======================================================================================================================
 XFighter::XFighter() {
-    m_rot = 0;
 }
 
 //======================================================================================================================
@@ -44,37 +48,32 @@ XFighter::~XFighter() {
 
 //======================================================================================================================
 void XFighter::Initialise() {
-    InitialiseEcs();
+    EntityManagerCreate();
     
-    CreateSystemEnt();
+    res->PublishFactory<EntityDef>();
     
-    m_player = res->Load<i3d::PrototypeResource>( "~/prototypes/player.proto" );
+    m_globalsRes = res->Load<i3d::RttiResource>("~/rtti/GameGlobals.brtti");
+    m_playerDef = res->Load<EntityDef>("~/entities/Player.ent");
     
     res->StartLoading();
     while ( res->HasPending() == true ) {
         
     }
     
-    i3d::Entity playerEnt = m_player->CreateEntity();
+    m_globals = m_globalsRes->GetObject()->SafeCast<GameGlobals>();
+    
+    m_player = m_playerDef->Construct()->SafeCast<Ship>();
+    res->StartLoading();
+    while ( res->HasPending() == true ) {
+        
+    }
+    
+    entityMgr->AddEntity( m_player );
+    
 }
-
 
 //======================================================================================================================
 void XFighter::CreateSystemEnt() {
-    i3d::PrototypeResource * systemProto = nullptr;
-    
-    bool loaded = res->Find("~/prototypes/system.proto");
-    if ( loaded == false ) {
-        systemProto = res->Load<i3d::PrototypeResource>("~/prototypes/system.proto");
-
-        res->StartLoading();
-        
-        while ( res->HasPending() == true ) {
-        
-        }
-    }
-    
-    m_systemEnt = systemProto->CreateEntity();
 }
 
 //======================================================================================================================
@@ -84,12 +83,10 @@ void XFighter::Finalise() {
 
 //======================================================================================================================
 void XFighter::Think( float timeStep, uint32_t viewWidth, uint32_t viewHeight ) {
-    //m_rot += 180.0f * deltaTime;
-    //while ( m_rot >= 360 ) m_rot -= 360.0f;
+    m_globals->m_camera->Update( viewWidth, viewHeight );
+    m_globals->m_playfield->Update( m_globals->m_camera );
     
-    m_playerManager.Think( timeStep );
-    m_transformManager.Think( timeStep );
-    
+    entityMgr->Think( timeStep );
 }
 
 //======================================================================================================================
@@ -100,25 +97,19 @@ void XFighter::Draw( float timeStep, uint32_t viewWidth, uint32_t viewHeight ) {
     viewMat = i3d::Matrix4::IDENTITY;
     viewMat.SetTranslation( i3d::Vector3( 0, 0, -20 ) );
     
-    int32_t viewport[] = { 0, 0, 0, 0 };
-    
-    i3d::Matrix4 modelMat;
-    modelMat = i3d::Matrix4::IDENTITY;
-    modelMat.SetRotationAA( i3d::Vector3::UNIT_Y, i3d::scalar::DegToRad( m_rot ) );
+    int32_t viewport[] = { 0, 0, (int32_t)viewWidth, (int32_t)viewHeight };
     
     render->BeginScene();
     {
-        //render->BeginScene3d( projMat, viewMat, viewport );
-        //render->SubmitModel( m_model, modelMat, m_materialRes->GetMaterial() );
-        
-        m_sceneManager.BeginScene( timeStep, viewWidth, viewHeight );
-        {
-            m_shipManager.Draw( timeStep );
-        }
-        m_sceneManager.EndScene();
-        
-        //render->EndScene3d();
-        
+        if ( m_globals != nullptr ) {
+            render->BeginScene3d( m_globals->m_camera->m_projection,
+                                  m_globals->m_camera->m_transform,
+                                  viewport );
+            
+            entityMgr->Draw( timeStep, viewWidth, viewHeight);
+            
+            render->EndScene3d();
+        }        
     }
     render->EndScene();
 }

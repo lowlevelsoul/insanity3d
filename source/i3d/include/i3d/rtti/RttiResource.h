@@ -21,6 +21,8 @@ namespace i3d {
         
         virtual void Load( File * file, const char * path ) override;
         
+        RttiObject * GetObject();
+        
     protected:
         RttiObject *        m_object;           ///< Pointer to the rtti object that was loaded
     };

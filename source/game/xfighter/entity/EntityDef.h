@@ -3,22 +3,28 @@
 // Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#ifndef __PLAYERMANAGER_H__
-#define __PLAYERMANAGER_H__
+#ifndef __ENTITYRESOURCE_H__
+#define __ENTITYRESOURCE_H__
 
-#include "i3d/ecs/System.h"
+#include "i3d/rtti/RttiStream.h"
 
-class PlayerManager : public i3d::System {
+class Entity;
+
+class EntityDef : public i3d::Resource {
 public:
-    PlayerManager();
+    DECLARE_RESOURCE( EntityDef )
     
-    ~PlayerManager();
+    EntityDef();
     
-    void Think( float timeStep );
+    virtual ~EntityDef();
+    
+    virtual void Load( i3d::File * file, const char * path ) override;
+    
+    Entity * Construct();
     
 protected:
-    
+    i3d::RttiStream      m_stream;
 };
 
-
 #endif
+

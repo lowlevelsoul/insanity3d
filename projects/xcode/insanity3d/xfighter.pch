@@ -28,6 +28,8 @@
 #   include "i3d/core/Sys.h"
 #   include "i3d/core/FileSystem.h"
 #   include "i3d/math/Math3d.h"
+#   include "i3d/math/Plane.h"
+#   include "i3d/math/Frustum.h"
 #   include "i3d/core/Hash.h"
 #   include "i3d/core/Id.h"
 #   include "i3d/core/Log.h"
@@ -41,6 +43,10 @@
 #   include "i3d/ecs/Ecs.h"
 #   include "i3d/ecs/EntityPrototype.h"
 #   include "i3d/ecs/ComponentPrototype.h"
+
+#   include "i3d/render/Model.h"
+#   include "i3d/render/Material.h"
+#   include "i3d/render/Render.h"
 
 #endif
 

@@ -3,24 +3,25 @@
 // Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#ifndef __SCENEMANAGER_H__
-#define __SCENEMANAGER_H__
+#ifndef __SHIPPREVIEW_H__
+#define __SHIPPREVIEW_H__
 
-#include "i3d/ecs/System.h"
+#include "ship/Ship.h"
 
-class SceneManager : public i3d::System {
+class ShipPreview : public ShipComponent {
 public:
-    SceneManager();
+    RTTI_CLASS_DECLARE( ShipPreview, ShipComponent );
+    ShipPreview();
     
-    ~SceneManager();
+    virtual ~ShipPreview();
     
-    void BeginScene( float timeStep, uint32_t viewWidth, uint32_t viewHeight );
+    virtual void Think( float timeStep ) override;
     
-    void EndScene();
-    
-protected:
-    
+public:
+    i3d::Vector3        m_location;
+    i3d::Vector3        m_rotationAxis;
+    float               m_rotation;
+    float               m_rotationSpeed;
 };
-
 
 #endif

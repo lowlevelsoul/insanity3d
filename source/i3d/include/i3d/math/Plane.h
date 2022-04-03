@@ -10,6 +10,12 @@ namespace i3d {
     
     class Plane {
     public:
+        enum TEST_RESULT {
+            TEST_RESULT_HIT=0,
+            TEST_RESULT_MISS,
+            TEST_RESULT_PARALLEL,
+        };
+        
         Plane() {
             // Empty - does nothing
         }
@@ -50,9 +56,45 @@ namespace i3d {
             m_value.W() = d;
         }
         
+        Vector3 ClipPoint(const Vector3 & p) const;
+        
+        TEST_RESULT TestSegment(Vector3& q, float& t, const Vector3& p0, const Vector3& p1) const;
+        
     protected:
         Vector4         m_value;
     };
+    
+    //======================================================================================================================
+    inline Vector3 Plane::ClipPoint( const Vector3 & p ) const {
+        i3d::Vector3 n = m_value;
+        
+        float d = n.Dot( p ) - m_value.W();
+        if (d > 0) {
+            Vector3 cp = p - n * d;
+            return cp;
+        }
+        
+        return p;
+    }
+    
+    //======================================================================================================================
+    inline Plane::TEST_RESULT Plane::TestSegment( Vector3 & q, float & t, const Vector3 & p0, const Vector3 & p1 ) const {
+        Vector3 ab = p1 - p0;
+        float nDotAb = GetNormal().Dot(ab);
+        
+        if ( nDotAb == 0 ) {
+            return TEST_RESULT_PARALLEL;
+        }
+        
+        t = ( GetDistance() - GetNormal().Dot( p0 ) ) / nDotAb;
+        
+        if ( ( t >= 0 ) && ( t <= 1.0f ) ) {
+            q = p0 + ( ab * t );
+            return TEST_RESULT_HIT;
+        }
+        
+        return TEST_RESULT_MISS;
+    }
 }
 
 

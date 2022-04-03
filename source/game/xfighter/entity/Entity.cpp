@@ -3,37 +3,46 @@
 // Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#include "components/ShipModel.h"
-#include "i3d/render/Material.h"
+#include "entity/Entity.h"
 
-RTTI_CLASS_BEGIN( ShipModelPrototype )
-    RTTI_PROP( RESOURCE, "model", m_model )
-    RTTI_PROP( RESOURCE, "material", m_materialRes )
-RTTI_CLASS_END_NAMED( ShipModelPrototype, "ShipModel" )
+
+RTTI_CLASS_BEGIN( Entity )
+    RTTI_PROP( VEC3,    "location",         m_location )
+    RTTI_PROP( QUAT,    "rotation",         m_rotation )
+    RTTI_PROP( BOOL,    "do_think",         m_doThink )
+    RTTI_PROP( BOOL,    "do_draw",          m_doDraw )
+RTTI_CLASS_END( Entity )
 
 //======================================================================================================================
-ShipModelPrototype::ShipModelPrototype() {
+Entity::Entity() : m_deleteNode(this) {
+    m_id        = ID_INVALID;
+    m_location  = i3d::Vector3::ZERO;
+    m_rotation  = i3d::Quaternion::IDENTITY;
+    m_doThink = true;
+    m_doDraw = true;
+}
+
+//======================================================================================================================
+Entity::~Entity() {
     
 }
 
 //======================================================================================================================
-ShipModelPrototype::~ShipModelPrototype() {
-}
-
-//======================================================================================================================
-void ShipModelPrototype::CreateComponent( i3d::Entity ent ) {
-    ecs->AddEntityComponent<ShipModel>(ent);
-}
-
-//======================================================================================================================
-void ShipModelPrototype::Construct( i3d::Entity & ent ) {
-    ShipModel & comp = ecs->GetComponent<ShipModel>(ent);
-    comp.m_model = m_model;
-    comp.m_material = m_materialRes->GetMaterial();
-}
-
-//======================================================================================================================
-void ShipModelPrototype::DestroyComponent( i3d::Entity ent ) {
+void Entity::Think( float timeStep ) {
     
 }
 
+//======================================================================================================================
+void Entity::Draw( float timeStep ) {
+    
+}
+
+//======================================================================================================================
+void Entity::OnAdd() {
+    
+}
+
+//======================================================================================================================
+void Entity::OnDelete() {
+    
+}

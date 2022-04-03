@@ -32,6 +32,10 @@ namespace i3d {
         
         Vector3 ClipPoint( const Vector3 & p );
         
+        void ClipPoint( Vector3 & clippedPoint, const Vector3 & p);
+        
+        bool ClipSegment( Vector3 & clippedPoint, const Vector3 & p0, const Vector3 & p1);
+        
     protected:
         Plane       m_planes[ PLANE_COUNT ];
     };

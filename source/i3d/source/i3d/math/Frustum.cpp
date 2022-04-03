@@ -104,4 +104,37 @@ namespace i3d {
         
         return currP;
     }
+    
+    //======================================================================================================================
+    void Frustum::ClipPoint( Vector3& clippedPoint, const Vector3 & p) {
+        
+        clippedPoint = p;
+        
+        for(uint32_t i=0; i < PLANE_COUNT; ++i) {
+            clippedPoint = m_planes[ i ].ClipPoint(clippedPoint);
+        }
+    }
+
+    //======================================================================================================================
+    bool Frustum::ClipSegment( Vector3 & clippedPoint, const Vector3 & p0, const Vector3 & p1 ) {
+        
+        float closestT = 1;
+        bool haveHit = false;
+        
+        for(uint32_t i=0; i < PLANE_COUNT; ++i) {
+            Vector3 q;
+            float t;
+            Plane::TEST_RESULT hit = m_planes[i].TestSegment(q, t, p0, p1);
+            if (hit == Plane::TEST_RESULT_HIT &&  t < closestT) {
+                closestT = t;
+                haveHit = true;
+            }
+        }
+        
+        if (haveHit == true) {
+            clippedPoint = ( p0 * ( 1.0f - closestT ) ) + ( p1 * closestT );
+        }
+        
+        return haveHit;
+    }
 }

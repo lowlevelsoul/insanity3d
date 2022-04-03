@@ -3,22 +3,25 @@
 // Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#ifndef __SHIPMANAGER_H__
-#define __SHIPMANAGER_H__
+#ifndef __GAMEGLOBALS_H__
+#define __GAMEGLOBALS_H__
 
-#include "i3d/ecs/System.h"
+#include "misc/Camera.h"
+#include "misc/Playfield.h"
 
-class ShipManager : public i3d::System {
+class GameGlobals : public i3d::RttiObject {
 public:
-    ShipManager();
+    RTTI_CLASS_DECLARE( GameGlobals, i3d::RttiObject )
     
-    ~ShipManager();
+    GameGlobals();
     
-    void Draw( float timeStep );
+    virtual ~ GameGlobals();
     
-protected:
+    void Think( float timeStep, int width, int height );
     
+public:
+    Camera::ref_ptr_t         m_camera;
+    Playfield::ref_ptr_t      m_playfield;
 };
-
 
 #endif

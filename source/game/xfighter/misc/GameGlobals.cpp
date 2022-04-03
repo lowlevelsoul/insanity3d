@@ -3,26 +3,19 @@
 // Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#include "TransformManager.h"
-#include "components/Transform.h"
+#include "misc/GameGlobals.h"
+
+RTTI_CLASS_BEGIN( GameGlobals )
+    RTTI_PROP(      OBJECT_REFPTR,           "camera",          m_camera )
+    RTTI_PROP(      OBJECT_REFPTR,           "playfield",       m_playfield )
+RTTI_CLASS_END( GameGlobals )
 
 //======================================================================================================================
-TransformManager::TransformManager() {
+GameGlobals::GameGlobals() {
     
 }
 
 //======================================================================================================================
-TransformManager::~TransformManager() {
+GameGlobals::~GameGlobals() {
     
-}
-
-//======================================================================================================================
-void TransformManager::Think( float timeStep ) {
-    
-    for( auto e : m_entities ) {
-        Transform & tf = ecs->GetComponent<Transform>(e);
-        
-        tf.m_transform.SetRotationQ( tf.m_rotation );
-        tf.m_transform.SetTranslation( tf.m_location );
-    }    
 }

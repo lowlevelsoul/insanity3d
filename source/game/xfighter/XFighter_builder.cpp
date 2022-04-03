@@ -29,6 +29,8 @@ const char * XFighterBuilder::FOLDERS[] = {
     "@/textures",
     "@/materials",
     "@/prototypes",
+    "@/entities",
+    "@/rtti",
     nullptr,
 };
 
