@@ -17,7 +17,17 @@ namespace i3d {
         RTTI_PROP( BOOL,    "gen_normals",      m_genNormals )
         RTTI_PROP( BOOL,    "strip_mixamo",     m_stripMixamo )
         RTTI_PROP_ARRAY( STRING, "mesh_filter", m_meshFilter)
+        RTTI_PROP_ARRAY( OBJECT_REFPTR, "transforms", m_transforms)
     RTTI_CLASS_END( ModelBuilder )
+    
+    RTTI_CLASS_BEGIN( ModelTransform )
+    RTTI_CLASS_END( ModelTransform )
+    
+    RTTI_CLASS_BEGIN( ModelRotateAxis )
+        RTTI_PROP(      VEC3,       "axis",                  m_axis )
+        RTTI_PROP(      FLOAT,      "angle_degrees",         m_angleDegrees )
+    RTTI_CLASS_END( ModelRotateAxis )
+
 
     class VertexInfluence {
     public:
@@ -280,6 +290,12 @@ namespace i3d {
         if ( model->HasSkinnedMeshes() ) {
             sb.BuildJointList( model->m_skeleton );
         }
+        
+        if ( HasTransformList() == true ) {
+            XE_LOG("Model has a transform modification list\nCollapsing...");
+            CollapseTransforms();
+            XE_LOG("Done\n");
+        }
 
         //
         for ( auto sm : m_srcMeshes ) {
@@ -310,10 +326,19 @@ namespace i3d {
             }
                     
             // Apply any transforms from the caller
-            Matrix4 modTransform = Matrix4::IDENTITY;
-            modTransform.Set(m_scale, m_scale, m_scale, 1);
+            if ( m_scale != 1 ) {
+                Matrix4 modTransform = Matrix4::IDENTITY;
+                modTransform.Set(m_scale, m_scale, m_scale, 1);
+                
+                sm->m_mesh->ApplyTransform( modTransform );
+            }
          
-            sm->m_mesh->ApplyTransform( modTransform );
+
+            
+            if ( HasTransformList() == true ) {
+                XE_LOG("    Applying transforms\n");
+                sm->m_mesh->ApplyTransform( m_transform );
+            }
         }
 
         // Calculate entire model bounds
@@ -655,5 +680,18 @@ namespace i3d {
             m_influenceStream.Write( weights, 4 );
             m_influenceStream.Write( params, 4 );
         }
+    }
+    
+    //======================================================================================================================
+    void ModelBuilder::CollapseTransforms() {
+        Matrix4 mat = m_transforms.back()->MakeTransform();
+        
+        for ( int32_t i = (int32_t) (m_transforms.size() - 2); i >= 0; --i ) {
+            Matrix4 thisTransform = m_transforms[i]->MakeTransform();
+            Matrix4 newTransform = mat * thisTransform;
+            mat = newTransform;
+        }
+        
+        m_transform = mat;
     }
 }

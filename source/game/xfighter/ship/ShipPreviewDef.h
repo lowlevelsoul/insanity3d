@@ -3,25 +3,27 @@
 // Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#ifndef __ENTITYDEF_H__
-#define __ENTITYDEF_H__
+#ifndef __SHIPPREVIEWDEF_H__
+#define __SHIPPREVIEWDEF_H__
 
-#include "i3d/rtti/RttiStream.h"
+#include "ship/Ship.h"
+#include "ship/ShipDef.h"
 
-class Entity;
-
-class EntityDef : public i3d::RttiObject {
+class ShipPreviewDef : public ShipComponentDef {
 public:
-    RTTI_CLASS_DECLARE( EntityDef, i3d::RttiObject )
+    RTTI_CLASS_DECLARE( ShipPreviewDef, ShipComponentDef );
     
-    EntityDef();
+    ShipPreviewDef();
     
-    virtual ~EntityDef();
+    virtual ~ShipPreviewDef();
     
     virtual const char * GetTypeName();
     
-protected:
+public:
+    i3d::Vector3        m_location;
+    i3d::Vector3        m_rotationAxis;
+    float               m_rotation;
+    float               m_rotationSpeed;
 };
 
 #endif
-

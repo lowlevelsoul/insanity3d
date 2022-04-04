@@ -3,23 +3,32 @@
 // Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#include "entity/EntityDef.h"
+#include "entity/EntityDefResource.h"
 #include "entity/Entity.h"
+#include "entity/EntityDef.h"
 
-RTTI_CLASS_BEGIN( EntityDef )
-RTTI_CLASS_END( EntityDef )
+DEFINE_RESOURCE( EntityDefResource, "ent;")
 
 //======================================================================================================================
-EntityDef::EntityDef() {
+EntityDefResource::EntityDefResource() {
     
 }
 
 //======================================================================================================================
-EntityDef::~EntityDef() {
+EntityDefResource::~EntityDefResource() {
     
 }
 
 //======================================================================================================================
-const char * EntityDef::GetTypeName() {
-    return "Entity";
+Entity * EntityDefResource::Construct() {
+    EntityDef * def = m_object->SafeCast<EntityDef>();
+    XE_ERROR(def == nullptr, "Object in entity def resource is not a valid EntityDef\n");
+    
+    i3d::RttiObject * obj = rtti->Create( def->GetTypeName() );
+    Entity * ent = obj->SafeCast<Entity>();
+    XE_ERROR( ent == nullptr, "Type %s is not an entity\n", def->GetTypeName() );
+    
+    ent->Construct( def );
+    
+    return ent;
 }

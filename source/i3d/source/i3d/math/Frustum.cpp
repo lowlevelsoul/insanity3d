@@ -45,7 +45,7 @@ namespace i3d {
         float scaleX = scaleY * aspect;
         
         // Construct the frustum vertices in local space
-        Vector3 nearVert( scaleX * nearClip, scaleY * farClip, nearClip );
+        Vector3 nearVert( scaleX * nearClip, scaleY * nearClip, nearClip );
         Vector3 farVert( scaleX * farClip, scaleY * farClip, farClip );
         
         Vector3 localVerts[8] = {

@@ -12,6 +12,56 @@
 #include "i3d/resbuild/SkeletonBuilder.h"
 
 namespace i3d {
+    
+    class ModelTransform : public i3d::RttiObject {
+    public:
+        RTTI_CLASS_DECLARE( ModelTransform, i3d::RttiObject )
+        ModelTransform() {
+            
+        }
+        
+        virtual ~ModelTransform() {
+            
+        }
+        
+        virtual Matrix4 MakeTransform() { return Matrix4::IDENTITY; }
+    };
+    
+    class ModelRotateAxis : ModelTransform {
+    public:
+        RTTI_CLASS_DECLARE( ModelRotateAxis, ModelTransform )
+        
+        ModelRotateAxis() {
+            m_axis = Vector3::ZERO;
+            m_angleDegrees = 0;
+        }
+        
+        virtual ~ModelRotateAxis() {
+            
+        }
+        
+        virtual Matrix4 MakeTransform() override {
+            if ( m_angleDegrees != 0 ) {
+                XE_ERROR( m_axis.Dot(m_axis) == 0, "Zero length axis in rotation\n" );
+                m_axis.Normalise();
+                
+                if ( m_angleDegrees > 360 || m_angleDegrees < -360) {
+                    m_angleDegrees = std::fmodf(m_angleDegrees, 360);
+                }
+                                
+                Matrix4 mat = Matrix4::IDENTITY;
+                mat.SetRotationAA( m_axis, scalar::DegToRad( m_angleDegrees ) );
+                
+                return mat;
+            }
+            
+            return Matrix4::IDENTITY;
+        }
+        
+    public:
+        i3d::Vector3        m_axis;
+        float               m_angleDegrees;
+    };
 
     class ModelBuilder : public i3d::ResourceBuilder{
     public:
@@ -78,6 +128,10 @@ namespace i3d {
         
         bool MeshPassesFilter( const char * name );
         
+        bool HasTransformList() const { return m_transforms.empty() == false; }
+        
+        void CollapseTransforms();
+        
     public:
         class SrcMesh : public RefObject {
         public:
@@ -91,8 +145,10 @@ namespace i3d {
             ToolMesh::ref_ptr_t     m_mesh;
         };
         
-        stl::String::type   m_input;
-        stl::Vector<stl::String::type>::type m_meshFilter;
+        stl::String::type                           m_input;
+        stl::Vector<stl::String::type>::type        m_meshFilter;
+        stl::Vector<ModelTransform::ref_ptr_t>::type      m_transforms;
+        Matrix4             m_transform;
         float               m_scale;
         bool                m_flipFaces;
         bool                m_forceStatic;

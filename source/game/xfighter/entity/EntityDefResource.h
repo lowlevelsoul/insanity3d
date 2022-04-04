@@ -3,24 +3,23 @@
 // Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#ifndef __ENTITYDEF_H__
-#define __ENTITYDEF_H__
+#ifndef __ENTITYRESOURCE_H__
+#define __ENTITYRESOURCE_H__
 
 #include "i3d/rtti/RttiStream.h"
 
 class Entity;
 
-class EntityDef : public i3d::RttiObject {
+class EntityDefResource : public i3d::RttiResource {
 public:
-    RTTI_CLASS_DECLARE( EntityDef, i3d::RttiObject )
+    DECLARE_RESOURCE( EntityDefResource )
     
-    EntityDef();
+    EntityDefResource();
     
-    virtual ~EntityDef();
+    virtual ~EntityDefResource();
     
-    virtual const char * GetTypeName();
+    Entity * Construct();
     
-protected:
 };
 
 #endif

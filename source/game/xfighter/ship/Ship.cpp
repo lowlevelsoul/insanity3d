@@ -4,22 +4,18 @@
 //======================================================================================================================
 
 #include "ship/Ship.h"
+#include "ship/ShipDef.h"
 
 RTTI_CLASS_BEGIN(ShipComponent)
 RTTI_CLASS_END(ShipComponent)
 
 RTTI_CLASS_BEGIN(Ship)
-        RTTI_PROP_ARRAY( OBJECT_REFPTR,         "components",       m_components )
-        RTTI_PROP( RESOURCE,                    "model",            m_model )
-        RTTI_PROP( RESOURCE,                    "material",         m_materialMat )
-        RTTI_PROP( QUAT,                        "offs_rot",         m_modelOffsRot )
-        RTTI_PROP( VEC3,                        "offs_pos",         m_modelOffsPos )
 RTTI_CLASS_END(Ship)
 
 //======================================================================================================================
 Ship::Ship() {
     m_model = nullptr;
-    m_materialMat = nullptr;
+    m_material = nullptr;
     m_modelOffsRot = i3d::Quaternion::IDENTITY;
     m_modelOffsPos = i3d::Vector3::ZERO;
 }
@@ -57,6 +53,31 @@ void Ship::Think( float timeStep ) {
 }
 
 //======================================================================================================================
-void Ship::Draw( float timeStep ) {
-    render->SubmitModel( m_model, m_transform, m_materialMat->GetMaterial() );
+void Ship::Construct( EntityDef * def ) {
+    ShipDef * shipDef = def->SafeCast<ShipDef>();
+    XE_ERROR( shipDef == nullptr, "EntityDef is not derived from ShipDef\n");
+    
+    m_model = shipDef->m_model;
+    m_material = shipDef->m_materialMat->GetMaterial();
+    m_modelOffsPos = shipDef->m_modelOffsPos;
+    m_modelOffsRot = shipDef->m_modelOffsRot;
+    
+    for (auto c : shipDef->m_components ) {
+        
+        RttiObject * obj = rtti->Create( c->GetTypeName() );
+        ShipComponent * sc = obj->SafeCast<ShipComponent>();
+        XE_ERROR( sc == nullptr, "Object %s is not a valid ShipComponent type\n", c->GetTypeName() );
+        
+        sc->SetOwner( this );
+        sc->Construct( c );
+        
+        m_components.push_back( sc );
+    }
 }
+
+//======================================================================================================================
+void Ship::Draw( float timeStep ) {
+    render->SubmitModel( m_model, m_transform, m_material );
+}
+
+

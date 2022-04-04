@@ -16,7 +16,7 @@ namespace i3d {
 }
 
 class GameGlobals;
-class EntityDef;
+class EntityDefResource;
 class Ship;
 
 class XFighter : public i3d::Game {
@@ -40,7 +40,7 @@ protected:
 public:    
     i3d::RttiResource *         m_globalsRes;
     GameGlobals *               m_globals;
-    EntityDef *                 m_playerDef;
+    EntityDefResource *         m_playerDef;
     
     Ship *                      m_player;
 };

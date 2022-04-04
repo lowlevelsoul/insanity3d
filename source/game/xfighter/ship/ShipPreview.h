@@ -7,15 +7,21 @@
 #define __SHIPPREVIEW_H__
 
 #include "ship/Ship.h"
+#include "ship/ShipDef.h"
+
+class EntityDef;
 
 class ShipPreview : public ShipComponent {
 public:
     RTTI_CLASS_DECLARE( ShipPreview, ShipComponent );
+    
     ShipPreview();
     
     virtual ~ShipPreview();
     
     virtual void Think( float timeStep ) override;
+    
+    virtual void Construct( ShipComponentDef * def ) override;
     
 public:
     i3d::Vector3        m_location;

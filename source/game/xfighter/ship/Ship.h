@@ -9,6 +9,8 @@
 #include "entity/Entity.h"
 
 class Ship;
+class ShipDef;
+class ShipComponentDef;
 
 class ShipComponent : public i3d::RttiObject {
     friend class Ship; 
@@ -28,6 +30,12 @@ public:
     virtual void Think( float timeStep ) {
         // Empty - does nothing
     }
+    
+    virtual void Construct( ShipComponentDef * compDef ) {
+        // Empty - does nothing
+    }
+    
+    void SetOwner( Ship * owner ) { m_owner = owner; }
     
     Ship * GetOwner() { return m_owner; }
     
@@ -51,10 +59,12 @@ public:
     
     virtual bool ReadComplete( const char * path ) override;
     
+    virtual void Construct( EntityDef * def ) override;
+    
 public:
     ShipComponent::vector_t::type   m_components;
     i3d::Model *                    m_model;
-    i3d::MaterialResource *         m_materialMat;
+    i3d::Material *                 m_material;
     
     i3d::Quaternion                 m_modelOffsRot;
     i3d::Vector3                    m_modelOffsPos;

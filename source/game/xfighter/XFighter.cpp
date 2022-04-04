@@ -8,7 +8,8 @@
 #include "i3d/render/Material.h"
 #include "i3d/ecs/PrototypeResource.h"
 
-#include "entity/EntityDef.h"
+#include "entity/EntityDefResource.h"
+#include "entity/EntityDefResource.h"
 #include "entity/EntityManager.h"
 #include "misc/GameGlobals.h"
 #include "ship/Ship.h"
@@ -50,10 +51,10 @@ XFighter::~XFighter() {
 void XFighter::Initialise() {
     EntityManagerCreate();
     
-    res->PublishFactory<EntityDef>();
+    res->PublishFactory<EntityDefResource>();
     
     m_globalsRes = res->Load<i3d::RttiResource>("~/rtti/GameGlobals.brtti");
-    m_playerDef = res->Load<EntityDef>("~/entities/Player.ent");
+    m_playerDef = res->Load<EntityDefResource>("~/entities/Player.ent");
     
     res->StartLoading();
     while ( res->HasPending() == true ) {

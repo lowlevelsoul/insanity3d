@@ -385,9 +385,6 @@
 		D3BE385D27F220F4006B345A /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3BE385B27F220F4006B345A /* EntityManager.cpp */; };
 		D3BE385E27F220F4006B345A /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3BE385B27F220F4006B345A /* EntityManager.cpp */; };
 		D3BE385F27F220F4006B345A /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3BE385B27F220F4006B345A /* EntityManager.cpp */; };
-		D3F4C00927F7027000A82826 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C00727F7027000A82826 /* Ship.cpp */; };
-		D3F4C00A27F7027000A82826 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C00727F7027000A82826 /* Ship.cpp */; };
-		D3F4C00B27F7027000A82826 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C00727F7027000A82826 /* Ship.cpp */; };
 		D3F4C00F27F71BA200A82826 /* ShipPreview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C00D27F71BA200A82826 /* ShipPreview.cpp */; };
 		D3F4C01027F71BA200A82826 /* ShipPreview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C00D27F71BA200A82826 /* ShipPreview.cpp */; };
 		D3F4C01127F71BA200A82826 /* ShipPreview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C00D27F71BA200A82826 /* ShipPreview.cpp */; };
@@ -400,15 +397,28 @@
 		D3F4C01F27F8190500A82826 /* GameGlobals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C01D27F8190500A82826 /* GameGlobals.cpp */; };
 		D3F4C02027F8190500A82826 /* GameGlobals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C01D27F8190500A82826 /* GameGlobals.cpp */; };
 		D3F4C02127F8190500A82826 /* GameGlobals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C01D27F8190500A82826 /* GameGlobals.cpp */; };
-		D3F4C02427F86AAE00A82826 /* EntityDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C02227F86AAE00A82826 /* EntityDef.cpp */; };
-		D3F4C02527F86AAE00A82826 /* EntityDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C02227F86AAE00A82826 /* EntityDef.cpp */; };
-		D3F4C02627F86AAE00A82826 /* EntityDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C02227F86AAE00A82826 /* EntityDef.cpp */; };
+		D3F4C02427F86AAE00A82826 /* EntityDefResource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C02227F86AAE00A82826 /* EntityDefResource.cpp */; };
+		D3F4C02527F86AAE00A82826 /* EntityDefResource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C02227F86AAE00A82826 /* EntityDefResource.cpp */; };
+		D3F4C02627F86AAE00A82826 /* EntityDefResource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C02227F86AAE00A82826 /* EntityDefResource.cpp */; };
 		D3F4C02727F8AEA100A82826 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3BE385627F21F44006B345A /* Entity.cpp */; };
-		D3F4C02827F8AEA500A82826 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C00727F7027000A82826 /* Ship.cpp */; };
-		D3F4C02927F8AEA700A82826 /* ShipPreview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C00D27F71BA200A82826 /* ShipPreview.cpp */; };
 		D3F4C02A27F8AEBB00A82826 /* GameGlobals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C01D27F8190500A82826 /* GameGlobals.cpp */; };
 		D3F4C02B27F8AEBD00A82826 /* Playfield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C01827F8175000A82826 /* Playfield.cpp */; };
 		D3F4C02C27F8AEBF00A82826 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C01327F7766A00A82826 /* Camera.cpp */; };
+		D3F4C02F27FABEC900A82826 /* EntityDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C02D27FABEC900A82826 /* EntityDef.cpp */; };
+		D3F4C03027FABEC900A82826 /* EntityDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C02D27FABEC900A82826 /* EntityDef.cpp */; };
+		D3F4C03127FABEC900A82826 /* EntityDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C02D27FABEC900A82826 /* EntityDef.cpp */; };
+		D3F4C03727FAC56B00A82826 /* ShipDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C03227FABFA900A82826 /* ShipDef.cpp */; };
+		D3F4C03827FAC56B00A82826 /* ShipDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C03227FABFA900A82826 /* ShipDef.cpp */; };
+		D3F4C03927FAC56B00A82826 /* ShipDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C03227FABFA900A82826 /* ShipDef.cpp */; };
+		D3F4C03A27FAC56C00A82826 /* ShipDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C03227FABFA900A82826 /* ShipDef.cpp */; };
+		D3F4C03B27FAC57900A82826 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C00727F7027000A82826 /* Ship.cpp */; };
+		D3F4C03C27FAC57900A82826 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C00727F7027000A82826 /* Ship.cpp */; };
+		D3F4C03D27FAC57900A82826 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C00727F7027000A82826 /* Ship.cpp */; };
+		D3F4C04027FAC59100A82826 /* ShipPreviewDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C03E27FAC59100A82826 /* ShipPreviewDef.cpp */; };
+		D3F4C04127FAC59100A82826 /* ShipPreviewDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C03E27FAC59100A82826 /* ShipPreviewDef.cpp */; };
+		D3F4C04227FAC59100A82826 /* ShipPreviewDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C03E27FAC59100A82826 /* ShipPreviewDef.cpp */; };
+		D3F4C04327FAC59100A82826 /* ShipPreviewDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C03E27FAC59100A82826 /* ShipPreviewDef.cpp */; };
+		D3F4C04427FAC9E800A82826 /* EntityDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C02D27FABEC900A82826 /* EntityDef.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -805,8 +815,14 @@
 		D3F4C01927F8175000A82826 /* Playfield.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Playfield.h; sourceTree = "<group>"; };
 		D3F4C01D27F8190500A82826 /* GameGlobals.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameGlobals.cpp; sourceTree = "<group>"; };
 		D3F4C01E27F8190500A82826 /* GameGlobals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameGlobals.h; sourceTree = "<group>"; };
-		D3F4C02227F86AAE00A82826 /* EntityDef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntityDef.cpp; sourceTree = "<group>"; };
-		D3F4C02327F86AAE00A82826 /* EntityDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntityDef.h; sourceTree = "<group>"; };
+		D3F4C02227F86AAE00A82826 /* EntityDefResource.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntityDefResource.cpp; sourceTree = "<group>"; };
+		D3F4C02327F86AAE00A82826 /* EntityDefResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntityDefResource.h; sourceTree = "<group>"; };
+		D3F4C02D27FABEC900A82826 /* EntityDef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntityDef.cpp; sourceTree = "<group>"; };
+		D3F4C02E27FABEC900A82826 /* EntityDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntityDef.h; sourceTree = "<group>"; };
+		D3F4C03227FABFA900A82826 /* ShipDef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShipDef.cpp; sourceTree = "<group>"; };
+		D3F4C03327FABFA900A82826 /* ShipDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShipDef.h; sourceTree = "<group>"; };
+		D3F4C03E27FAC59100A82826 /* ShipPreviewDef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShipPreviewDef.cpp; sourceTree = "<group>"; };
+		D3F4C03F27FAC59100A82826 /* ShipPreviewDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShipPreviewDef.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1584,8 +1600,10 @@
 				D3BE385727F21F44006B345A /* Entity.h */,
 				D3BE385B27F220F4006B345A /* EntityManager.cpp */,
 				D3BE385C27F220F4006B345A /* EntityManager.h */,
-				D3F4C02227F86AAE00A82826 /* EntityDef.cpp */,
-				D3F4C02327F86AAE00A82826 /* EntityDef.h */,
+				D3F4C02227F86AAE00A82826 /* EntityDefResource.cpp */,
+				D3F4C02327F86AAE00A82826 /* EntityDefResource.h */,
+				D3F4C02D27FABEC900A82826 /* EntityDef.cpp */,
+				D3F4C02E27FABEC900A82826 /* EntityDef.h */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -1597,6 +1615,10 @@
 				D3F4C00827F7027000A82826 /* Ship.h */,
 				D3F4C00D27F71BA200A82826 /* ShipPreview.cpp */,
 				D3F4C00E27F71BA200A82826 /* ShipPreview.h */,
+				D3F4C03227FABFA900A82826 /* ShipDef.cpp */,
+				D3F4C03327FABFA900A82826 /* ShipDef.h */,
+				D3F4C03E27FAC59100A82826 /* ShipPreviewDef.cpp */,
+				D3F4C03F27FAC59100A82826 /* ShipPreviewDef.h */,
 			);
 			path = ship;
 			sourceTree = "<group>";
@@ -1689,6 +1711,7 @@
 				D34A48DE27C915EC0083DD65 /* Sources */,
 				D34A48DF27C915EC0083DD65 /* Frameworks */,
 				D34A48E027C915EC0083DD65 /* Resources */,
+				D3F4C04627FB3C7000A82826 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1706,6 +1729,7 @@
 				D34A48F227C915EC0083DD65 /* Sources */,
 				D34A48F327C915EC0083DD65 /* Frameworks */,
 				D34A48F427C915EC0083DD65 /* Resources */,
+				D3F4C04527FB3B9600A82826 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1893,16 +1917,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D3F4C04527FB3B9600A82826 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd $(PROJECT_DIR)/../../../data/xfighter/\n./bin/builder +res_buildPlatform ios\n";
+		};
+		D3F4C04627FB3C7000A82826 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd $PROJECT_DIR/../../../data/xfighter/\n./bin/builder +res_buildPlatform ios\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D34A48DE27C915EC0083DD65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3F4C02427F86AAE00A82826 /* EntityDef.cpp in Sources */,
+				D3F4C02427F86AAE00A82826 /* EntityDefResource.cpp in Sources */,
 				D34A498627C916450083DD65 /* ResourceCache_local.cpp in Sources */,
 				D34A493227C9161C0083DD65 /* Log_local.cpp in Sources */,
 				D34A495C27C916390083DD65 /* GfxContext_metal.mm in Sources */,
 				D34A4A2227CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */,
+				D3F4C03927FAC56B00A82826 /* ShipDef.cpp in Sources */,
 				D34A492D27C9161C0083DD65 /* CVarManager_local.cpp in Sources */,
 				D34A493127C9161C0083DD65 /* Log_common.cpp in Sources */,
 				D34A49E127C9FD960083DD65 /* Model_local.cpp in Sources */,
@@ -1937,6 +1999,7 @@
 				D34A495927C916390083DD65 /* GfxBuffer_metal.mm in Sources */,
 				D34A492B27C916180083DD65 /* FileSystem_ios.mm in Sources */,
 				D34A4A2027CA9ECA0083DD65 /* pbr.metal in Sources */,
+				D3F4C04027FAC59100A82826 /* ShipPreviewDef.cpp in Sources */,
 				D34A495A27C916390083DD65 /* GfxDepthState_metal.mm in Sources */,
 				D34A494427C9162B0083DD65 /* Quaternion.cpp in Sources */,
 				D34A495B27C916390083DD65 /* GfxRasterizeState_metal.mm in Sources */,
@@ -1953,6 +2016,7 @@
 				D34A4A3A27CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
 				D34A495127C916390083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
 				D34A4A5027D11D2C0083DD65 /* ComponentPrototype.cpp in Sources */,
+				D3F4C03C27FAC57900A82826 /* Ship.cpp in Sources */,
 				D3F4C01F27F8190500A82826 /* GameGlobals.cpp in Sources */,
 				D34A4A4327CFE8EF0083DD65 /* Ecs.cpp in Sources */,
 				D34A499F27C916600083DD65 /* RttiParser.cpp in Sources */,
@@ -1962,9 +2026,9 @@
 				D34A495727C916390083DD65 /* GfxGpuTextureArray_metal.mm in Sources */,
 				D34A495527C916390083DD65 /* GfxTexture_metal.mm in Sources */,
 				D34A49DE27C9FD960083DD65 /* StaticTransform.cpp in Sources */,
+				D3F4C02F27FABEC900A82826 /* EntityDef.cpp in Sources */,
 				D34A49A127C916600083DD65 /* RttiResource.cpp in Sources */,
 				D3F4C01527F7766A00A82826 /* Camera.cpp in Sources */,
-				D3F4C00927F7027000A82826 /* Ship.cpp in Sources */,
 				D34A49DC27C9FD960083DD65 /* Render_local.cpp in Sources */,
 				D34A4A8E27DC6E500083DD65 /* Frustum.cpp in Sources */,
 				D34A49C027C94FA00083DD65 /* i3d.cpp in Sources */,
@@ -1982,7 +2046,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3F4C02527F86AAE00A82826 /* EntityDef.cpp in Sources */,
+				D3F4C02527F86AAE00A82826 /* EntityDefResource.cpp in Sources */,
 				D3BE385E27F220F4006B345A /* EntityManager.cpp in Sources */,
 				D34A493427C9161D0083DD65 /* CVarManager_local.cpp in Sources */,
 				D34A49AA27C916600083DD65 /* RttiLexer.cpp in Sources */,
@@ -2009,6 +2073,7 @@
 				D34A49A627C916600083DD65 /* RttiSystem_local.cpp in Sources */,
 				D34A4A2B27CA9ECA0083DD65 /* TransformStatic.metal in Sources */,
 				D34A494827C9162B0083DD65 /* Quaternion.cpp in Sources */,
+				D3F4C03D27FAC57900A82826 /* Ship.cpp in Sources */,
 				D34A49EB27C9FD970083DD65 /* DebugLineDraw.cpp in Sources */,
 				D34A490527C915EC0083DD65 /* main.m in Sources */,
 				D34A4A1D27CA6AFF0083DD65 /* farmhash.cpp in Sources */,
@@ -2028,6 +2093,7 @@
 				D34A494727C9162B0083DD65 /* Matrix4.cpp in Sources */,
 				D3F4C01B27F8175000A82826 /* Playfield.cpp in Sources */,
 				D3F4C02027F8190500A82826 /* GameGlobals.cpp in Sources */,
+				D3F4C03027FABEC900A82826 /* EntityDef.cpp in Sources */,
 				D34A496D27C9163A0083DD65 /* Gfx_metal.mm in Sources */,
 				D34A493627C9161D0083DD65 /* Sys_common.cpp in Sources */,
 				D34A49AD27C916600083DD65 /* RttiStream.cpp in Sources */,
@@ -2043,13 +2109,14 @@
 				D34A497127C9163A0083DD65 /* GfxGpuTextureArray_metal.mm in Sources */,
 				D34A497327C9163A0083DD65 /* GfxBuffer_metal.mm in Sources */,
 				D34A49A727C916600083DD65 /* RttiParser.cpp in Sources */,
+				D3F4C03827FAC56B00A82826 /* ShipDef.cpp in Sources */,
 				D34A493927C9161D0083DD65 /* Log_local.cpp in Sources */,
 				D34A496F27C9163A0083DD65 /* GfxTexture_metal.mm in Sources */,
 				D34A4A8F27DC6E500083DD65 /* Frustum.cpp in Sources */,
 				D34A493727C9161D0083DD65 /* CVar.cpp in Sources */,
+				D3F4C04127FAC59100A82826 /* ShipPreviewDef.cpp in Sources */,
 				D34A49A827C916600083DD65 /* RttiObject.cpp in Sources */,
 				D367BB1527EA53FB00BBAAB4 /* ResourceBuilder.cpp in Sources */,
-				D3F4C00A27F7027000A82826 /* Ship.cpp in Sources */,
 				D34A49E727C9FD970083DD65 /* StaticTransform.cpp in Sources */,
 				D34A49E927C9FD970083DD65 /* Material.cpp in Sources */,
 				D34A4A2727CA9ECA0083DD65 /* pbr.metal in Sources */,
@@ -2083,6 +2150,7 @@
 				D34A499D27C916560083DD65 /* RenderBatch.cpp in Sources */,
 				D34A497F27C9163A0083DD65 /* GfxVertexDesc_local.cpp in Sources */,
 				D34A497927C9163A0083DD65 /* GfxGpuFunction_metal.mm in Sources */,
+				D3F4C03727FAC56B00A82826 /* ShipDef.cpp in Sources */,
 				D34A499927C916560083DD65 /* StaticTransform.cpp in Sources */,
 				D34A4A6A27D7B1080083DD65 /* PrototypeResource.cpp in Sources */,
 				D34A497B27C9163A0083DD65 /* GfxFence_metal.mm in Sources */,
@@ -2090,11 +2158,11 @@
 				D34A4D5627E376600083DD65 /* SkeletonBuilder.cpp in Sources */,
 				D34A49B127C916610083DD65 /* RttiResource.cpp in Sources */,
 				D34A4D4A27E374390083DD65 /* ToolModel.cpp in Sources */,
-				D3F4C00B27F7027000A82826 /* Ship.cpp in Sources */,
 				D3BE383B27EB7211006B345A /* filter_neon_intrinsics.c in Sources */,
 				D34A49AE27C916610083DD65 /* RttiSystem_local.cpp in Sources */,
 				D34A494C27C9162B0083DD65 /* Quaternion.cpp in Sources */,
 				D34A4A1927CA69160083DD65 /* XFighter.cpp in Sources */,
+				D3F4C03B27FAC57900A82826 /* Ship.cpp in Sources */,
 				D34A491627C915EC0083DD65 /* main.mm in Sources */,
 				D34A4D5327E375A90083DD65 /* ResourceBuilder.cpp in Sources */,
 				D3F4C01C27F8175000A82826 /* Playfield.cpp in Sources */,
@@ -2118,6 +2186,7 @@
 				D34A497827C9163A0083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
 				D3F4C01127F71BA200A82826 /* ShipPreview.cpp in Sources */,
 				D34A4A2E27CA9ECA0083DD65 /* pbr.metal in Sources */,
+				D3F4C03127FABEC900A82826 /* EntityDef.cpp in Sources */,
 				D34A4D4B27E374390083DD65 /* ToolMesh.cpp in Sources */,
 				D34A4A0F27CA45F00083DD65 /* FileSystem_macos.mm in Sources */,
 				D34A490E27C915EC0083DD65 /* AppDelegate.m in Sources */,
@@ -2130,12 +2199,13 @@
 				D34A4A2F27CA9ECA0083DD65 /* Debug3d.metal in Sources */,
 				D34A4D5027E374390083DD65 /* ToolJoint.cpp in Sources */,
 				D34A4D6027E7492B0083DD65 /* RttiBuilder.cpp in Sources */,
-				D3F4C02627F86AAE00A82826 /* EntityDef.cpp in Sources */,
+				D3F4C02627F86AAE00A82826 /* EntityDefResource.cpp in Sources */,
 				D34A4D5827E5CE350083DD65 /* Image.cpp in Sources */,
 				D34A49EC27C9FD980083DD65 /* RenderBuffers.cpp in Sources */,
 				D34A499C27C916560083DD65 /* DebugLineDraw.cpp in Sources */,
 				D3BE383927EB7211006B345A /* palette_neon_intrinsics.c in Sources */,
 				D34A4A3C27CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
+				D3F4C04227FAC59100A82826 /* ShipPreviewDef.cpp in Sources */,
 				D34A4D2B27E373530083DD65 /* ModelBuilder.cpp in Sources */,
 				D34A493D27C9161D0083DD65 /* Sys_common.cpp in Sources */,
 				D34A4A5227D11D2C0083DD65 /* ComponentPrototype.cpp in Sources */,
@@ -2240,6 +2310,7 @@
 				D367BAD027E8D63F00BBAAB4 /* Log_common.cpp in Sources */,
 				D367BAE827E8D66600BBAAB4 /* Image_png.cpp in Sources */,
 				D367BAF327E8D67500BBAAB4 /* SkeletonBuilder.cpp in Sources */,
+				D3F4C04427FAC9E800A82826 /* EntityDef.cpp in Sources */,
 				D367BADC27E8D64D00BBAAB4 /* Matrix3.cpp in Sources */,
 				D367BB0E27E8D71100BBAAB4 /* ModelImporterAssImp.cpp in Sources */,
 				D367BAD427E8D63F00BBAAB4 /* FileSystem_common.cpp in Sources */,
@@ -2250,10 +2321,10 @@
 				D367BB0727E8D71100BBAAB4 /* ToolModel.cpp in Sources */,
 				D3F4C02C27F8AEBF00A82826 /* Camera.cpp in Sources */,
 				D367BAFF27E8D69600BBAAB4 /* ComponentPrototype.cpp in Sources */,
+				D3F4C03A27FAC56C00A82826 /* ShipDef.cpp in Sources */,
 				D367BAD527E8D63F00BBAAB4 /* farmhash.cpp in Sources */,
 				D367BAFD27E8D69600BBAAB4 /* ComponentArray.cpp in Sources */,
 				D367BB1027E8EA6F00BBAAB4 /* ResourceCache_local.cpp in Sources */,
-				D3F4C02827F8AEA500A82826 /* Ship.cpp in Sources */,
 				D367BAEC27E8D66600BBAAB4 /* ToolMemStream.cpp in Sources */,
 				D367BB0B27E8D71100BBAAB4 /* ToolAnimation.cpp in Sources */,
 				D367BACD27E8D63000BBAAB4 /* XFighter_builder.cpp in Sources */,
@@ -2265,7 +2336,7 @@
 				D367BAD227E8D63F00BBAAB4 /* Log_local.cpp in Sources */,
 				D367BAE327E8D65D00BBAAB4 /* RttiObject.cpp in Sources */,
 				D367BAFB27E8D69600BBAAB4 /* EntityPrototype.cpp in Sources */,
-				D3F4C02927F8AEA700A82826 /* ShipPreview.cpp in Sources */,
+				D3F4C04327FAC59100A82826 /* ShipPreviewDef.cpp in Sources */,
 				D3BE383C27EB7211006B345A /* filter_neon_intrinsics.c in Sources */,
 				D3BE383A27EB7211006B345A /* palette_neon_intrinsics.c in Sources */,
 				D367BAF227E8D67500BBAAB4 /* RttiBuilder.cpp in Sources */,
@@ -2421,6 +2492,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -2496,6 +2568,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;

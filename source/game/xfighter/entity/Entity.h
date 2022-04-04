@@ -8,6 +8,8 @@
 
 #include "i3d/core/IntrusiveList.h"
 
+class EntityDef;
+
 class Entity : public i3d::RttiObject {
     friend class EntityManager;
 public:
@@ -40,6 +42,8 @@ public:
     virtual void Think( float timeStep );
     
     virtual void Draw( float timeStep );
+    
+    virtual void Construct( EntityDef * def );
     
     const i3d::Vector3 & GetLocation() const { return m_location; }
     void SetLocation( const i3d::Vector3 & value ) { m_location = value; }
