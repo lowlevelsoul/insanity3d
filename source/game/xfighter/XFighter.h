@@ -7,6 +7,8 @@
 #define __XFIGHTER_H__
 
 #include "i3d/i3d.h"
+#include "i3d/input/Input.h"
+#include "misc/PlayerTouchController.h"
 
 namespace i3d {
     class Material;
@@ -37,10 +39,22 @@ protected:
     
     void CreateSystemEnt();
     
+    void ProcessInputs();
+    
+    void ProcessInputTouch( i3d::Event& ev );
+    
+    void ProceesInputKey( i3d::Event& ev );
+    
 public:    
     i3d::RttiResource *         m_globalsRes;
     GameGlobals *               m_globals;
     EntityDefResource *         m_playerDef;
+    PlayerTouchController       m_touchController;
+    int32_t                     m_viewWidth;
+    int32_t                     m_viewHeight;
+    
+    i3d::Event *                 m_inputEvents;              ///< Input events
+    uint32_t                     m_inputEventCount;          ///< Number of input events
     
     Ship *                      m_player;
 };

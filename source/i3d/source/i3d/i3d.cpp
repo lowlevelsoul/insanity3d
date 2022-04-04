@@ -36,6 +36,9 @@ namespace i3d {
     void EcsCreate();
     void EcsDestroy();
     
+    void InputCreate();
+    void InputDestroy();
+    
     class EngineState {
     public:
         EngineState() {
@@ -79,6 +82,7 @@ namespace i3d {
         RttiCreate();
         ResCreate();
         EcsCreate();
+        InputCreate();
         
         res->PublishFactory< i3d::MaterialResource >();
         res->PublishFactory< i3d::RttiResource >();
@@ -98,6 +102,7 @@ namespace i3d {
         engine->m_game->Finalise();
         GameDestroy();
         
+        InputDestroy();
         EcsDestroy();
         ResDestroy();
         RttiDestroy();

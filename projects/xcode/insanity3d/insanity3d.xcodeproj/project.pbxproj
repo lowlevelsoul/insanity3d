@@ -419,6 +419,17 @@
 		D3F4C04227FAC59100A82826 /* ShipPreviewDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C03E27FAC59100A82826 /* ShipPreviewDef.cpp */; };
 		D3F4C04327FAC59100A82826 /* ShipPreviewDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C03E27FAC59100A82826 /* ShipPreviewDef.cpp */; };
 		D3F4C04427FAC9E800A82826 /* EntityDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C02D27FABEC900A82826 /* EntityDef.cpp */; };
+		D3F4C04927FB461B00A82826 /* PlayerMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C04727FB461B00A82826 /* PlayerMovement.cpp */; };
+		D3F4C04A27FB461B00A82826 /* PlayerMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C04727FB461B00A82826 /* PlayerMovement.cpp */; };
+		D3F4C04B27FB461B00A82826 /* PlayerMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C04727FB461B00A82826 /* PlayerMovement.cpp */; };
+		D3F4C04C27FB461B00A82826 /* PlayerMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C04727FB461B00A82826 /* PlayerMovement.cpp */; };
+		D3F4C05227FB46EB00A82826 /* Input_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C04F27FB46EB00A82826 /* Input_ios.mm */; };
+		D3F4C05327FB46EB00A82826 /* Input_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C04F27FB46EB00A82826 /* Input_ios.mm */; };
+		D3F4C05627FB46EF00A82826 /* Input_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C05027FB46EB00A82826 /* Input_macos.mm */; };
+		D3F4C05C27FB692600A82826 /* GameView.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C05B27FB692600A82826 /* GameView.mm */; };
+		D3F4C05D27FB692600A82826 /* GameView.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C05B27FB692600A82826 /* GameView.mm */; };
+		D3F4C06027FB6B5000A82826 /* PlayerTouchController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C05F27FB6B5000A82826 /* PlayerTouchController.cpp */; };
+		D3F4C06127FB6B5000A82826 /* PlayerTouchController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C05F27FB6B5000A82826 /* PlayerTouchController.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -736,9 +747,6 @@
 		D366B45327C6B6AA0004E0E2 /* Math3dTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Math3dTypes.h; sourceTree = "<group>"; };
 		D366B45427C6B6AA0004E0E2 /* Scalar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scalar.h; sourceTree = "<group>"; };
 		D366B45527C6B6AA0004E0E2 /* Math3d.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = Math3d.inl; sourceTree = "<group>"; };
-		D366B45727C6B6AA0004E0E2 /* InputSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputSystem.h; sourceTree = "<group>"; };
-		D366B45827C6B6AA0004E0E2 /* InputEventArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputEventArray.h; sourceTree = "<group>"; };
-		D366B45927C6B6AA0004E0E2 /* InputTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputTypes.h; sourceTree = "<group>"; };
 		D366B45B27C6B6AA0004E0E2 /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
 		D366B45D27C6B6AA0004E0E2 /* FileSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileSystem.h; sourceTree = "<group>"; };
 		D366B45E27C6B6AA0004E0E2 /* Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
@@ -823,6 +831,18 @@
 		D3F4C03327FABFA900A82826 /* ShipDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShipDef.h; sourceTree = "<group>"; };
 		D3F4C03E27FAC59100A82826 /* ShipPreviewDef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShipPreviewDef.cpp; sourceTree = "<group>"; };
 		D3F4C03F27FAC59100A82826 /* ShipPreviewDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShipPreviewDef.h; sourceTree = "<group>"; };
+		D3F4C04727FB461B00A82826 /* PlayerMovement.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerMovement.cpp; sourceTree = "<group>"; };
+		D3F4C04827FB461B00A82826 /* PlayerMovement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerMovement.h; sourceTree = "<group>"; };
+		D3F4C04E27FB46EB00A82826 /* Input_macos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Input_macos.h; sourceTree = "<group>"; };
+		D3F4C04F27FB46EB00A82826 /* Input_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Input_ios.mm; sourceTree = "<group>"; };
+		D3F4C05027FB46EB00A82826 /* Input_macos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Input_macos.mm; sourceTree = "<group>"; };
+		D3F4C05127FB46EB00A82826 /* Input_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Input_ios.h; sourceTree = "<group>"; };
+		D3F4C05827FB470F00A82826 /* Input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Input.h; sourceTree = "<group>"; };
+		D3F4C05927FB474F00A82826 /* InputTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputTypes.h; sourceTree = "<group>"; };
+		D3F4C05A27FB692600A82826 /* GameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		D3F4C05B27FB692600A82826 /* GameView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GameView.mm; sourceTree = "<group>"; };
+		D3F4C05E27FB6B2A00A82826 /* PlayerTouchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerTouchController.h; sourceTree = "<group>"; };
+		D3F4C05F27FB6B5000A82826 /* PlayerTouchController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerTouchController.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -901,6 +921,8 @@
 				D34A48EA27C915EC0083DD65 /* Main.storyboard */,
 				D34A48ED27C915EC0083DD65 /* LaunchScreen.storyboard */,
 				D34A48F027C915EC0083DD65 /* main.mm */,
+				D3F4C05A27FB692600A82826 /* GameView.h */,
+				D3F4C05B27FB692600A82826 /* GameView.mm */,
 			);
 			path = "xfighter iOS";
 			sourceTree = "<group>";
@@ -1308,11 +1330,11 @@
 		D366B3A427C6A5240004E0E2 /* i3d */ = {
 			isa = PBXGroup;
 			children = (
+				D3F4C05727FB46FE00A82826 /* input */,
 				D34A4A3527CCCF7D0083DD65 /* ecs */,
 				D34A49C327C94FBE0083DD65 /* i3d.h */,
 				D366B4E127C7CD140004E0E2 /* rtti */,
 				D366B45C27C6B6AA0004E0E2 /* core */,
-				D366B45627C6B6AA0004E0E2 /* input */,
 				D366B45027C6B6AA0004E0E2 /* math */,
 				D366B46427C6B6AB0004E0E2 /* render */,
 				D366B45A27C6B6AA0004E0E2 /* res */,
@@ -1323,6 +1345,7 @@
 		D366B3D427C6A5B40004E0E2 /* i3d */ = {
 			isa = PBXGroup;
 			children = (
+				D3F4C04D27FB46CF00A82826 /* input */,
 				D34A4D2527E372AB0083DD65 /* resbuild */,
 				D34A4A3427CCCF6D0083DD65 /* ecs */,
 				D366B4F927C7FA480004E0E2 /* mem */,
@@ -1443,16 +1466,6 @@
 				D34A4A9127DC97DE0083DD65 /* Sphere.h */,
 			);
 			path = math;
-			sourceTree = "<group>";
-		};
-		D366B45627C6B6AA0004E0E2 /* input */ = {
-			isa = PBXGroup;
-			children = (
-				D366B45727C6B6AA0004E0E2 /* InputSystem.h */,
-				D366B45827C6B6AA0004E0E2 /* InputEventArray.h */,
-				D366B45927C6B6AA0004E0E2 /* InputTypes.h */,
-			);
-			path = input;
 			sourceTree = "<group>";
 		};
 		D366B45A27C6B6AA0004E0E2 /* res */ = {
@@ -1619,6 +1632,8 @@
 				D3F4C03327FABFA900A82826 /* ShipDef.h */,
 				D3F4C03E27FAC59100A82826 /* ShipPreviewDef.cpp */,
 				D3F4C03F27FAC59100A82826 /* ShipPreviewDef.h */,
+				D3F4C04727FB461B00A82826 /* PlayerMovement.cpp */,
+				D3F4C04827FB461B00A82826 /* PlayerMovement.h */,
 			);
 			path = ship;
 			sourceTree = "<group>";
@@ -1632,8 +1647,30 @@
 				D3F4C01927F8175000A82826 /* Playfield.h */,
 				D3F4C01D27F8190500A82826 /* GameGlobals.cpp */,
 				D3F4C01E27F8190500A82826 /* GameGlobals.h */,
+				D3F4C05E27FB6B2A00A82826 /* PlayerTouchController.h */,
+				D3F4C05F27FB6B5000A82826 /* PlayerTouchController.cpp */,
 			);
 			path = misc;
+			sourceTree = "<group>";
+		};
+		D3F4C04D27FB46CF00A82826 /* input */ = {
+			isa = PBXGroup;
+			children = (
+				D3F4C05127FB46EB00A82826 /* Input_ios.h */,
+				D3F4C04F27FB46EB00A82826 /* Input_ios.mm */,
+				D3F4C04E27FB46EB00A82826 /* Input_macos.h */,
+				D3F4C05027FB46EB00A82826 /* Input_macos.mm */,
+			);
+			path = input;
+			sourceTree = "<group>";
+		};
+		D3F4C05727FB46FE00A82826 /* input */ = {
+			isa = PBXGroup;
+			children = (
+				D3F4C05927FB474F00A82826 /* InputTypes.h */,
+				D3F4C05827FB470F00A82826 /* Input.h */,
+			);
+			path = input;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1961,6 +1998,7 @@
 			files = (
 				D3F4C02427F86AAE00A82826 /* EntityDefResource.cpp in Sources */,
 				D34A498627C916450083DD65 /* ResourceCache_local.cpp in Sources */,
+				D3F4C05227FB46EB00A82826 /* Input_ios.mm in Sources */,
 				D34A493227C9161C0083DD65 /* Log_local.cpp in Sources */,
 				D34A495C27C916390083DD65 /* GfxContext_metal.mm in Sources */,
 				D34A4A2227CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */,
@@ -2032,11 +2070,14 @@
 				D34A49DC27C9FD960083DD65 /* Render_local.cpp in Sources */,
 				D34A4A8E27DC6E500083DD65 /* Frustum.cpp in Sources */,
 				D34A49C027C94FA00083DD65 /* i3d.cpp in Sources */,
+				D3F4C06027FB6B5000A82826 /* PlayerTouchController.cpp in Sources */,
 				D34A495627C916390083DD65 /* GfxPass_metal.mm in Sources */,
 				D34A49DD27C9FD960083DD65 /* RenderBatch.cpp in Sources */,
 				D34A494127C9162B0083DD65 /* Math3d.cpp in Sources */,
+				D3F4C05C27FB692600A82826 /* GameView.mm in Sources */,
 				D34A4A2527CA9ECA0083DD65 /* draw3d_toon.metal in Sources */,
 				D34A49E027C9FD960083DD65 /* Material.cpp in Sources */,
+				D3F4C04927FB461B00A82826 /* PlayerMovement.cpp in Sources */,
 				D34A4A2327CA9ECA0083DD65 /* TransformSkin.metal in Sources */,
 				D34A49A327C916600083DD65 /* RttiType.cpp in Sources */,
 			);
@@ -2058,11 +2099,13 @@
 				D34A498827C916450083DD65 /* ResourceCache_local.cpp in Sources */,
 				D3BE385927F21F44006B345A /* Entity.cpp in Sources */,
 				D34A4A2A27CA9ECA0083DD65 /* TransformSkin.metal in Sources */,
+				D3F4C04A27FB461B00A82826 /* PlayerMovement.cpp in Sources */,
 				D34A4A4D27D11D2C0083DD65 /* EntityPrototype.cpp in Sources */,
 				D34A493327C9161D0083DD65 /* FileSystem_common.cpp in Sources */,
 				D34A494527C9162B0083DD65 /* Math3d.cpp in Sources */,
 				D34A49E527C9FD970083DD65 /* Render_local.cpp in Sources */,
 				D34A4A2927CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */,
+				D3F4C06127FB6B5000A82826 /* PlayerTouchController.cpp in Sources */,
 				D34A497227C9163A0083DD65 /* GfxVertexDesc_local.cpp in Sources */,
 				D34A496C27C9163A0083DD65 /* GfxGpuFunction_metal.mm in Sources */,
 				D34A496E27C9163A0083DD65 /* GfxFence_metal.mm in Sources */,
@@ -2105,8 +2148,10 @@
 				D34A4A1827CA69150083DD65 /* XFighter.cpp in Sources */,
 				D34A491C27C915EC0083DD65 /* Shaders.metal in Sources */,
 				D34A497027C9163A0083DD65 /* GfxPass_metal.mm in Sources */,
+				D3F4C05D27FB692600A82826 /* GameView.mm in Sources */,
 				D34A4A2C27CA9ECA0083DD65 /* draw3d_toon.metal in Sources */,
 				D34A497127C9163A0083DD65 /* GfxGpuTextureArray_metal.mm in Sources */,
+				D3F4C05327FB46EB00A82826 /* Input_ios.mm in Sources */,
 				D34A497327C9163A0083DD65 /* GfxBuffer_metal.mm in Sources */,
 				D34A49A727C916600083DD65 /* RttiParser.cpp in Sources */,
 				D3F4C03827FAC56B00A82826 /* ShipDef.cpp in Sources */,
@@ -2163,6 +2208,7 @@
 				D34A494C27C9162B0083DD65 /* Quaternion.cpp in Sources */,
 				D34A4A1927CA69160083DD65 /* XFighter.cpp in Sources */,
 				D3F4C03B27FAC57900A82826 /* Ship.cpp in Sources */,
+				D3F4C05627FB46EF00A82826 /* Input_macos.mm in Sources */,
 				D34A491627C915EC0083DD65 /* main.mm in Sources */,
 				D34A4D5327E375A90083DD65 /* ResourceBuilder.cpp in Sources */,
 				D3F4C01C27F8175000A82826 /* Playfield.cpp in Sources */,
@@ -2208,6 +2254,7 @@
 				D3F4C04227FAC59100A82826 /* ShipPreviewDef.cpp in Sources */,
 				D34A4D2B27E373530083DD65 /* ModelBuilder.cpp in Sources */,
 				D34A493D27C9161D0083DD65 /* Sys_common.cpp in Sources */,
+				D3F4C04B27FB461B00A82826 /* PlayerMovement.cpp in Sources */,
 				D34A4A5227D11D2C0083DD65 /* ComponentPrototype.cpp in Sources */,
 				D34A4A4527CFE8EF0083DD65 /* Ecs.cpp in Sources */,
 				D34A49B527C916610083DD65 /* RttiStream.cpp in Sources */,
@@ -2359,6 +2406,7 @@
 				D367BB0F27E8D71100BBAAB4 /* ModelImporter.cpp in Sources */,
 				D367BAEA27E8D66600BBAAB4 /* RefObject.cpp in Sources */,
 				D367BAE527E8D65D00BBAAB4 /* RttiStream.cpp in Sources */,
+				D3F4C04C27FB461B00A82826 /* PlayerMovement.cpp in Sources */,
 				D367BB0D27E8D71100BBAAB4 /* ToolSkeleton.cpp in Sources */,
 				D367BAE627E8D65D00BBAAB4 /* RttiType.cpp in Sources */,
 				D367BAE427E8D65D00BBAAB4 /* RttiScriptResource.cpp in Sources */,

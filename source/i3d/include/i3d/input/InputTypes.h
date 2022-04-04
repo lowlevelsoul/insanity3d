@@ -1,166 +1,173 @@
 //======================================================================================================================
 // CONFIDENTIAL AND PROPRIETARY INFORMATION / NOT FOR DISCLOSURE WITHOUT WRITTEN PERMISSION
-// Copyright (C) 2021, 2022 James Steele. All Rights Reserved.
+// Copyright (C) 2021 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#ifndef __I3D_INPUTTYPES_H__
-#define __I3D_INPUTTYPES_H__
-
-#include "i3d/core/Types.h"
+#ifndef __INPUTTYPES_H__
+#define __INPUTTYPES_H__
 
 namespace i3d {
+    
+    enum EVENT_TYPE {
+        EVENT_TYPE_NONE=0,
+        EVENT_TYPE_KEY,
+        EVENT_TYPE_TOUCH,
+        EVENT_TYPE_COUNT,
+    };
 
-    enum KeyModifier
+    enum MODIFIER
     {
-        KeyModifier_None       = 0,
-        KeyModifier_LeftAlt    = 0x01,
-        KeyModifier_RightAlt   = 0x02,
-        KeyModifier_LeftCtrl   = 0x04,
-        KeyModifier_RightCtrl  = 0x08,
-        KeyModifier_LeftShift  = 0x10,
-        KeyModifier_RightShift = 0x20,
-        KeyModifier_LeftMeta   = 0x40,
-        KeyModifier_RightMeta  = 0x80,
+        MODIFIER_None       = 0,
+        MODIFIER_LeftAlt    = 0x01,
+        MODIFIER_RightAlt   = 0x02,
+        MODIFIER_LeftCtrl   = 0x04,
+        MODIFIER_RightCtrl  = 0x08,
+        MODIFIER_LeftShift  = 0x10,
+        MODIFIER_RightShift = 0x20,
+        MODIFIER_LeftMeta   = 0x40,
+        MODIFIER_RightMeta  = 0x80,
     };
 
-    enum Key
-    {
-        Key_None = 0,
-        Key_Esc,
-        Key_Return,
-        Key_Tab,
-        Key_Space,
-        Key_Backspace,
-        Key_Up,
-        Key_Down,
-        Key_Left,
-        Key_Right,
-        Key_Insert,
-        Key_Delete,
-        Key_Home,
-        Key_End,
-        Key_PageUp,
-        Key_PageDown,
-        Key_Print,
-        Key_Plus,
-        Key_Minus,
-        Key_LeftBracket,
-        Key_RightBracket,
-        Key_Semicolon,
-        Key_Quote,
-        Key_Comma,
-        Key_Period,
-        Key_Slash,
-        Key_Backslash,
-        Key_Tilde,
-        Key_F1,
-        Key_F2,
-        Key_F3,
-        Key_F4,
-        Key_F5,
-        Key_F6,
-        Key_F7,
-        Key_F8,
-        Key_F9,
-        Key_F10,
-        Key_F11,
-        Key_F12,
-        Key_NumPad0,
-        Key_NumPad1,
-        Key_NumPad2,
-        Key_NumPad3,
-        Key_NumPad4,
-        Key_NumPad5,
-        Key_NumPad6,
-        Key_NumPad7,
-        Key_NumPad8,
-        Key_NumPad9,
-        Key_Key0,
-        Key_Key1,
-        Key_Key2,
-        Key_Key3,
-        Key_Key4,
-        Key_Key5,
-        Key_Key6,
-        Key_Key7,
-        Key_Key8,
-        Key_Key9,
-        Key_KeyA,
-        Key_KeyB,
-        Key_KeyC,
-        Key_KeyD,
-        Key_KeyE,
-        Key_KeyF,
-        Key_KeyG,
-        Key_KeyH,
-        Key_KeyI,
-        Key_KeyJ,
-        Key_KeyK,
-        Key_KeyL,
-        Key_KeyM,
-        Key_KeyN,
-        Key_KeyO,
-        Key_KeyP,
-        Key_KeyQ,
-        Key_KeyR,
-        Key_KeyS,
-        Key_KeyT,
-        Key_KeyU,
-        Key_KeyV,
-        Key_KeyW,
-        Key_KeyX,
-        Key_KeyY,
-        Key_KeyZ,
-
-        Key_GamepadA,
-        Key_GamepadB,
-        Key_GamepadX,
-        Key_GamepadY,
-        Key_GamepadThumbL,
-        Key_GamepadThumbR,
-        Key_GamepadShoulderL,
-        Key_GamepadShoulderR,
-        Key_GamepadUp,
-        Key_GamepadDown,
-        Key_GamepadLeft,
-        Key_GamepadRight,
-        Key_GamepadBack,
-        Key_GamepadStart,
-        Key_GamepadGuide,
+    enum KEY {
+        KEY_None = 0,
+        KEY_Esc,
+        KEY_Return,
+        KEY_Tab,
+        KEY_Space,
+        KEY_Backspace,
+        KEY_Up,
+        KEY_Down,
+        KEY_Left,
+        KEY_Right,
+        KEY_Insert,
+        KEY_Delete,
+        KEY_Home,
+        KEY_End,
+        KEY_PageUp,
+        KEY_PageDown,
+        KEY_Print,
+        KEY_Plus,
+        KEY_Minus,
+        KEY_LeftBracket,
+        KEY_RightBracket,
+        KEY_Semicolon,
+        KEY_Quote,
+        KEY_Comma,
+        KEY_Period,
+        KEY_Slash,
+        KEY_Backslash,
+        KEY_Tilde,
+        KEY_F1,
+        KEY_F2,
+        KEY_F3,
+        KEY_F4,
+        KEY_F5,
+        KEY_F6,
+        KEY_F7,
+        KEY_F8,
+        KEY_F9,
+        KEY_F10,
+        KEY_F11,
+        KEY_F12,
+        KEY_NumPad0,
+        KEY_NumPad1,
+        KEY_NumPad2,
+        KEY_NumPad3,
+        KEY_NumPad4,
+        KEY_NumPad5,
+        KEY_NumPad6,
+        KEY_NumPad7,
+        KEY_NumPad8,
+        KEY_NumPad9,
+        KEY_0,
+        KEY_1,
+        KEY_2,
+        KEY_3,
+        KEY_4,
+        KEY_5,
+        KEY_6,
+        KEY_7,
+        KEY_8,
+        KEY_9,
+        KEY_A,
+        KEY_B,
+        KEY_C,
+        KEY_D,
+        KEY_E,
+        KEY_F,
+        KEY_G,
+        KEY_H,
+        KEY_I,
+        KEY_J,
+        KEY_K,
+        KEY_L,
+        KEY_M,
+        KEY_N,
+        KEY_O,
+        KEY_P,
+        KEY_Q,
+        KEY_R,
+        KEY_S,
+        KEY_T,
+        KEY_U,
+        KEY_V,
+        KEY_W,
+        KEY_X,
+        KEY_Y,
+        KEY_Z,
         
-        Key_GamepadAxisX,
-        Key_GamepadAxisY,
-        Key_GamepadAxisZ,
-        Key_GamepadAxisW,
+        KEY_GamepadA,
+        KEY_GamepadB,
+        KEY_GamepadX,
+        KEY_GamepadY,
+        KEY_GamepadThumbL,
+        KEY_GamepadThumbR,
+        KEY_GamepadShoulderL,
+        KEY_GamepadShoulderR,
+        KEY_GamepadUp,
+        KEY_GamepadDown,
+        KEY_GamepadLeft,
+        KEY_GamepadRight,
+        KEY_GamepadBack,
+        KEY_GamepadStart,
+        KEY_GamepadGuide,
         
-        Key_MouseButton1,
-        Key_MouseButton2,
-        Key_MouseButton3,
-        Key_MouseMoved,
-
-        Key_Count
+        KEY_Count
     };
 
-    enum InputEventType {
-        InputEventType_None = 0,
-        InputEventType_Key,
-        InputEventType_Count
-    };
-
-    struct InputKeyEvent {
-        Key         m_key;
-        uint32_t    m_modifiers;
+    struct KeyEvent {
+        KEY         m_key;
+        char        m_char;
+        uint32_t    m_modifier;
         float       m_value;
+        
+        void Set(KEY key, char charPressed, uint32_t modifier, float value ) {
+            m_key = key;
+            m_char = charPressed;
+            m_modifier = modifier;
+            m_value = value;
+        }
     };
 
+    struct TouchEvent {
+        enum TYPE {
+            TYPE_BEGIN=0,
+            TYPE_END,
+            TYPE_MOVED,
+        };
+        TYPE            m_type;
+        uint32_t        m_id;
+        float           m_x;
+        float           m_y;
+    };
 
-    struct InputEvent {
-        InputEventType       m_type;
+    struct Event {
+        EVENT_TYPE   m_type;
         union {
-            InputKeyEvent        m_key;
-        } m_data;
+            KeyEvent    m_key;
+            TouchEvent  m_touch;
+        } m_event;
     };
 }
-
 
 #endif

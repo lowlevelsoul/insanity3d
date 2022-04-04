@@ -13,7 +13,7 @@
 #include "i3d/render/Model.h"
 #include "i3d/render/Material.h"
 #include "i3d/render/Texture.h"
-#include "i3d/render/Texture_Base.h"
+#include "i3d/render/Texture_base.h"
 #include "i3d/core/Log.h"
 
 //#include "i3d/mem/Mem_local.h"

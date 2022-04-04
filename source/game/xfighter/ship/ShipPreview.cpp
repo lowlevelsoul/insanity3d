@@ -41,7 +41,6 @@ void ShipPreview::Think( float timeStep ) {
     float znear, zfar;
     game->m_globals->m_playfield->CalcZLimits(znear, zfar, 0, 0);
 
-    
     m_location = i3d::Vector3(0, 0, znear) + i3d::Vector3(0, 0, 50);
     
     m_rotation += m_rotationSpeed * timeStep;
