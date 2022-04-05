@@ -57,8 +57,37 @@ bool PlayerTouchController::GetPlayfieldPickPoint( i3d::Vector3& point, float sc
 
 //======================================================================================================================
 void PlayerTouchController::CalcPickRay( i3d::Vector3 & start, i3d::Vector3 & dir, float screenX, float screenY) {
-    start = game->m_globals->m_camera->m_location;
-    dir = CalcPickRayDirWorld(screenX, screenY);
+    //start = game->m_globals->m_camera->m_location;
+    //dir = CalcPickRayDirWorld(screenX * 2.0f, screenY * 2.0f);
+    
+    
+    float invViewWidth = 1.0f / (float) (game->m_viewWidth) ;
+    float invViewHeight = 1.0f / (float) (game->m_viewHeight);
+    float clipX = (2.0f * (screenX * 2.0f) * invViewWidth) - 1.0f;
+    float clipY = (2.0f * -(screenY * 2.0f) * invViewHeight) + 1.0f;
+    
+    float aspect = (float) game->m_viewWidth / (float)game->m_viewHeight;
+    float yScale = i3d::scalar::Tan( i3d::scalar::DegToRad( game->m_globals->m_camera->m_fov ) / 2.0f );
+    float xScale = yScale * aspect;
+    float yNearSizeHalf = yScale * game->m_globals->m_camera->m_clipNear;
+    float xNearSizeHalf = xScale * game->m_globals->m_camera->m_clipNear;
+    float yFarSizeHalf = yScale * game->m_globals->m_camera->m_clipFar;
+    float xFarSizeHalf = xScale * game->m_globals->m_camera->m_clipFar;
+    
+    float camPointLocalX = xNearSizeHalf * clipX;
+    float camPointLocalY = yNearSizeHalf * clipY;
+    float camDirLocalX = (xFarSizeHalf * clipX) - camPointLocalX;
+    float camDirLocalY = (yFarSizeHalf * clipY) - camPointLocalY;
+    
+    i3d::Vector3 camPointLocal = i3d::Vector3( camPointLocalX, camPointLocalY, game->m_globals->m_camera->m_clipNear);
+    i3d::Vector3 camPointWorld = game->m_globals->m_camera->m_transform * i3d::Vector4(camPointLocal, 1);
+    
+    i3d::Vector3 camDirLocal = i3d::Vector3(camDirLocalX, camDirLocalY, game->m_globals->m_camera->m_clipFar - game->m_globals->m_camera->m_clipNear );
+    camDirLocal.Normalise();
+    i3d::Vector3 camDirWorld = game->m_globals->m_camera->m_transform * i3d::Vector4(camDirLocal, 0);
+    
+    start = camPointWorld;
+    dir = camDirWorld;
 }
 
 //======================================================================================================================
