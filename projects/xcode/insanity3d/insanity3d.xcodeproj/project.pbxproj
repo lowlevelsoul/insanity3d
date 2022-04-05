@@ -430,6 +430,9 @@
 		D3F4C05D27FB692600A82826 /* GameView.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C05B27FB692600A82826 /* GameView.mm */; };
 		D3F4C06027FB6B5000A82826 /* PlayerTouchController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C05F27FB6B5000A82826 /* PlayerTouchController.cpp */; };
 		D3F4C06127FB6B5000A82826 /* PlayerTouchController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C05F27FB6B5000A82826 /* PlayerTouchController.cpp */; };
+		D3F4C06427FB6DAF00A82826 /* PlayerMovementDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C06227FB6DAF00A82826 /* PlayerMovementDef.cpp */; };
+		D3F4C06527FB6DAF00A82826 /* PlayerMovementDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C06227FB6DAF00A82826 /* PlayerMovementDef.cpp */; };
+		D3F4C06627FB6DAF00A82826 /* PlayerMovementDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C06227FB6DAF00A82826 /* PlayerMovementDef.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -843,6 +846,8 @@
 		D3F4C05B27FB692600A82826 /* GameView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GameView.mm; sourceTree = "<group>"; };
 		D3F4C05E27FB6B2A00A82826 /* PlayerTouchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerTouchController.h; sourceTree = "<group>"; };
 		D3F4C05F27FB6B5000A82826 /* PlayerTouchController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerTouchController.cpp; sourceTree = "<group>"; };
+		D3F4C06227FB6DAF00A82826 /* PlayerMovementDef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerMovementDef.cpp; sourceTree = "<group>"; };
+		D3F4C06327FB6DAF00A82826 /* PlayerMovementDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerMovementDef.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1634,6 +1639,8 @@
 				D3F4C03F27FAC59100A82826 /* ShipPreviewDef.h */,
 				D3F4C04727FB461B00A82826 /* PlayerMovement.cpp */,
 				D3F4C04827FB461B00A82826 /* PlayerMovement.h */,
+				D3F4C06227FB6DAF00A82826 /* PlayerMovementDef.cpp */,
+				D3F4C06327FB6DAF00A82826 /* PlayerMovementDef.h */,
 			);
 			path = ship;
 			sourceTree = "<group>";
@@ -2054,6 +2061,7 @@
 				D34A4A3A27CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
 				D34A495127C916390083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
 				D34A4A5027D11D2C0083DD65 /* ComponentPrototype.cpp in Sources */,
+				D3F4C06427FB6DAF00A82826 /* PlayerMovementDef.cpp in Sources */,
 				D3F4C03C27FAC57900A82826 /* Ship.cpp in Sources */,
 				D3F4C01F27F8190500A82826 /* GameGlobals.cpp in Sources */,
 				D34A4A4327CFE8EF0083DD65 /* Ecs.cpp in Sources */,
@@ -2130,6 +2138,7 @@
 				D34A493527C9161D0083DD65 /* Hash.cpp in Sources */,
 				D34A496B27C9163A0083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
 				D3F4C01027F71BA200A82826 /* ShipPreview.cpp in Sources */,
+				D3F4C06527FB6DAF00A82826 /* PlayerMovementDef.cpp in Sources */,
 				D34A48FA27C915EC0083DD65 /* AppDelegate.m in Sources */,
 				D34A49E427C9FD970083DD65 /* RenderBuffers.cpp in Sources */,
 				D34A49B727C916660083DD65 /* LoaderBase.cpp in Sources */,
@@ -2194,6 +2203,7 @@
 				D34A4A3227CA9ECA0083DD65 /* TransformStatic.metal in Sources */,
 				D34A499D27C916560083DD65 /* RenderBatch.cpp in Sources */,
 				D34A497F27C9163A0083DD65 /* GfxVertexDesc_local.cpp in Sources */,
+				D3F4C06627FB6DAF00A82826 /* PlayerMovementDef.cpp in Sources */,
 				D34A497927C9163A0083DD65 /* GfxGpuFunction_metal.mm in Sources */,
 				D3F4C03727FAC56B00A82826 /* ShipDef.cpp in Sources */,
 				D34A499927C916560083DD65 /* StaticTransform.cpp in Sources */,
