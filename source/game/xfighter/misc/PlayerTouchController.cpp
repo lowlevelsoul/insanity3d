@@ -63,8 +63,8 @@ void PlayerTouchController::CalcPickRay( i3d::Vector3 & start, i3d::Vector3 & di
     
     float invViewWidth = 1.0f / (float) (game->m_viewWidth) ;
     float invViewHeight = 1.0f / (float) (game->m_viewHeight);
-    float clipX = (2.0f * (screenX * 2.0f) * invViewWidth) - 1.0f;
-    float clipY = (2.0f * -(screenY * 2.0f) * invViewHeight) + 1.0f;
+    float clipX = (2.0f * screenX * invViewWidth) - 1.0f;
+    float clipY = (2.0f * -screenY * invViewHeight) + 1.0f;
     
     float aspect = (float) game->m_viewWidth / (float)game->m_viewHeight;
     float yScale = i3d::scalar::Tan( i3d::scalar::DegToRad( game->m_globals->m_camera->m_fov ) / 2.0f );

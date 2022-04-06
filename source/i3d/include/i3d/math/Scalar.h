@@ -33,13 +33,75 @@ namespace i3d {
         inline scalar_t Max( scalar_t lhs, scalar_t rhs ) { return ::fmax(lhs, rhs); }
         inline scalar_t Clamp( scalar_t val, scalar_t limitMin, scalar_t limitMax ) { return scalar::Max( limitMin, scalar::Min( limitMax, val ) ); }
         
+        //======================================================================================================================
         inline scalar_t Mix( scalar_t from, scalar_t to, scalar_t t ) {
             return (from * ( scalar_t( 1 ) - t ) ) + ( to * t );
         }
 
+        //======================================================================================================================
         inline scalar_t MixSafe( scalar_t from, scalar_t to, scalar_t t ) {
             scalar_t clampedT = scalar::Clamp( t, 0, 1 );
             return Mix( from, to, clampedT );
+        }
+        
+        //======================================================================================================================
+        template<typename __type__>
+        inline bool BitScan(int32_t& index, const __type__& val) {
+            if (val == 0) {
+                return false;
+            }
+            
+            int32_t bitIndex = 0;
+            while ((val & __type__(1 << bitIndex)) != 0) {
+                ++bitIndex;
+            }
+            
+            index = bitIndex;
+            return true;
+        }
+        
+        //======================================================================================================================
+        template<typename __type__>
+        inline bool BitScanReverse(int32_t& index, const __type__& val) {
+            if (val == 0) {
+                
+                return false;
+            }
+            
+            int32_t bitIndex = (sizeof(__type__) * 8) - 1;
+            while ((val & __type__(1 << bitIndex)) == 0) {
+                --bitIndex;
+            }
+            
+            index = bitIndex;
+            return true;
+        }
+        
+        //======================================================================================================================
+        template<typename __type__>
+        inline bool IsPowerOfTwo(const __type__& rhs) {
+            __type__ tmp = rhs & (rhs-1);
+            return (tmp == 0);
+        }
+        
+        //======================================================================================================================
+        template<typename __type__>
+        inline __type__ GetNextPowerOfTwo(const __type__& rhs) {
+
+            if ((rhs == 0)  || (IsPowerOfTwo(rhs))) {
+                return rhs;
+            }
+            
+            int32_t msbIndex = -1;
+            BitScanReverse(msbIndex, rhs);
+            
+            __type__ tmp = (1 << msbIndex) - 1;
+            tmp &= rhs;
+            if (tmp != 0) {
+                ++msbIndex;
+            }
+            
+            return (1 << msbIndex);
         }
     }
 }

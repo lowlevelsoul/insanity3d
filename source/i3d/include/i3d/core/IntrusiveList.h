@@ -56,7 +56,7 @@ namespace i3d {
         }
         
         void InsertBefore( IntrusiveList * item ) {
-            if (item->root != item ) {
+            if (item->m_root != item ) {
                 item->Remove();
             }
 
@@ -69,7 +69,7 @@ namespace i3d {
         }
         
         void InsertAfter( IntrusiveList * item ) {
-            if (item->root != item ) {
+            if (item->m_root != item ) {
                 item->Remove();
             }
 
@@ -109,6 +109,8 @@ namespace i3d {
         operator const_ptr_t() const { return m_value; }
         
         bool Empty() const { return m_next == this; }
+        
+        bool IsRoot() const { return this == m_root; }
         
     protected:
         IntrusiveList *         m_root;

@@ -31,19 +31,21 @@ public:
     
     virtual void Finalise() override;
     
-    virtual void Think( float deltaTime, uint32_t viewWidth, uint32_t viewHeight ) override;
+    virtual void Think( float deltaTime, uint32_t viewWidth, uint32_t viewHeight, float displayScale ) override;
     
-    virtual void Draw( float deltaTime, uint32_t viewWidth, uint32_t viewHeight ) override;
+    virtual void Draw( float deltaTime, uint32_t viewWidth, uint32_t viewHeight, float displayScale ) override;
     
 protected:
     
     void CreateSystemEnt();
     
-    void ProcessInputs();
+    void ProcessInputs( float displayScale );
     
-    void ProcessInputTouch( i3d::Event& ev );
+    void ProcessInputTouch( i3d::Event& ev, float displayScale );
     
     void ProceesInputKey( i3d::Event& ev );
+    
+    void CalcCollisionAreaBounds( i3d::Vector2& bmin, i3d::Vector2& bmax );
     
 public:    
     i3d::RttiResource *         m_globalsRes;

@@ -13,6 +13,7 @@
 #include "entity/EntityManager.h"
 #include "misc/GameGlobals.h"
 #include "ship/Ship.h"
+#include "col/CollideSys.h"
 
 
 static uint8_t XFighterMem[ sizeof( XFighter ) ];
@@ -20,6 +21,9 @@ XFighter * game = nullptr;
 
 void EntityManagerCreate();
 void EntityManagerDestroy();
+
+void CollideCreate();
+void CollideDestroy();
 
 i3d::CVar   in_Player1MoveX("in_player1MoveX", 0.0f, "Player1 move input in x-direction");
 i3d::CVar   in_Player1MoveZ("in_player1MoveZ", 0.0f, "Player1 move input in z-direction");
@@ -73,6 +77,12 @@ void XFighter::Initialise() {
     
     m_globals = m_globalsRes->GetObject()->SafeCast<GameGlobals>();
     
+    CollideCreate();
+    i3d::Vector2 bmin, bmax;
+    CalcCollisionAreaBounds( bmin, bmax );
+    colSys->Initialise( bmin, bmax );
+    
+    
     m_player = m_playerDef->Construct()->SafeCast<Ship>();
     res->StartLoading();
     while ( res->HasPending() == true ) {
@@ -93,20 +103,43 @@ void XFighter::Finalise() {
 }
 
 //======================================================================================================================
-void XFighter::Think( float timeStep, uint32_t viewWidth, uint32_t viewHeight ) {
+void XFighter::CalcCollisionAreaBounds( i3d::Vector2& bmin, i3d::Vector2& bmax) {
+    
+    m_globals->m_camera->Update( 160, 90 );
+    m_globals->m_playfield->Update( m_globals->m_camera );
+    
+    // Determine the bounds of the frustum
+    float minZ, maxZ;
+    m_globals->m_playfield->CalcZLimits(minZ, maxZ, 0, 0);
+    
+    float left, right;
+    m_globals->m_playfield->CalcXLimits(left, right, 0, maxZ);
+    
+    // Workout the largest bounds component
+    int32_t halfSize = (maxZ > right) ? maxZ : right;
+    halfSize = (halfSize > -minZ) ? halfSize : -minZ;
+    assert(halfSize > 0);
+    
+    halfSize = i3d::scalar::GetNextPowerOfTwo(halfSize);
+    bmin.Set((float)-halfSize, (float)-halfSize);
+    bmax.Set((float)halfSize, (float)halfSize);
+}
+
+//======================================================================================================================
+void XFighter::Think( float timeStep, uint32_t viewWidth, uint32_t viewHeight, float displayScale ) {
     m_viewWidth = viewWidth;
     m_viewHeight = viewHeight;
     
     m_globals->m_camera->Update( viewWidth, viewHeight );
     m_globals->m_playfield->Update( m_globals->m_camera );
     
-    ProcessInputs();
+    ProcessInputs( displayScale );
     
     entityMgr->Think( timeStep );
 }
 
 //======================================================================================================================
-void XFighter::ProcessInputTouch( i3d::Event& ev ) {
+void XFighter::ProcessInputTouch( i3d::Event& ev, float displayScale ) {
 #ifdef XF_USE_TOUCH_INPUT
     i3d::TouchEvent tv = ev.m_event.m_touch;
 
@@ -115,7 +148,7 @@ void XFighter::ProcessInputTouch( i3d::Event& ev ) {
         in_Player1MoveX.Set(0.0f);
         in_Player1MoveZ.Set(0.0f);
     
-        m_touchController.Begin(tv.m_x, tv.m_y);
+        m_touchController.Begin(tv.m_x * displayScale, tv.m_y * displayScale);
         
     }
     else if (tv.m_type == i3d::TouchEvent::TYPE_END) {
@@ -126,9 +159,9 @@ void XFighter::ProcessInputTouch( i3d::Event& ev ) {
         m_touchController.End(0, 0);
     }
     else if (tv.m_type == i3d::TouchEvent::TYPE_MOVED) {
-        m_touchController.Moved(tv.m_x, tv.m_y);
+        m_touchController.Moved(tv.m_x * displayScale, tv.m_y * displayScale);
         
-        in_Player1MoveX.Set( m_touchController.m_moveDelta.X()) ;
+        in_Player1MoveX.Set( m_touchController.m_moveDelta.X() ) ;
         in_Player1MoveZ.Set( m_touchController.m_moveDelta.Z() );
     }
 #endif
@@ -160,7 +193,7 @@ void XFighter::ProceesInputKey( i3d::Event& ev ) {
 }
 
 //======================================================================================================================
-void XFighter::ProcessInputs() {
+void XFighter::ProcessInputs( float displayScale ) {
     
     input->Think( m_inputEvents, m_inputEventCount);
     
@@ -174,7 +207,7 @@ void XFighter::ProcessInputs() {
                 break;
                 
             case i3d::EVENT_TYPE_TOUCH:
-                ProcessInputTouch(ev);
+                ProcessInputTouch(ev, displayScale );
                 break;
                 
             default:
@@ -185,7 +218,7 @@ void XFighter::ProcessInputs() {
 
 
 //======================================================================================================================
-void XFighter::Draw( float timeStep, uint32_t viewWidth, uint32_t viewHeight ) {
+void XFighter::Draw( float timeStep, uint32_t viewWidth, uint32_t viewHeight, float displayScale ) {
     i3d::Matrix4 projMat, viewMat;
     
     projMat.SetProjectionPerspLH( i3d::scalar::DegToRad( 60 ), 4.0f / 3.0f, 5, 500 );

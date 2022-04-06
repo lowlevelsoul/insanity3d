@@ -62,9 +62,9 @@ namespace i3d {
     static uint8_t EngineStateMem[ sizeof( EngineState ) ];
     EngineState * engine = nullptr;
     
-    static void EngineThink( float deltaTime, uint32_t viewWidth, uint32_t viewHeight );
+    static void EngineThink( float deltaTime, uint32_t viewWidth, uint32_t viewHeight, float displayScale );
     
-    static void EngineDraw( float deltaTime, uint32_t viewWidth, uint32_t viewHeight );
+    static void EngineDraw( float deltaTime, uint32_t viewWidth, uint32_t viewHeight, float displayScale );
     
 
     //======================================================================================================================
@@ -116,7 +116,7 @@ namespace i3d {
     }
     
     //======================================================================================================================
-    void EngineThink( uint32_t viewWidth, uint32_t viewHeight ) {
+    void EngineThink( uint32_t viewWidth, uint32_t viewHeight, float displayScale ) {
         float deltaTime = 1.0f / 60.0f;
         if ( engine->m_firstFrame == true ) {
             engine->m_firstFrame = false;
@@ -129,20 +129,20 @@ namespace i3d {
             engine->m_lastTick = currTick;
         }
         
-        EngineThink( deltaTime, viewWidth, viewHeight );
+        EngineThink( deltaTime, viewWidth, viewHeight, displayScale );
         
-        EngineDraw( deltaTime, viewWidth, viewHeight );
+        EngineDraw( deltaTime, viewWidth, viewHeight, displayScale );
     }
     
     //======================================================================================================================
-    void EngineThink( float deltaTime, uint32_t viewWidth, uint32_t viewHeight ) {
-        engine->m_game->Think( deltaTime, viewWidth, viewHeight );
+    void EngineThink( float deltaTime, uint32_t viewWidth, uint32_t viewHeight, float displayScale ) {
+        engine->m_game->Think( deltaTime, viewWidth, viewHeight, displayScale );
     }
     
     //======================================================================================================================
-    void EngineDraw( float deltaTime, uint32_t viewWidth, uint32_t viewHeight ) {
+    void EngineDraw( float deltaTime, uint32_t viewWidth, uint32_t viewHeight, float displayScale ) {
         
-        engine->m_game->Draw( deltaTime, viewWidth, viewHeight );
+        engine->m_game->Draw( deltaTime, viewWidth, viewHeight, displayScale );
         render->Submit();
     }
 }

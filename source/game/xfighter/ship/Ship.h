@@ -69,6 +69,8 @@ public:
     i3d::Quaternion                 m_modelOffsRot;
     i3d::Vector3                    m_modelOffsPos;
     i3d::Matrix4                    m_transform;
+    
+    float                           m_roll;
 };
 
 #endif

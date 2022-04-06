@@ -22,9 +22,9 @@ namespace i3d {
         
         virtual void Finalise() = 0;
         
-        virtual void Think( float deltaTime, uint32_t viewWidth, uint32_t viewHeight ) = 0;
+        virtual void Think( float deltaTime, uint32_t viewWidth, uint32_t viewHeight, float displayScale ) = 0;
         
-        virtual void Draw( float deltaTime, uint32_t viewWidth, uint32_t viewHeight ) = 0;
+        virtual void Draw( float deltaTime, uint32_t viewWidth, uint32_t viewHeight, float displayScale ) = 0;
     };
     
     void EngineInitialise( int argc, const char ** argv );

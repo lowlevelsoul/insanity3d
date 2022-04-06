@@ -18,6 +18,7 @@ Ship::Ship() {
     m_material = nullptr;
     m_modelOffsRot = i3d::Quaternion::IDENTITY;
     m_modelOffsPos = i3d::Vector3::ZERO;
+    m_roll = 0;
 }
 
 //======================================================================================================================
@@ -41,11 +42,16 @@ void Ship::Think( float timeStep ) {
     localMod.SetRotationQ( m_modelOffsRot );
     localMod.SetTranslation( m_modelOffsPos );
     
+    i3d::Matrix4 roll = i3d::Matrix4::IDENTITY;
+    roll.SetRotationAA( i3d::Vector3::UNIT_Z, i3d::scalar::DegToRad( m_roll ) );
+    
     i3d::Matrix4 transform;
     transform.SetRotationQ( m_rotation );
     transform.SetTranslation( m_location );
     
-    m_transform.Concat( localMod, transform );
+    i3d::Matrix4 local;
+    local.Concat( localMod, roll);
+    m_transform.Concat( local, transform );
     
     for ( auto c : m_components ) {
         c->Think( timeStep );
