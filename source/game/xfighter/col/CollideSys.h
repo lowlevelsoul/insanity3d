@@ -59,11 +59,13 @@ public:
         }
     };
     
-    typedef i3d::stl::Vector<Collider*>      ObjectArray;
-    typedef i3d::stl::Vector<Pair>           PairArray;
-    typedef i3d::stl::Vector<Pair*>          PairPointerArray;
-    typedef i3d::stl::Vector<uint64_t>       PairHashArray;
-    typedef i3d::stl::Map<uint64_t, Pair>    PairMap;
+    typedef i3d::stl::Vector<Collider*>             ObjectArray;
+    typedef i3d::stl::Vector<Pair>                  PairArray;
+    typedef i3d::stl::Vector<Pair*>                 PairPointerArray;
+    typedef i3d::stl::Vector<uint64_t>              PairHashArray;
+    typedef i3d::stl::Map<uint64_t, Pair>           PairMap;
+    
+    typedef i3d::stl::Map<uint64_t, uint32_t>       MaskMap;
     
     Collider::ListNode                  m_shapeList;            ///< The list of shapes in the collision system
     ObjectArray::type                   m_dirtyList;            ///< List of nodes that are dirty and must be updated
@@ -81,6 +83,8 @@ public:
     i3d::Vector3                        m_circleVerts[CIRCLE_VERTS_COUNT];
     i3d::Vector4                        m_debugColours[DEBUG_COLOUR_COUNT];
     
+    MaskMap::type                       m_maskNameHashes;
+    
     CollideSys();
     
     ~CollideSys();
@@ -90,6 +94,8 @@ public:
     void Finalise();
     
     void Think(float timeStep);
+    
+    uint32_t FindMask( const char * name ) const;
     
     void UpdateDirty();
     
@@ -124,6 +130,8 @@ public:
     void DebugSetDrawBoundsGroups(uint32_t group) { m_debugDrawBoundsGroups = group; }
     
     void DebugSetDrawCellGroups(uint32_t group) { m_debugDrawCelGroups = group; }
+    
+    void AddMaskName( uint32_t value, const char * name );
 };
 
 #endif

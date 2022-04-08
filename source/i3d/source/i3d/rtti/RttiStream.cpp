@@ -110,8 +110,8 @@ namespace i3d {
             }
         }
         
-        for ( auto o : m_objects ) {
-            o->ReadComplete( nullptr );
+        for ( int32_t i = (int32_t) (m_objects.size() - 1); i >= 0; --i ) {
+            m_objects[i]->ReadComplete( nullptr );
         }
     }
 

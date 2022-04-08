@@ -67,9 +67,14 @@ void XFighter::Initialise() {
     
     res->PublishFactory<EntityDefResource>();
     
+    CollideCreate();
+    i3d::Vector2 bmin(-256, -256), bmax(256, 256);
+    colSys->Initialise( bmin, bmax );
+    colSys->DebugSetDrawBoundsGroups( col::GROUP_PLAYER );
+    
     m_globalsRes = res->Load<i3d::RttiResource>("~/rtti/GameGlobals.brtti");
     m_playerDef = res->Load<EntityDefResource>("~/entities/Player.ent");
-    
+
     res->StartLoading();
     while ( res->HasPending() == true ) {
         
@@ -77,18 +82,7 @@ void XFighter::Initialise() {
     
     m_globals = m_globalsRes->GetObject()->SafeCast<GameGlobals>();
     
-    CollideCreate();
-    i3d::Vector2 bmin, bmax;
-    CalcCollisionAreaBounds( bmin, bmax );
-    colSys->Initialise( bmin, bmax );
-    
-    
     m_player = m_playerDef->Construct()->SafeCast<Ship>();
-    res->StartLoading();
-    while ( res->HasPending() == true ) {
-        
-    }
-    
     entityMgr->AddEntity( m_player );
     
 }
@@ -134,6 +128,8 @@ void XFighter::Think( float timeStep, uint32_t viewWidth, uint32_t viewHeight, f
     m_globals->m_playfield->Update( m_globals->m_camera );
     
     ProcessInputs( displayScale );
+    
+    colSys->Think( timeStep );
     
     entityMgr->Think( timeStep );
 }
@@ -235,6 +231,8 @@ void XFighter::Draw( float timeStep, uint32_t viewWidth, uint32_t viewHeight, fl
                                   viewport );
             
             entityMgr->Draw( timeStep, viewWidth, viewHeight);
+            
+            colSys->DebugDraw();
             
             render->EndScene3d();
         }        

@@ -137,7 +137,7 @@ namespace i3d {
         m_drawTransformPass = gfx::CreatePass( "Draw");
         
         m_drawLit.Initialise( &m_renderBuffers, m_gfxContext );
-        //m_lineDraw.Initialise( &m_renderBuffers, 0 );
+        m_lineDraw.Initialise( &m_renderBuffers, m_gfxContext );
     
         m_staticTransform.Initialise( & m_renderBuffers, m_useMaterialBatching );
         //m_skinTransform.Initialise( &m_renderBuffers );
@@ -230,6 +230,11 @@ namespace i3d {
     void RenderLocal::DrawLine( const Vector3 & v0, const Vector3 & v1, const Vector4 & colour ) {
         m_batcher.DrawLine( v0, v1, colour );
     }
+    
+    //======================================================================================================================
+    void RenderLocal::DrawClosedLineList( const Vector3 * verts, size_t vertexCount, const Vector4 & colour ) {
+        m_batcher.DrawClosedLineList( verts, vertexCount, colour );
+    }
 
     //======================================================================================================================
     void RenderLocal::BuildTexturePoolForFrame() {
@@ -258,6 +263,9 @@ namespace i3d {
             // haing to map / unmap  buffers. Having the scene constant buffers built in one place
             // reduces the number of map's unmaps that we have to perform.
             BuildSceneConstants( m_currScene );
+            
+            // Fill in the line buffers
+            m_lineDraw.BuildLineBuffers( m_currScene );
         
         // If we're using bindless textures, we need to build the texture "pool" buffer
         // that the rendering passes use. This is just a buffer that contains the address
@@ -300,8 +308,14 @@ namespace i3d {
                     gfx::BeginPass("Draw Lit 3D");
                     
                     if ( m_currScene != nullptr ) {
+                        
                         gfx::WaitForFence( m_renderBuffers.m_currBuffer->m_staticTransformFence, gfx::RENDER_STAGE_VERTEX );
+                        
+                        // Draw the lit, 3d-scene
                         m_drawLit.DoPass( m_currScene );
+                        
+                        // Draw any lines
+                        m_lineDraw.DoPass( m_currScene );
                     }
                     
                     gfx::EndPass();

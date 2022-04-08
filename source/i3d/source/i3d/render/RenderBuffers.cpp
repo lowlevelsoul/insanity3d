@@ -16,6 +16,12 @@ namespace i3d {
     extern CVar render_sceneConstantBufferSize;
     extern CVar render_lineVertexCapacity;
     extern CVar render_lineIndexCapacity;
+    
+    static const gfx::VertexDesc::Element LINE_VERTEX_ELEMENTS[] = {
+        {gfx::TYPE_FLOAT4,      0},         // Position
+        {gfx::TYPE_FLOAT4,      16},        // Colour
+        {gfx::TYPE_NIL }
+    };
 
     //======================================================================================================================
     RenderBuffers::RenderBuffers() {
@@ -25,6 +31,7 @@ namespace i3d {
         m_nextBufferIndex = 0;
         m_skinUniformBufferSize = 0;
         m_constantOffsetAlign = 512;
+        m_lineVertexDesc = nullptr;
     }
 
     //======================================================================================================================
@@ -37,6 +44,8 @@ namespace i3d {
                                     size_t skinTargetBufferSize, size_t skinUniformBufferSize ) {
         
         XE_LOG( "Creating metal geometry render buffers (%u)\n", BUFFER_COUNT );
+        
+        m_lineVertexDesc = gfx::CreateVertexDesc( LINE_VERTEX_ELEMENTS );
 
         m_vertexBufferSize = vertexBufferSize;
         m_indexBufferSize = indexBufferSize;
@@ -79,8 +88,8 @@ namespace i3d {
             }
 #endif
             
-            bi.m_lineVertices = gfx::CreateBuffer( render_lineVertexCapacity.GetInt() * 32, 0 );
-            bi.m_lineIndices = gfx::CreateBuffer( render_lineIndexCapacity.GetInt() * 4, 0 );
+            bi.m_lineVertices = gfx::CreateBuffer( render_lineVertexCapacity.GetInt() * m_lineVertexDesc->GetStride(), 0 );
+            bi.m_lineIndices = gfx::CreateBuffer( render_lineIndexCapacity.GetInt() * sizeof(uint32_t), 0 );
             
             bi.m_staticTransformFence = gfx::CreateFence( "Static Transform End" );
             bi.m_skinTransformFence = gfx::CreateFence( "Skin Transform End" );

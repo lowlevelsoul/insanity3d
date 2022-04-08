@@ -7,6 +7,7 @@
 #define __RENDERBUFFERS_METAL_H__
 
 #include "i3d/core/Types.h"
+#include "i3d/gfx/GfxVertexDesc.h"
 
 namespace i3d { namespace gfx {
     class Buffer;
@@ -128,6 +129,9 @@ namespace i3d {
         BufferInfo      m_buffers[ BUFFER_COUNT ];          ///< Array of avilable buffers
         BufferInfo *    m_currBuffer;                       ///< Pointer to the currently active buffer
         uint32_t        m_nextBufferIndex;                  ///< Index to the next buffer
+
+        gfx::VertexDesc * m_lineVertexDesc;
+                                                    
         
         uintptr_t       m_constantOffsetAlign;
         

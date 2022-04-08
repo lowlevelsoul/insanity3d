@@ -62,6 +62,8 @@ namespace i3d {
         virtual void SubmitPointLight( const Vector3& pos, float radius, float fallOff, const Vector4& colour ) = 0;
         
         virtual void DrawLine( const Vector3 & v0, const Vector3 & v1, const Vector4 & colour ) = 0;
+        
+        virtual void DrawClosedLineList( const Vector3 * verts, size_t vertexCount, const Vector4 & colour ) = 0;
 
         virtual void Submit() = 0;
     };

@@ -49,6 +49,10 @@ namespace i3d {
         
         void DrawLine( const Vector3 & v0, const Vector3 & v1, const Vector4 & colour );
         
+        void DrawLineList( const Vector3 * verts, size_t numVerts, const Vector4 & colour );
+        
+        void DrawClosedLineList( const Vector3 * verts, size_t numVerts, const Vector4 & colour );
+        
         CmdMaterial * GetMaterialCmd( Material * mat );
         
     public:

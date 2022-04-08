@@ -30,11 +30,8 @@ namespace i3d {
 
     //======================================================================================================================
     DebugLineDraw::DebugLineDraw() {
-        m_maxLines = 0;
         m_pipeline = nullptr;
         m_vertexDesc = nullptr;
-        m_vertexCapacity = 0;
-        m_indexCapacity = 0;
     }
 
     //======================================================================================================================
@@ -43,28 +40,35 @@ namespace i3d {
     }
 
     //======================================================================================================================
-    void DebugLineDraw::Initialise( RenderBuffers * renderBuffers, size_t maxLines ) {
-        
-        m_vertexCapacity = render_lineVertexCapacity.GetInt();
-        m_indexCapacity = render_lineIndexCapacity.GetInt();
-        
+    void DebugLineDraw::Initialise( RenderBuffers * renderBuffers, gfx::Context * gfxCtxt ) {
         m_renderBuffers = renderBuffers;
         
-        m_vertexDesc = gfx::CreateVertexDesc( LINE_VERTEX_ELEMENTS );
-        m_vertexBufferStride = m_vertexDesc->GetStride();
+        m_vertexDesc = renderBuffers->m_lineVertexDesc;     // gfx::CreateVertexDesc( LINE_VERTEX_ELEMENTS );
+        m_vertexBufferStride = renderBuffers->m_lineVertexDesc->GetStride();
         
         // Create the vertex transform pipeline
         {
             gfx::GpuPipeline::Params plParams;
-            plParams.m_vertexFuncName = "Debug3dVertexShader";
-            plParams.m_pixelFuncName = "Debug3dFragmentShader";
-            plParams.m_vertexDesc[0] = m_vertexDesc;
-            plParams.m_label = "Debug Line Draw";
+            plParams.m_vertexFuncName   = "Debug3dVertexShader";
+            plParams.m_pixelFuncName    = "Debug3dFragmentShader";
+            plParams.m_vertexDesc[0]    = m_vertexDesc;
+            plParams.m_label            = "Debug Line Draw";
+            plParams.m_context          = gfxCtxt;
             
             m_pipeline = gfx::CreateGpuPipeline( &plParams );
         }
+    }
     
-        m_maxLines = maxLines;
+    //======================================================================================================================
+    void DebugLineDraw::DoPass( CmdScene * scene ) {
+        gfx::SetRenderPipeline( m_pipeline );
+        gfx::SetVertexBuffer( m_renderBuffers->m_currBuffer->m_lineVertices, Debug3dBufferIndex_Verts, 0);
+        
+        for ( CmdScene3d * scene3d = scene->m_scene3dList.m_head;
+             scene3d != nullptr;
+             scene3d = scene3d->m_next) {
+            DoPass ( scene3d );
+        }
     }
 
     //======================================================================================================================
@@ -72,11 +76,6 @@ namespace i3d {
         
 #if 0
         // NEW LINE DRAWING CODE
-        
-        [encoder setRenderPipelineState: this->m_lineDrawPipeline ];
-        gfx::SetVertexBuffer( m_renderBuffers.m_currBuffer->m_lineVertices, Debug3dBufferIndex_Verts, 0);
-        
-    
         RenderBuffers::AllocInfo<Debug3dUniforms> sceneConstInfo;
         m_renderBuffers.AllocSceneConstant(sceneConstInfo, 1);
 
@@ -90,9 +89,9 @@ namespace i3d {
                               scene->m_lineIndexCount, m_renderBuffers.m_currBuffer->m_lineIndices);
 #endif
         
-#if 0
+#if 1
                     
-        if ( vertexCount == 0 ) {
+        if ( scene3d->m_lineIndexCount == 0 ) {
             return;
         }
         
@@ -102,11 +101,12 @@ namespace i3d {
         RenderBuffers::AllocInfo<Debug3dUniforms> sceneConstInfo;
         m_renderBuffers->AllocSceneConstant(sceneConstInfo, 1);
         
-        sceneConstInfo.m_memory->projMatrix = projMat;
-        sceneConstInfo.m_memory->viewMatrix = viewMat;
+        sceneConstInfo.m_memory->projMatrix = scene3d->m_matProj;
+        sceneConstInfo.m_memory->viewMatrix = scene3d->m_matView;
                 
         gfx::SetVertexBuffer( m_renderBuffers->m_currBuffer->m_sceneConstantBuffer, Debug3dBufferIndex_Uniforms, sceneConstInfo.m_offs );
                     
+        /*
         size_t vertexDataSize = m_vertexBufferStride * vertexCount;
         size_t indexDataSize = sizeof(uint32_t) * indexCount;
         
@@ -120,44 +120,26 @@ namespace i3d {
         memcpy(indexBufferDst, indices, indexDataSize );
         
         m_renderBuffers->m_currBuffer->m_lineVertices->Unmap();
-        m_renderBuffers->m_currBuffer->m_lineIndices->Unmap();
+        m_renderBuffers->m_currBuffer->m_lineIndices->Unmap(); */
         
-        gfx::DrawIndexedPrim( gfx::PRIM_LINES, 0, indexCount, m_renderBuffers->m_currBuffer->m_lineIndices );
+        gfx::DrawIndexedPrim( gfx::PRIM_LINES,
+                              scene3d->m_lineIndexStart, scene3d->m_lineIndexCount,
+                              m_renderBuffers->m_currBuffer->m_lineIndices );
 #endif
     }
     
     //======================================================================================================================
     void DebugLineDraw::BuildLineBuffers( CmdScene * scene ) {
         
-        uint32_t currIndexCount = 0;
-        uint32_t currVertexCount = 0;
+        if (scene->m_lineIndexCount == 0 ) {
+            return;
+        }
         
         DebugVertex * verts = (DebugVertex *) m_renderBuffers->m_currBuffer->m_lineVertices->Map();
         uint32_t * indices = (uint32_t *) m_renderBuffers->m_currBuffer->m_lineIndices->Map();
         
-        for ( CmdScene3d * scene3d = scene->m_scene3dList.m_head; scene3d != nullptr; scene3d = scene3d->m_next ) {
-            scene3d->m_lineIndexStart = currIndexCount;
-            
-            if ( scene3d->m_lineIndexCount > 0 ) {
-                
-                uint32_t newVertexCount = (uint32_t) ( currVertexCount + scene3d->m_lineVertexCount );
-                uint32_t newIndexCount = (uint32_t) ( currIndexCount + scene3d->m_lineIndexCount );
-                
-                if ( newIndexCount < m_indexCapacity && newVertexCount < m_vertexCapacity ) {
-                    
-                    memcpy( verts, scene3d->m_lineVerts, scene3d->m_lineVertexCount * sizeof(DebugVertex));
-                    
-                    for ( uint32_t i = 0; i < scene3d->m_lineIndexCount; i += 2) {
-                        indices[i] = scene3d->m_lineIndices[i] + currVertexCount;
-                        indices[i+1] = scene3d->m_lineIndices[i+1] + currVertexCount;
-                    }
-                }
-                
-                scene3d->m_lineIndexStart = currIndexCount;
-                currIndexCount = newIndexCount;
-                currVertexCount = newVertexCount;
-            }
-        }
+        memcpy(verts, scene->m_lineVerts, m_vertexBufferStride * scene->m_lineVertexCount );
+        memcpy(indices, scene->m_lineIndices, sizeof(uint32_t) * scene->m_lineIndexCount );
         
         m_renderBuffers->m_currBuffer->m_lineVertices->Unmap();
         m_renderBuffers->m_currBuffer->m_lineIndices->Unmap();

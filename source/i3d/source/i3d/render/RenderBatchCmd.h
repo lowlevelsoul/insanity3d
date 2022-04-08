@@ -102,15 +102,13 @@ namespace i3d {
         Vector4                 m_cameraPos;
         Vector4                 m_globalLightDir;
         Vector4                 m_globalLightColour;
-        
-        CmdLineVertex *         m_lineVerts;
-        uint32_t *              m_lineIndices;
-        size_t                  m_lineIndexCapacity;
-        size_t                  m_lineIndexCount;
-        size_t                  m_lineVertexCapacity;
-        size_t                  m_lineVertexCount;
 
-        uint32_t                m_lineIndexStart;
+
+        size_t                  m_lineIndexStart;
+        size_t                  m_lineIndexCount;
+        size_t                  m_lineVertexStart;
+        size_t                  m_lineVertexCount;
+        
         uint64_t                m_sceneConstOffs;
         uint64_t                m_scenePixelConstOffs;          ///< Offset in the scene constant buffer for the 3d-scene's pixel constants
                                                                 ///
@@ -136,6 +134,13 @@ namespace i3d {
         uint32_t                m_materialCapacity;
         uint32_t                m_materialCount;
         
+        CmdLineVertex *         m_lineVerts;
+        uint32_t *              m_lineIndices;
+        size_t                  m_lineIndexCapacity;
+        size_t                  m_lineIndexCount;
+        size_t                  m_lineVertexCapacity;
+        size_t                  m_lineVertexCount;
+
         uint32_t                m_transformedVertexCount;
     };
 }

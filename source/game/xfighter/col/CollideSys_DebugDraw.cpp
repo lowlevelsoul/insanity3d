@@ -18,16 +18,14 @@ void CollideSys::DrawDebugCircle(const i3d::Vector2& pos, float radius, const i3
         verts[i] = p3 + (m_circleVerts[i] * radius);
     }
     
-    //engine.render->Debug3dClosedLines(verts, CIRCLE_VERTS_COUNT, colour);
+    render->DrawClosedLineList(verts, CIRCLE_VERTS_COUNT, colour);
 }
 
 //======================================================================================================================
 void CollideSys::DebugDraw() {
-    
-#if 0
-    for(Collider::ListNode* shapeNode = m_shapeList.GetNext();
+    for(Collider::ListNode* shapeNode = m_shapeList.Next();
         shapeNode->IsRoot() == false;
-        shapeNode = shapeNode->GetNext()) {
+        shapeNode = shapeNode->Next()) {
         
         Collider* obj = *shapeNode;
         int32_t colIndex = (int32_t) obj->m_group % (int32_t) DEBUG_COLOUR_COUNT;
@@ -59,21 +57,19 @@ void CollideSys::DebugDraw() {
         }
     }
     
-    
-    for(int32_t p=0; p < m_sortedPairCount; ++p) {
-        bool drawPair = ((m_sortedPairs[p]->m_shape0->m_group && m_debugDrawPairs) ||
-                         (m_sortedPairs[p]->m_shape1->m_group && m_debugDrawPairs));
+    for ( auto i : m_pairs ) {
+        Pair & p = i.second;
+        bool drawPair = ((p.m_shape0->m_group && m_debugDrawPairs) ||
+                         (p.m_shape1->m_group && m_debugDrawPairs));
         if (drawPair == true) {
-            DrawPair(m_sortedPairs[p]);
+            DrawPair( &p );
         }
     }
-#endif
 }
 
 //======================================================================================================================
 void CollideSys::DrawCell(Cell* cell) {
-#if 0
-    Vector3 verts[4];
+    i3d::Vector3 verts[4];
     float x0 = cell->m_boundsMin.X();
     float y0 = cell->m_boundsMin.Y();
     float x1 = cell->m_boundsMax.X();
@@ -85,37 +81,12 @@ void CollideSys::DrawCell(Cell* cell) {
     verts[2].Set(x1, 0, y0 );
     verts[3].Set(x0, 0, y0 );
     
-    engine.render->Debug3dClosedLines(verts, 4, Vector4(0, 1, 0, 1));
-#endif
+    render->DrawClosedLineList(verts, 4, i3d::Vector4(0, 1, 0, 1));
 }
 
 //======================================================================================================================
 void CollideSys::DrawAxisBox(const i3d::Vector2& bmin, const i3d::Vector2& bmax, const i3d::Vector4& colour) {
-#if 0
-    Vector3 verts[4];
-    float x0 = bmin.X();
-    float y0 = bmin.Y();
-    float x1 = bmax.X();
-    float y1 = bmax.Y();
-
-    
-    verts[0].Set(x0, GameConstants::PLAYFIELD_PLANE_HEIGHT, y1 );
-    verts[1].Set(x1, GameConstants::PLAYFIELD_PLANE_HEIGHT, y1 );
-    verts[2].Set(x1, GameConstants::PLAYFIELD_PLANE_HEIGHT, y0 );
-    verts[3].Set(x0, GameConstants::PLAYFIELD_PLANE_HEIGHT, y0 );
-    
-    engine.render->Debug3dClosedLines(verts, 4, Vector4(0, 1, 0, 1));
-#endif
-}
-
-
-//======================================================================================================================
-void CollideSys::DrawPair(Pair* pair) {
-#if 0
-    Vector2 bmin, bmax;
-    pair->GetBounds(bmin, bmax);
-    
-    Vector3 verts[4];
+    i3d::Vector3 verts[4];
     float x0 = bmin.X();
     float y0 = bmin.Y();
     float x1 = bmax.X();
@@ -127,6 +98,25 @@ void CollideSys::DrawPair(Pair* pair) {
     verts[2].Set(x1, 0, y0 );
     verts[3].Set(x0, 0, y0 );
     
-    engine.render->Debug3dClosedLines(verts, 4, Vector4(1, 0, 1, 1));
-#endif
+    render->DrawClosedLineList(verts, 4, i3d::Vector4(0, 1, 0, 1));
+}
+
+//======================================================================================================================
+void CollideSys::DrawPair(Pair* pair) {
+    i3d::Vector2 bmin, bmax;
+    pair->GetBounds(bmin, bmax);
+    
+    i3d::Vector3 verts[4];
+    float x0 = bmin.X();
+    float y0 = bmin.Y();
+    float x1 = bmax.X();
+    float y1 = bmax.Y();
+
+    
+    verts[0].Set(x0, 0, y1 );
+    verts[1].Set(x1, 0, y1 );
+    verts[2].Set(x1, 0, y0 );
+    verts[3].Set(x0, 0, y0 );
+    
+    render->DrawClosedLineList(verts, 4, i3d::Vector4(1, 0, 1, 1));
 }

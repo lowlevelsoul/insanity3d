@@ -127,4 +127,9 @@ namespace i3d {
 
 #define RTTI_CLASS_END(__type__) RTTI_CLASS_END_NAMED( __type__, #__type__)
 
+#define RTTI_CLASS_DEFINE(__type__)\
+    RTTI_CLASS_BEGIN(__type__)\
+    RTTI_CLASS_END(__type__)
+
+
 #endif

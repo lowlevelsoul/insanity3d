@@ -62,7 +62,7 @@ void Collider::AddToCell(Cell* newCell) {
     }
     
     if (newCell != m_cell) {
-        m_cellListNode.InsertBefore(&newCell->m_objects);
+        newCell->m_objects.InsertAfter( &m_cellListNode );
         m_cell = newCell;
     }
 }

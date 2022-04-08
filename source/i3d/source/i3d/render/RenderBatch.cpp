@@ -11,6 +11,9 @@
 
 namespace i3d {
     
+    extern CVar render_lineVertexCapacity;
+    extern CVar render_lineIndexCapacity;
+    
     //======================================================================================================================
     RenderBatch::RenderBatch() {
         m_memory = nullptr;
@@ -47,10 +50,17 @@ namespace i3d {
         m_currScene = Alloc<CmdScene>();
         m_currScene->m_scene3dList.Reset();
         
-        m_currScene->m_materials  = Alloc<CmdMaterial>( m_materialCapacity );
-        m_currScene->m_materialCapacity = (uint32_t) m_materialCapacity;
-        m_currScene->m_materialCount = 0;
+        m_currScene->m_materials            = Alloc<CmdMaterial>( m_materialCapacity );
+        m_currScene->m_materialCapacity     = (uint32_t) m_materialCapacity;
+        m_currScene->m_materialCount        = 0;
         m_currScene->m_transformedVertexCount = 0;
+        
+        m_currScene->m_lineVerts            = Alloc<CmdLineVertex>( m_lineCapacity * 2 );
+        m_currScene->m_lineIndices          = Alloc<uint32_t>( m_lineCapacity * 2 );
+        m_currScene->m_lineIndexCapacity    = render_lineIndexCapacity.GetInt();
+        m_currScene->m_lineIndexCount       = 0;
+        m_currScene->m_lineVertexCapacity   = render_lineVertexCapacity.GetInt();
+        m_currScene->m_lineVertexCount      = 0;
         
         ++m_materialTimestamp;
         
@@ -82,12 +92,12 @@ namespace i3d {
         m_currScene3d->m_globalLightColour.Set(2, 2, 2, 1);
         m_currScene3d->m_cameraPos = matView.m_rows[3];
         
-        m_currScene3d->m_lineVerts = nullptr;
-        m_currScene3d->m_lineIndices = nullptr;
-        m_currScene3d->m_lineIndexCapacity = 0;
+        m_currScene3d->m_lineIndexStart = 0;
         m_currScene3d->m_lineIndexCount = 0;
-        m_currScene3d->m_lineVertexCapacity = 0;
+        m_currScene3d->m_lineVertexStart = 0;
         m_currScene3d->m_lineVertexCount = 0;
+        
+        
         m_currScene3d->m_materialListStart = m_currScene->m_materialCount;
         m_currScene3d->m_materialListCount = 0;
 
@@ -103,20 +113,18 @@ namespace i3d {
     //======================================================================================================================
     void RenderBatch::DrawLine( const Vector3 & v0, const Vector3 & v1, const Vector4 & colour ) {
         
-        if ( m_currScene3d->m_lineVertexCapacity == 0 ) {
-            m_currScene3d->m_lineVertexCapacity = m_lineCapacity * 2;
-            m_currScene3d->m_lineIndexCapacity = m_lineCapacity * 2;
-            m_currScene3d->m_lineVerts = Alloc<CmdLineVertex>( m_currScene3d->m_lineVertexCapacity );
-            m_currScene3d->m_lineIndices = Alloc<uint32_t>( m_currScene3d->m_lineVertexCapacity );
+        if (m_currScene3d->m_lineIndexCount == 0 ) {
+            m_currScene3d->m_lineIndexStart = m_currScene->m_lineIndexCount;
+            m_currScene3d->m_lineVertexStart = m_currScene->m_lineVertexCount;
         }
         
-        if ( m_currScene3d->m_lineIndexCount >= m_currScene3d->m_lineIndexCapacity - 1 ||
-             m_currScene3d->m_lineVertexCount >= m_currScene3d->m_lineVertexCapacity - 1 ) {
+        if ( m_currScene->m_lineIndexCount >= m_currScene->m_lineIndexCapacity - 1 ||
+             m_currScene->m_lineVertexCount >= m_currScene->m_lineVertexCapacity - 1 ) {
             return;
         }
         
-        CmdLineVertex * v = &m_currScene3d->m_lineVerts[ m_currScene3d->m_lineVertexCount ];
-        uint32_t * i = &m_currScene3d->m_lineIndices[ m_currScene3d->m_lineIndexCount ];
+        CmdLineVertex * v = &m_currScene->m_lineVerts[ m_currScene->m_lineVertexCount ];
+        uint32_t * i = &m_currScene->m_lineIndices[ m_currScene->m_lineIndexCount ];
         
         v[0].m_pos = Vector4(v0,1);
         v[0].m_colour = colour;
@@ -124,11 +132,77 @@ namespace i3d {
         v[1].m_pos = Vector4(v1, 1);
         v[1].m_colour = colour;
         
-        i[0] = (uint32_t) m_currScene3d->m_lineVertexCount;
-        i[1] = (uint32_t) m_currScene3d->m_lineVertexCount+1;
+        i[0] = (uint32_t) m_currScene->m_lineVertexCount;
+        i[1] = (uint32_t) m_currScene->m_lineVertexCount+1;
         
+        m_currScene->m_lineVertexCount += 2;
+        m_currScene->m_lineIndexCount += 2;
         m_currScene3d->m_lineVertexCount += 2;
         m_currScene3d->m_lineIndexCount += 2;
+    }
+    
+    //======================================================================================================================
+    void RenderBatch::DrawLineList( const Vector3 * verts, size_t numVerts, const Vector4 & colour ) {
+        size_t numIndices = (numVerts - 1) * 2;
+        
+        if ( m_currScene->m_lineIndexCount + numIndices > m_currScene->m_lineIndexCapacity ||
+             m_currScene->m_lineVertexCount + numVerts > m_currScene->m_lineVertexCapacity ) {
+            // Not enough vertices or indices
+            return;
+        }
+        
+        
+        CmdLineVertex * v = &m_currScene->m_lineVerts[ m_currScene->m_lineVertexCount ];
+        for ( uint32_t i = 0; i < numVerts; ++i ) {
+            v->m_pos = verts[i];
+            v->m_colour = colour;
+        }
+        
+        uint32_t * index = &m_currScene->m_lineIndices[ m_currScene->m_lineIndexCount ];
+        for ( uint32_t i = 0; i < numVerts - 1; ++i ) {
+            *index = (uint32_t)(m_currScene->m_lineVertexCount + i);
+            *(index+1) = (uint32_t)(m_currScene->m_lineVertexCount + i + 1);
+        }
+        
+        
+        m_currScene->m_lineVertexCount += numVerts;
+        m_currScene->m_lineIndexCount += numIndices;
+        m_currScene3d->m_lineVertexCount += numVerts;
+        m_currScene3d->m_lineIndexCount += numIndices;
+    }
+    
+    //======================================================================================================================
+    void RenderBatch::DrawClosedLineList( const Vector3 * verts, size_t numVerts, const Vector4 & colour ) {
+        size_t numIndices = numVerts * 2;
+        
+        if ( m_currScene->m_lineIndexCount + numIndices > m_currScene->m_lineIndexCapacity ||
+             m_currScene->m_lineVertexCount + numVerts > m_currScene->m_lineVertexCapacity ) {
+            // Not enough vertices or indices
+            return;
+        }
+        
+        
+        CmdLineVertex * v = &m_currScene->m_lineVerts[ m_currScene->m_lineVertexCount ];
+        for ( uint32_t i = 0; i < numVerts; ++i ) {
+            v->m_pos.Set(verts[i], 1);
+            v->m_colour = colour;
+            ++v;
+        }
+        
+        uint32_t * index = &m_currScene->m_lineIndices[ m_currScene->m_lineIndexCount ];
+        for ( uint32_t i = 0; i < numVerts; ++i ) {
+            uint32_t nextIndex = (i + 1) % numVerts;
+            
+            *index = (uint32_t)(m_currScene->m_lineVertexCount + i);
+            *(index+1) = (uint32_t)(m_currScene->m_lineVertexCount + nextIndex);
+            
+            index += 2;
+        }
+                
+        m_currScene->m_lineVertexCount += numVerts;
+        m_currScene->m_lineIndexCount += numIndices;
+        m_currScene3d->m_lineVertexCount += numVerts;
+        m_currScene3d->m_lineIndexCount += numIndices;
     }
 
     //======================================================================================================================

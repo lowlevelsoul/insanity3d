@@ -3,8 +3,8 @@
 // Copyright (C) 2021 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#ifndef __XFIGHTER_COLSHAPECIRCLE_H__
-#define __XFIGHTER_COLSHAPECIRCLE_H__
+#ifndef __COL_COLSHAPECIRCLE_H__
+#define __COL_COLSHAPECIRCLE_H__
 
 #include "col/ColShape.h"
 

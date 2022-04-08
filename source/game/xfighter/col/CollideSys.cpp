@@ -54,6 +54,17 @@ void CollideSys::Initialise(const i3d::Vector2& areaBoundsMin, const i3d::Vector
     
     CreateDebugVerts();
     SetupDebugColours();
+    
+    AddMaskName( col::GROUP_PLAYER, "player" );
+    AddMaskName( col::GROUP_ENEMY, "enemy" );
+    AddMaskName( col::GROUP_ENEMY_BULLET, "enemy_bullet" );
+    AddMaskName( col::GROUP_PLAYER_BULLET, "player_bullet" );
+}
+
+//======================================================================================================================
+void CollideSys::AddMaskName( uint32_t value, const char * name ) {
+    uint64_t hash = i3d::fh64::CalcFromString( name );
+    m_maskNameHashes[ hash ] = value;
 }
 
 //======================================================================================================================
@@ -101,6 +112,17 @@ void CollideSys::Think(float timeStep) {
     BuildPairs();
     
     TestPairs();
+}
+
+
+//======================================================================================================================
+uint32_t CollideSys::FindMask( const char * name ) const {
+    MaskMap::const_iterator findIt = m_maskNameHashes.find( i3d::fh64::CalcFromString( name ) );
+    if (findIt == m_maskNameHashes.end()) {
+        return 0;
+    }
+    
+    return findIt->second;
 }
 
 //======================================================================================================================
@@ -265,7 +287,7 @@ void CollideSys::AddDirty(Collider* obj) {
 void CollideSys::AddShape(Collider* obj) {
     assert(obj->IsAdded() == false);
     
-    obj->m_listNode.InsertBefore(&m_shapeList);
+    m_shapeList.InsertAfter( &obj->m_listNode );
 
     AddDirty(obj);
 }

@@ -22,20 +22,18 @@ namespace i3d {
             float       colour[4];
         };
         
-        size_t                          m_maxLines;
         size_t                          m_vertexBufferStride;        
         RenderBuffers *                 m_renderBuffers;
         gfx::GpuPipeline *              m_pipeline;
         gfx::VertexDesc *               m_vertexDesc;
         
-        uint32_t                        m_vertexCapacity;
-        uint32_t                        m_indexCapacity;
-        
         DebugLineDraw();
         
         ~DebugLineDraw();
         
-        void Initialise( RenderBuffers * renderBuffers, size_t maxLines );
+        void Initialise( RenderBuffers * renderBuffers, gfx::Context * gfxCtxt );
+        
+        void DoPass( CmdScene * scene );
         
         void DoPass( CmdScene3d * scene3d );
         

@@ -53,6 +53,8 @@ namespace i3d {
         virtual void SubmitPointLight( const Vector3& pos, float radius, float fallOff, const Vector4& colour )override;
         
         virtual void DrawLine( const Vector3 & v0, const Vector3 & v1, const Vector4 & colour ) override;
+        
+        virtual void DrawClosedLineList( const Vector3 * verts, size_t vertexCount, const Vector4 & colour ) override;
 
         virtual void Submit()override;
         
@@ -101,9 +103,7 @@ namespace i3d {
         RenderBuffers                   m_renderBuffers;
         StaticTransform                 m_staticTransform;
         //SkinTransform                   m_skinTransform;
-        //DebugLineDraw                   m_lineDraw;
-        
-
+        DebugLineDraw                   m_lineDraw;
     };
     
     extern RenderLocal * renderLocal;

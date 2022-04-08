@@ -3,8 +3,8 @@
 // Copyright (C) 2021 James Steele. All Rights Reserved.
 //======================================================================================================================
 
-#ifndef __COLSHAPE_H__
-#define __COLSHAPE_H__
+#ifndef __COL_COLSHAPE_H__
+#define __COL_COLSHAPE_H__
 
 #include "col/ColTypes.h"
 #include "i3d/core/IntrusiveList.h"
