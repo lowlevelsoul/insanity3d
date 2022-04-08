@@ -10,6 +10,15 @@
 static uint8_t colSysMemory[sizeof(CollideSys)];
 CollideSys* colSys = nullptr;
 
+i3d::CVar   col_dbgDraw("col_dbgDraw", false, "Enables / disables the drawing of collision debug info");
+i3d::CVar   col_dbgDrawShapes("col_dbgDrawShapes", false, "Enables / disables the drawing of collision shapes");
+i3d::CVar   col_dbgDrawCells("col_dbgDrawCells", false, "Enables / disables the drawing of collision cells");
+i3d::CVar   col_dbgDrawPairs("col_dbgDrawPairs", false, "Enables / disables the drawing of collision pairs");
+
+i3d::CVar   col_dbgDrawShapesGroups("col_dbgDrawShapesGroups", "", "String defining which groups to draw for collisions shapes");
+i3d::CVar   col_dbgDrawCellGroups("col_dbgDrawCellGroups", "", "String defining which groups to draw for collisions shapes");
+i3d::CVar   col_dbgDrawPairGroups("col_dbgDrawPairGroups", "", "String defining which groups to draw for collisions pairs");
+
 //======================================================================================================================
 void CollideCreate() {
     if (colSys == nullptr ) {
@@ -311,4 +320,24 @@ void CollideSys::RemoveShape(Collider* obj) {
     obj->ClearDirty();
 }
 
-
+//======================================================================================================================
+uint32_t CollideSys::BuildCollisionMaskFromString( const char * str ) {
+    const char * currStr = col_dbgDrawShapesGroups.GetString();
+    char itemBuff[128];
+    
+    uint32_t mask = 0;
+    
+    bool gotStr = false;
+    do {
+        gotStr = i3d::Sys::GetNextStringItem(currStr, itemBuff, 128);
+        if ( gotStr == true ) {
+            uint32_t thisMask = FindMask( itemBuff );
+            if ( thisMask != 0 ) {
+                mask |= thisMask;
+            }
+        }
+        
+    } while( gotStr == true);
+    
+    return mask;
+}

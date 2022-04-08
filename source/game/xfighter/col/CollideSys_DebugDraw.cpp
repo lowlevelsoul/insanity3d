@@ -9,6 +9,13 @@
 #include "col/ColShapeBox.h"
 #include "col/ColShapeCircle.h"
 
+extern i3d::CVar col_dbgDraw;
+extern i3d::CVar col_dbgDrawShapesGroups;
+extern i3d::CVar col_dbgDrawCellGroups;
+extern i3d::CVar col_dbgDrawPairGroups;
+extern i3d::CVar col_dbgDrawCells;
+extern i3d::CVar col_dbgDrawPairs;
+
 //======================================================================================================================
 void CollideSys::DrawDebugCircle(const i3d::Vector2& pos, float radius, const i3d::Vector4& colour) {
     i3d::Vector3 verts[CIRCLE_VERTS_COUNT];
@@ -23,6 +30,11 @@ void CollideSys::DrawDebugCircle(const i3d::Vector2& pos, float radius, const i3
 
 //======================================================================================================================
 void CollideSys::DebugDraw() {
+    
+    m_debugDrawBoundsGroups = BuildCollisionMaskFromString( col_dbgDrawShapesGroups.GetString() );
+    m_debugDrawCelGroups = BuildCollisionMaskFromString( col_dbgDrawCellGroups.GetString() );
+    m_debugDrawPairs = BuildCollisionMaskFromString( col_dbgDrawPairGroups.GetString() );
+    
     for(Collider::ListNode* shapeNode = m_shapeList.Next();
         shapeNode->IsRoot() == false;
         shapeNode = shapeNode->Next()) {
@@ -32,7 +44,7 @@ void CollideSys::DebugDraw() {
         
         Shape* shape = obj->GetShape();
         
-        if ((obj->m_group & m_debugDrawBoundsGroups) != 0) {
+        if ( col_dbgDraw.GetBool() == true && (obj->m_group & m_debugDrawBoundsGroups) != 0) {
         
             switch(shape->m_type) {
                 case Shape::TYPE_CIRCLE: {
@@ -52,17 +64,24 @@ void CollideSys::DebugDraw() {
             }
         }
         
-        if (((obj->m_group & m_debugDrawCelGroups) != 0) && (obj->m_cell != nullptr)) {
-            DrawCell(obj->m_cell);
+        if ( col_dbgDrawCells.GetBool() == true ) {
+            if (((obj->m_group & m_debugDrawCelGroups) != 0) && (obj->m_cell != nullptr)) {
+                DrawCell(obj->m_cell);
+            }
         }
     }
     
-    for ( auto i : m_pairs ) {
-        Pair & p = i.second;
-        bool drawPair = ((p.m_shape0->m_group && m_debugDrawPairs) ||
-                         (p.m_shape1->m_group && m_debugDrawPairs));
-        if (drawPair == true) {
-            DrawPair( &p );
+    if ( col_dbgDrawPairs.GetBool() == true ) {
+        
+        for ( auto i : m_pairs ) {
+            
+            Pair & p = i.second;
+            bool drawPair = ((p.m_shape0->m_group && m_debugDrawPairs) ||
+                             (p.m_shape1->m_group && m_debugDrawPairs));
+            
+            if (drawPair == true) {
+                DrawPair( &p );
+            }
         }
     }
 }

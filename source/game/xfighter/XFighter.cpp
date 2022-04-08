@@ -35,6 +35,15 @@ i3d::CVar   in_Player2Fire("in_player2Fire", 0.0f, "Player2 move input in z-dire
 
 i3d::CVar   in_enabled("in_enabled", 1, "Enables / disables player input");
 
+extern i3d::CVar   col_dbgDraw;
+extern i3d::CVar   col_dbgDrawShapes;
+extern i3d::CVar   col_dbgDrawCells;
+extern i3d::CVar   col_dbgDrawPairs;
+
+extern i3d::CVar   col_dbgDrawShapesGroups;
+extern i3d::CVar   col_dbgDrawCellGroups;
+extern i3d::CVar   col_dbgDrawPairGroups;
+
 //======================================================================================================================
 i3d::Game * i3d::GameCreate() {
     if ( game == nullptr ) {
@@ -70,7 +79,15 @@ void XFighter::Initialise() {
     CollideCreate();
     i3d::Vector2 bmin(-256, -256), bmax(256, 256);
     colSys->Initialise( bmin, bmax );
-    colSys->DebugSetDrawBoundsGroups( col::GROUP_PLAYER );
+
+    col_dbgDraw.Set( true );
+    col_dbgDrawShapes.Set( true );
+    col_dbgDrawCells.Set( true );
+    col_dbgDrawPairs.Set( true );
+    
+    col_dbgDrawShapesGroups.Set( "player;enemy;player_bullet;enemy_bullet" );
+    col_dbgDrawCellGroups.Set( "player;enemy" );
+    col_dbgDrawPairGroups.Set( "player;enemy" );
     
     m_globalsRes = res->Load<i3d::RttiResource>("~/rtti/GameGlobals.brtti");
     m_playerDef = res->Load<EntityDefResource>("~/entities/Player.ent");
@@ -212,27 +229,24 @@ void XFighter::ProcessInputs( float displayScale ) {
     }
 }
 
-
 //======================================================================================================================
 void XFighter::Draw( float timeStep, uint32_t viewWidth, uint32_t viewHeight, float displayScale ) {
-    i3d::Matrix4 projMat, viewMat;
-    
-    projMat.SetProjectionPerspLH( i3d::scalar::DegToRad( 60 ), 4.0f / 3.0f, 5, 500 );
-    viewMat = i3d::Matrix4::IDENTITY;
-    viewMat.SetTranslation( i3d::Vector3( 0, 0, -20 ) );
     
     int32_t viewport[] = { 0, 0, (int32_t)viewWidth, (int32_t)viewHeight };
     
     render->BeginScene();
     {
         if ( m_globals != nullptr ) {
+            
             render->BeginScene3d( m_globals->m_camera->m_projection,
                                   m_globals->m_camera->m_transform,
                                   viewport );
             
             entityMgr->Draw( timeStep, viewWidth, viewHeight);
             
-            colSys->DebugDraw();
+            if ( col_dbgDraw.GetBool() == true ) {
+                colSys->DebugDraw();
+            }
             
             render->EndScene3d();
         }        

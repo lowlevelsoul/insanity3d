@@ -132,6 +132,10 @@ public:
     void DebugSetDrawCellGroups(uint32_t group) { m_debugDrawCelGroups = group; }
     
     void AddMaskName( uint32_t value, const char * name );
+    
+protected:
+    
+    uint32_t BuildCollisionMaskFromString( const char * str );
 };
 
 #endif
