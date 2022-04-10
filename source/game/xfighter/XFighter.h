@@ -51,6 +51,7 @@ public:
     i3d::RttiResource *         m_globalsRes;
     GameGlobals *               m_globals;
     EntityDefResource *         m_playerDef;
+    EntityDefResource *         m_enemyDef;
     PlayerTouchController       m_touchController;
     int32_t                     m_viewWidth;
     int32_t                     m_viewHeight;
@@ -59,6 +60,7 @@ public:
     uint32_t                     m_inputEventCount;          ///< Number of input events
     
     Ship *                      m_player;
+    Ship *                      m_enemy;
 };
 
 extern XFighter * game;

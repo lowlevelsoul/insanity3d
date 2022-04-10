@@ -111,6 +111,7 @@ namespace i3d {
             for ( uint32_t imat = 0; imat < scene3d->m_materialListCount; ++imat ) {
                 renderLocal->UseMaterial( matCmd->m_material );
                 gfx::DrawIndexedPrim( gfx::PRIM_TRIANGLES, matCmd->m_drawIndexStart, matCmd->m_drawIndexCount , m_currBuffer->m_indexBuffer );
+                ++matCmd;
             }
         }
     }

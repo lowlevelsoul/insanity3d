@@ -127,6 +127,8 @@ namespace i3d {
         gfx::SetVertexBuffer( m_buffers->m_currBuffer->m_vertexBuffer, BufferIndex_VertsDstBuffer, 0 );
         gfx::SetVertexBuffer( m_buffers->m_currBuffer->m_sceneConstantBuffer, BufferIndex_VertsSceneConst, 0 );
         gfx::SetVertexBuffer( m_buffers->m_currBuffer->m_sceneConstantBuffer,  BufferIndex_VertsMeshConst, 0 );
+        
+        uint32_t vertexDrawCount = 0;
                 
         for ( CmdScene3d * scene3d = scene->m_scene3dList.m_head; scene3d != nullptr; scene3d = scene3d->m_next ) {
             
@@ -145,12 +147,15 @@ namespace i3d {
                 
                 for ( CmdDrawModel * draw = matCmd->m_drawList.m_head; draw != nullptr; draw = draw->m_next ) {
                     
+                    draw->m_transformVertexStart = vertexDrawCount;
+                    
                     ModelLocal * modelLocal = (ModelLocal *) draw->m_model;
                     
-                    // Set the transform constantds for this mesh
-                    uintptr_t dstVertexOffset = 0;
-                    m_buffers->AllocIndex( dstVertexOffset, sizeof(uint32_t) * draw->m_model->GetVertexCount() );
                     
+                    // Set the transform constants for this mesh
+                    uintptr_t dstVertexOffset = 0;
+                    m_buffers->AllocVertex( dstVertexOffset, m_outputVertexStride * draw->m_model->GetVertexCount() );
+   
                     RenderBuffers::AllocInfo<TransformStaticVertexMeshConstants> meshConst;
                     m_buffers->AllocSceneConstant( meshConst, 1 );
                     meshConst.m_memory->modelMatrix = draw->m_transform;
@@ -159,7 +164,10 @@ namespace i3d {
                     meshConst.m_memory->materialInfo[2] = 0;
                     meshConst.m_memory->materialInfo[3] = 0;
                     
-                    // Set the offset for the transformed vertices
+                    // Set the offset for the destination / transformed vertices
+                    gfx::SetVertexBufferOffset( BufferIndex_VertsDstBuffer, dstVertexOffset );
+                    
+                    // Set the offset for the mesh info
                     gfx::SetVertexBufferOffset( BufferIndex_VertsMeshConst, meshConst.m_offs );
                     
                     // Set the src vertex buffer
@@ -168,6 +176,7 @@ namespace i3d {
                     // Tansform the vertices
                     gfx::DrawPrim( gfx::PRIM_POINTS, 0, draw->m_model->GetVertexCount() );
                     
+                    vertexDrawCount += draw->m_model->GetVertexCount();
                 }
                 
                 ++matCmd;
@@ -189,25 +198,35 @@ namespace i3d {
             
             CmdMaterial * matCmd = &scene->m_materials[ scene3d->m_materialListStart ];
             
+            
             for ( uint32_t imat = 0; imat < scene3d->m_materialListCount; ++ imat ) {
+                
+                matCmd->m_drawIndexStart = (uint32_t) totalindexCount;
                 
                 for ( CmdDrawModel * draw = matCmd->m_drawList.m_head; draw != NULL; draw = draw->m_next ) {
                     
                     ModelLocal * modelLocal = (ModelLocal *) draw->m_model;
                     uint32_t thisIndexCount = (uint32_t) modelLocal->GetIndexCount();
+                    
+                    uintptr_t indexOffset;
+                    m_buffers->AllocIndex( indexOffset, sizeof(uint32_t) * thisIndexCount );
                 
                     // Setup the constants for this
                     RenderBuffers::AllocInfo<TransformStaticIndexConstants> meshConst;
                     m_buffers->AllocSceneConstant( meshConst, 1 );
                     
                     meshConst.m_memory->vertexOffset = draw->m_transformVertexStart;
+                    
                     gfx::SetVertexBufferOffset( BufferIndex_IndexMeshConst, meshConst.m_offs );
+                    gfx::SetVertexBufferOffset( BufferIndex_IndexDstBuffer, indexOffset );
                     
                     gfx::SetVertexBuffer( modelLocal->m_indices, BufferIndex_IndexSrcBuffer, 0 );
                     gfx::DrawPrim( gfx::PRIM_POINTS, 0, thisIndexCount );
                     
                     totalindexCount += thisIndexCount;
                     matCmd->m_drawIndexCount += thisIndexCount;
+                    
+
                 }
                 
                 ++matCmd;

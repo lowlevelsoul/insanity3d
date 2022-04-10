@@ -91,6 +91,7 @@ void XFighter::Initialise() {
     
     m_globalsRes = res->Load<i3d::RttiResource>("~/rtti/GameGlobals.brtti");
     m_playerDef = res->Load<EntityDefResource>("~/entities/Player.ent");
+    m_enemyDef = res->Load<EntityDefResource>("~/entities/Enemy_gunship.ent");
 
     res->StartLoading();
     while ( res->HasPending() == true ) {
@@ -100,8 +101,10 @@ void XFighter::Initialise() {
     m_globals = m_globalsRes->GetObject()->SafeCast<GameGlobals>();
     
     m_player = m_playerDef->Construct()->SafeCast<Ship>();
-    entityMgr->AddEntity( m_player );
+    m_enemy = m_enemyDef->Construct()->SafeCast<Ship>();
     
+    entityMgr->AddEntity( m_player );
+    entityMgr->AddEntity( m_enemy );
 }
 
 //======================================================================================================================

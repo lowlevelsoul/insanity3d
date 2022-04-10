@@ -86,10 +86,10 @@ namespace i3d {
         m_currScene3d->m_modelDraw.Reset();
         m_currScene3d->m_skins.Reset();
         
-        Vector3 dir(0, -20, 20);
+        Vector3 dir(0, -30, 20);
         dir.Normalise();
         m_currScene3d->m_globalLightDir.Set( dir, 1 );
-        m_currScene3d->m_globalLightColour.Set(2, 2, 2, 1);
+        m_currScene3d->m_globalLightColour.Set(1, 1, 1, 1);
         m_currScene3d->m_cameraPos = matView.m_rows[3];
         
         m_currScene3d->m_lineIndexStart = 0;
@@ -211,7 +211,6 @@ namespace i3d {
         
         CmdMaterial * matCmd = GetMaterialCmd( mat );
         matCmd->m_drawList.Add( drawCmd );
-        matCmd->m_drawIndexCount += model->GetIndexCount();
         
         drawCmd->m_model        = model;
         drawCmd->m_transform    = transform;
