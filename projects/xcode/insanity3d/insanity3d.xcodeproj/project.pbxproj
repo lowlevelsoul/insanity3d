@@ -466,6 +466,24 @@
 		D3F4C0A427FEBDFD00A82826 /* ColShapeDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0A127FEBDFD00A82826 /* ColShapeDef.cpp */; };
 		D3F4C0A527FEBDFD00A82826 /* ColShapeDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0A127FEBDFD00A82826 /* ColShapeDef.cpp */; };
 		D3F4C0A627FED16600A82826 /* ColShapeDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0A127FEBDFD00A82826 /* ColShapeDef.cpp */; };
+		D3F4C0AB28041F3A00A82826 /* Projectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0A928041F3A00A82826 /* Projectile.cpp */; };
+		D3F4C0AC28041F3A00A82826 /* Projectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0A928041F3A00A82826 /* Projectile.cpp */; };
+		D3F4C0AD28041F3A00A82826 /* Projectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0A928041F3A00A82826 /* Projectile.cpp */; };
+		D3F4C0B028041F5B00A82826 /* ProjectileDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0AE28041F5B00A82826 /* ProjectileDef.cpp */; };
+		D3F4C0B128041F5B00A82826 /* ProjectileDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0AE28041F5B00A82826 /* ProjectileDef.cpp */; };
+		D3F4C0B228041F5B00A82826 /* ProjectileDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0AE28041F5B00A82826 /* ProjectileDef.cpp */; };
+		D3F4C0B3280730DA00A82826 /* ProjectileDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0AE28041F5B00A82826 /* ProjectileDef.cpp */; };
+		D3F4C0B62807321600A82826 /* ProjectileCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0B42807321600A82826 /* ProjectileCircle.cpp */; };
+		D3F4C0B72807321600A82826 /* ProjectileCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0B42807321600A82826 /* ProjectileCircle.cpp */; };
+		D3F4C0B82807321600A82826 /* ProjectileCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0B42807321600A82826 /* ProjectileCircle.cpp */; };
+		D3F4C0BB2807358000A82826 /* PlayerFireControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0B92807358000A82826 /* PlayerFireControl.cpp */; };
+		D3F4C0BC2807358000A82826 /* PlayerFireControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0B92807358000A82826 /* PlayerFireControl.cpp */; };
+		D3F4C0BD2807358000A82826 /* PlayerFireControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0B92807358000A82826 /* PlayerFireControl.cpp */; };
+		D3F4C0BF280736B000A82826 /* PlayerFireControlDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0BE280736B000A82826 /* PlayerFireControlDef.cpp */; };
+		D3F4C0C0280736B000A82826 /* PlayerFireControlDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0BE280736B000A82826 /* PlayerFireControlDef.cpp */; };
+		D3F4C0C1280736B000A82826 /* PlayerFireControlDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0BE280736B000A82826 /* PlayerFireControlDef.cpp */; };
+		D3F4C0C2280736B000A82826 /* PlayerFireControlDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C0BE280736B000A82826 /* PlayerFireControlDef.cpp */; };
+		D3F4C0C428096BB700A82826 /* PlayerMovementDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3F4C06227FB6DAF00A82826 /* PlayerMovementDef.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -904,6 +922,16 @@
 		D3F4C09D27FEBDC800A82826 /* ColShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColShape.h; sourceTree = "<group>"; };
 		D3F4C0A127FEBDFD00A82826 /* ColShapeDef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ColShapeDef.cpp; sourceTree = "<group>"; };
 		D3F4C0A227FEBDFD00A82826 /* ColShapeDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColShapeDef.h; sourceTree = "<group>"; };
+		D3F4C0A928041F3A00A82826 /* Projectile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Projectile.cpp; sourceTree = "<group>"; };
+		D3F4C0AA28041F3A00A82826 /* Projectile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Projectile.h; sourceTree = "<group>"; };
+		D3F4C0AE28041F5B00A82826 /* ProjectileDef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectileDef.cpp; sourceTree = "<group>"; };
+		D3F4C0AF28041F5B00A82826 /* ProjectileDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectileDef.h; sourceTree = "<group>"; };
+		D3F4C0B42807321600A82826 /* ProjectileCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectileCircle.cpp; sourceTree = "<group>"; };
+		D3F4C0B52807321600A82826 /* ProjectileCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectileCircle.h; sourceTree = "<group>"; };
+		D3F4C0B92807358000A82826 /* PlayerFireControl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerFireControl.cpp; sourceTree = "<group>"; };
+		D3F4C0BA2807358000A82826 /* PlayerFireControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerFireControl.h; sourceTree = "<group>"; };
+		D3F4C0BE280736B000A82826 /* PlayerFireControlDef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerFireControlDef.cpp; sourceTree = "<group>"; };
+		D3F4C0C3280736C400A82826 /* PlayerFireControlDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerFireControlDef.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1056,6 +1084,7 @@
 		D34A4A1227CA68FC0083DD65 /* xfighter */ = {
 			isa = PBXGroup;
 			children = (
+				D3F4C0A828041F0100A82826 /* weapons */,
 				D3F4C06E27FC8F7000A82826 /* col */,
 				D3F4C01227F7765600A82826 /* misc */,
 				D3F4C00C27F706F700A82826 /* ship */,
@@ -1704,6 +1733,10 @@
 				D3F4C09D27FEBDC800A82826 /* ColShape.h */,
 				D3F4C0A127FEBDFD00A82826 /* ColShapeDef.cpp */,
 				D3F4C0A227FEBDFD00A82826 /* ColShapeDef.h */,
+				D3F4C0B92807358000A82826 /* PlayerFireControl.cpp */,
+				D3F4C0BA2807358000A82826 /* PlayerFireControl.h */,
+				D3F4C0BE280736B000A82826 /* PlayerFireControlDef.cpp */,
+				D3F4C0C3280736C400A82826 /* PlayerFireControlDef.h */,
 			);
 			path = ship;
 			sourceTree = "<group>";
@@ -1765,6 +1798,19 @@
 				D3F4C07827FC8F8000A82826 /* ColTypes.h */,
 			);
 			path = col;
+			sourceTree = "<group>";
+		};
+		D3F4C0A828041F0100A82826 /* weapons */ = {
+			isa = PBXGroup;
+			children = (
+				D3F4C0A928041F3A00A82826 /* Projectile.cpp */,
+				D3F4C0AA28041F3A00A82826 /* Projectile.h */,
+				D3F4C0AE28041F5B00A82826 /* ProjectileDef.cpp */,
+				D3F4C0AF28041F5B00A82826 /* ProjectileDef.h */,
+				D3F4C0B42807321600A82826 /* ProjectileCircle.cpp */,
+				D3F4C0B52807321600A82826 /* ProjectileCircle.h */,
+			);
+			path = weapons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2140,6 +2186,7 @@
 				D3F4C08F27FC8F8100A82826 /* ColShape.cpp in Sources */,
 				D34A495A27C916390083DD65 /* GfxDepthState_metal.mm in Sources */,
 				D34A494427C9162B0083DD65 /* Quaternion.cpp in Sources */,
+				D3F4C0BB2807358000A82826 /* PlayerFireControl.cpp in Sources */,
 				D34A495B27C916390083DD65 /* GfxRasterizeState_metal.mm in Sources */,
 				D34A49DB27C9FD960083DD65 /* RenderBuffers.cpp in Sources */,
 				D34A495227C916390083DD65 /* GfxGpuFunction_metal.mm in Sources */,
@@ -2148,7 +2195,9 @@
 				D3F4C08C27FC8F8100A82826 /* ColShapeBox.cpp in Sources */,
 				D367BB1427EA53FB00BBAAB4 /* ResourceBuilder.cpp in Sources */,
 				D3F4C08927FC8F8100A82826 /* ColQuadTree.cpp in Sources */,
+				D3F4C0B028041F5B00A82826 /* ProjectileDef.cpp in Sources */,
 				D34A4A1F27CA9ECA0083DD65 /* draw3d_pbr_bindless.metal in Sources */,
+				D3F4C0AB28041F3A00A82826 /* Projectile.cpp in Sources */,
 				D3BE385827F21F44006B345A /* Entity.cpp in Sources */,
 				D34A48E627C915EC0083DD65 /* AppDelegate.m in Sources */,
 				D34A4A2127CA9ECA0083DD65 /* Debug3d.metal in Sources */,
@@ -2170,6 +2219,7 @@
 				D34A495527C916390083DD65 /* GfxTexture_metal.mm in Sources */,
 				D34A49DE27C9FD960083DD65 /* StaticTransform.cpp in Sources */,
 				D3F4C02F27FABEC900A82826 /* EntityDef.cpp in Sources */,
+				D3F4C0B62807321600A82826 /* ProjectileCircle.cpp in Sources */,
 				D34A49A127C916600083DD65 /* RttiResource.cpp in Sources */,
 				D3F4C01527F7766A00A82826 /* Camera.cpp in Sources */,
 				D34A49DC27C9FD960083DD65 /* Render_local.cpp in Sources */,
@@ -2181,6 +2231,7 @@
 				D34A494127C9162B0083DD65 /* Math3d.cpp in Sources */,
 				D3F4C05C27FB692600A82826 /* GameView.mm in Sources */,
 				D34A4A2527CA9ECA0083DD65 /* draw3d_toon.metal in Sources */,
+				D3F4C0BF280736B000A82826 /* PlayerFireControlDef.cpp in Sources */,
 				D34A49E027C9FD960083DD65 /* Material.cpp in Sources */,
 				D3F4C04927FB461B00A82826 /* PlayerMovement.cpp in Sources */,
 				D34A4A2327CA9ECA0083DD65 /* TransformSkin.metal in Sources */,
@@ -2195,6 +2246,7 @@
 			files = (
 				D3F4C02527F86AAE00A82826 /* EntityDefResource.cpp in Sources */,
 				D3BE385E27F220F4006B345A /* EntityManager.cpp in Sources */,
+				D3F4C0B128041F5B00A82826 /* ProjectileDef.cpp in Sources */,
 				D34A493427C9161D0083DD65 /* CVarManager_local.cpp in Sources */,
 				D34A49AA27C916600083DD65 /* RttiLexer.cpp in Sources */,
 				D34A49EA27C9FD970083DD65 /* Model_local.cpp in Sources */,
@@ -2217,6 +2269,7 @@
 				D3F4C06127FB6B5000A82826 /* PlayerTouchController.cpp in Sources */,
 				D34A497227C9163A0083DD65 /* GfxVertexDesc_local.cpp in Sources */,
 				D34A496C27C9163A0083DD65 /* GfxGpuFunction_metal.mm in Sources */,
+				D3F4C0B72807321600A82826 /* ProjectileCircle.cpp in Sources */,
 				D34A496E27C9163A0083DD65 /* GfxFence_metal.mm in Sources */,
 				D34A49E827C9FD970083DD65 /* Texture_base.cpp in Sources */,
 				D34A4A4427CFE8EF0083DD65 /* Ecs.cpp in Sources */,
@@ -2246,6 +2299,7 @@
 				D34A48FA27C915EC0083DD65 /* AppDelegate.m in Sources */,
 				D34A49E427C9FD970083DD65 /* RenderBuffers.cpp in Sources */,
 				D34A49B727C916660083DD65 /* LoaderBase.cpp in Sources */,
+				D3F4C0C0280736B000A82826 /* PlayerFireControlDef.cpp in Sources */,
 				D3F4C09627FC8F8100A82826 /* CollideSys_DebugDraw.cpp in Sources */,
 				D34A494727C9162B0083DD65 /* Matrix4.cpp in Sources */,
 				D3F4C01B27F8175000A82826 /* Playfield.cpp in Sources */,
@@ -2270,6 +2324,7 @@
 				D34A497127C9163A0083DD65 /* GfxGpuTextureArray_metal.mm in Sources */,
 				D3F4C05327FB46EB00A82826 /* Input_ios.mm in Sources */,
 				D3F4C09F27FEBDC800A82826 /* ColShape.cpp in Sources */,
+				D3F4C0AC28041F3A00A82826 /* Projectile.cpp in Sources */,
 				D34A497327C9163A0083DD65 /* GfxBuffer_metal.mm in Sources */,
 				D34A49A727C916600083DD65 /* RttiParser.cpp in Sources */,
 				D3F4C03827FAC56B00A82826 /* ShipDef.cpp in Sources */,
@@ -2284,6 +2339,7 @@
 				D34A49E927C9FD970083DD65 /* Material.cpp in Sources */,
 				D34A4A2727CA9ECA0083DD65 /* pbr.metal in Sources */,
 				D34A49E627C9FD970083DD65 /* RenderBatch.cpp in Sources */,
+				D3F4C0BC2807358000A82826 /* PlayerFireControl.cpp in Sources */,
 				D34A4A5127D11D2C0083DD65 /* ComponentPrototype.cpp in Sources */,
 				D34A497427C9163A0083DD65 /* GfxDepthState_metal.mm in Sources */,
 				D34A49E327C9FD970083DD65 /* DrawLit.cpp in Sources */,
@@ -2294,11 +2350,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F4C0C1280736B000A82826 /* PlayerFireControlDef.cpp in Sources */,
 				D34A493B27C9161D0083DD65 /* CVarManager_local.cpp in Sources */,
 				D34A49B227C916610083DD65 /* RttiLexer.cpp in Sources */,
 				D34A4D3327E373CB0083DD65 /* RefObject.cpp in Sources */,
 				D3BE383F27EB7211006B345A /* filter_neon.S in Sources */,
 				D3F4C01727F7766A00A82826 /* Camera.cpp in Sources */,
+				D3F4C0B82807321600A82826 /* ProjectileCircle.cpp in Sources */,
 				D34A49EE27C9FD980083DD65 /* Texture_base.cpp in Sources */,
 				D34A4A3027CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */,
 				D34A4D5727E5CE320083DD65 /* Image_png.cpp in Sources */,
@@ -2371,6 +2429,7 @@
 				D34A4D5027E374390083DD65 /* ToolJoint.cpp in Sources */,
 				D34A4D6027E7492B0083DD65 /* RttiBuilder.cpp in Sources */,
 				D3F4C02627F86AAE00A82826 /* EntityDefResource.cpp in Sources */,
+				D3F4C0AD28041F3A00A82826 /* Projectile.cpp in Sources */,
 				D34A4D5827E5CE350083DD65 /* Image.cpp in Sources */,
 				D34A49EC27C9FD980083DD65 /* RenderBuffers.cpp in Sources */,
 				D34A499C27C916560083DD65 /* DebugLineDraw.cpp in Sources */,
@@ -2382,7 +2441,9 @@
 				D34A493D27C9161D0083DD65 /* Sys_common.cpp in Sources */,
 				D3F4C09A27FC8F8100A82826 /* ColTypes.cpp in Sources */,
 				D3F4C04B27FB461B00A82826 /* PlayerMovement.cpp in Sources */,
+				D3F4C0BD2807358000A82826 /* PlayerFireControl.cpp in Sources */,
 				D34A4A5227D11D2C0083DD65 /* ComponentPrototype.cpp in Sources */,
+				D3F4C0B228041F5B00A82826 /* ProjectileDef.cpp in Sources */,
 				D34A4A4527CFE8EF0083DD65 /* Ecs.cpp in Sources */,
 				D34A49B527C916610083DD65 /* RttiStream.cpp in Sources */,
 				D34A4D3227E373CB0083DD65 /* ToolMemStream.cpp in Sources */,
@@ -2495,14 +2556,17 @@
 				D367BAD127E8D63F00BBAAB4 /* Sys_common.cpp in Sources */,
 				D3F4C02B27F8AEBD00A82826 /* Playfield.cpp in Sources */,
 				D367BB0827E8D71100BBAAB4 /* ToolSkin.cpp in Sources */,
+				D3F4C0B3280730DA00A82826 /* ProjectileDef.cpp in Sources */,
 				D367BB0727E8D71100BBAAB4 /* ToolModel.cpp in Sources */,
 				D3F4C02C27F8AEBF00A82826 /* Camera.cpp in Sources */,
 				D367BAFF27E8D69600BBAAB4 /* ComponentPrototype.cpp in Sources */,
+				D3F4C0C2280736B000A82826 /* PlayerFireControlDef.cpp in Sources */,
 				D3F4C03A27FAC56C00A82826 /* ShipDef.cpp in Sources */,
 				D367BAD527E8D63F00BBAAB4 /* farmhash.cpp in Sources */,
 				D367BAFD27E8D69600BBAAB4 /* ComponentArray.cpp in Sources */,
 				D367BB1027E8EA6F00BBAAB4 /* ResourceCache_local.cpp in Sources */,
 				D367BAEC27E8D66600BBAAB4 /* ToolMemStream.cpp in Sources */,
+				D3F4C0C428096BB700A82826 /* PlayerMovementDef.cpp in Sources */,
 				D367BB0B27E8D71100BBAAB4 /* ToolAnimation.cpp in Sources */,
 				D367BACD27E8D63000BBAAB4 /* XFighter_builder.cpp in Sources */,
 				D367BADD27E8D65100BBAAB4 /* ResourceBuilder.cpp in Sources */,

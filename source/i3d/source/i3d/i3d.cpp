@@ -125,7 +125,7 @@ namespace i3d {
         else {
             uint64_t currTick = sys->GetTicks();
             uint64_t deltaTick = ( currTick - engine->m_lastTick );
-            deltaTime = 0.001f * (float)( deltaTick );
+            deltaTime = (float)( deltaTick ) / 1000.0f;
             engine->m_lastTick = currTick;
         }
         
