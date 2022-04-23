@@ -24,9 +24,13 @@ public:
     
     virtual void Think( float timeStep ) override;
     
+    virtual void ProjectileThink( float timeStep );
+    
     virtual void OnAdd() override;
     
     virtual void OnDelete() override;
+    
+    bool IsInPlayfield() const;
     
 public:
     i3d::Texture *          m_texture;

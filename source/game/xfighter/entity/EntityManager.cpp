@@ -67,14 +67,26 @@ void EntityManager::AddEntity( Entity * ent ) {
 }
 
 //======================================================================================================================
+void EntityManager::RemoveEntity( Entity * ent ) {
+    XE_ASSERT( ent != nullptr );
+    XE_ASSERT( ent->IsAlive() == true );        // Make sure we're not trying to remove an entity more than once
+    
+    m_deleteList.InsertBefore( &ent->m_deleteNode );
+    ent->m_flags.m_remove = 1;
+    ent->m_flags.m_active = 0;
+}
+
+//======================================================================================================================
 void EntityManager::ProcessDeleteList() {
-    if (m_deleteList.Empty() == true ) {
+    if ( m_deleteList.Empty() == true ) {
         return;
     }
     
     while ( m_deleteList.Empty() == false ) {
         Entity * ent = *m_deleteList.Next();
         m_deleteList.Next()->Remove();
+        
+        m_entities.erase( ent->m_id );
         
         ent->OnDelete();
         delete ent;

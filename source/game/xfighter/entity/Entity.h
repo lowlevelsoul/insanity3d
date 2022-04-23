@@ -51,6 +51,9 @@ public:
     const i3d::Quaternion & GetRotation() const { return m_rotation; }
     void SetRotation( const i3d::Quaternion & value ) { m_rotation = value; }
     
+    bool IsAlive() const { return m_flags.m_remove == 0; }
+    bool IsActive() const { return m_flags.m_active == 1; }
+    
 protected:
     id_t                m_id;           ///< Id / index of the entity
     list_node_t         m_deleteNode;   ///< Node use for when the item needs to be deleted
