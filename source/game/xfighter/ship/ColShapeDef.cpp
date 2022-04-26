@@ -19,6 +19,10 @@ RTTI_CLASS_BEGIN( ColShapeCircleDef )
     RTTI_PROP( FLOAT ,  "radius",   m_radius )
 RTTI_CLASS_END( ColShapeCircleDef )
 
+RTTI_CLASS_BEGIN( ColShapeBoxDef )
+    RTTI_PROP( VEC2 ,   "size",   m_size )
+RTTI_CLASS_END( ColShapeBoxDef )
+
 //======================================================================================================================
 ColShapeDef::ColShapeDef() {
     m_group = 0;
@@ -76,4 +80,20 @@ ColShapeCircleDef::~ColShapeCircleDef() {
 //======================================================================================================================
 const char * ColShapeCircleDef::GetTypeName() {
     return "ColShapeCircle";
+}
+
+
+//======================================================================================================================
+ColShapeBoxDef::ColShapeBoxDef() {
+    m_size.Set(10, 20);
+}
+
+//======================================================================================================================
+ColShapeBoxDef::~ColShapeBoxDef() {
+    
+}
+
+//======================================================================================================================
+const char * ColShapeBoxDef::GetTypeName() {
+    return "ColShapeBox";
 }

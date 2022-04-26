@@ -15,6 +15,7 @@ Collider::Collider() : m_listNode(this), m_cellListNode(this) {
     m_filter = 0;
     m_cell = nullptr;
     m_pos.Set(0, 0);
+    m_rot = 0;
     m_hitCallback =  nullptr;
     m_hitCallbackContext = nullptr;
     m_shape = nullptr;
@@ -34,6 +35,12 @@ Collider::~Collider() {
 }
 
 //======================================================================================================================
+void Collider::SetRotation( float rot ) {
+    m_rot = rot;
+    MarkDiry();
+}
+
+//======================================================================================================================
 void Collider::SetPosition(const i3d::Vector2& pos) {
     m_pos = pos;    
     MarkDiry();
@@ -45,7 +52,6 @@ void Collider::MarkDiry() {
         colSys->AddDirty(this);
     }
 }
-
 
 //======================================================================================================================
 void Collider::RemoveFromCell() {
@@ -82,6 +88,10 @@ void Collider::SetShape(Shape* shape) {
 
 //======================================================================================================================
 void Collider::UpdateBounds() {
+    
+    // Update the rotation
+    m_basis.SetRotation( m_rot );
+    
     if (m_shape != nullptr) {
         m_shape->UpdateBounds();
         

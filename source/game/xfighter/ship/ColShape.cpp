@@ -8,6 +8,7 @@
 
 #include "col/ColShape.h"
 #include "col/ColShapeCircle.h"
+#include "col/ColShapeBox.h"
 #include "col/CollideSys.h"
 
 class ColShapeCircle : public ColShape {
@@ -24,10 +25,24 @@ public:
     ShapeCircle     m_circle;
 };
 
-RTTI_CLASS_DEFINE( ColShape )
 
-RTTI_CLASS_BEGIN( ColShapeCircle )
-RTTI_CLASS_END( ColShapeCircle )
+class ColShapeBox : public ColShape {
+public:
+    RTTI_CLASS_DECLARE( ColShapeBox, ColShape )
+    
+    ColShapeBox();
+    
+    virtual ~ColShapeBox();
+    
+    virtual void Construct( ShipComponentDef * compDef ) override;
+    
+public:
+    ShapeBox         m_box;
+};
+
+RTTI_CLASS_DEFINE( ColShape )
+RTTI_CLASS_DEFINE( ColShapeBox )
+RTTI_CLASS_DEFINE( ColShapeCircle )
 
 //======================================================================================================================
 ColShape::ColShape() {
@@ -58,7 +73,9 @@ void ColShape::Construct( ShipComponentDef * compDef ) {
 void ColShape::Think( float timeStep ) {
     i3d::Vector4 location = GetOwner()->m_transform.m_rows[3];
     i3d::Vector2 pos2( location.X(), location.Z() );
+    
     m_collider.SetPosition( pos2 );
+    
 }
 
 //======================================================================================================================
@@ -77,6 +94,27 @@ void ColShapeCircle::Construct( ShipComponentDef * compDef ) {
     
     m_circle.Set( circleDef->m_center, circleDef->m_radius );
     m_collider.SetShape( & m_circle );
+
+    Super::Construct( compDef );
+}
+
+
+//======================================================================================================================
+ColShapeBox::ColShapeBox() {
+    
+}
+
+//======================================================================================================================
+ColShapeBox::~ColShapeBox() {
+    
+}
+
+//======================================================================================================================
+void ColShapeBox::Construct( ShipComponentDef * compDef ) {
+    ColShapeBoxDef * boxDef = compDef->SafeCast<ColShapeBoxDef>();
+    
+    m_box.Set( boxDef->m_size.X(), boxDef->m_size.Y() );
+    m_collider.SetShape( &m_box );
 
     Super::Construct( compDef );
 }

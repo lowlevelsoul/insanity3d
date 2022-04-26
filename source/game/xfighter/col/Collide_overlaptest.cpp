@@ -40,7 +40,7 @@ void TestCircle_Circle(OverlapResult& result, Shape* shape0, Shape* shape1) {
     
     float overlapDist = circle0->GetRadiusSqr() +  circle1->GetRadiusSqr();
     const i3d::Vector2 & c0 = circle0->GetCenterWorld();
-    const i3d::Vector2 & c1 = circle0->GetCenterWorld();
+    const i3d::Vector2 & c1 = circle1->GetCenterWorld();
     
     i3d::Vector2 sepDir = c1 - c0;
     float sepDistSqr = sepDir.Dot(sepDir);
@@ -54,18 +54,22 @@ void TestCircle_Aabox(OverlapResult& result, Shape* shape0, Shape* shape1) {
     ShapeCircle * circle = (ShapeCircle*) shape0;
     ShapeBox * box = (ShapeBox*) shape1;
     
-    const i3d::Vector2 & boxMin = box->GetMinWorld();
-    const i3d::Vector2 & boxMax = box->GetMaxWorld();
-    const i3d::Vector2 & circleCenter = circle->GetCenterWorld();
+    const i3d::Vector2 & bmin = box->GetMinWorld();
+    const i3d::Vector2 & bmax = box->GetMaxWorld();
+    const i3d::Vector2 & c = circle->GetCenterWorld();
     
-    float tx, ty;
-    tx = (circleCenter.X() < boxMin.X()) ? boxMin.X() : boxMax.X();
-    ty = (circleCenter.Y() < boxMin.Y()) ? boxMin.Y() : boxMax.Y();
     
-    i3d::Vector2 delta = circleCenter - i3d::Vector2(tx, ty);
-    float deltaSqr = delta.Dot(delta);
+    float closestX = (c.X() < bmin.X() ? bmin.X() : (c.X() > bmax.X() ? bmax.X() : c.X() ) );
+    float closestY = (c.Y() < bmin.Y() ? bmin.Y() : (c.Y() > bmax.Y() ? bmax.Y() : c.Y() ) );
+    i3d::Vector2 delta = i3d::Vector2(closestX, closestY) - c;
+    float d = delta.Dot(delta);
     
-    result.m_overlap = deltaSqr < circle->GetRadiusSqr();
+    if ( d < circle->GetRadiusSqr() ) {
+        result.m_overlap = true;
+    }
+    else {
+        result.m_overlap = false;
+    }
 }
 
 //======================================================================================================================

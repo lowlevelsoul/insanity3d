@@ -40,7 +40,8 @@ void ShapeCircle::SetRadius(float radius) {
 //======================================================================================================================
 void ShapeCircle::UpdateBounds() {
     assert(m_collider != nullptr);
-    m_centerWorld = m_center + m_collider->m_pos;
+    
+    m_centerWorld = ( m_collider->m_basis * m_center ) + m_collider->m_pos;
 }
 
 //======================================================================================================================

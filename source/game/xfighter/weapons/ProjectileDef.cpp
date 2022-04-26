@@ -11,6 +11,7 @@ RTTI_CLASS_BEGIN( ProjectileDef )
     RTTI_PROP(  VEC2,       "tex_bottom_right",     m_texBottomRight )
     RTTI_PROP(  BOOL,       "is_player",            m_isPlayer )
     RTTI_PROP(  FLOAT,      "speed",                m_speed )
+    RTTI_PROP(  FLOAT,      "damage",               m_damage )
 RTTI_CLASS_END( ProjectileDef )
 
 RTTI_CLASS_BEGIN( ProjectileCircleDef )
@@ -27,6 +28,7 @@ ProjectileDef::ProjectileDef() {
     m_texture = nullptr;
     m_isPlayer = false;
     m_speed = 4;
+    m_damage = 100.0f;
 }
 
 //======================================================================================================================

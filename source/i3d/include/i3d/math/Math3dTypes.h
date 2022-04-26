@@ -4,6 +4,7 @@
 
 #include "i3d/math/Scalar.h"
 #include "i3d/math/Vector2.h"
+#include "i3d/math/Matrix2.h"
 
 namespace i3d {
 

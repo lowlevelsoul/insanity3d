@@ -25,6 +25,7 @@ public:
     // General stuff
     bool                m_isPlayer;             ///< If true, this is a projectile that belongs to the player
     float               m_speed;                ///< Speed that the projectile is travelling
+    float               m_damage;               ///< Amount of damage the projetile causes
 };
 
 class ProjectileCircleDef : public ProjectileDef {

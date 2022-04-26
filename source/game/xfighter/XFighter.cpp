@@ -82,8 +82,8 @@ void XFighter::Initialise() {
 
     col_dbgDraw.Set( true );
     col_dbgDrawShapes.Set( true );
-    col_dbgDrawCells.Set( true );
-    col_dbgDrawPairs.Set( true );
+    //col_dbgDrawCells.Set( true );
+    //col_dbgDrawPairs.Set( true );
     
     col_dbgDrawShapesGroups.Set( "player;enemy;player_bullet;enemy_bullet" );
     col_dbgDrawCellGroups.Set( "player;enemy" );
@@ -102,8 +102,10 @@ void XFighter::Initialise() {
     
     m_player = m_playerDef->Construct()->SafeCast<Ship>();
     m_enemy = m_enemyDef->Construct()->SafeCast<Ship>();
+    m_enemy->SetLocation( i3d::Vector3(0, 0, 200 ) );
     
     entityMgr->AddEntity( m_player );
+    
     entityMgr->AddEntity( m_enemy );
 }
 

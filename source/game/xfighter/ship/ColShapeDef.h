@@ -45,4 +45,17 @@ public:
     float               m_radius;
 };
 
+class ColShapeBoxDef : public ColShapeDef {
+public:
+    RTTI_CLASS_DECLARE( ColShapeBoxDef, ColShapeDef )
+    
+    ColShapeBoxDef();
+    
+    virtual ~ColShapeBoxDef();
+    
+    virtual const char * GetTypeName() override;
+public:
+    i3d::Vector2        m_size;
+};
+
 #endif

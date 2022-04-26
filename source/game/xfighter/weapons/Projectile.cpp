@@ -16,6 +16,7 @@ RTTI_CLASS_DEFINE( Projectile )
 Projectile::Projectile() {
     m_direction = i3d::Vector3(0, 0, 1);
     m_speed = 20;
+    m_damage = 100;
 }
 
 //======================================================================================================================
@@ -28,15 +29,18 @@ void Projectile::Construct( EntityDef * def ) {
     
     ProjectileDef * pdef = def->SafeCast<ProjectileDef>();
     if ( pdef->m_isPlayer == true ) {
-        m_collider.SetGroup( col::GROUP_PLAYER );
-        m_collider.SetFilter( col::GROUP_ENEMY | col::GROUP_ENEMY_BULLET );
+        m_collider.SetGroup( col::GROUP_PLAYER_BULLET );
+        m_collider.SetFilter( col::GROUP_ENEMY );
     }
     else {
-        m_collider.SetGroup( col::GROUP_ENEMY );
-        m_collider.SetFilter( col::GROUP_PLAYER | col::GROUP_PLAYER_BULLET );
+        m_collider.SetGroup( col::GROUP_ENEMY_BULLET );
+        m_collider.SetFilter( col::GROUP_PLAYER );
     }
+    
+    m_collider.m_userData = this;
 
     m_speed = pdef->m_speed;
+    m_damage = pdef->m_damage;
 }
 
 //======================================================================================================================
@@ -48,6 +52,17 @@ void Projectile::OnAdd() {
 void Projectile::OnDelete() {
     colSys->RemoveShape( &m_collider );
     //XE_LOG("Removing projectile\n");
+}
+
+//======================================================================================================================
+void Projectile::DestroyFromHit() {
+    // It's possible that this is called more than once, so make
+    // sure we only process the first hit.
+    if ( IsAlive() == false ) {
+        return;
+    }
+    
+    entityMgr->RemoveEntity( this );
 }
 
 //======================================================================================================================
@@ -89,7 +104,7 @@ bool Projectile::IsInPlayfield() const {
     }
     
     float xmin, xmax;
-    playfield->CalcXLimits( xmin, xmax, 0, GetLocation().Z() );
+    playfield->CalcXLimits( xmin, xmax, 0, m_collider.m_boundsWorld[0].Y()  );
     if ( m_collider.m_boundsWorld[0].X() > xmax || m_collider.m_boundsWorld[1].X() < xmin ) {
         return false;
     }

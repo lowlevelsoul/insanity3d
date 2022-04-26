@@ -82,6 +82,48 @@ void Ship::Construct( EntityDef * def ) {
 }
 
 //======================================================================================================================
+bool Ship::FindComponent( uint32_t & index, i3d::RttiType * type ) {
+    
+    index = 0;
+    
+    for ( ShipComponent * c : m_components ) {
+        bool isOfType = c->GetType()->IsOfType( type );
+        if ( isOfType == true ) {
+            return true;
+        }
+        
+        ++index;
+    }
+    
+    return false;
+}
+
+//======================================================================================================================
+bool Ship::FindNextComponent( uint32_t & index, i3d::RttiType * type ) {
+    
+    for ( uint32_t i = index + 1; i < m_components.size(); ++i ) {
+        bool isOfType = m_components[i]->GetType()->IsOfType( type );
+        if ( isOfType == true ) {
+            index = i;
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+//======================================================================================================================
+ShipComponent * Ship::FindComponent( i3d::RttiType * type ) {
+    uint32_t index;
+    bool found = FindComponent( index, type );
+    if (found == false ) {
+        return nullptr;
+    }
+    
+    return m_components[ index ];    
+}
+
+//======================================================================================================================
 void Ship::Draw( float timeStep ) {
     render->SubmitModel( m_model, m_transform, m_material );
 }

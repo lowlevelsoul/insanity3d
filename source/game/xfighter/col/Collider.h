@@ -37,8 +37,10 @@ public:
     Shape *                 m_shape;            ///< Pointer to the shape attached to this collider
     
     i3d::Vector2            m_pos;              ///< Object position
+    float                   m_rot;              ///< Object rotation in radians
+    i3d::Matrix2            m_basis;            ///< Object rotation as a 2x2 matrix
     i3d::Vector2            m_boundsLocal[2];   ///< Local bounds of the object
-    i3d::Vector2            m_boundsWorld[2];        ///< World space bounds of the object
+    i3d::Vector2            m_boundsWorld[2];   ///< World space bounds of the object
     float                   m_radius;           ///< Bounding radius
     
     Cell*                   m_cell;             ///< The Cell the this shape is wholly contained within
@@ -65,6 +67,8 @@ public:
     const Shape* GetShape() const;
     
     void SetPosition(const i3d::Vector2& pos);
+    
+    void SetRotation( float rot );
     
     void SetFilter(uint32_t filter) { m_filter = filter; }
     

@@ -61,6 +61,22 @@ public:
     
     virtual void Construct( EntityDef * def ) override;
     
+    bool FindComponent( uint32_t & index, i3d::RttiType * type );
+    
+    bool FindNextComponent( uint32_t & index, i3d::RttiType * type );
+    
+    ShipComponent * FindComponent( i3d::RttiType * type );
+    
+    template<typename __type__>
+    __type__ * FindComponent() {
+        ShipComponent * comp = FindComponent( __type__::GetClassType() );
+        if ( comp == nullptr ) {
+            return nullptr;
+        }
+        
+        return ( __type__ * ) comp;
+    }
+
 public:
     ShipComponent::vector_t::type   m_components;
     i3d::Model *                    m_model;

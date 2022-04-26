@@ -8,7 +8,8 @@
 
 #include "col/ColShape.h"
 
-/// Defines an axis-aligned box shape
+/// Defines an axis-aligned box shape. The Axis aligned box does NOT inherit the rotartion of the collider that it is
+/// attached to.
 class ShapeBox : public Shape {
 protected:
     float               m_width;        ///< Width of the box

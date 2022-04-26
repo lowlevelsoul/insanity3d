@@ -25,6 +25,7 @@ namespace i3d {
 
     const Quaternion Quaternion::IDENTITY( 0, 0, 0, 1 );
 
+    const Matrix2 Matrix2::IDENTITY( 1, 1 );
     const Matrix3 Matrix3::IDENTITY( 1, 1, 1 );
     const Matrix4 Matrix4::IDENTITY( 1, 1, 1, 1 );
 }

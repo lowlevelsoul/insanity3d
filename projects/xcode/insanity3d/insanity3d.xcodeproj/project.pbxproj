@@ -316,6 +316,26 @@
 		D34A4D5C27E6FF350083DD65 /* TextureBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D5A27E6FF350083DD65 /* TextureBuilder.cpp */; };
 		D34A4D5D27E735C20083DD65 /* AmrBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D2727E373530083DD65 /* AmrBuilder.cpp */; };
 		D34A4D6027E7492B0083DD65 /* RttiBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D34A4D5E27E7492B0083DD65 /* RttiBuilder.cpp */; };
+		D35763B72816F0CC0006CD92 /* ColShapeConvex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763B52816F0CC0006CD92 /* ColShapeConvex.cpp */; };
+		D35763B82816F0CC0006CD92 /* ColShapeConvex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763B52816F0CC0006CD92 /* ColShapeConvex.cpp */; };
+		D35763B92816F0CC0006CD92 /* ColShapeConvex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763B52816F0CC0006CD92 /* ColShapeConvex.cpp */; };
+		D35763BB2816F3630006CD92 /* Matrix2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763BA2816F3630006CD92 /* Matrix2.cpp */; };
+		D35763BC2816F3630006CD92 /* Matrix2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763BA2816F3630006CD92 /* Matrix2.cpp */; };
+		D35763BD2816F3630006CD92 /* Matrix2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763BA2816F3630006CD92 /* Matrix2.cpp */; };
+		D35763BE2816F3630006CD92 /* Matrix2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763BA2816F3630006CD92 /* Matrix2.cpp */; };
+		D35763C22817003C0006CD92 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763C02817003C0006CD92 /* Scene.cpp */; };
+		D35763C32817003C0006CD92 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763C02817003C0006CD92 /* Scene.cpp */; };
+		D35763C42817003C0006CD92 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763C02817003C0006CD92 /* Scene.cpp */; };
+		D35763CE281706660006CD92 /* SceneStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763CC281706660006CD92 /* SceneStream.cpp */; };
+		D35763CF281706660006CD92 /* SceneStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763CC281706660006CD92 /* SceneStream.cpp */; };
+		D35763D0281706660006CD92 /* SceneStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763CC281706660006CD92 /* SceneStream.cpp */; };
+		D35763D52817C35F0006CD92 /* EnemyMoveSimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763D32817C35F0006CD92 /* EnemyMoveSimple.cpp */; };
+		D35763D62817C35F0006CD92 /* EnemyMoveSimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763D32817C35F0006CD92 /* EnemyMoveSimple.cpp */; };
+		D35763D72817C35F0006CD92 /* EnemyMoveSimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763D32817C35F0006CD92 /* EnemyMoveSimple.cpp */; };
+		D35763DD2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763DB2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp */; };
+		D35763DE2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763DB2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp */; };
+		D35763DF2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763DB2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp */; };
+		D35763E02817C5E40006CD92 /* EnemyMoveSimpleDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D35763DB2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp */; };
 		D367BACD27E8D63000BBAAB4 /* XFighter_builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D367BAC027E8D2FF00BBAAB4 /* XFighter_builder.cpp */; };
 		D367BACE27E8D63F00BBAAB4 /* CVar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3A827C6A56C0004E0E2 /* CVar.cpp */; };
 		D367BACF27E8D63F00BBAAB4 /* Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B3AA27C6A56C0004E0E2 /* Hash.cpp */; };
@@ -371,6 +391,16 @@
 		D367BB1327EA525C00BBAAB4 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D367BB1227EA525C00BBAAB4 /* data */; };
 		D367BB1427EA53FB00BBAAB4 /* ResourceBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B44927C6B3590004E0E2 /* ResourceBuilder.cpp */; };
 		D367BB1527EA53FB00BBAAB4 /* ResourceBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D366B44927C6B3590004E0E2 /* ResourceBuilder.cpp */; };
+		D39DCABD28144F9C00D7A6F9 /* PlayerGameplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39DCABB28144F9C00D7A6F9 /* PlayerGameplay.cpp */; };
+		D39DCABE28144F9C00D7A6F9 /* PlayerGameplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39DCABB28144F9C00D7A6F9 /* PlayerGameplay.cpp */; };
+		D39DCABF28144F9C00D7A6F9 /* PlayerGameplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39DCABB28144F9C00D7A6F9 /* PlayerGameplay.cpp */; };
+		D39DCAC32815344500D7A6F9 /* EnemyGameplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39DCAC12815344500D7A6F9 /* EnemyGameplay.cpp */; };
+		D39DCAC42815344500D7A6F9 /* EnemyGameplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39DCAC12815344500D7A6F9 /* EnemyGameplay.cpp */; };
+		D39DCAC52815344500D7A6F9 /* EnemyGameplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39DCAC12815344500D7A6F9 /* EnemyGameplay.cpp */; };
+		D39DCAC828153FAC00D7A6F9 /* EnemyGameplayDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39DCAC628153FAC00D7A6F9 /* EnemyGameplayDef.cpp */; };
+		D39DCAC928153FAC00D7A6F9 /* EnemyGameplayDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39DCAC628153FAC00D7A6F9 /* EnemyGameplayDef.cpp */; };
+		D39DCACA28153FAC00D7A6F9 /* EnemyGameplayDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39DCAC628153FAC00D7A6F9 /* EnemyGameplayDef.cpp */; };
+		D39DCACB2815403D00D7A6F9 /* EnemyGameplayDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39DCAC628153FAC00D7A6F9 /* EnemyGameplayDef.cpp */; };
 		D3BE383927EB7211006B345A /* palette_neon_intrinsics.c in Sources */ = {isa = PBXBuildFile; fileRef = D3BE383527EB7211006B345A /* palette_neon_intrinsics.c */; };
 		D3BE383A27EB7211006B345A /* palette_neon_intrinsics.c in Sources */ = {isa = PBXBuildFile; fileRef = D3BE383527EB7211006B345A /* palette_neon_intrinsics.c */; };
 		D3BE383B27EB7211006B345A /* filter_neon_intrinsics.c in Sources */ = {isa = PBXBuildFile; fileRef = D3BE383627EB7211006B345A /* filter_neon_intrinsics.c */; };
@@ -732,6 +762,18 @@
 		D34A4D5B27E6FF350083DD65 /* TextureBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureBuilder.h; sourceTree = "<group>"; };
 		D34A4D5E27E7492B0083DD65 /* RttiBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RttiBuilder.cpp; sourceTree = "<group>"; };
 		D34A4D5F27E7492B0083DD65 /* RttiBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RttiBuilder.h; sourceTree = "<group>"; };
+		D35763B52816F0CC0006CD92 /* ColShapeConvex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ColShapeConvex.cpp; sourceTree = "<group>"; };
+		D35763B62816F0CC0006CD92 /* ColShapeConvex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColShapeConvex.h; sourceTree = "<group>"; };
+		D35763BA2816F3630006CD92 /* Matrix2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix2.cpp; sourceTree = "<group>"; };
+		D35763C02817003C0006CD92 /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		D35763C12817003C0006CD92 /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		D35763CC281706660006CD92 /* SceneStream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneStream.cpp; sourceTree = "<group>"; };
+		D35763CD281706660006CD92 /* SceneStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneStream.h; sourceTree = "<group>"; };
+		D35763D22817C1050006CD92 /* SceneTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneTypes.h; sourceTree = "<group>"; };
+		D35763D32817C35F0006CD92 /* EnemyMoveSimple.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyMoveSimple.cpp; sourceTree = "<group>"; };
+		D35763D42817C35F0006CD92 /* EnemyMoveSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemyMoveSimple.h; sourceTree = "<group>"; };
+		D35763DB2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyMoveSimpleDef.cpp; sourceTree = "<group>"; };
+		D35763DC2817C5E40006CD92 /* EnemyMoveSimpleDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemyMoveSimpleDef.h; sourceTree = "<group>"; };
 		D366B39D27C408CB0004E0E2 /* i3d_base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_base.xcconfig; sourceTree = "<group>"; };
 		D366B39E27C409150004E0E2 /* i3d_lib.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = i3d_lib.xcconfig; sourceTree = "<group>"; };
 		D366B3A627C6A56C0004E0E2 /* Sys_macos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Sys_macos.mm; sourceTree = "<group>"; };
@@ -858,6 +900,13 @@
 		D367BAC627E8D5DC00BBAAB4 /* xfighter_builder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xfighter_builder; sourceTree = BUILT_PRODUCTS_DIR; };
 		D367BB0027E8D6C800BBAAB4 /* xfighter_builder.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = xfighter_builder.xcconfig; sourceTree = "<group>"; };
 		D367BB1227EA525C00BBAAB4 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../../../data/xfighter/data/ios/data; sourceTree = "<group>"; };
+		D39DCABB28144F9C00D7A6F9 /* PlayerGameplay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerGameplay.cpp; sourceTree = "<group>"; };
+		D39DCABC28144F9C00D7A6F9 /* PlayerGameplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerGameplay.h; sourceTree = "<group>"; };
+		D39DCAC12815344500D7A6F9 /* EnemyGameplay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyGameplay.cpp; sourceTree = "<group>"; };
+		D39DCAC22815344500D7A6F9 /* EnemyGameplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemyGameplay.h; sourceTree = "<group>"; };
+		D39DCAC628153FAC00D7A6F9 /* EnemyGameplayDef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyGameplayDef.cpp; sourceTree = "<group>"; };
+		D39DCAC728153FAC00D7A6F9 /* EnemyGameplayDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemyGameplayDef.h; sourceTree = "<group>"; };
+		D39DCACC2815A21A00D7A6F9 /* Matrix2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix2.h; sourceTree = "<group>"; };
 		D3BE383527EB7211006B345A /* palette_neon_intrinsics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = palette_neon_intrinsics.c; sourceTree = "<group>"; };
 		D3BE383627EB7211006B345A /* filter_neon_intrinsics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filter_neon_intrinsics.c; sourceTree = "<group>"; };
 		D3BE383727EB7211006B345A /* arm_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arm_init.c; sourceTree = "<group>"; };
@@ -1084,13 +1133,12 @@
 		D34A4A1227CA68FC0083DD65 /* xfighter */ = {
 			isa = PBXGroup;
 			children = (
+				D35763BF2816FFDD0006CD92 /* scene */,
 				D3F4C0A828041F0100A82826 /* weapons */,
 				D3F4C06E27FC8F7000A82826 /* col */,
 				D3F4C01227F7765600A82826 /* misc */,
 				D3F4C00C27F706F700A82826 /* ship */,
 				D3BE385527F21F1E006B345A /* entity */,
-				D34A4A5627D1F1F00083DD65 /* systems */,
-				D34A4A5527D1F1EA0083DD65 /* components */,
 				D34A4A1327CA690E0083DD65 /* XFighter.cpp */,
 				D34A4A1427CA690E0083DD65 /* XFighter.h */,
 				D367BAC027E8D2FF00BBAAB4 /* XFighter_builder.cpp */,
@@ -1125,20 +1173,6 @@
 				D34A4A6527D7B0640083DD65 /* PrototypeResource.h */,
 			);
 			path = ecs;
-			sourceTree = "<group>";
-		};
-		D34A4A5527D1F1EA0083DD65 /* components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = components;
-			sourceTree = "<group>";
-		};
-		D34A4A5627D1F1F00083DD65 /* systems */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = systems;
 			sourceTree = "<group>";
 		};
 		D34A4B4C27DE77BD0083DD65 /* config */ = {
@@ -1346,6 +1380,33 @@
 			path = toolmodel;
 			sourceTree = "<group>";
 		};
+		D35763BF2816FFDD0006CD92 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				D35763C02817003C0006CD92 /* Scene.cpp */,
+				D35763C12817003C0006CD92 /* Scene.h */,
+				D35763CC281706660006CD92 /* SceneStream.cpp */,
+				D35763CD281706660006CD92 /* SceneStream.h */,
+				D35763D22817C1050006CD92 /* SceneTypes.h */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
+		D35763D92817C37D0006CD92 /* enemy */ = {
+			isa = PBXGroup;
+			children = (
+				D39DCAC12815344500D7A6F9 /* EnemyGameplay.cpp */,
+				D39DCAC22815344500D7A6F9 /* EnemyGameplay.h */,
+				D39DCAC628153FAC00D7A6F9 /* EnemyGameplayDef.cpp */,
+				D39DCAC728153FAC00D7A6F9 /* EnemyGameplayDef.h */,
+				D35763D32817C35F0006CD92 /* EnemyMoveSimple.cpp */,
+				D35763D42817C35F0006CD92 /* EnemyMoveSimple.h */,
+				D35763DB2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp */,
+				D35763DC2817C5E40006CD92 /* EnemyMoveSimpleDef.h */,
+			);
+			path = enemy;
+			sourceTree = "<group>";
+		};
 		D366B36927C406370004E0E2 = {
 			isa = PBXGroup;
 			children = (
@@ -1485,6 +1546,7 @@
 				D366B3EF27C6B17F0004E0E2 /* Matrix4.cpp */,
 				D366B3F127C6B17F0004E0E2 /* Quaternion.cpp */,
 				D34A4A8C27DC6E500083DD65 /* Frustum.cpp */,
+				D35763BA2816F3630006CD92 /* Matrix2.cpp */,
 			);
 			path = math;
 			sourceTree = "<group>";
@@ -1556,6 +1618,7 @@
 				D34A4A8A27DBD09E0083DD65 /* Plane.h */,
 				D34A4A8B27DBD1B80083DD65 /* Frustum.h */,
 				D34A4A9127DC97DE0083DD65 /* Sphere.h */,
+				D39DCACC2815A21A00D7A6F9 /* Matrix2.h */,
 			);
 			path = math;
 			sourceTree = "<group>";
@@ -1717,6 +1780,7 @@
 		D3F4C00C27F706F700A82826 /* ship */ = {
 			isa = PBXGroup;
 			children = (
+				D35763D92817C37D0006CD92 /* enemy */,
 				D3F4C00727F7027000A82826 /* Ship.cpp */,
 				D3F4C00827F7027000A82826 /* Ship.h */,
 				D3F4C00D27F71BA200A82826 /* ShipPreview.cpp */,
@@ -1737,6 +1801,8 @@
 				D3F4C0BA2807358000A82826 /* PlayerFireControl.h */,
 				D3F4C0BE280736B000A82826 /* PlayerFireControlDef.cpp */,
 				D3F4C0C3280736C400A82826 /* PlayerFireControlDef.h */,
+				D39DCABB28144F9C00D7A6F9 /* PlayerGameplay.cpp */,
+				D39DCABC28144F9C00D7A6F9 /* PlayerGameplay.h */,
 			);
 			path = ship;
 			sourceTree = "<group>";
@@ -1796,6 +1862,8 @@
 				D3F4C07A27FC8F8000A82826 /* ColShapeCircle.h */,
 				D3F4C07F27FC8F8100A82826 /* ColTypes.cpp */,
 				D3F4C07827FC8F8000A82826 /* ColTypes.h */,
+				D35763B52816F0CC0006CD92 /* ColShapeConvex.cpp */,
+				D35763B62816F0CC0006CD92 /* ColShapeConvex.h */,
 			);
 			path = col;
 			sourceTree = "<group>";
@@ -2152,11 +2220,14 @@
 				D34A4A2427CA9ECA0083DD65 /* TransformStatic.metal in Sources */,
 				D34A495327C916390083DD65 /* Gfx_metal.mm in Sources */,
 				D34A494227C9162B0083DD65 /* Matrix3.cpp in Sources */,
+				D35763B72816F0CC0006CD92 /* ColShapeConvex.cpp in Sources */,
+				D35763DD2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp in Sources */,
 				D34A495827C916390083DD65 /* GfxVertexDesc_local.cpp in Sources */,
 				D34A49A427C916600083DD65 /* RttiLoader.cpp in Sources */,
 				D34A4A6827D7B1080083DD65 /* PrototypeResource.cpp in Sources */,
 				D34A49A027C916600083DD65 /* RttiObject.cpp in Sources */,
 				D34A492A27C916180083DD65 /* Sys_ios.mm in Sources */,
+				D35763C22817003C0006CD92 /* Scene.cpp in Sources */,
 				D34A49B827C916670083DD65 /* LoaderBase.cpp in Sources */,
 				D3F4C09827FC8F8100A82826 /* ColTypes.cpp in Sources */,
 				D3F4C09227FC8F8100A82826 /* CollideSys.cpp in Sources */,
@@ -2189,6 +2260,7 @@
 				D3F4C0BB2807358000A82826 /* PlayerFireControl.cpp in Sources */,
 				D34A495B27C916390083DD65 /* GfxRasterizeState_metal.mm in Sources */,
 				D34A49DB27C9FD960083DD65 /* RenderBuffers.cpp in Sources */,
+				D35763D52817C35F0006CD92 /* EnemyMoveSimple.cpp in Sources */,
 				D34A495227C916390083DD65 /* GfxGpuFunction_metal.mm in Sources */,
 				D3F4C09E27FEBDC800A82826 /* ColShape.cpp in Sources */,
 				D34A4A6E27D8A6550083DD65 /* RttiScriptResource.cpp in Sources */,
@@ -2200,8 +2272,10 @@
 				D3F4C0AB28041F3A00A82826 /* Projectile.cpp in Sources */,
 				D3BE385827F21F44006B345A /* Entity.cpp in Sources */,
 				D34A48E627C915EC0083DD65 /* AppDelegate.m in Sources */,
+				D39DCABD28144F9C00D7A6F9 /* PlayerGameplay.cpp in Sources */,
 				D34A4A2127CA9ECA0083DD65 /* Debug3d.metal in Sources */,
 				D34A493027C9161C0083DD65 /* CVar.cpp in Sources */,
+				D35763CE281706660006CD92 /* SceneStream.cpp in Sources */,
 				D34A494327C9162B0083DD65 /* Matrix4.cpp in Sources */,
 				D34A4A3A27CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
 				D34A495127C916390083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
@@ -2209,10 +2283,12 @@
 				D3F4C06427FB6DAF00A82826 /* PlayerMovementDef.cpp in Sources */,
 				D3F4C03C27FAC57900A82826 /* Ship.cpp in Sources */,
 				D3F4C01F27F8190500A82826 /* GameGlobals.cpp in Sources */,
+				D39DCAC828153FAC00D7A6F9 /* EnemyGameplayDef.cpp in Sources */,
 				D34A4A4327CFE8EF0083DD65 /* Ecs.cpp in Sources */,
 				D34A499F27C916600083DD65 /* RttiParser.cpp in Sources */,
 				D34A495D27C916390083DD65 /* Gfx.cpp in Sources */,
 				D3F4C08327FC8F8100A82826 /* Collide_overlaptest.cpp in Sources */,
+				D39DCAC32815344500D7A6F9 /* EnemyGameplay.cpp in Sources */,
 				D34A491B27C915EC0083DD65 /* Shaders.metal in Sources */,
 				D34A492E27C9161C0083DD65 /* Hash.cpp in Sources */,
 				D34A495727C916390083DD65 /* GfxGpuTextureArray_metal.mm in Sources */,
@@ -2225,6 +2301,7 @@
 				D34A49DC27C9FD960083DD65 /* Render_local.cpp in Sources */,
 				D34A4A8E27DC6E500083DD65 /* Frustum.cpp in Sources */,
 				D34A49C027C94FA00083DD65 /* i3d.cpp in Sources */,
+				D35763BB2816F3630006CD92 /* Matrix2.cpp in Sources */,
 				D3F4C06027FB6B5000A82826 /* PlayerTouchController.cpp in Sources */,
 				D34A495627C916390083DD65 /* GfxPass_metal.mm in Sources */,
 				D34A49DD27C9FD960083DD65 /* RenderBatch.cpp in Sources */,
@@ -2267,6 +2344,7 @@
 				D34A4A2927CA9ECA0083DD65 /* draw3d_pbr.metal in Sources */,
 				D3F4C08727FC8F8100A82826 /* Collider.cpp in Sources */,
 				D3F4C06127FB6B5000A82826 /* PlayerTouchController.cpp in Sources */,
+				D35763D62817C35F0006CD92 /* EnemyMoveSimple.cpp in Sources */,
 				D34A497227C9163A0083DD65 /* GfxVertexDesc_local.cpp in Sources */,
 				D34A496C27C9163A0083DD65 /* GfxGpuFunction_metal.mm in Sources */,
 				D3F4C0B72807321600A82826 /* ProjectileCircle.cpp in Sources */,
@@ -2304,11 +2382,16 @@
 				D34A494727C9162B0083DD65 /* Matrix4.cpp in Sources */,
 				D3F4C01B27F8175000A82826 /* Playfield.cpp in Sources */,
 				D3F4C02027F8190500A82826 /* GameGlobals.cpp in Sources */,
+				D35763DE2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp in Sources */,
+				D39DCABE28144F9C00D7A6F9 /* PlayerGameplay.cpp in Sources */,
 				D3F4C03027FABEC900A82826 /* EntityDef.cpp in Sources */,
 				D34A496D27C9163A0083DD65 /* Gfx_metal.mm in Sources */,
 				D3F4C08D27FC8F8100A82826 /* ColShapeBox.cpp in Sources */,
 				D34A493627C9161D0083DD65 /* Sys_common.cpp in Sources */,
+				D39DCAC42815344500D7A6F9 /* EnemyGameplay.cpp in Sources */,
 				D34A49AD27C916600083DD65 /* RttiStream.cpp in Sources */,
+				D35763BC2816F3630006CD92 /* Matrix2.cpp in Sources */,
+				D35763B82816F0CC0006CD92 /* ColShapeConvex.cpp in Sources */,
 				D34A494627C9162B0083DD65 /* Matrix3.cpp in Sources */,
 				D34A497627C9163A0083DD65 /* GfxContext_metal.mm in Sources */,
 				D34A4A3B27CCD1A90083DD65 /* ComponentArray.cpp in Sources */,
@@ -2318,16 +2401,19 @@
 				D34A4A1827CA69150083DD65 /* XFighter.cpp in Sources */,
 				D34A491C27C915EC0083DD65 /* Shaders.metal in Sources */,
 				D3F4C09027FC8F8100A82826 /* ColShape.cpp in Sources */,
+				D35763C32817003C0006CD92 /* Scene.cpp in Sources */,
 				D34A497027C9163A0083DD65 /* GfxPass_metal.mm in Sources */,
 				D3F4C05D27FB692600A82826 /* GameView.mm in Sources */,
 				D34A4A2C27CA9ECA0083DD65 /* draw3d_toon.metal in Sources */,
 				D34A497127C9163A0083DD65 /* GfxGpuTextureArray_metal.mm in Sources */,
 				D3F4C05327FB46EB00A82826 /* Input_ios.mm in Sources */,
+				D35763CF281706660006CD92 /* SceneStream.cpp in Sources */,
 				D3F4C09F27FEBDC800A82826 /* ColShape.cpp in Sources */,
 				D3F4C0AC28041F3A00A82826 /* Projectile.cpp in Sources */,
 				D34A497327C9163A0083DD65 /* GfxBuffer_metal.mm in Sources */,
 				D34A49A727C916600083DD65 /* RttiParser.cpp in Sources */,
 				D3F4C03827FAC56B00A82826 /* ShipDef.cpp in Sources */,
+				D39DCAC928153FAC00D7A6F9 /* EnemyGameplayDef.cpp in Sources */,
 				D34A493927C9161D0083DD65 /* Log_local.cpp in Sources */,
 				D34A496F27C9163A0083DD65 /* GfxTexture_metal.mm in Sources */,
 				D34A4A8F27DC6E500083DD65 /* Frustum.cpp in Sources */,
@@ -2355,6 +2441,7 @@
 				D34A49B227C916610083DD65 /* RttiLexer.cpp in Sources */,
 				D34A4D3327E373CB0083DD65 /* RefObject.cpp in Sources */,
 				D3BE383F27EB7211006B345A /* filter_neon.S in Sources */,
+				D35763C42817003C0006CD92 /* Scene.cpp in Sources */,
 				D3F4C01727F7766A00A82826 /* Camera.cpp in Sources */,
 				D3F4C0B82807321600A82826 /* ProjectileCircle.cpp in Sources */,
 				D34A49EE27C9FD980083DD65 /* Texture_base.cpp in Sources */,
@@ -2362,6 +2449,7 @@
 				D34A4D5727E5CE320083DD65 /* Image_png.cpp in Sources */,
 				D34A491A27C915EC0083DD65 /* Renderer.mm in Sources */,
 				D34A498227C9163A0083DD65 /* GfxRasterizeState_metal.mm in Sources */,
+				D39DCABF28144F9C00D7A6F9 /* PlayerGameplay.cpp in Sources */,
 				D34A4D4C27E374390083DD65 /* ModelImporter.cpp in Sources */,
 				D34A4A1027CA45FE0083DD65 /* Sys_macos.mm in Sources */,
 				D34A498A27C916460083DD65 /* ResourceCache_local.cpp in Sources */,
@@ -2390,6 +2478,7 @@
 				D34A4A1927CA69160083DD65 /* XFighter.cpp in Sources */,
 				D3F4C03B27FAC57900A82826 /* Ship.cpp in Sources */,
 				D3F4C05627FB46EF00A82826 /* Input_macos.mm in Sources */,
+				D35763B92816F0CC0006CD92 /* ColShapeConvex.cpp in Sources */,
 				D34A491627C915EC0083DD65 /* main.mm in Sources */,
 				D34A4D5327E375A90083DD65 /* ResourceBuilder.cpp in Sources */,
 				D3F4C01C27F8175000A82826 /* Playfield.cpp in Sources */,
@@ -2402,6 +2491,7 @@
 				D34A49BB27C9166D0083DD65 /* HeapFrame.cpp in Sources */,
 				D34A4A1E27CA6AFF0083DD65 /* farmhash.cpp in Sources */,
 				D34A4D5127E374390083DD65 /* ToolAnimation.cpp in Sources */,
+				D35763D72817C35F0006CD92 /* EnemyMoveSimple.cpp in Sources */,
 				D34A4D4927E374390083DD65 /* ToolSkin.cpp in Sources */,
 				D34A4D4F27E374390083DD65 /* ModelImporterAssImp.cpp in Sources */,
 				D3BE385A27F21F44006B345A /* Entity.cpp in Sources */,
@@ -2410,7 +2500,10 @@
 				D34A498427C9163A0083DD65 /* Gfx.cpp in Sources */,
 				D34A49B327C916610083DD65 /* RttiType.cpp in Sources */,
 				D34A4D5227E374390083DD65 /* ToolSkeleton.cpp in Sources */,
+				D35763D0281706660006CD92 /* SceneStream.cpp in Sources */,
 				D3F4C0A027FEBDC800A82826 /* ColShape.cpp in Sources */,
+				D35763BD2816F3630006CD92 /* Matrix2.cpp in Sources */,
+				D35763DF2817C5E40006CD92 /* EnemyMoveSimpleDef.cpp in Sources */,
 				D34A493C27C9161D0083DD65 /* Hash.cpp in Sources */,
 				D34A497827C9163A0083DD65 /* GfxGpuPipeline_metal.mm in Sources */,
 				D3F4C01127F71BA200A82826 /* ShipPreview.cpp in Sources */,
@@ -2421,11 +2514,13 @@
 				D34A490E27C915EC0083DD65 /* AppDelegate.m in Sources */,
 				D34A49B627C916660083DD65 /* LoaderBase.cpp in Sources */,
 				D34A494B27C9162B0083DD65 /* Matrix4.cpp in Sources */,
+				D39DCAC52815344500D7A6F9 /* EnemyGameplay.cpp in Sources */,
 				D34A499827C916560083DD65 /* Model_local.cpp in Sources */,
 				D34A4A7027D8A6550083DD65 /* RttiScriptResource.cpp in Sources */,
 				D34A4A2D27CA9ECA0083DD65 /* draw3d_pbr_bindless.metal in Sources */,
 				D34A497A27C9163A0083DD65 /* Gfx_metal.mm in Sources */,
 				D34A4A2F27CA9ECA0083DD65 /* Debug3d.metal in Sources */,
+				D39DCACA28153FAC00D7A6F9 /* EnemyGameplayDef.cpp in Sources */,
 				D34A4D5027E374390083DD65 /* ToolJoint.cpp in Sources */,
 				D34A4D6027E7492B0083DD65 /* RttiBuilder.cpp in Sources */,
 				D3F4C02627F86AAE00A82826 /* EntityDefResource.cpp in Sources */,
@@ -2546,6 +2641,7 @@
 				D367BAF427E8D67500BBAAB4 /* AmrBuilder.cpp in Sources */,
 				D367BAF627E8D67500BBAAB4 /* TextureBuilder.cpp in Sources */,
 				D367BAD027E8D63F00BBAAB4 /* Log_common.cpp in Sources */,
+				D35763E02817C5E40006CD92 /* EnemyMoveSimpleDef.cpp in Sources */,
 				D367BAE827E8D66600BBAAB4 /* Image_png.cpp in Sources */,
 				D367BAF327E8D67500BBAAB4 /* SkeletonBuilder.cpp in Sources */,
 				D3F4C04427FAC9E800A82826 /* EntityDef.cpp in Sources */,
@@ -2556,6 +2652,7 @@
 				D367BAD127E8D63F00BBAAB4 /* Sys_common.cpp in Sources */,
 				D3F4C02B27F8AEBD00A82826 /* Playfield.cpp in Sources */,
 				D367BB0827E8D71100BBAAB4 /* ToolSkin.cpp in Sources */,
+				D39DCACB2815403D00D7A6F9 /* EnemyGameplayDef.cpp in Sources */,
 				D3F4C0B3280730DA00A82826 /* ProjectileDef.cpp in Sources */,
 				D367BB0727E8D71100BBAAB4 /* ToolModel.cpp in Sources */,
 				D3F4C02C27F8AEBF00A82826 /* Camera.cpp in Sources */,
@@ -2570,6 +2667,7 @@
 				D367BB0B27E8D71100BBAAB4 /* ToolAnimation.cpp in Sources */,
 				D367BACD27E8D63000BBAAB4 /* XFighter_builder.cpp in Sources */,
 				D367BADD27E8D65100BBAAB4 /* ResourceBuilder.cpp in Sources */,
+				D35763BE2816F3630006CD92 /* Matrix2.cpp in Sources */,
 				D367BAE227E8D65D00BBAAB4 /* RttiLoader.cpp in Sources */,
 				D367BAD627E8D64600BBAAB4 /* Sys_macos.mm in Sources */,
 				D367BAE027E8D65D00BBAAB4 /* RttiResource.cpp in Sources */,

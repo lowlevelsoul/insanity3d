@@ -32,11 +32,14 @@ public:
     
     bool IsInPlayfield() const;
     
+    virtual void DestroyFromHit();
+    
 public:
     i3d::Texture *          m_texture;
     Collider                m_collider;
     i3d::Vector3            m_direction;
     float                   m_speed;
+    float                   m_damage;           ///< Amount of  damage the projtile causes 
 };
 
 #endif
